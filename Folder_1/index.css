@@ -1,6 +1,6 @@
 /* zeroing */
 
-*{
+/* *{
 	padding: 0;
 	margin: 0;
 	border: 0;
@@ -36,5 +36,67 @@ ul li{list-style: none;}
 img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
-/*--------------------*/
+-------------------- */
 
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    color:blue;
+}
+
+h2 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rgb(25, 154, 241);
+}
+
+h4 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rgb(25, 154, 241);
+}
+
+.p1 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.p2 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+.p3 {
+    font-family:Arial, Helvetica, sans-serif;
+    color: red;
+}
+
+.p4 {
+    text-indent: 50%;   
+}
+
+.p5 {
+    text-transform: uppercase;   
+    letter-spacing:2px; 
+}
+
+.p6 {
+    font-style: italic;   
+}
+
+.p7 {
+    text-decoration:underline;  
+}
+
+.p8 {
+    text-indent: 35%;   
+}
+
+.p9 {
+    font-size:20px   
+}
+
+.p10 {
+    text-decoration:line-through;  
+}
+
+.p12 {
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px #000;
+}
