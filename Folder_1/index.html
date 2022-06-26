@@ -56,63 +56,113 @@
     <form action="#" method="get">
       <div>
         <p>Name</p>
-        <input type="text" name="username" value="" />
+        <input
+          autofocus
+          placeholder="User Name"
+          tabindex="1"
+          type="text"
+          name="username"
+          value=""
+        />
       </div>
       <br />
 
       <div>
         <p>Password</p>
-        <input type="password" name="password" value="" />
+        <input
+          placeholder="Password"
+          tabindex="2"
+          type="password"
+          name="password"
+          value=""
+        />
       </div>
       <br />
 
       <div>
         <p>Pone Number</p>
-        <input type="tel" name="phonenumber" value="" />
+        <input
+          placeholder="Phone Number"
+          tabindex="3"
+          type="tel"
+          name="phonenumber"
+          value=""
+        />
       </div>
       <br />
 
       <div>
         <p>Gender</p>
-        <p><input checked type="checkbox" name="male" value="" />Male</p>
-        <p><input type="checkbox" name="female" value="" />Female</p>
+        <p>
+          <input
+            tabindex="4"
+            checked
+            type="checkbox"
+            name="gender"
+            value="male"
+          />Male
+        </p>
+        <p>
+          <input
+            tabindex="4"
+            type="checkbox"
+            name="gender"
+            value="female"
+          />Female
+        </p>
       </div>
       <br />
 
       <div>
         <p>Property</p>
-        <p><input checked type="checkbox" name="bicycle" value="" />Bicycle</p>
-        <p><input type="checkbox" name="car" value="" />Car</p>
-        <p><input disabled type="checkbox" name="house" value="" />House</p>
+        <p>
+          <input
+            tabindex="5"
+            checked
+            type="checkbox"
+            name="bicycle"
+            value=""
+          />Bicycle
+        </p>
+        <p><input tabindex="5" type="checkbox" name="car" value="" />Car</p>
+        <p>
+          <input
+            tabindex="5"
+            disabled
+            type="checkbox"
+            name="house"
+            value=""
+          />House
+        </p>
       </div>
       <br />
 
       <div>
         <p>Aditional Information</p>
-        <textarea name="field" value=""></textarea>
+        <textarea tabindex="6" name="field" value=""></textarea>
       </div>
       <br />
 
       <div>
         <p>Select Foto</p>
-        <input type="file" name="foto" value="" />
+        <input tabindex="7" type="file" name="foto" value="" />
       </div>
       <br />
 
       <div>
         <p>Favorite Color</p>
-        <select name="color">
-          <option>Red</option>
-          <option>Green</option>
-          <option selected>Yellow</option>
+        <select tabindex="8" name="color">
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+          <option value="yellow" selected>Yellow</option>
         </select>
       </div>
       <br />
 
       <div>
         <p>Actions</p>
-        <button>Send</button>
-        <button>Reset</button>
+        <button tabindex="9" type="sumbit">Send</button>
+        <button tabindex="9" type="reset">Reset</button>
       </div>
       <br />
     </form>
