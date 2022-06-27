@@ -104,8 +104,81 @@ h4 {
 .b1{
     margin: 2%;
     width: 50%;
-    border: solid red;
+    text-indent: 10%;
+    text-align: justify;
+    border: solid rgb(9, 244, 170);
 }
 
+.b2{
+    display: inline-block;
+    padding-left: 5%;
+    border: solid rgb(9, 244, 170);
+}
+
+.b3{
+    display: block;
+    padding-left: 7%;
+    border: solid rgb(9, 244, 170);
+    text-decoration: none;
+}
+
+.b3:hover{
+    color:chartreuse;
+    text-decoration: underline;
+}
+
+.b4{
+    height: 100px;
+    width: 100%; 
+    margin: 2% 0 2%;
+    text-indent: 5%;
+    text-align: justify;
+    border: solid rgb(9, 244, 170);
+}
+
+.b5{
+    height: 100%;
+    width: 25%;
+    padding-left: 15px;
+    display: inline-block;
+    border: solid rgb(9, 244, 170);
+}
+
+.b6{
+    height: 10%;
+    width: 25%;
+    padding-left: 15px;
+    display: inline-block;
+    border: solid rgb(9, 244, 170);
+    
+}
+
+.b7{
+    height: 10%;
+    width: 25%;
+    display: inline-block;
+    padding: 0 15px 0 15px ;
+    margin-top: 5px;
+    border: solid rgb(9, 244, 170);
+}
+
+.b8{
+    height: 10%;
+    width: 25%;
+    padding: 0 15px 0 15px ;
+    display: inline-block;
+    border: solid rgb(9, 244, 170);
+    
+}
+
+
+.b9{
+    margin:35px 0;
+    border: solid rgb(9, 244, 170);
+}
+
+.b10{
+    border: solid rgb(9, 244, 170);
+}
 
 
