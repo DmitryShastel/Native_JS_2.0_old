@@ -37,7 +37,7 @@ img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 -------------------- */
-
+/* 
 h1 {
     font-family: 'Courier New', Courier, monospace;
     color:blue;
@@ -99,4 +99,13 @@ h4 {
 .p12 {
     font-weight: bolder;
     text-shadow: 1px 1px 1px #000;
+} */
+
+.b1{
+    margin: 2%;
+    width: 50%;
+    border: solid red;
 }
+
+
+
