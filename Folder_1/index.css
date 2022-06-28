@@ -102,10 +102,12 @@ h4 {
 } */
 
 .b1{
+    height: 100px;
     margin: 2%;
     width: 50%;
     text-indent: 10%;
     text-align: justify;
+    overflow:scroll ;
     border: solid rgb(9, 244, 170);
 }
 
