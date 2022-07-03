@@ -225,6 +225,19 @@ a{
     font-style: italic;
 }
 
+a:visited{
+    color:red;
+    opacity: 0.5;
+}
+
+a:hover{
+    color:aqua;
+    opacity: 0.5;
+}
+
+a:active{
+    color:yellow;
+}
 
 .l4{
     width: 70%;
@@ -235,11 +248,14 @@ a{
     font-size: 20px;
 }
 
-.list {
-    padding: 0 14%;
+.list1 {
+    padding: 1% 15%;
+}
+.list2 {
+    padding: 1% 15%;
 }
 
-.list li {
+.list1 li{
     font-size: 20px;
     list-style-type: none;
     background: url('../../Source/2.png') 2%/3%;  
@@ -248,24 +264,43 @@ a{
     padding: 1% 0 0 5%;
 }
 
-.a {
+.list1 li:first-child{
     font-family: 'Courier New', Courier, monospace;
 }
 
-.b {
+.list1 li:last-child{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.list1 li:nth-child(2){
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
     color: aqua;
 }
 
-.c {
+.list1 li:nth-child(3){
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
 }
 
-.d {
+.list2 li{
+    font-size: 20px;
+    list-style-type: none;
+    background: url('../../Source/2.png') 2%/3%;  
+    background-repeat: no-repeat;
+    background-position: 0 65%;
+    padding: 1% 0 0 5%;
+}
+
+.list2 li:nth-child(odd){
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: line-through;
-    opacity: 0.5;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.list2 li:nth-child(even){
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .buttons {
@@ -284,5 +319,17 @@ button {
     color: aliceblue;
     font-size: 15px;
     font-weight: bold;
+}
+
+button:hover{
+    background-color: green;
+}
+
+button:active{
+    background-color: grey;
+}
+
+button{
+  cursor: pointer; 
 }
 
