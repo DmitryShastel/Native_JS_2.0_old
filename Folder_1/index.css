@@ -219,6 +219,17 @@ h4 {
 
 } */
 
+/* body{
+    overflow: hidden;
+} */
+
+body.noscroll
+{
+    position: fixed; 
+    overflow-y: scroll;
+    width: 100%;
+}
+
 a{
     text-decoration: none;
     color:green;
@@ -331,5 +342,34 @@ button:active{
 
 button{
   cursor: pointer; 
+}
+
+.btn{
+    all: initial;
+    border: 1px solid yellow;
+    border-radius: 50px 50px;
+    padding: 1% 5%;
+    font-weight: bold;
+    background-color: red;
+    color: black;
+    cursor: pointer;
+   
+}
+
+.form{
+    margin: 5% auto;
+    text-align: center;
+}
+
+input{
+    margin: 1% 5%;
+    padding: 1% 5%;
+    border-radius: 10px;
+    border-color: chartreuse;
+    outline:none;
+}
+
+.form input:focus:nth-child(2){
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
