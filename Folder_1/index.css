@@ -272,10 +272,8 @@ button {
     border-radius: 50px 50px;
     border: none;
     background-color: aquamarine;
-}
-
-span{
+    color: aliceblue;
     font-size: 15px;
     font-weight: bold;
-    color: aliceblue;
 }
+
