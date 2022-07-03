@@ -187,9 +187,7 @@ h4 {
     height: 100%;
     width: 85%;
     margin:0% auto;
-     background:url(../../Source/1.png) 100% 100% no-repeat; 
-     /*  100%/cover no-repeat;  */
-   
+    background:url(../../Source/1.png) 60%/40% no-repeat;    
 }
 .block2{
     height: 300px;
@@ -232,5 +230,52 @@ h4 {
     line-height: 1.5;
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
+}
 
+.list {
+    padding: 0 14%;
+}
+
+.list li {
+    font-size: 20px;
+    list-style-type: none;
+    background: url('../../Source/2.png') 2%/3%;  
+    background-repeat: no-repeat;
+    background-position: 0 65%;
+    padding: 1% 0 0 5%;
+}
+
+.a {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.b {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    color: aqua;
+}
+
+.c {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+.d {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+button {
+    margin: 2% 15%;
+    padding: 1% 10%;
+    text-transform: uppercase;
+    border-radius: 50px 50px;
+    border: none;
+    background-color: aquamarine;
+}
+
+span{
+    font-size: 15px;
+    font-weight: bold;
+    color: aliceblue;
 }
