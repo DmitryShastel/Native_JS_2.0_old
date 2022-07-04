@@ -1,5 +1,4 @@
-body.noscroll
-{
+body.noscroll{
     position: fixed; 
     overflow-y: scroll;
     width: 100%;
@@ -22,9 +21,11 @@ body.noscroll
     color:blue;
 }
 
+
 .list1 {
     padding: 1% 15%;
 }
+
 .list2 {
     padding: 1% 15%;
 }
@@ -32,9 +33,15 @@ body.noscroll
 .list1 li{
     font-size: 20px;
     list-style-type: none;
-    background: url('../../Source/2.png') 2%/3%;  
+    padding: 1% 0;
+}
+
+.list1 li:before{
+    content: '';
+    background: url('../../Source/2.png');
     background-repeat: no-repeat;
-    background-position: 0 65%;
+    background-position: 0 60%;
+    background-size: 20px 15px;
     padding: 1% 0 0 5%;
 }
 
@@ -61,9 +68,14 @@ body.noscroll
 .list2 li{
     font-size: 20px;
     list-style-type: none;
-    background: url('../../Source/2.png') 2%/3%;  
+    padding: 1% 0;
+}
+.list2 li:before{
+    content: '';
+    background: url('../../Source/2.png');
     background-repeat: no-repeat;
-    background-position: 0 65%;
+    background-position: 0 60%;
+    background-size: 20px 15px;
     padding: 1% 0 0 5%;
 }
 
@@ -78,8 +90,6 @@ body.noscroll
 }
 
 .buttons {
-    /* height: auto;
-    width: 80%; */
     margin: 5% auto;
     text-align: center;
 }
@@ -95,6 +105,16 @@ button {
     font-weight: bold;
 }
 
+button:after{
+    content: '';
+    background: url('../../Source/4.jpg');
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+    background-position: 50% 100%;
+    
+    padding: 5% 0 0 50%; 
+}
+
 button:hover{
     background-color: green;
 }
@@ -106,23 +126,3 @@ button:active{
 button{
   cursor: pointer; 
 }
-
-.btn{
-    all: initial;
-    border: 1px solid yellow;
-    border-radius: 50px 50px;
-    padding: 1% 5%;
-    font-weight: bold;
-    background-color: red;
-    color: black;
-    cursor: pointer;
-   
-}
-
-.form{
-    margin: 5% auto;
-    text-align: center;
-}
-
-
-
