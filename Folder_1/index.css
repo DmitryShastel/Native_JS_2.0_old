@@ -1,128 +1,27 @@
-body.noscroll{
-    position: fixed; 
-    overflow-y: scroll;
-    width: 100%;
-}
-
-.l4{
-    width: 70%;
+.block{
+    height:500px;
+    width: 80%;
+    border: 1px solid green;
     margin: 20px auto;
-    text-align: left;
-    line-height: 1.5;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
 }
 
-.l4:first-line{
-    color:blue;
+.block1{
+    height: 100px;
+    width: 100%;
+    background-color: red;
+    border: 1px solid green;
 }
 
-.l5::first-letter{
-    color:blue;
+.block2{
+    height: 100px;
+    width: 100%;
+    background-color: yellow;
+    border: 1px solid green;
 }
 
-
-.list1 {
-    padding: 1% 15%;
-}
-
-.list2 {
-    padding: 1% 15%;
-}
-
-.list1 li{
-    font-size: 20px;
-    list-style-type: none;
-    padding: 1% 0;
-}
-
-.list1 li:before{
-    content: '';
-    background: url('../../Source/2.png');
-    background-repeat: no-repeat;
-    background-position: 0 60%;
-    background-size: 20px 15px;
-    padding: 1% 0 0 5%;
-}
-
-.list1 li:first-child{
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.list1 li:last-child{
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: line-through;
-    color: rgba(0, 0, 0, 0.3);
-}
-
-.list1 li:nth-child(2){
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
-    color: aqua;
-}
-
-.list1 li:nth-child(3){
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
-}
-
-.list2 li{
-    font-size: 20px;
-    list-style-type: none;
-    padding: 1% 0;
-}
-.list2 li:before{
-    content: '';
-    background: url('../../Source/2.png');
-    background-repeat: no-repeat;
-    background-position: 0 60%;
-    background-size: 20px 15px;
-    padding: 1% 0 0 5%;
-}
-
-.list2 li:nth-child(odd){
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: line-through;
-    color: rgba(0, 0, 0, 0.3);
-}
-
-.list2 li:nth-child(even){
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.buttons {
-    margin: 5% auto;
-    text-align: center;
-}
-button {
-    margin: 0 5%;
-    padding: 1% 5%; 
-    text-transform: uppercase;
-    border-radius: 50px 50px;
-    border: none;
-    background-color: aquamarine;
-    color: aliceblue;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-button:after{
-    content: '';
-    background: url('../../Source/4.jpg');
-    background-repeat: no-repeat;
-    background-size: 80% 80%;
-    background-position: 50% 100%;
-    
-    padding: 5% 0 0 50%; 
-}
-
-button:hover{
+.block3{
+    height: 100px;
+    width: 100%;
     background-color: green;
-}
-
-button:active{
-    background-color: grey;
-}
-
-button{
-  cursor: pointer; 
+    border: 1px solid green;
 }
