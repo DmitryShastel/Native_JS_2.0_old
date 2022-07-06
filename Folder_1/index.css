@@ -1,27 +1,31 @@
 .block{
-    height:500px;
+    height:1500px;
     width: 80%;
     border: 1px solid green;
     margin: 20px auto;
 }
 
-.block1{
+.block div{
     height: 100px;
     width: 100%;
+    font-size: 50px;
+    text-align: center;
+}
+
+.block1{
     background-color: red;
-    border: 1px solid green;
 }
 
 .block2{
-    height: 100px;
-    width: 100%;
     background-color: yellow;
-    border: 1px solid green;
+    position: fixed;
+    width: 100%;
+    top: 10px;
+    left: 0px;
 }
 
 .block3{
-    height: 100px;
-    width: 100%;
     background-color: green;
-    border: 1px solid green;
+    position: sticky;
+    top: 0px;
 }
