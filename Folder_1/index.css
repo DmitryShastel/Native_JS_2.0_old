@@ -1,31 +1,7 @@
-.block{
-    height:1500px;
-    width: 80%;
-    border: 1px solid green;
-    margin: 20px auto;
-}
-
-.block div{
-    height: 100px;
-    width: 100%;
-    font-size: 50px;
-    text-align: center;
-}
-
 .block1{
-    background-color: red;
+    padding: 0 0 15px 0;
 }
 
 .block2{
-    background-color: yellow;
-    position: fixed;
-    width: 100%;
-    top: 10px;
-    left: 0px;
-}
-
-.block3{
-    background-color: green;
-    position: sticky;
-    top: 0px;
+    padding: 0 0 15px 0;
 }
