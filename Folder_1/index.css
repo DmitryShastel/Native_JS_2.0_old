@@ -23,9 +23,8 @@ body {
 
 
 .text__content{
-    /* display: flex;
-    align-items: center;
-    justify-content: right; */
+    width: 90%;
+    padding: 0 0 0 5%;
     color: #fff;
 }
 
@@ -39,7 +38,11 @@ ul{
 
 li {
     list-style-type: none;
-    background-image: url('../../Source/2.png') 10px 10px no-repeat;
+    list-style-type: none;
+    background: url('../../Source/2.png') 1%/ 5%;  
+    background-repeat: no-repeat;
+    background-position: 0% 65%;
+    padding: 1% 0 0 7%;
    }
 
 
@@ -49,7 +52,6 @@ li {
     align-items: center;
     justify-content: right;
     padding: 0 0 0 30%;
-    
 }
 
 img{
