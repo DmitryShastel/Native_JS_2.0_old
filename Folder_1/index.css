@@ -1,14 +1,14 @@
 .grid{
-
-    background-color: #eee;
-    display: grid;
+    background-color: greenyellow;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     }
     
     .grid__item{
-    
     background-color: #5e5373;
     border: 1px solid #ece89d;
-    padding: 10px;
+    padding: 30px;
     color: #fff;
     font-size: 20px;
     font-weight: 700;
