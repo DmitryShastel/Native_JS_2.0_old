@@ -1,15 +1,22 @@
 .grid{
     background-color: greenyellow;
     display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template: 1fr / repeat(6,100px);
+    grid-auto-columns: 50px;
+    grid-auto-flow:column;
     }
-    
+
+
+
     .grid__item{
-    background-color: #5e5373;
-    border: 1px solid #ece89d;
-    padding: 30px;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 700;
-    }
+        background-color: #5e5373;
+        border: 1px solid #ece89d;
+        padding: 30px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        }
+    
+    
+  
+
