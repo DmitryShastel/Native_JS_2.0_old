@@ -1,1 +1,6 @@
-console.log("Hello World !");
+let user;
+let userName = 'Vasa';
+
+user = userName;
+
+console.log(user);
