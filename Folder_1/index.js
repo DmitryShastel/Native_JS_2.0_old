@@ -1,6 +1,8 @@
-let user;
-let userName = 'Vasa';
+let admin;
+let name = 'Jone';
 
-user = userName;
+admin = name 
 
-console.log(user);
+alert(admin);
+
+console.log(admin);
