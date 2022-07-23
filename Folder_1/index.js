@@ -4,4 +4,4 @@ b = 1;
 let c = ++a;
 let d = b++;
 
-console.log(a, b)
+console.log(c, d)
