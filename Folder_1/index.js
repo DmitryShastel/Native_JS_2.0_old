@@ -1,9 +1,7 @@
-let isGreater = 4 > 1;
-let age;
+let a = 1; 
+b = 1;
 
-let name = 'Ilya'
-alert(`hello ${1}`);
-alert(`hello ${'name'}`);
-alert(`hello ${name}`);
+let c = ++a;
+let d = b++;
 
-console.log(age);
+console.log(a, b)
