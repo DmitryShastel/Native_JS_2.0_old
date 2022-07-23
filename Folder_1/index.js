@@ -1,15 +1,18 @@
-let a = 5 > 4;
-let b = "ананас" > "яблоко";
-let c = "2" > "12";
-let d = undefined == null;
-let e = undefined === null;
-let f = null == "\n0\n";
-let g = null === +"\n0\n";
+let a = +prompt("Fill in your age", 0);
 
-console.log(a);
-console.log(b);
-console.log(c);
-console.log(d);
-console.log(e);
-console.log(f);
-console.log(g);
+if (a >= 14 && a <= 90) {
+    alert('Your Welcome man');
+} else if (a >= 0 && a <= 13) {
+    alert('You are kid, get lose');
+} else if (a >= 90 && a <= 130) {
+    alert('You are old timer, get lose');
+}
+
+
+
+
+
+
+
+
+
