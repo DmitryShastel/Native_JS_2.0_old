@@ -1,29 +1,13 @@
-let a = "" + 1 + 0;
-let b = "" - 1 + 0;
-let c = true + false;
-let d = 6 / "3";
-let e = "2" * "3";
-let f = 4 + 5 + "px";
-let g = "$" + 4 + 5;
-let h = "4" - 2;
-let i = "4px" - 2;
-let j = "-9" + 5;
-let k = " -9 " - 5;
-let l = null + 1;
-let m = undefined + 1;
-let n = " \t \n" - 2;
+// let a = Number(prompt("First number", 1));
+// let b = Number(prompt("Second number", 2));
 
-console.log(a);
-console.log(b);
-console.log(c);
-console.log(d);
-console.log(e);
-console.log(f);
-console.log(g);
-console.log(h);
-console.log(i);
-console.log(j);
-console.log(k);
-console.log(l);
-console.log(m);
-console.log(n);
+// let c = +prompt("First number", 1);
+// let d = +prompt("Second number", 2);
+
+let app = "2";
+let ass = "3";
+console.log(+app + +ass);
+
+
+// alert(c + d);
+
