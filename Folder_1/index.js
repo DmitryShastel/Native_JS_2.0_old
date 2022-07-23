@@ -1,7 +1,4 @@
-let a = 1; 
-b = 1;
+let a = 2;
+let x = 1 + (a *= 2);
 
-let c = ++a;
-let d = b++;
-
-console.log(c, d)
+console.log(a, x);
