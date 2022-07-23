@@ -1,13 +1,15 @@
-// let a = Number(prompt("First number", 1));
-// let b = Number(prompt("Second number", 2));
+let a = 5 > 4;
+let b = "ананас" > "яблоко";
+let c = "2" > "12";
+let d = undefined == null;
+let e = undefined === null;
+let f = null == "\n0\n";
+let g = null === +"\n0\n";
 
-// let c = +prompt("First number", 1);
-// let d = +prompt("Second number", 2);
-
-let app = "2";
-let ass = "3";
-console.log(+app + +ass);
-
-
-// alert(c + d);
-
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
+console.log(e);
+console.log(f);
+console.log(g);
