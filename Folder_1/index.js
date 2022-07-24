@@ -1,24 +1,17 @@
-let login = prompt("Fill in your login");
+let a = 2 * (3 - 1);
+let b = 6 - 2;
 
-if (login === 'admin'){
-    let password = prompt('Enter your password');
-    
-    if (password === 'passw0rd'){
-        alert('You are logged');
-    } else if (password === '' || password === null){
-            alert('Canceled');
-    } else{
-        alert('Your password is wrong');
-    }
-} else if (login === '' || login === null){
-    alert('Canceled');
-} else {
-    alert('Your login is wrong');
-}
+console.log(a == b);
 
+let c = 5 * (7 - 4);
+let d = 1 + 2 + 7;
 
+console.log(c > d);
 
+let e = 2 ** 4;
+let f = 4 ** 2; 
 
+console.log(e != f);
 
 
 
