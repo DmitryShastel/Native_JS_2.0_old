@@ -1,12 +1,25 @@
-let a = +prompt("Fill in your age", 0);
+let login = prompt("Fill in your login");
 
-if (!(a >= 14 && a <= 90)) {
-    alert('You are kid, get lose');
-} else if (a !== 14 && a !== 90) {
-    alert('Your Welcome man');
-} else if (a > 90 && a <= 130) {
-    alert('You are old timer, get lose');
+if (login === 'admin'){
+    let password = prompt('Enter your password');
+    
+    if (password === 'passw0rd'){
+        alert('You are logged');
+    } else if (password === '' || password === null){
+            alert('Canceled');
+    } else{
+        alert('Your password is wrong');
     }
+} else if (login === '' || login === null){
+    alert('Canceled');
+} else {
+    alert('Your login is wrong');
+}
+
+
+
+
+
 
 
 
