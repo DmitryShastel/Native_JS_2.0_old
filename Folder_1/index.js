@@ -1,9 +1,13 @@
-let a = 1;
-let b = 7;
-let c = 0;
-let d = 2;
+let title = prompt('What is the afishial title JS');
 
-console.log( a && b && c && d );
+if (title === 'ECMAScript') {
+    alert('Godd knologe');
+} else{
+    alert('You do not know JS');
+}
+
+
+ 
 
 
 
