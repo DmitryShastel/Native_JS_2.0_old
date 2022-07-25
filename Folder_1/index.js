@@ -1,9 +1,9 @@
-let x = 7;
-let y = null;
-let z = 9;
+let a = "";
+let b = 9;
+let c = null;
 
 
-console.log(z || x && y);
+console.log( !(!a || !b && !c) );
 
 
 
