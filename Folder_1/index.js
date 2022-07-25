@@ -1,10 +1,9 @@
-let code = prompt('Enter coupone code');
+let accessAllowed = (age > 18) ? true : false;
 
-if(code >= 1) {
-    alert('1');
-} else if(code < 0) {
-    alert('-1') 
-}else if (code == 0){
-    alert('0');
-}
+let a = 22;
+let b = 22;
+
+let result = (a + b < 4) ? 'much' : 'less'; 
+
+console.log(result)
 
