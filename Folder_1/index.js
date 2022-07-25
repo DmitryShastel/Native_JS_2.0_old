@@ -1,10 +1,9 @@
-let a = "";
+let a = 1;
 let b = 7;
-let c = 1;
+let c = 0;
 let d = 2;
 
-
-console.log( a || c ||  b || d);
+console.log( a && b && c && d );
 
 
 
