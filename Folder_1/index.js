@@ -1,9 +1,7 @@
-let accessAllowed = (age > 18) ? true : false;
+let login;
 
-let a = 22;
-let b = 22;
-
-let result = (a + b < 4) ? 'much' : 'less'; 
-
-console.log(result)
+let message = (login == 'Сотрудник') ? 'Привет' :
+  (login == 'Директор') ? 'Здравствуйте' :
+  (login == '') ? 'Нет логина' :
+  '';
 
