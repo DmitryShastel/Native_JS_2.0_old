@@ -1,26 +1,10 @@
-let title = prompt('What is the afishial title JS');
+let code = prompt('Enter coupone code');
 
-if (title === 'ECMAScript') {
-    alert('Godd knologe');
-} else{
-    alert('You do not know JS');
+if(code >= 1) {
+    alert('1');
+} else if(code < 0) {
+    alert('-1') 
+}else if (code == 0){
+    alert('0');
 }
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
