@@ -1,9 +1,10 @@
 let a = "";
-let b = 9;
-let c = null;
+let b = 7;
+let c = 1;
+let d = 2;
 
 
-console.log( !(!a || !b && !c) );
+console.log( a || c ||  b || d);
 
 
 
