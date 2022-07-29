@@ -1,4 +1,5 @@
-let num = 3;
+let a = 10;
+let b = 2;
 
-alert(num);
+console.log(a / b);
 
