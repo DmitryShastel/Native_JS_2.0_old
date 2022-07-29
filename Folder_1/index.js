@@ -1,6 +1,9 @@
-let c = 15;
-let d = 2;
-let result = c + d; 
+let a = 17;
+let b = 10;
+let d = 7;
+let result = a - b; 
+let c = result;
+let result2 = c + d;
 
-console.log(result);
+console.log(result2);
 
