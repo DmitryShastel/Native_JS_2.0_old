@@ -1,7 +1,4 @@
-let login;
+let num = 3;
 
-let message = (login == 'Сотрудник') ? 'Привет' :
-  (login == 'Директор') ? 'Здравствуйте' :
-  (login == '') ? 'Нет логина' :
-  '';
+alert(num);
 
