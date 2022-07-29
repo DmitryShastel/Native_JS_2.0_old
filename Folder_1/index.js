@@ -1,4 +1,5 @@
-let str = 'Hello world';
+let name = 'Dimon';
 
-console.log(str);
+
+console.log('hi' + ' ' + name);
 
