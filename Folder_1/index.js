@@ -1,7 +1,13 @@
-let num = '12345';
+let hour = 60; //min
+let days = 24;   //day
+let month = 30; //day
 
-let result = "12345".split('').reduce((acc,item) => acc *item, 1);
+let rhour = hour ** 2;
+let rday = days * rhour;
+let rmonth = month * rday;
 
 
-console.log(result);
+console.log(rhour);
+console.log(rday);
+console.log(rmonth);
 
