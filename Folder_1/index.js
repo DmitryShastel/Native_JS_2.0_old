@@ -1,5 +1,5 @@
-let name = 'Dimon';
+let age = 31;
 
 
-console.log('hi' + ' ' + name);
+console.log('I am' + ' ' + age + ' ' + 'years old');
 
