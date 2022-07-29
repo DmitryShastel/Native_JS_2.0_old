@@ -1,5 +1,5 @@
-let num = +prompt('Enter number');
+let str = 'abcde';
 
 
-console.log('Your result is' + ' ' + num ** 2);
+console.log(str[0],str[2],str[4]);
 
