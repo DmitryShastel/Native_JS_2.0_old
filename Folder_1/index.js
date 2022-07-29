@@ -1,5 +1,5 @@
-let age = 31;
+let name = prompt('Enter your name');
 
 
-console.log('I am' + ' ' + age + ' ' + 'years old');
+console.log(`Welcome ${name}`);
 
