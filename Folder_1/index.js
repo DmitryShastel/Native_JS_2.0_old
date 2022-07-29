@@ -1,5 +1,5 @@
-let name = prompt('Enter your name');
+let num = +prompt('Enter number');
 
 
-console.log(`Welcome ${name}`);
+console.log('Your result is' + ' ' + num ** 2);
 
