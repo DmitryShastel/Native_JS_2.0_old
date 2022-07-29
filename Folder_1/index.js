@@ -1,13 +1,7 @@
-let hour = 60; //min
-let days = 24;   //day
-let month = 30; //day
+let hour = 1;
+let minute = 53;
+let sec = 55;
 
-let rhour = hour ** 2;
-let rday = days * rhour;
-let rmonth = month * rday;
+console.log(hour + ":" + minute + ":" + sec);
 
-
-console.log(rhour);
-console.log(rday);
-console.log(rmonth);
 
