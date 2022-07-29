@@ -1,5 +1,7 @@
-let str = 'abcde';
+let num = '12345';
+
+let result = "12345".split('').reduce((acc,item) => acc *item, 1);
 
 
-console.log(str[0],str[2],str[4]);
+console.log(result);
 
