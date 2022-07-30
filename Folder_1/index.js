@@ -1,9 +1,9 @@
+let a = 5;
+let b = 5;
 
-let h = 5;
-
-let str1 = h;
-let str2 = h ** 2;
+let str1 = a * b;
+let str2 = a + b;
 
 
-console.log('h = ' + str1);
-console.log('h in the square = ' + str2);
+console.log('The multiplication of numbers a and b is ' + str1);
+console.log('he sum of numbers a and b is ' + str2);
