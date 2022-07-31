@@ -1,6 +1,6 @@
     let a = +prompt('Enter the number');
 
-    let b = (Number.isInteger(a)) ? (a * 2) : 'www'
+    let b = (a == 0) ? 0 : 'www'
     console.log('New value is ' + b);
    
 
