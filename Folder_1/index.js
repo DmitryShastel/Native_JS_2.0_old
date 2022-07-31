@@ -1,10 +1,11 @@
     let a = +prompt('Enter the number');
 
-    let b = (a == 0) ? 0 : 'www'
+    let b = (a >= 1) ? 'Positive':
+    (a < 0) ? 'Negative' :
+    (a === 0) ? 'Zero' : 'www';
     console.log('New value is ' + b);
    
 
 
 
-    // let n = 123;
-    // console.log(Number.isInteger(n));
+    
