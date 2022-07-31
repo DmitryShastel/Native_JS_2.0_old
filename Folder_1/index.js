@@ -1,5 +1,4 @@
-    let a = +prompt('Enter first number');
-    let b = +prompt('Enter second number');
-    console.log(a ** 2);
-    console.log(b ** 2);
-    console.log((a ** 2)+(b ** 2));
+    let a = +prompt('Enter your date birthday', '');
+    let b = +prompt('Enter current year' , '');
+    console.log('Your age is ' +  (b - a));
+   
