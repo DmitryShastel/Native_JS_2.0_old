@@ -1,8 +1,10 @@
 let a = +prompt('Enter the first number');
+let b = +prompt('Enter the first number');
 
-let c = (a === 0) ? 'Negative value2' :
-    (a < 0) ? 'This is negative value' :
-    (Math.sign(1)) ? 'The positive value' : 'ww';
+let c = (a === b) ? 'This is the same value' :
+    (a != b) ? 'This is different value' : 'ww';
 
 
+    console.log(a);
+    console.log(b);
     console.log(c);
