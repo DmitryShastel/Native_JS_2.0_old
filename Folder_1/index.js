@@ -1,10 +1,11 @@
 let a = +prompt('The first catet');
+let b = +prompt('The second catet');
+let c = +prompt('The hypatenuse');
 
-
-let b = (a < 0) ?  Math.abs(a)  : (a = 0) ? 0 :'False';
+let d = ((a ** 2 + b ** 2) === c ** 2) ? 'True' : 'False';
 
 
     console.log(a);
     console.log(b);
-
-    // : (a == +a) ? 0 : (a === 0) ? 0 
+    console.log(c);
+    console.log(d);
