@@ -1,9 +1,10 @@
-let a = +prompt('Enter the number students');
-let b = +prompt('Enter the number chairs');
+let a = +prompt('The first catet');
 
-let c = (a <= b * 2) ? 'The chairs enough' : 'ww';
+
+let b = (a < 0) ?  Math.abs(a)  : (a = 0) ? 0 :'False';
 
 
     console.log(a);
     console.log(b);
-    console.log(c);
+
+    // : (a == +a) ? 0 : (a === 0) ? 0 
