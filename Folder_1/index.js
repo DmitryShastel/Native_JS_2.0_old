@@ -1,9 +1,6 @@
 let a = +prompt('The first number');
-let b = +prompt('The second number');
 
-let c = (a > 0) ?  (a * b) : (a < 0) ? (b + a) :'error';
+let c = (a <= 5) ?  a  : 'error';
 
 
-console.log(a);     
-console.log(b);     
 console.log(c);     
