@@ -1,7 +1,9 @@
 let a = +prompt('The first number');
 let b = +prompt('The second number');
 
-let c = (a < b) ?  (-(a - b) + ' ' + 'Extra tables') : (a > b) ? (-(b - a) + ' ' + 'The chairs is not enough')  : 'error';
+let c = (a > 0) ?  (a * b) : (a < 0) ? (b + a) :'error';
 
 
+console.log(a);     
+console.log(b);     
 console.log(c);     
