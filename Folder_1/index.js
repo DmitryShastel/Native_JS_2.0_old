@@ -1,8 +1,10 @@
 let a = +prompt('The first number');
 
-let c = (a == 12 || a ==  1 || a == 2) ?  'Winter' : 
- (a == 3 || a ==  4 || a == 5) ? 'Spring' : 
- (a == 6 || a ==  7 || a == 8) ? 'Summer' : 
- (a == 9 || a ==  10 || a == 11) ? 'Autumn'  : 'error';
+let c = (a >= 6 && a <= 9) ?  'Morning' : 
+ (a >= 10 && a <= 17) ? 'Noon' : 
+ (a >= 18 && a <= 22) ? 'Evening' : 
+ (a == 23 || a == 24) ? 'Night'  : 
+ (a >= 1 && a <= 5) ? 'Night'  : 'error';
 
 console.log(c);  
+// a >= 23 &&
