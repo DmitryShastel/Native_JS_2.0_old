@@ -1,5 +1,5 @@
-let i = 3;
+let i = 0;
+while (++i < 5) console.log(i);
 
-while (i) {
-    console.log(i--);
-}
+let o = 0;
+while (o++ < 5) console.log(o);
