@@ -1,5 +1,4 @@
-let i = 0;
-while (++i < 5) console.log(i);
-
-let o = 0;
-while (o++ < 5) console.log(o);
+for (let i = 2; i <= 10; i++)
+if(i % 2 == 0){
+    console.log(i);
+} 
