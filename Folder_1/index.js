@@ -1,7 +1,9 @@
-let i = 0;
+let sum = 0;
+let p = 0;
 
-while(i < 101) {
-    if(i % 2 == 0)
-    console.log(i);
-    i ++;
+while(p <= 100) {
+    sum = sum + p;
+    p ++;
+    
 }
+console.log('sum = ' + sum);
