@@ -1,17 +1,63 @@
-// Есть объект users в которм перечислен возраст участников. Напишите код, который выведет суммарный возраст всех участников. 
-Решите задачу через цикл for...in.
+//Вывести числа от 4 до 400
 
-let users = {
-    'John': 28,
-    'Mark': 30,
-    'David': 25,
-    'Richard': 42,
-};
+// let a = 4;
 
-let sum = 0;
+// while(a <= 400) {
+//     console.log(a);
+//     a++;
+// }
 
-for(let name in users){
-     sum += users[name];
+//Вывести числа в последовательности: 4 7 10 13 с помощью цикла.
+
+// let out = document.getElementById('out');
+// let tmp = '';
+
+// for (let i = 4; i <= 13; i= i + 3){
+//     tmp = tmp + i + ' ';
+// }
+
+// console.log(tmp);
+
+
+//Вывести числа 654 653 652 до нуля
+
+// let tmp = '';
+
+// for (let i = 654; i >= 0; i--){
+//     tmp = tmp + i + ' ';
+// }
+
+// console.log(tmp);
+
+
+
+//Вывести все годы с 1983 по 2017
+// let tmp = '';
+
+// for (let i = 1983; i <= 2017; i++){
+//     tmp = tmp + i + ' ';
+// }
+
+// console.log(tmp);
+
+
+//Вывести числа -4 -2 0 2 4 6 .....100.
+
+// let tmp = '';
+
+// for (let i = -4; i <= 100; i++){
+//     tmp = tmp + i + ' ';
+// }
+
+// console.log(tmp);
+
+
+//С помощью цикла напечатойте таблицу умножения на 7 от 1 до 9.
+
+let tmp = '';
+
+for (let i = 1; i <= 9; i++){
+    tmp = tmp + 7 * i + ' ';
 }
 
-console.log(sum);
+console.log(tmp);
