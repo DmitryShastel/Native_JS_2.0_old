@@ -1,5 +1,9 @@
-let checkAge = (age) => {
-    return (age > 18) ||  confirm('false');
+let min = (a, b) => {
+    a < b ? console.log(a) : 'vice verse';
+    b < a ? console.log(b) : 'vice verse2';
+    b == a ? console.log(b) : 'vice verse3';
 }
 
-checkAge(20);
+min(2, 5);
+min(3, -1);
+min(1, 1);
