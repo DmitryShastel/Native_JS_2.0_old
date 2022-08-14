@@ -1,7 +1,5 @@
 let checkAge = (age) => {
-    age > 18 ?
-    console.log(true) : 
-    console.log('false');
+    return (age > 18) ||  confirm('false');
 }
 
 checkAge(20);
