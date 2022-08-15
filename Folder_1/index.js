@@ -1,5 +1,8 @@
-let showName = () => {
-    console.log('Vasa');
+let result = (a, b) => {
+    let result = Math.pow(a, b)
+    console.log(result);
 }
-setTimeout(showName, 0);
-console.log('Kola');
+
+result(3, 2);
+result(3, 3);
+result(1, 100);
