@@ -1,9 +1,3 @@
-let min = (a, b) => {
-    a < b ? console.log(a) : 'vice verse';
-    b < a ? console.log(b) : 'vice verse2';
-    b == a ? console.log(b) : 'vice verse3';
+let t3 = () => {
+    console.log('hello ' + 'f2022')
 }
-
-min(2, 5);
-min(3, -1);
-min(1, 1);
