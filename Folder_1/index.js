@@ -1,5 +1,5 @@
-let showMessage = () => {
-    console.log('Hello')
+let showName = () => {
+    console.log('Vasa');
 }
-
-showMessage();
+setTimeout(showName, 0);
+console.log('Kola');
