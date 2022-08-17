@@ -1,5 +1,6 @@
-let t1 = (a, b) => {
-    return console.log(a + b);
+let t2 = (a, b) => {
+    if(a < b) return b;
+    if(a > b) return a;
 }
 
-t1(1, 3)
+console.log(t2(3, 2));
