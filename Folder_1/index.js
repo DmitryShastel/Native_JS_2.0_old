@@ -1,8 +1,10 @@
-let result = (a, b) => {
-    let result = Math.pow(a, b)
-    console.log(result);
+let t1 = () => {
+    let a = 1;
+    let b = 10;
+
+    const out1 = document.querySelector('out-1');
+    let ran =  Math.floor(a + Math.random() * (b + 1 - a));
+    console.log(ran, out1);
 }
 
-result(3, 2);
-result(3, 3);
-result(1, 100);
+t1();
