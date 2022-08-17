@@ -7,8 +7,9 @@
     padding: 10px;
 }
 
-#out-1 {
+.out-1 {
     width: 100px;
     height: 100px;
     border:1px solid red;
+    font-size: 30px;
 }

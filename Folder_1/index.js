@@ -5,14 +5,6 @@ let f1 = (x, y) => {
     return sum;
 }
 
-f1(1, 2);
-f1(1, 3);
-console.log(1 + 2 + 8 + f1(1, 2))
 
-// let f2 = () => {
-//     console.log(2);
-//     return 15;
-// }
-
-// f2();
-// console.log(5 + f2());
+console.log(100 + 200);
+document.querySelector('.out-1').innerHTML = f1(100, 300);
