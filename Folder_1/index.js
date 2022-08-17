@@ -1,10 +1,7 @@
-let sum = 0;
+//Get data of entered the user
 
-let f1 = (x, y) => {
-    let sum = x + y;
-    return sum;
-}
-
-
-console.log(100 + 200);
-document.querySelector('.out-1').innerHTML = f1(100, 300);
+document.querySelector('.btn').addEventListener('click',
+function () {
+    const s = document.querySelector('.inp').value;
+    document.querySelector('.out-1').innerHTML = 'Hello ' + s;
+});

@@ -8,8 +8,12 @@
 }
 
 .out-1 {
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
     border:1px solid red;
-    font-size: 30px;
+    font-size: 25px;
+}
+
+.inp{
+    margin-bottom: 20px;
 }
