@@ -1,10 +1,14 @@
-let obj = {
-    name: 'Ivan',
-    age: 30,
-    hello() {
-        console.log('My name is ' + this.name + ' I am ' + this.age);
- }
-}
-// obj.hello();
+//Вывести количество четных/нечетных чисел из числа n
 
-obj.hello();
+let number = () => {
+  
+    let num = document.getElementById('inp').value;
+    let count1 = 0;
+    let count2 = 0;
+
+    for (let i = 0; i < num.length; i++) {
+        if(num[i] % 2 == 0) count1++;
+            else count2++;      
+    } 
+    return console.log([count1, count2]);
+}
