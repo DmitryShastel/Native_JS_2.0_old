@@ -1,14 +1,24 @@
-//Вывести количество четных/нечетных чисел из числа n
+//Проверить является ли строка палиндромом 
 
-let number = () => {
+let palindrome = () => {
   
-    let num = document.getElementById('inp').value;
-    let count1 = 0;
-    let count2 = 0;
+    let str = document.getElementById('inp').value.toLowerCase();
 
-    for (let i = 0; i < num.length; i++) {
-        if(num[i] % 2 == 0) count1++;
-            else count2++;      
-    } 
-    return console.log([count1, count2]);
+    return console.log(str.split('').reverse().join('') == str);
+    
 }
+
+
+
+// let palindrome = () => {
+//     let str = document.getElementById('inp').value.toLowerCase();
+//     let str2 = str.split('');
+//     str2 = str2.reverse();
+//     str2 = str2.join('');
+//     if(str == str2) return console.log(true);
+//     else return console.log(false);
+
+// }
+
+
+
