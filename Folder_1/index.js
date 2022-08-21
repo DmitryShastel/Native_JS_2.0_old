@@ -1,8 +1,48 @@
-const arr1 = [4, 5, 6];
+let numbers1 = [];
+let numbers2 = [];
 
-let res = (arr1) => {
-    return arr1 * 2;
-}
 
-let res1 = arr1.map(res)
-console.log(res1);
+numbers1[0] = 1;
+numbers1[1] = 2;
+numbers1[2] = 3;
+numbers1[3] = 4;
+numbers1[4] = 5;
+
+numbers2[0] = 'a';
+numbers2[1] = 'b';
+numbers2[2] = 'c';
+numbers2[3] = 'd';
+numbers2[4] = 'e';
+
+
+// add
+// numbers.unshift('buy1');
+// numbers.push('hello');
+
+// delete
+// let lastNumber = numbers.pop();
+// let firstNumber = numbers.shift();
+
+//merge
+//let mergeArrs = numbers1.concat(numbers2);
+
+//join to string
+// let joinString = numbers1.join(' ');
+
+//get random number
+// let randomNumber = Math.floor(Math.random(numbers1) * 5);
+ 
+
+// console.log(numbers1);
+// console.log(numbers2);
+// console.log(randomNumber);
+
+let noun1 = ['', '', '', ''];
+let adjective1 = ['', '', '', ''];
+let comparing1 = ['', '', '', ''];
+
+let noun = noun1[Math.floor(Math.random() * 4)];
+let adjective = adjective1[Math.floor(Math.random() * 4)];
+let comparing = comparing1[Math.floor(Math.random() * 4)];
+
+console.log('У тебя ' + noun + ' ' + 'словно ' + adjective + '  ' + comparing);
