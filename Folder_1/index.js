@@ -37,16 +37,21 @@ numbers2[4] = 'e';
 // console.log(numbers2);
 // console.log(randomNumber);
 
-let noun1 = ['1', '2', '3', '4'];
-let adjective1 = ['a', 'b', 'c', 'd'];
-let noun2 = ['q', 'w', 'e', 'r'];
-let comparing1 = ['a', 's', 'd', 'f'];
+// let noun1 = ['1', '2', '3', '4'];
+// let adjective1 = ['a', 'b', 'c', 'd'];
+// let noun2 = ['q', 'w', 'e', 'r'];
+// let comparing1 = ['a', 's', 'd', 'f'];
 
-let noun = noun1[Math.floor(Math.random() * 4)];
-let adjective = adjective1[Math.floor(Math.random() * 4)];
-let noun3 = noun2[Math.floor(Math.random() * 4)];
-let comparing = comparing1[Math.floor(Math.random() * 4)];
+// let noun = noun1[Math.floor(Math.random() * 4)];
+// let adjective = adjective1[Math.floor(Math.random() * 4)];
+// let noun3 = noun2[Math.floor(Math.random() * 4)];
+// let comparing = comparing1[Math.floor(Math.random() * 4)];
 
-let result = ['У тебя', noun, 'еще более', adjective, 'чем', noun3, comparing].join(' ');
-console.log(result);
+// let result = ['У тебя', noun, 'еще более', adjective, 'чем', noun3, comparing].join(' ');
+// console.log(result);
 
+let arr = [3, 2, 1];
+
+let el1 = arr.join(', больше, чем ');
+
+console.log(el1);
