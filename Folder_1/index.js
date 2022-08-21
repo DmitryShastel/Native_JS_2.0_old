@@ -39,10 +39,12 @@ numbers2[4] = 'e';
 
 let noun1 = ['', '', '', ''];
 let adjective1 = ['', '', '', ''];
+let noun2 = ['', '', '', ''];
 let comparing1 = ['', '', '', ''];
 
 let noun = noun1[Math.floor(Math.random() * 4)];
 let adjective = adjective1[Math.floor(Math.random() * 4)];
+let noun3 = noun2[Math.floor(Math.random() * 4)];
 let comparing = comparing1[Math.floor(Math.random() * 4)];
 
-console.log('У тебя ' + noun + ' ' + 'словно ' + adjective + '  ' + comparing);
+console.log('У тебя ' + noun + ' '+ 'еще более '+  adjective +  ' чем ' + ' ' + noun3 + '  ' + comparing);
