@@ -1,24 +1,8 @@
-//Проверить является ли строка палиндромом 
+const arr1 = [4, 5, 6];
 
-let palindrome = () => {
-  
-    let str = document.getElementById('inp').value.toLowerCase();
-
-    return console.log(str.split('').reverse().join('') == str);
-    
+let res = (arr1) => {
+    return arr1 * 2;
 }
 
-
-
-// let palindrome = () => {
-//     let str = document.getElementById('inp').value.toLowerCase();
-//     let str2 = str.split('');
-//     str2 = str2.reverse();
-//     str2 = str2.join('');
-//     if(str == str2) return console.log(true);
-//     else return console.log(false);
-
-// }
-
-
-
+let res1 = arr1.map(res)
+console.log(res1);
