@@ -1,8 +1,9 @@
-let inputIn = document.querySelector('#inp');
-let arr = [];
+let reverse = () => {
+    let arr = [1, 2, 3, 4, 5];
 
-let fill = () => {
-    arr.push(inputIn.value);  
-    console.log(arr);
-    inputIn.value = '';
+    for (i = arr.length - 1; i >= 0; i--){
+        console.log(arr[i]);
+    }  
 }
+
+reverse();
