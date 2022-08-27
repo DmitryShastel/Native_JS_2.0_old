@@ -1,5 +1,18 @@
-let arr = [2, 'hello', 17, 34, 'hi'];
+//Что выведет следующий код?
 
-// document.querySelector('#out-1').innerHTML = arr;
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-console.log(arr[0] + arr[2] + arr[3]);
+let arr2 = arr;
+arr.push('a');
+
+console.log(arr);
+
+let arr = ['Jaz', 'Blyz'];
+
+arr[1] = 'classika'
+arr.push('Rock');
+arr.shift();
+arr.unshift('Reggy');
+arr.unshift('Rap');
+
+console.log(arr);
