@@ -1,15 +1,9 @@
-//Напишите функцию, которая разворачивает массив в обратном порядке
+//Очиcтить массив от нежелательных значений
+let arr = [0, 1, false, 2, undefined, '', 3, null];
 
-let arr = [1, 2, 3, 4, 5];
-
-let reverse = (arr) => {
-  
-    let reversed = [];
-
-    for (let i = arr.length - 1; i >= 0; i--){
-        reversed.push(arr[i]);
-    } 
-    return  console.log(reversed);
+let = result = (arr) => {
+    let a = arr.filter(i => i);
+    return console.log(a);;
 }
 
-reverse(arr);
+result(arr);
