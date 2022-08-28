@@ -1,9 +1,13 @@
-let owedMoney = {
+let scores = {
     'Anna': 0,
     'Kate': 0,
     'Jon': 0
 }
 
-owedMoney.Jon = 5;
+console.log(scores);
 
-console.log(owedMoney);
+scores.Anna = 4;
+scores.Kate = 6;
+scores.Jon = 7;
+
+console.log(scores);
