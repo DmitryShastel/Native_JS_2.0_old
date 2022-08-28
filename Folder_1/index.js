@@ -1,11 +1,14 @@
-//Write a method that returns an object composed of key-value pairs.
-let arr = [['a', 1]];
+//Write a method that returns a duplicate-free array
+let arr = [1, 2, 3, 1, 2, 3];
 
-let = result = (arr) => arr.reduce((acc, value) => {
-    if (Array.isArray(value)) {
-        acc[value[0]] = value[1];
+let unique = (arr) => {
+    let result = [];
+    for(let str of arr){
+        if (!result.includes(str)) {
+            result.push(str);
+        }
     }
-    return console.log(acc);
-}, {});
+    return console.log(result);
+}
 
-result(arr);
+unique(arr);
