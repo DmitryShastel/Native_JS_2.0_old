@@ -1,9 +1,9 @@
-let dog = {
-    name: 'Spike',
-    age: 3,
-    color: 'black'
+let owedMoney = {
+    'Anna': 0,
+    'Kate': 0,
+    'Jon': 0
 }
 
-dog['color2'] = 'white';
+owedMoney.Jon = 5;
 
-console.log(Object.keys(dog));
+console.log(owedMoney);
