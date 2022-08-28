@@ -1,9 +1,11 @@
-//Очиcтить массив от нежелательных значений
-let arr = [0, 1, false, 2, undefined, '', 3, null];
+//Write a method that returns an object composed of key-value pairs.
+let arr = [['a', 1]];
 
-let = result = (arr) => {
-    let a = arr.filter(i => i);
-    return console.log(a);;
-}
+let = result = (arr) => arr.reduce((acc, value) => {
+    if (Array.isArray(value)) {
+        acc[value[0]] = value[1];
+    }
+    return console.log(acc);
+}, {});
 
 result(arr);
