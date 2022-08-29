@@ -1,13 +1,7 @@
-let scores = {
-    'Anna': 0,
-    'Kate': 0,
-    'Jon': 0
-}
+let myCrazyObject = {
+    "name": "Нелепый объект",
+    "some array": [7, 9, { purpose: "путаница", number: 123 }, 3.3],
+    "random animal": "Банановая акула"
+    };
 
-console.log(scores);
-
-scores.Anna = 4;
-scores.Kate = 6;
-scores.Jon = 7;
-
-console.log(scores);
+    console.log(myCrazyObject["some array"][2].number);
