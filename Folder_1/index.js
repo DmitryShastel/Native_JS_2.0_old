@@ -1,7 +1,12 @@
-let myCrazyObject = {
-    "name": "Нелепый объект",
-    "some array": [7, 9, { purpose: "путаница", number: 123 }, 3.3],
-    "random animal": "Банановая акула"
-    };
+let fruit = document.querySelector('#inp');
 
-    console.log(myCrazyObject["some array"][2].number);
+
+let result = () => {
+    let a = fruit.value;
+    let bag = {
+        [a]: 5,
+    }
+    fruit.value = '';
+    console.log(bag);
+}
+
