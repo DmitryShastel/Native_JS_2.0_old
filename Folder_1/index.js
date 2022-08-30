@@ -1,13 +1,7 @@
-// Проверка на пустоту
-let user = {};
-
-user.name = "John";
-user.surname = "Smith";
-user.name = "Pete";
-
-console.log(user);
-
-let schedule = () => {
-  let a = "age" in user;
-  a == true ? console.log(true) : console.log(false);
+let user = {
+  name: "John",
+  surname: "De",
+  patronymic: 123,
 };
+
+console.log(user.name + " " + user.surname + " " + user.patronymic);
