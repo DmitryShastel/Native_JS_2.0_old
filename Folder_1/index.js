@@ -1,12 +1,13 @@
-let user = {
-  'Jonh': 100,
-  'Ann': 160,
-  'Pete': 130,
-};
+// Проверка на пустоту
+let user = {};
+
+user.name = "John";
+user.surname = "Smith";
+user.name = "Pete";
 
 console.log(user);
 
 let schedule = () => {
-  let sum = user.Jonh + user.Ann + user.Pete;
-  console.log(sum);
-}
+  let a = "age" in user;
+  a == true ? console.log(true) : console.log(false);
+};
