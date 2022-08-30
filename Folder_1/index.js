@@ -1,8 +1,15 @@
-let user = {};
+// Сумма свойств объекта
+let user = {
+  Jonh: 100,
+  Ann: 160,
+  Pete: 130,
+  title: "My menu",
+};
 
-user.name = 'John';
-user.surname = 'Smith';
-user.name = 'Pete';
-delete user.name;
-
-console.log(user);
+let schedule = () => {
+  for (let key in user)
+    if (typeof user[key] == "number") {
+      user[key] *= 2;
+      console.log(user);
+    }
+};
