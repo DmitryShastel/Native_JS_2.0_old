@@ -1,7 +1,8 @@
-let user = {
-  name: "John",
-  surname: "De",
-  patronymic: 123,
+let a = {
+  "1a": 1,
+  b2: 2,
+  "c-c": 4,
+  e5: 5,
 };
 
-console.log(user.name + " " + user.surname + " " + user.patronymic);
+console.log();
