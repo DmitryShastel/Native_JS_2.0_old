@@ -6,4 +6,4 @@ let obj = {
 
 let keys = Object.keys(obj);
 
-console.log(keys);
+console.log(Object.keys(obj).length);
