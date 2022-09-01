@@ -1,9 +1,4 @@
-let obj = {
-  x: 1,
-  y: 2,
-  z: 3,
-};
+let obj = { x: 1, y: 2, z: 3 };
 
-let keys = Object.keys(obj);
-
-console.log(Object.keys(obj).length);
+let prop = "x";
+console.log(obj["prop"]);
