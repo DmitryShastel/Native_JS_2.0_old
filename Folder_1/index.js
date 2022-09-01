@@ -1,9 +1,8 @@
-let key = "x";
-
 let obj = {
-  [key]: 1,
+  x: 1,
   y: 2,
   z: 3,
 };
+delete obj.x;
 
-console.log(obj);
+console.log("x" in obj); //false
