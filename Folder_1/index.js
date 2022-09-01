@@ -1,4 +1,9 @@
-let obj = { x: 1, y: 2, z: 3 };
+let key = "x";
 
-let prop = "x";
-console.log(obj["prop"]);
+let obj = {
+  [key]: 1,
+  y: 2,
+  z: 3,
+};
+
+console.log(obj);
