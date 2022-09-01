@@ -1,8 +1,11 @@
-let a = {
-  "1a": 1,
-  b2: 2,
-  "c-c": 4,
-  e5: 5,
+let obj = {
+  x: 1,
+  y: 2,
+  z: 3,
 };
 
-console.log();
+obj.x **= 2;
+obj.y **= 2;
+obj.z **= 2;
+
+console.log(obj);
