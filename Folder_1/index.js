@@ -4,8 +4,6 @@ let obj = {
   z: 3,
 };
 
-obj.x **= 2;
-obj.y **= 2;
-obj.z **= 2;
+let keys = Object.keys(obj);
 
-console.log(obj);
+console.log(keys);
