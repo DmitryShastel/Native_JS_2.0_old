@@ -1,4 +1,7 @@
-const arr = ["a", "b", "c"];
-arr = ["a", "b", "c"];
+const months = ["January", "February", "March", "Aprial"];
 
-console.log(arr);
+const transformedArray = months.map((months) => {
+  return months.toUpperCase();
+});
+
+console.log(transformedArray);
