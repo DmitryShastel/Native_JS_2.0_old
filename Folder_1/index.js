@@ -1,12 +1,9 @@
-const employees = [
-  { name: "David", age: 30 },
-  { name: "John", age: 28 },
-  { name: "Mike", age: 36 },
-  { name: "John", age: 30 },
-];
+let a = [3, -12, 0, 4, 5, 8];
 
-let employee = employees.filter(
-  (employee) => employee.name.indexOf("John") > -1
-);
+let b = [];
 
-console.log(employee);
+for (i = 0; i < a.length; i++) {
+  if (a[i] >= 0) b.push(a[i]);
+}
+
+console.log(b);
