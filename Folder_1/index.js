@@ -4,6 +4,35 @@
 //   return months.toUpperCase();
 // });
 
+let studentRecords = [
+  {
+    id: 1,
+    name: "John",
+    marks: 98,
+  },
+  {
+    id: 2,
+    name: "Baba",
+    marks: 23,
+  },
+  {
+    id: 3,
+    name: "yaga",
+    marks: 45,
+  },
+  {
+    id: 4,
+    name: "Wick",
+    marks: 75,
+  },
+];
+
+let studentNames = studentRecords.map((studentRecords) =>
+  studentRecords.name.toUpperCase()
+);
+
+console.log(studentNames);
+
 // console.log(months, transformedArray);
 
 // let showArray = () => {
@@ -60,11 +89,3 @@
 // );
 
 // console.log(newArr);
-
-let numbers = [1, 2, 3, 4, 5];
-
-let arrayCopy = numbers.map((numbers) => {
-  return numbers;
-});
-
-console.log(arrayCopy);
