@@ -1,9 +1,11 @@
-let a = [3, -12, 0, 4, 5, 8];
+let arr = [1, 2, 3, 4, 5, 6];
 
-let b = [];
+let arr2 = arr.filter((e) => {
+  if (e % 2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
+});
 
-for (i = 0; i < a.length; i++) {
-  if (a[i] >= 0) b.push(a[i]);
-}
-
-console.log(b);
+console.log(arr2);
