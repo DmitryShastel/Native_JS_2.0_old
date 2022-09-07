@@ -1,5 +1,12 @@
-let arr = [1, 2, 3, -5, 4, 5, 6, -8, 11, 20, 0, "qa", "qwerty", "asd"];
+const numbers = [1, 2, 3, 4, 5];
 
-let arr2 = arr.filter((e) => e.length > 2);
+let newNumbers = numbers.map((number) => number * number);
+console.log(numbers, newNumbers);
 
-console.log(arr2);
+const strings = ["a", "b", "c", "d", "e"];
+
+let newStrings = strings.map((string) => {
+  return string + " " + "!";
+});
+
+console.log(newStrings);
