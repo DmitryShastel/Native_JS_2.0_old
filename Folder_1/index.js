@@ -22,7 +22,7 @@ let a1 = [1, 8, 7, 99, 66, 90, 3, 41];
 
 let f1 = () => {
   let z1 = a1.filter((e) => {
-    if (e % 2 == 0) {
+    if (e % 2 != 0) {
       return true;
     } else {
       return false;
