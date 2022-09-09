@@ -31,10 +31,20 @@
 //   console.log(z1);
 // };
 
-const strings = ["regardless", "hello"];
+// const strings = ["regardless", "hello"];
 
-let newStrings = strings.map((string) => {
-  return string.split("").reverse().join("");
-});
+// let newStrings = strings.map((string) => {
+//   return string.split("").reverse().join("");
+// });
 
-console.log(newStrings);
+// console.log(newStrings);
+
+const arr = ["123", "456", "789"];
+
+let arr1 = [];
+
+let newArr = arr.map((e) =>
+  e.split("").map((singleNumber) => Number(singleNumber))
+);
+
+console.log(newArr);
