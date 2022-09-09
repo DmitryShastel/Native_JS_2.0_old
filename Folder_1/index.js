@@ -18,15 +18,23 @@
 
 // console.log(result);
 
-let a1 = [1, 8, 7, 99, 66, 90, 3, 41];
+// let a1 = [1, 8, 7, 99, 66, 90, 3, 41];
 
-let f1 = () => {
-  let z1 = a1.filter((e, index) => {
-    if (index > 4) {
-      return true;
-    } else {
-      return false;
-    }
-  });
-  console.log(z1);
-};
+// let f1 = () => {
+//   let z1 = a1.filter((e, index) => {
+//     if (index > 4) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   });
+//   console.log(z1);
+// };
+
+const strings = ["regardless", "hello"];
+
+let newStrings = strings.map((string) => {
+  return string.split("").reverse().join("");
+});
+
+console.log(newStrings);
