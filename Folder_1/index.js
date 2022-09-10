@@ -75,15 +75,37 @@
 // };
 
 //Подсчитать сумму балов студентов
-let studens = [
-  { name: "John", score: 120 },
-  { name: "John2", score: 22 },
-  { name: "John3", score: 18 },
-  { name: "John4", score: 51 },
+// let studens = [
+//   { name: "John", score: 120 },
+//   { name: "John2", score: 22 },
+//   { name: "John3", score: 18 },
+//   { name: "John4", score: 51 },
+// ];
+
+// let scoures = studens
+//   .filter((studens) => studens.score > 50)
+//   .reduce((acc, curr) => acc + curr.score, 0);
+
+// console.log(scoures);
+
+//вывести общее количество студентов с баллами больше 50, полученными после начисления поощрения в 15 баллов.
+
+let studentRecords = [
+  { id: 1, name: "John", marks: 98 },
+  { id: 2, name: "John2", marks: 23 },
+  { id: 3, name: "John3", marks: 45 },
+  { id: 4, name: "John4", marks: 75 },
+  { id: 1, name: "John", marks: 98 },
 ];
 
-let scoures = studens
-  .filter((studens) => studens.score > 50)
-  .reduce((acc, curr) => acc + curr.score, 0);
+let totalMarks = studentRecords
+  .map((stu) => {
+    if (stu.marks < 50) {
+      stu.marks += 15;
+    }
+    return stu;
+  })
+  .filter((stu) => stu.marks > 50)
+  .reduce((acc, item) => acc + item.marks, 0);
 
-console.log(scoures);
+console.log(totalMarks);
