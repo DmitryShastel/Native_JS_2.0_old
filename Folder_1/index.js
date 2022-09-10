@@ -61,14 +61,29 @@
 
 // console.log(finalArray);
 
-let array = [1, "a", true, "tr"];
+// let array = [1, 2];
 
-let b = array.reduce((prev, item) => {
-  if (item == Number && String) {
-    return true;
-  } else {
-    return false;
-  }
-});
+// let b = () => {
+//   let array2 = array.reduce((prev, item) => {
+//     if (item == Number) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   }, []);
+//   console.log(array2);
+// };
 
-console.log(b);
+//Подсчитать сумму балов студентов
+let studens = [
+  { name: "John", score: 120 },
+  { name: "John2", score: 22 },
+  { name: "John3", score: 18 },
+  { name: "John4", score: 51 },
+];
+
+let scoures = studens
+  .filter((studens) => studens.score > 50)
+  .reduce((acc, curr) => acc + curr.score, 0);
+
+console.log(scoures);
