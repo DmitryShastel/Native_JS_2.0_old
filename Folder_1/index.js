@@ -49,14 +49,26 @@
 
 // console.log(newArr);
 
-const data = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
-];
+// const data = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
 
-const finalArray = data.reduce((prev, item) => {
-  return prev.concat(item);
+// const finalArray = data.reduce((prev, item) => {
+//   return prev.concat(item);
+// });
+
+// console.log(finalArray);
+
+let array = [1, "a", true, "tr"];
+
+let b = array.reduce((prev, item) => {
+  if (item == Number && String) {
+    return true;
+  } else {
+    return false;
+  }
 });
 
-console.log(finalArray);
+console.log(b);
