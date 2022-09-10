@@ -39,12 +39,24 @@
 
 // console.log(newStrings);
 
-const arr = ["123", "456", "789"];
+// const arr = ["123", "456", "789"];
 
-let arr1 = [];
+// let arr1 = [];
 
-let newArr = arr.map((e) =>
-  e.split("").map((singleNumber) => Number(singleNumber))
-);
+// let newArr = arr.map((e) =>
+//   e.split("").map((singleNumber) => Number(singleNumber))
+// );
 
-console.log(newArr);
+// console.log(newArr);
+
+const data = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+const finalArray = data.reduce((prev, item) => {
+  return prev.concat(item);
+});
+
+console.log(finalArray);
