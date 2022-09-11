@@ -90,22 +90,41 @@
 
 //вывести общее количество студентов с баллами больше 50, полученными после начисления поощрения в 15 баллов.
 
-let studentRecords = [
-  { id: 1, name: "John", marks: 98 },
-  { id: 2, name: "John2", marks: 23 },
-  { id: 3, name: "John3", marks: 45 },
-  { id: 4, name: "John4", marks: 75 },
-  { id: 1, name: "John", marks: 98 },
-];
+// let studentRecords = [
+//   { id: 1, name: "John", marks: 98 },
+//   { id: 2, name: "John2", marks: 23 },
+//   { id: 3, name: "John3", marks: 45 },
+//   { id: 4, name: "John4", marks: 75 },
+//   { id: 1, name: "John", marks: 98 },
+// ];
 
-let totalMarks = studentRecords
-  .map((stu) => {
-    if (stu.marks < 50) {
-      stu.marks += 15;
-    }
-    return stu;
-  })
-  .filter((stu) => stu.marks > 50)
-  .reduce((acc, item) => acc + item.marks, 0);
+// let totalMarks = studentRecords
+//   .map((stu) => {
+//     if (stu.marks < 50) {
+//       stu.marks += 15;
+//     }
+//     return stu;
+//   })
+//   .filter((stu) => stu.marks > 50)
+//   .reduce((acc, item) => acc + item.marks, 0);
 
-console.log(totalMarks);
+// console.log(totalMarks);
+
+let n1 = document.querySelector("#inp");
+let n2 = document.querySelector("#inp");
+
+// let a = +n1.value;
+// let b = +n2.value;
+
+let squareData = () => {
+  let a = +n1.value;
+  n1.value = "";
+  // let b = +n2.value;
+  // n1.value = "";
+
+  console.log(a ** 2);
+};
+
+let squareQuadrat = () => {
+  a * b;
+};
