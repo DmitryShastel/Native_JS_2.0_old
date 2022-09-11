@@ -6,6 +6,53 @@
     border-radius: 20px;
     background: #000;
     font-family: Arial;
+    color: white;
     padding: 18px;
     box-shadow: 4px 4px 4px #4f4f4f
+}
+
+.buttons {
+    display: grid;
+    grid-template-areas: 
+    'ac plus-minus percent division'
+    'seven eigth nine multi'
+    'four five six minus'
+    'one two three plus'
+    'zero zero dot equal';
+    grid-gap: 7px;
+    justify-items: center;
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn:hover {
+    filter: brightness(120%);
+}
+
+.btn:active {
+    filter: brightness(90%);
+}
+
+.btn.bg-grey {
+    background: #a6a6a6;
+}
+
+.btn.bg-orange {
+    background: #ff9501;
+}
+
+.btn.zero {
+    grid-area: zero;
+    width: 100%;
+    border-radius: 34px;
 }
