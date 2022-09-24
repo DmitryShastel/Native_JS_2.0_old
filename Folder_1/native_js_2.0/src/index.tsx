@@ -3,12 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {splitIntoWords} from "./Native_JS_2.0/Native_JS_Monday/Unit_Tests_Monday/tests";
-
-const sentence = 'Hello friends!';
-const result = splitIntoWords(sentence);
-console.log(result);
-
 
 
 const root = ReactDOM.createRoot(
