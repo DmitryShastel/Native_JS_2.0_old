@@ -1,10 +1,10 @@
-type CityType = {
+type LocalCityType = {
     title: string
     country: string
 }
-type AddressType = {
+type LocalAddressType = {
     streetTitle: string
-    city: CityType
+    city: LocalCityType
 }
 type TeachType = {
     id: number
@@ -15,7 +15,7 @@ type StudentType = {
     name: string
     age: number
     isActive: boolean
-    address: AddressType
+    address: LocalAddressType
     technologies: Array<TeachType>
 }
 
@@ -42,4 +42,38 @@ console.log(student.age);
 console.log(student.name);
 console.log(student.address.city.title);
 console.log(student.technologies[2].title);
-export {}
+
+
+export type HouseType = {
+    buildedAt: number
+    repaid: boolean
+    address: AddressType
+}
+export type AddressType = {
+    number: number
+    street: StreetType
+}
+export type StreetType = {
+    title: string
+}
+
+export type GovermentBuildingsType = {
+
+}
+
+export type CityType = {
+    title: string
+    houses: Array<HouseType>
+    govermentBuildings: Array<GovermentBuildingsType>
+    citizensNumber: number
+}
+
+
+
+
+
+
+
+
+
+
