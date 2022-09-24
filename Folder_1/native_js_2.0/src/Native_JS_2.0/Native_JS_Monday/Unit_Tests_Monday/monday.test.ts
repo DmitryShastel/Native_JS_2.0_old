@@ -1,21 +1,30 @@
 import {mult, splitWords, sum} from "../Test_Functions";
 
+let a: number;
+let b: number;
+
+beforeEach(() => {
+    a = 1;
+    b = 2;
+})
+
 
 test('sum should be correct', () => {
     //data
-    const a = 1;
-    const b = 1;
+    // const a = 1;
+    // const b = 1;
 
+    a = 100;
     //action
     const result = sum(a,b);
 
     //expected result
-    expect(result).toBe(2);
+    expect(result).toBe(102);
 })
 test('mult should be correct', () => {
     //data
-    const a = 2;
-    const b = 3;
+     a = 2;
+     b = 3;
 
     //action
     const result = mult(a,b);
