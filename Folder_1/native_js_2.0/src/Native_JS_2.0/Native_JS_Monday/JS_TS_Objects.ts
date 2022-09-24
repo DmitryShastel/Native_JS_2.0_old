@@ -1,16 +1,16 @@
-type LocalCityType = {
+export type LocalCityType = {
     title: string
     country: string
 }
-type LocalAddressType = {
+export type LocalAddressType = {
     streetTitle: string
     city: LocalCityType
 }
-type TeachType = {
+export type TeachType = {
     id: number
     title: string
 }
-type StudentType = {
+export type StudentType = {
     id: number
     name: string
     age: number
@@ -19,7 +19,7 @@ type StudentType = {
     technologies: Array<TeachType>
 }
 
-let student: StudentType = {
+export let student: StudentType = {
     id: 1,
     name: "Dima",
     age: 31,
@@ -56,14 +56,12 @@ export type AddressType = {
 export type StreetType = {
     title: string
 }
-
 export type GovermentBuildingsType = {
     type: 'HOSPITAL' | 'FIRE-STATION'
     budget: number
     staffCount: number
     address: AddressType
 }
-
 export type CityType = {
     title: string
     houses: Array<HouseType>

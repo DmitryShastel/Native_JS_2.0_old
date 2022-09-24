@@ -1,5 +1,5 @@
 import {mult, splitWords, sum} from "../Test_Functions";
-import {CityType} from "../JS_TS_Objects";
+import {CityType, student, StudentType} from "../JS_TS_Objects";
 
 
 // tests for Test_Functions
@@ -58,9 +58,7 @@ import {CityType} from "../JS_TS_Objects";
 // })
 
 //tests for JS_TS_Objects
-
 let city: CityType;
-
 beforeEach(() => {
     city = {
         title: 'New York',
@@ -121,7 +119,6 @@ beforeEach(() => {
         citizensNumber: 10000
     }
 })
-
 test('test city should contains 3 houses', () => {
     expect(city.houses.length).toBe(3);
 
@@ -140,7 +137,6 @@ test('test city should contains 3 houses', () => {
     expect(city.houses[2].address.number).toBe(19);
     expect(city.houses[2].address.street.title).toBe('Red street');
 })
-
 test('test city should contains hospital and fire station', () => {
     expect(city.govermentBuildings.length).toBe(2);
 
@@ -153,6 +149,23 @@ test('test city should contains hospital and fire station', () => {
     expect(city.govermentBuildings[1].budget).toBe(500000);
     expect(city.govermentBuildings[1].staffCount).toBe(1000);
     expect(city.govermentBuildings[1].address.street.title).toBe('South Str');
+})
+test('the objects students should be display correct', () => {
+    expect(student.technologies.length).toBe(3);
+
+    expect(student.id).toBe(1);
+    expect(student.name).toBe('Dima');
+    expect(student.age).toBe(31);
+    expect(student.isActive).toBe(true);
+    expect(student.address.streetTitle).toBe('Gerasimenko');
+    expect(student.address.city.title).toBe('Minsk');
+    expect(student.address.city.country).toBe('Belarus');
+    expect(student.technologies[0].id).toBe(1);
+    expect(student.technologies[0].title).toBe('HTML');
+    expect(student.technologies[1].id).toBe(2);
+    expect(student.technologies[1].title).toBe('JS');
+    expect(student.technologies[2].id).toBe(3);
+    expect(student.technologies[2].title).toBe('React');
 })
 
 
