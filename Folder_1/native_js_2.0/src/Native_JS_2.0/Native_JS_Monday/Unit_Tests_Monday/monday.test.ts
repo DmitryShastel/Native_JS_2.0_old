@@ -96,7 +96,28 @@ beforeEach(() => {
                 }
             },
         ],
-        govermentBuildings: [],
+        govermentBuildings: [
+            {
+                type: 'HOSPITAL',
+                budget: 200000,
+                staffCount: 200,
+                address: {
+                    street: {
+                        title: 'Central Str'
+                    }
+                }
+            },
+            {
+                type: 'FIRE-STATION',
+                budget: 500000,
+                staffCount: 1000,
+                address: {
+                    street: {
+                        title: 'South Str'
+                    }
+                }
+            }
+        ],
         citizensNumber: 10000
     }
 })
@@ -118,6 +139,20 @@ test('test city should contains 3 houses', () => {
     expect(city.houses[2].repaid).toBe(false);
     expect(city.houses[2].address.number).toBe(19);
     expect(city.houses[2].address.street.title).toBe('Red street');
+})
+
+test('test city should contains hospital and fire station', () => {
+    expect(city.govermentBuildings.length).toBe(2);
+
+    expect(city.govermentBuildings[0].type).toBe('HOSPITAL');
+    expect(city.govermentBuildings[0].budget).toBe(200000);
+    expect(city.govermentBuildings[0].staffCount).toBe(200);
+    expect(city.govermentBuildings[0].address.street.title).toBe('Central Str');
+
+    expect(city.govermentBuildings[1].type).toBe('FIRE-STATION');
+    expect(city.govermentBuildings[1].budget).toBe(500000);
+    expect(city.govermentBuildings[1].staffCount).toBe(1000);
+    expect(city.govermentBuildings[1].address.street.title).toBe('South Str');
 })
 
 

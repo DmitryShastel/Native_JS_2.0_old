@@ -50,7 +50,7 @@ export type HouseType = {
     address: AddressType
 }
 export type AddressType = {
-    number: number
+    number?: number
     street: StreetType
 }
 export type StreetType = {
@@ -58,7 +58,10 @@ export type StreetType = {
 }
 
 export type GovermentBuildingsType = {
-
+    type: 'HOSPITAL' | 'FIRE-STATION'
+    budget: number
+    staffCount: number
+    address: AddressType
 }
 
 export type CityType = {
