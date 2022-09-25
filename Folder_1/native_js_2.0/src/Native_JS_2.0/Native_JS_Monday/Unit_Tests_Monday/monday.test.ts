@@ -1,5 +1,6 @@
 import {mult, splitWords, sum} from "../Test_Functions";
-import {CityType, student, StudentType} from "../JS_TS_Objects";
+import {CityType, student,  StudentType} from "../JS_TS_Objects";
+import {addSkill} from "../JS_TS_Functions";
 
 
 // tests for Test_Functions
@@ -56,117 +57,147 @@ import {CityType, student, StudentType} from "../JS_TS_Objects";
 //     expect(result2[4]).toBe('programing');
 //     expect(result2[5]).toBe('language');
 // })
-
 //tests for JS_TS_Objects
-let city: CityType;
+//let city: CityType;
+// beforeEach(() => {
+//     city = {
+//         title: 'New York',
+//         houses: [
+//             {
+//                 buildedAt: 2012,
+//                 repaid: false,
+//                 address: {
+//                     number: 100,
+//                     street: {
+//                         title: 'White street'
+//                     }
+//                 }
+//             },
+//             {
+//                 buildedAt: 2010,
+//                 repaid: true,
+//                 address: {
+//                     number: 15,
+//                     street: {
+//                         title: 'Black street'
+//                     }
+//                 }
+//             },
+//             {
+//                 buildedAt: 2018,
+//                 repaid: false,
+//                 address: {
+//                     number: 19,
+//                     street: {
+//                         title: 'Red street'
+//                     }
+//                 }
+//             },
+//         ],
+//         govermentBuildings: [
+//             {
+//                 type: 'HOSPITAL',
+//                 budget: 200000,
+//                 staffCount: 200,
+//                 address: {
+//                     street: {
+//                         title: 'Central Str'
+//                     }
+//                 }
+//             },
+//             {
+//                 type: 'FIRE-STATION',
+//                 budget: 500000,
+//                 staffCount: 1000,
+//                 address: {
+//                     street: {
+//                         title: 'South Str'
+//                     }
+//                 }
+//             }
+//         ],
+//         citizensNumber: 10000
+//     }
+// })
+// test('test city should contains 3 houses', () => {
+//     expect(city.houses.length).toBe(3);
+//
+//     expect(city.houses[0].buildedAt).toBe(2012);
+//     expect(city.houses[0].repaid).toBe(false);
+//     expect(city.houses[0].address.number).toBe(100);
+//     expect(city.houses[0].address.street.title).toBe('White street');
+//
+//     expect(city.houses[1].buildedAt).toBe(2010);
+//     expect(city.houses[1].repaid).toBe(true);
+//     expect(city.houses[1].address.number).toBe(15);
+//     expect(city.houses[1].address.street.title).toBe('Black street');
+//
+//     expect(city.houses[2].buildedAt).toBe(2018);
+//     expect(city.houses[2].repaid).toBe(false);
+//     expect(city.houses[2].address.number).toBe(19);
+//     expect(city.houses[2].address.street.title).toBe('Red street');
+// })
+// test('test city should contains hospital and fire station', () => {
+//     expect(city.govermentBuildings.length).toBe(2);
+//
+//     expect(city.govermentBuildings[0].type).toBe('HOSPITAL');
+//     expect(city.govermentBuildings[0].budget).toBe(200000);
+//     expect(city.govermentBuildings[0].staffCount).toBe(200);
+//     expect(city.govermentBuildings[0].address.street.title).toBe('Central Str');
+//
+//     expect(city.govermentBuildings[1].type).toBe('FIRE-STATION');
+//     expect(city.govermentBuildings[1].budget).toBe(500000);
+//     expect(city.govermentBuildings[1].staffCount).toBe(1000);
+//     expect(city.govermentBuildings[1].address.street.title).toBe('South Str');
+// })
+// test('the objects students should be display correct', () => {
+//     expect(student.technologies.length).toBe(3);
+//
+//     expect(student.id).toBe(1);
+//     expect(student.name).toBe('Dima');
+//     expect(student.age).toBe(31);
+//     expect(student.isActive).toBe(true);
+//     expect(student.address.streetTitle).toBe('Gerasimenko');
+//     expect(student.address.city.title).toBe('Minsk');
+//     expect(student.address.city.country).toBe('Belarus');
+//     expect(student.technologies[0].id).toBe(1);
+//     expect(student.technologies[0].title).toBe('HTML');
+//     expect(student.technologies[1].id).toBe(2);
+//     expect(student.technologies[1].title).toBe('JS');
+//     expect(student.technologies[2].id).toBe(3);
+//     expect(student.technologies[2].title).toBe('React');
+// })
+
+
+//let student: StudentType;
 beforeEach(() => {
-    city = {
-        title: 'New York',
-        houses: [
-            {
-                buildedAt: 2012,
-                repaid: false,
-                address: {
-                    number: 100,
-                    street: {
-                        title: 'White street'
-                    }
-                }
-            },
-            {
-                buildedAt: 2010,
-                repaid: true,
-                address: {
-                    number: 15,
-                    street: {
-                        title: 'Black street'
-                    }
-                }
-            },
-            {
-                buildedAt: 2018,
-                repaid: false,
-                address: {
-                    number: 19,
-                    street: {
-                        title: 'Red street'
-                    }
-                }
-            },
-        ],
-        govermentBuildings: [
-            {
-                type: 'HOSPITAL',
-                budget: 200000,
-                staffCount: 200,
-                address: {
-                    street: {
-                        title: 'Central Str'
-                    }
-                }
-            },
-            {
-                type: 'FIRE-STATION',
-                budget: 500000,
-                staffCount: 1000,
-                address: {
-                    street: {
-                        title: 'South Str'
-                    }
-                }
+    let student: StudentType = {
+        id: 1,
+        name: "Dima",
+        age: 31,
+        isActive: true,
+        address: {
+            streetTitle: 'Gerasimenko',
+            city: {
+                title: 'Minsk',
+                country: 'Belarus',
             }
-        ],
-        citizensNumber: 10000
+        },
+        technologies: [
+            {id: 1, title: 'HTML'},
+            {id: 2, title: 'JS'},
+            {id: 3, title: 'React'},
+        ]
     }
 })
-test('test city should contains 3 houses', () => {
-    expect(city.houses.length).toBe(3);
 
-    expect(city.houses[0].buildedAt).toBe(2012);
-    expect(city.houses[0].repaid).toBe(false);
-    expect(city.houses[0].address.number).toBe(100);
-    expect(city.houses[0].address.street.title).toBe('White street');
-
-    expect(city.houses[1].buildedAt).toBe(2010);
-    expect(city.houses[1].repaid).toBe(true);
-    expect(city.houses[1].address.number).toBe(15);
-    expect(city.houses[1].address.street.title).toBe('Black street');
-
-    expect(city.houses[2].buildedAt).toBe(2018);
-    expect(city.houses[2].repaid).toBe(false);
-    expect(city.houses[2].address.number).toBe(19);
-    expect(city.houses[2].address.street.title).toBe('Red street');
-})
-test('test city should contains hospital and fire station', () => {
-    expect(city.govermentBuildings.length).toBe(2);
-
-    expect(city.govermentBuildings[0].type).toBe('HOSPITAL');
-    expect(city.govermentBuildings[0].budget).toBe(200000);
-    expect(city.govermentBuildings[0].staffCount).toBe(200);
-    expect(city.govermentBuildings[0].address.street.title).toBe('Central Str');
-
-    expect(city.govermentBuildings[1].type).toBe('FIRE-STATION');
-    expect(city.govermentBuildings[1].budget).toBe(500000);
-    expect(city.govermentBuildings[1].staffCount).toBe(1000);
-    expect(city.govermentBuildings[1].address.street.title).toBe('South Str');
-})
-test('the objects students should be display correct', () => {
+test('new tech skill should be added to student', ()=> {
     expect(student.technologies.length).toBe(3);
-
-    expect(student.id).toBe(1);
-    expect(student.name).toBe('Dima');
-    expect(student.age).toBe(31);
-    expect(student.isActive).toBe(true);
-    expect(student.address.streetTitle).toBe('Gerasimenko');
-    expect(student.address.city.title).toBe('Minsk');
-    expect(student.address.city.country).toBe('Belarus');
-    expect(student.technologies[0].id).toBe(1);
-    expect(student.technologies[0].title).toBe('HTML');
-    expect(student.technologies[1].id).toBe(2);
-    expect(student.technologies[1].title).toBe('JS');
-    expect(student.technologies[2].id).toBe(3);
-    expect(student.technologies[2].title).toBe('React');
+    addSkill(student, 'JAVA');
+    expect(student.technologies.length).toBe(4);
+    expect(student.technologies[3].title).toBe('JAVA');
 })
+
 
 
 

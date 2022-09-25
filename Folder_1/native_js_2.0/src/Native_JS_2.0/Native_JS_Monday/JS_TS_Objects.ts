@@ -38,10 +38,10 @@ export let student: StudentType = {
     ]
 }
 
-console.log(student.age);
-console.log(student.name);
-console.log(student.address.city.title);
-console.log(student.technologies[2].title);
+// console.log(student.age);
+// console.log(student.name);
+// console.log(student.address.city.title);
+// console.log(student.technologies[2].title);
 
 
 export type HouseType = {
