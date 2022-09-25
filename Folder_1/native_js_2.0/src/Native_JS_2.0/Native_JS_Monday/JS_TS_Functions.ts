@@ -7,6 +7,13 @@ export const addSkill = (student: StudentType, skill: string) => {
     })
 }
 
+export const changeStatus = (student: StudentType, isActive: boolean) => {
+    student.isActive = true
+}
+
+export const doesStudentLiveIn = (student: StudentType, cityName: string) => {
+   return student.address.city.title === cityName
+}
 
 
 

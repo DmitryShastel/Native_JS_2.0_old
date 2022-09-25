@@ -23,7 +23,7 @@ export let student: StudentType = {
     id: 1,
     name: "Dima",
     age: 31,
-    isActive: true,
+    isActive: false,
     address: {
         streetTitle: 'Gerasimenko',
         city: {
