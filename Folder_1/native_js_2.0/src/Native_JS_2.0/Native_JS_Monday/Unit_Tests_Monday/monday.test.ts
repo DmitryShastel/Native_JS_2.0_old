@@ -1,6 +1,6 @@
 import {mult, splitWords, sum} from "../Test_Functions";
 import {CityType, StudentType} from "../JS_TS_Objects";
-import {addMoneyToBudget, addSkill, changeStatus, doesStudentLiveIn} from "../JS_TS_Functions";
+import {addMoneyToBudget, addSkill, changeStatus, doesStudentLiveIn, repairHouse} from "../JS_TS_Functions";
 
 
 //tests for Test_Functions
@@ -117,7 +117,7 @@ beforeEach(() => {
             },
             {
                 buildedAt: 2010,
-                repaid: true,
+                repaid: false,
                 address: {
                     number: 15,
                     street: {
@@ -209,16 +209,27 @@ test.skip('the objects students should be display correct', () => {
     expect(student.technologies[2].id).toBe(3);
     expect(student.technologies[2].title).toBe('React');
 })
-
-test('Budget should be changed for HOSPITAL', () => {
+test.skip('Budget should be changed for HOSPITAL', () => {
     addMoneyToBudget(city.govermentBuildings[0], 100000);
     expect(city.govermentBuildings[0].budget).toBe(300000)
 })
-
-test('Budget should be changed for FIRE-STATION', () => {
+test.skip('Budget should be changed for FIRE-STATION', () => {
     addMoneyToBudget(city.govermentBuildings[1], -100000);
     expect(city.govermentBuildings[1].budget).toBe(400000)
 })
+//rewrite
+test.skip('Houses should be destroyed', () => {
+    demolishHousesOnTheStreet(city, 'Happy street');
+    expect(city.houses.length).toBe(1);
+    expect(city.houses[0].id).toBe(1);
+})
+
+
+test('House should be repared', ()=> {
+    repairHouse(city.houses[1]);
+    expect(city.houses[1].repaid).toBe(true);
+})
+
 
 
 

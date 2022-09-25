@@ -1,4 +1,4 @@
-import {CityType, GovermentBuildingsType, StudentType} from "./JS_TS_Objects";
+import {AddressType, CityType, GovermentBuildingsType, HouseType, StudentType} from "./JS_TS_Objects";
 import {city} from "./Unit_Tests_Monday/monday.test";
 
 
@@ -21,4 +21,6 @@ export const addMoneyToBudget = (govermentBuildings: GovermentBuildingsType, bud
     govermentBuildings.budget += budget;
 }
 
-
+export const repairHouse = (houseType: HouseType) => {
+    houseType.repaid = true 
+}
