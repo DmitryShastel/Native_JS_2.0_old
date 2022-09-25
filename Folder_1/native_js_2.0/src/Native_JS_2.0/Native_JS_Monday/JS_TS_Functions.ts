@@ -1,4 +1,6 @@
-import {StudentType} from "./JS_TS_Objects";
+import {CityType, GovermentBuildingsType, StudentType} from "./JS_TS_Objects";
+import {city} from "./Unit_Tests_Monday/monday.test";
+
 
 export const addSkill = (student: StudentType, skill: string) => {
     student.technologies.push({
@@ -12,9 +14,11 @@ export const changeStatus = (student: StudentType, isActive: boolean) => {
 }
 
 export const doesStudentLiveIn = (student: StudentType, cityName: string) => {
-   return student.address.city.title === cityName
+    return student.address.city.title === cityName
 }
 
-
+export const addMoneyToBudget = (govermentBuildings: GovermentBuildingsType, budget: number) => {
+    govermentBuildings.budget += budget;
+}
 
 

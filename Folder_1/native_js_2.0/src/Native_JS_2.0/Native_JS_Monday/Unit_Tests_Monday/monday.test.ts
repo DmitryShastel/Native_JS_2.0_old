@@ -1,6 +1,6 @@
 import {mult, splitWords, sum} from "../Test_Functions";
 import {CityType, StudentType} from "../JS_TS_Objects";
-import {addSkill, changeStatus, doesStudentLiveIn} from "../JS_TS_Functions";
+import {addMoneyToBudget, addSkill, changeStatus, doesStudentLiveIn} from "../JS_TS_Functions";
 
 
 //tests for Test_Functions
@@ -58,8 +58,49 @@ test.skip('splitWords should be correct', () => {
     expect(result2[5]).toBe('language');
 })
 
+
 //tests for JS_TS_Objects
-let city: CityType;
+let student: StudentType;
+beforeEach(() => {
+    student = {
+        id: 1,
+        name: "Dima",
+        age: 31,
+        isActive: false,
+        address: {
+            streetTitle: 'Gerasimenko',
+            city: {
+                title: 'Minsk',
+                country: 'Belarus',
+            }
+        },
+        technologies: [
+            {id: 1, title: 'HTML'},
+            {id: 2, title: 'JS'},
+            {id: 3, title: 'React'},
+        ]
+    }
+})
+test.skip('new tech skill should be added to student', ()=> {
+    expect(student.technologies.length).toBe(3);
+    addSkill(student, 'JAVA');
+    expect(student.technologies.length).toBe(4);
+    expect(student.technologies[3].title).toBe('JAVA');
+})
+test.skip('the student should be active', ()=>{
+    expect(student.isActive).toBe(false);
+    changeStatus(student, true);
+    expect(student.isActive).toBe(true);
+
+})
+test.skip('does the student live in city', () => {
+    let result1 = doesStudentLiveIn(student, 'Moscow')
+    let result2 = doesStudentLiveIn(student, 'Minsk')
+    expect(result1).toBe(false);
+    expect(result2).toBe(true);
+})
+
+export let city: CityType;
 beforeEach(() => {
     city = {
         title: 'New York',
@@ -169,48 +210,18 @@ test.skip('the objects students should be display correct', () => {
     expect(student.technologies[2].title).toBe('React');
 })
 
-
-let student: StudentType;
-beforeEach(() => {
-     student = {
-        id: 1,
-        name: "Dima",
-        age: 31,
-        isActive: false,
-        address: {
-            streetTitle: 'Gerasimenko',
-            city: {
-                title: 'Minsk',
-                country: 'Belarus',
-            }
-        },
-        technologies: [
-            {id: 1, title: 'HTML'},
-            {id: 2, title: 'JS'},
-            {id: 3, title: 'React'},
-        ]
-    }
-})
-test.skip('new tech skill should be added to student', ()=> {
-    expect(student.technologies.length).toBe(3);
-    addSkill(student, 'JAVA');
-    expect(student.technologies.length).toBe(4);
-    expect(student.technologies[3].title).toBe('JAVA');
+test('Budget should be changed for HOSPITAL', () => {
+    addMoneyToBudget(city.govermentBuildings[0], 100000);
+    expect(city.govermentBuildings[0].budget).toBe(300000)
 })
 
-test.skip('the student should be active', ()=>{
-    expect(student.isActive).toBe(false);
-    changeStatus(student, true);
-    expect(student.isActive).toBe(true);
-
+test('Budget should be changed for FIRE-STATION', () => {
+    addMoneyToBudget(city.govermentBuildings[1], -100000);
+    expect(city.govermentBuildings[1].budget).toBe(400000)
 })
 
-test('does the student live in city', () => {
-    let result1 = doesStudentLiveIn(student, 'Moscow')
-    let result2 = doesStudentLiveIn(student, 'Minsk')
-    expect(result1).toBe(false);
-    expect(result2).toBe(true);
-})
+
+
 
 
 

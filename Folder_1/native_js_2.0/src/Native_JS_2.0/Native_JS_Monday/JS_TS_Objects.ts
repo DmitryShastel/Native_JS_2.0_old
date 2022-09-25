@@ -68,13 +68,3 @@ export type CityType = {
     govermentBuildings: Array<GovermentBuildingsType>
     citizensNumber: number
 }
-
-
-
-
-
-
-
-
-
-
