@@ -22,5 +22,13 @@ export const addMoneyToBudget = (govermentBuildings: GovermentBuildingsType, bud
 }
 
 export const repairHouse = (houseType: HouseType) => {
-    houseType.repaid = true 
+    houseType.repaid = true
+}
+
+export const toFireStaff = (goverment: GovermentBuildingsType, staffCountToFire: number) => {
+    goverment.staffCount -= staffCountToFire;
+}
+
+export const toHireStaff = (building: GovermentBuildingsType, staffCountToHire: number) => {
+    building.staffCount += staffCountToHire
 }

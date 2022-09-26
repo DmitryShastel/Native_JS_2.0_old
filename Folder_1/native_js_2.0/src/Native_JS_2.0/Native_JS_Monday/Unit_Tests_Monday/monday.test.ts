@@ -1,6 +1,13 @@
 import {mult, splitWords, sum} from "../Test_Functions";
 import {CityType, StudentType} from "../JS_TS_Objects";
-import {addMoneyToBudget, addSkill, changeStatus, doesStudentLiveIn, repairHouse} from "../JS_TS_Functions";
+import {
+    addMoneyToBudget,
+    addSkill,
+    changeStatus,
+    doesStudentLiveIn,
+    repairHouse,
+    toFireStaff, toHireStaff
+} from "../JS_TS_Functions";
 
 
 //tests for Test_Functions
@@ -223,11 +230,17 @@ test.skip('Houses should be destroyed', () => {
     expect(city.houses.length).toBe(1);
     expect(city.houses[0].id).toBe(1);
 })
-
-
-test('House should be repared', ()=> {
+test.skip('House should be repared', ()=> {
     repairHouse(city.houses[1]);
     expect(city.houses[1].repaid).toBe(true);
+})
+test.skip('Staff should be increased', ()=> {
+    toFireStaff(city.govermentBuildings[0], 20);
+    expect(city.govermentBuildings[0].staffCount).toBe(180);
+})
+test.skip('House should be repared2', () => {
+    toHireStaff(city.govermentBuildings[0], 20);
+    expect(city.govermentBuildings[0].staffCount).toBe(220);
 })
 
 
