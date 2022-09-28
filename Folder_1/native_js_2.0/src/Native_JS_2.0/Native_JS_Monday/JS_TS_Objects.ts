@@ -77,6 +77,24 @@ export let user = {
     isStudent: true
 }
 
-let newUser = {...user};
+//copy object
+export let newUser = {...user};
 newUser.name = 'Bob'
+
+export let users = [
+    {
+        name: 'Alex1',
+        age: 28,
+        isStudent: true
+    },
+    {
+        name: 'Alex2',
+        age: 54,
+        isStudent: false
+    }
+]
+
+export let copyUsers = {...users};
+copyUsers[0].name = 'Dima';
+
 
