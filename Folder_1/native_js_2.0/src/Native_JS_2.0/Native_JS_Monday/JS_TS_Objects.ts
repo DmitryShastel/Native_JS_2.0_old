@@ -94,7 +94,18 @@ export let users = [
     }
 ]
 
-export let copyUsers = {...users};
-copyUsers[0].name = 'Dima';
+export let copyUsers = [...users,  {
+    name: 'Alex3',
+    age: 44,
+    isStudent: false
+}];
+
+export let changeName = users.map(e => {
+    if(e.name === 'Alex1'){
+        e.name = 'Dima'
+    }
+    return e
+})
+
 
 
