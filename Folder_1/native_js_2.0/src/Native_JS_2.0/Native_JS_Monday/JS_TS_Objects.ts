@@ -70,3 +70,13 @@ export type CityType = {
 }
 
 //Native_JS_#01
+
+export let user = {
+    name: 'Alex',
+    age: 23,
+    isStudent: true
+}
+
+let newUser = user;
+newUser.name = 'Bob'
+

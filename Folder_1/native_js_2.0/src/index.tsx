@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {user} from "./Native_JS_2.0/Native_JS_Monday/JS_TS_Objects";
 
 
+console.log(user)
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
