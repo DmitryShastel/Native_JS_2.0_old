@@ -77,6 +77,6 @@ export let user = {
     isStudent: true
 }
 
-let newUser = user;
+let newUser = {...user};
 newUser.name = 'Bob'
 
