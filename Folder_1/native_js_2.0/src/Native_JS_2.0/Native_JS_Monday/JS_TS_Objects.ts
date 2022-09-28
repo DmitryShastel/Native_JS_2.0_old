@@ -68,3 +68,5 @@ export type CityType = {
     govermentBuildings: Array<GovermentBuildingsType>
     citizensNumber: number
 }
+
+//Native_JS_#01

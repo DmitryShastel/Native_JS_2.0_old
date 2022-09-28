@@ -225,11 +225,11 @@ test.skip('Budget should be changed for FIRE-STATION', () => {
     expect(city.govermentBuildings[1].budget).toBe(400000)
 })
 //rewrite
-test.skip('Houses should be destroyed', () => {
-    demolishHousesOnTheStreet(city, 'Happy street');
-    expect(city.houses.length).toBe(1);
-    expect(city.houses[0].id).toBe(1);
-})
+// test.skip('Houses should be destroyed', () => {
+//     demolishHousesOnTheStreet(city, 'Happy street');
+//     expect(city.houses.length).toBe(1);
+//     expect(city.houses[0].id).toBe(1);
+// })
 test.skip('House should be repared', ()=> {
     repairHouse(city.houses[1]);
     expect(city.houses[1].repaid).toBe(true);
