@@ -255,8 +255,7 @@ test.skip('should be age more than 90', () => {
     expect(oldAges.length).toBe(1)
     expect(oldAges[0]).toBe(100)
 })
-
-test('courses should be cheaper than 160', () => {
+test.skip('courses should be cheaper than 160', () => {
     const courses = [
         {title: 'CSS', price: 110},
         {title: 'JS', price: 200},
@@ -271,6 +270,22 @@ test('courses should be cheaper than 160', () => {
     expect(expensiveCourses[0].title).toBe('CSS')
     expect(expensiveCourses[1].price).toBe(150)
     expect(expensiveCourses[1].title).toBe('React')
+})
+
+test('get only completed tasks', ()=> {
+    const tasks = [
+        {id: 1, title: 'Bread', isDone: false},
+        {id: 2, title: 'Milk', isDone: true},
+        {id: 3, title: 'Solt', isDone: false},
+        {id: 4, title: 'Sugar', isDone: true},
+    ]
+
+    const completedTasks = tasks.filter(e => e.isDone === true)
+    expect(completedTasks.length).toBe(2)
+    expect(completedTasks[0].title).toBe('Milk')
+    expect(completedTasks[0].id).toBe(2)
+    expect(completedTasks[1].title).toBe('Sugar')
+    expect(completedTasks[1].id).toBe(4)
 })
 
 
