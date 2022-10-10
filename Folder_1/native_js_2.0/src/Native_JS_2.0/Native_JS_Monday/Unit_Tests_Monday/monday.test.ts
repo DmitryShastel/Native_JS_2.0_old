@@ -4,7 +4,7 @@ import {
     addMoneyToBudget,
     addSkill,
     changeStatus, demolishHouseOnTheStreet,
-    doesStudentLiveIn,
+    doesStudentLiveIn, getBuildingsWithStaffCountGreaterThen,
     repairHouse,
     toFireStaff, toHireStaff
 } from "../JS_TS_Functions";
@@ -227,13 +227,19 @@ test.skip('Budget should be changed for FIRE-STATION', () => {
     addMoneyToBudget(city.govermentBuildings[1], -100000);
     expect(city.govermentBuildings[1].budget).toBe(400000)
 })
-
-test('Houses should be destroyed', () => {
+test.skip('Houses should be destroyed', () => {
 
     demolishHouseOnTheStreet(city, 'White street')
 
     expect(city.houses.length).toBe(2)
     expect(city.houses[0].id).toBe(2)
+})
+
+test('buildings with correct staff count', () =>{
+    let buildings = getBuildingsWithStaffCountGreaterThen(city.govermentBuildings, 500)
+
+    expect(buildings.length).toBe(1);
+    expect(buildings[0].type).toBe('FIRE-STATION')
 })
 
 

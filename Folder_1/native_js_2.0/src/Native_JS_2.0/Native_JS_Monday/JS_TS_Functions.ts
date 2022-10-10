@@ -37,7 +37,9 @@ export const demolishHouseOnTheStreet = (city: CityType, street: string) => {
     city.houses = city.houses.filter(e => e.address.street.title != street)
 }
 
-
+export const getBuildingsWithStaffCountGreaterThen = (govermentBuildings: Array<GovermentBuildingsType>, number: number) => {
+    return govermentBuildings.filter(e => e.staffCount > number)
+}
 
 
 
