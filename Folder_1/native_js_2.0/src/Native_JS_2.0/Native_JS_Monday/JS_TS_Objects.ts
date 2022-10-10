@@ -102,7 +102,7 @@ export let copyUsers = [...users,  {
 
 export let changeName = users.map(e => {
     if(e.name === 'Alex1'){
-        e.name = 'Dima'
+       return {...user, name: 'Dima'}
     }
     return e
 })
