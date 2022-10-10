@@ -1,13 +1,12 @@
-export const ages = [18, 20, 22, 1, 100, 90, 14];
+const ages = [18, 20, 22, 1, 100, 90, 14];
 
-
-export let sortAges = () => {
+ let sortAges = (age: number) => {
     let oldAges = ages.filter((e) => {
         return e > 90
     });
     console.log(oldAges)
 }
-export let oldAges = [100];
+const oldAges = [100];
 
 
 export type CourseType = {

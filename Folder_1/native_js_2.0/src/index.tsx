@@ -4,10 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {changeName, copyUsers, newUser, user, users} from "./Native_JS_2.0/Native_JS_Monday/JS_TS_Objects";
-import {courses, CourseType, sortAges, sortCourses} from "./Native_JS_2.0/Native_JS_Monday/JS_TS_Filter";
+import {courses, CourseType, sortCourses} from "./Native_JS_2.0/Native_JS_Monday/JS_TS_Filter";
 
 
-sortAges();
+//sortAges();
 //sortCourses(courses);
 
 const root = ReactDOM.createRoot(

@@ -8,8 +8,7 @@ import {
     repairHouse,
     toFireStaff, toHireStaff
 } from "../JS_TS_Functions";
-import {ages, oldAges} from "../JS_TS_Filter";
-
+import {courses} from "../JS_TS_Filter";
 
 //tests for Test_Functions
 let a: number;
@@ -25,18 +24,18 @@ test.skip('sum should be correct', () => {
 
     a = 100;
     //action
-    const result = sum(a,b);
+    const result = sum(a, b);
 
     //expected result
     expect(result).toBe(102);
 })
 test.skip('mult should be correct', () => {
     //data
-     a = 2;
-     b = 3;
+    a = 2;
+    b = 3;
 
     //action
-    const result = mult(a,b);
+    const result = mult(a, b);
 
     //expected result
     expect(result).toBe(6);
@@ -89,13 +88,13 @@ beforeEach(() => {
         ]
     }
 })
-test.skip('new tech skill should be added to student', ()=> {
+test.skip('new tech skill should be added to student', () => {
     expect(student.technologies.length).toBe(3);
     addSkill(student, 'JAVA');
     expect(student.technologies.length).toBe(4);
     expect(student.technologies[3].title).toBe('JAVA');
 })
-test.skip('the student should be active', ()=>{
+test.skip('the student should be active', () => {
     expect(student.isActive).toBe(false);
     changeStatus(student, true);
     expect(student.isActive).toBe(true);
@@ -231,11 +230,11 @@ test.skip('Budget should be changed for FIRE-STATION', () => {
 //     expect(city.houses.length).toBe(1);
 //     expect(city.houses[0].id).toBe(1);
 // })
-test.skip('House should be repared', ()=> {
+test.skip('House should be repared', () => {
     repairHouse(city.houses[1]);
     expect(city.houses[1].repaid).toBe(true);
 })
-test.skip('Staff should be increased', ()=> {
+test.skip('Staff should be increased', () => {
     toFireStaff(city.govermentBuildings[0], 20);
     expect(city.govermentBuildings[0].staffCount).toBe(180);
 })
@@ -243,9 +242,35 @@ test.skip('House should be repared2', () => {
     toHireStaff(city.govermentBuildings[0], 20);
     expect(city.govermentBuildings[0].staffCount).toBe(220);
 })
+//Array filter
+test.skip('should be age more than 90', () => {
+    //data
+    const ages = [18, 20, 22, 1, 100, 90, 14];
+    //action
+    const oldAges = ages.filter(e => {
+        return e > 90
+    })
 
-test('should be age more than 90', () => {
-    expect(oldAges.length).toBe(1) 
+    //expected result
+    expect(oldAges.length).toBe(1)
+    expect(oldAges[0]).toBe(100)
+})
+
+test('courses should be cheaper than 160', () => {
+    const courses = [
+        {title: 'CSS', price: 110},
+        {title: 'JS', price: 200},
+        {title: 'React', price: 150},
+    ]
+
+    let expensiveCourses = courses.filter((e) => {
+        return e.price < 160
+    })
+    expect(expensiveCourses.length).toBe(2)
+    expect(expensiveCourses[0].price).toBe(110)
+    expect(expensiveCourses[0].title).toBe('CSS')
+    expect(expensiveCourses[1].price).toBe(150)
+    expect(expensiveCourses[1].title).toBe('React')
 })
 
 
