@@ -45,6 +45,7 @@ export let student: StudentType = {
 
 
 export type HouseType = {
+    id?: number
     buildedAt: number
     repaid: boolean
     address: AddressType

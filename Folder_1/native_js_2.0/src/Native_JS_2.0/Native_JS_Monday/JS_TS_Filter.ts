@@ -13,13 +13,13 @@ export type CourseType = {
     title: string
     price: number
 }
-export const courses = [
+const courses = [
     {title: 'CSS', price: 110},
     {title: 'JS', price: 200},
     {title: 'React', price: 150},
 ]
 
-export let sortCourses = (course: CourseType) => {
+let sortCourses = (course: CourseType) => {
     let expensiveCourses = courses.filter((e) => {
         return e.price < 160
     })

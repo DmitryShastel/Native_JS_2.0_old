@@ -3,12 +3,12 @@ import {CityType, StudentType} from "../JS_TS_Objects";
 import {
     addMoneyToBudget,
     addSkill,
-    changeStatus,
+    changeStatus, demolishHouseOnTheStreet,
     doesStudentLiveIn,
     repairHouse,
     toFireStaff, toHireStaff
 } from "../JS_TS_Functions";
-import {courses} from "../JS_TS_Filter";
+
 
 //tests for Test_Functions
 let a: number;
@@ -113,6 +113,7 @@ beforeEach(() => {
         title: 'New York',
         houses: [
             {
+                id: 1,
                 buildedAt: 2012,
                 repaid: false,
                 address: {
@@ -123,6 +124,7 @@ beforeEach(() => {
                 }
             },
             {
+                id: 2,
                 buildedAt: 2010,
                 repaid: false,
                 address: {
@@ -133,6 +135,7 @@ beforeEach(() => {
                 }
             },
             {
+                id: 3,
                 buildedAt: 2018,
                 repaid: false,
                 address: {
@@ -224,6 +227,16 @@ test.skip('Budget should be changed for FIRE-STATION', () => {
     addMoneyToBudget(city.govermentBuildings[1], -100000);
     expect(city.govermentBuildings[1].budget).toBe(400000)
 })
+
+test('Houses should be destroyed', () => {
+
+    demolishHouseOnTheStreet(city, 'White street')
+
+    expect(city.houses.length).toBe(2)
+    expect(city.houses[0].id).toBe(2)
+})
+
+
 //rewrite
 // test.skip('Houses should be destroyed', () => {
 //     demolishHousesOnTheStreet(city, 'Happy street');
@@ -271,8 +284,7 @@ test.skip('courses should be cheaper than 160', () => {
     expect(expensiveCourses[1].price).toBe(150)
     expect(expensiveCourses[1].title).toBe('React')
 })
-
-test('get only completed tasks', ()=> {
+test.skip('get only completed tasks', ()=> {
     const tasks = [
         {id: 1, title: 'Bread', isDone: false},
         {id: 2, title: 'Milk', isDone: true},

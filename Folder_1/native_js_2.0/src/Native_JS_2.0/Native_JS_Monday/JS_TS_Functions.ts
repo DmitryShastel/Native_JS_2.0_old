@@ -32,3 +32,32 @@ export const toFireStaff = (goverment: GovermentBuildingsType, staffCountToFire:
 export const toHireStaff = (building: GovermentBuildingsType, staffCountToHire: number) => {
     building.staffCount += staffCountToHire
 }
+
+export const demolishHouseOnTheStreet = (city: CityType, street: string) => {
+    city.houses = city.houses.filter(e => e.address.street.title != street)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
