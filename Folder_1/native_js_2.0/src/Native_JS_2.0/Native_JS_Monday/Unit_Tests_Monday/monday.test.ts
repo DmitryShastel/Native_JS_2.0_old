@@ -8,6 +8,7 @@ import {
     repairHouse,
     toFireStaff, toHireStaff
 } from "../JS_TS_Functions";
+import {ages, oldAges} from "../JS_TS_Filter";
 
 
 //tests for Test_Functions
@@ -243,7 +244,9 @@ test.skip('House should be repared2', () => {
     expect(city.govermentBuildings[0].staffCount).toBe(220);
 })
 
-
+test('should be age more than 90', () => {
+    expect(oldAges.length).toBe(1) 
+})
 
 
 
