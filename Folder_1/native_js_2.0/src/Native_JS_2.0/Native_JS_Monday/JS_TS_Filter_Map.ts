@@ -65,3 +65,8 @@ export const getValue = (arr: any) => {
     )
     return result
 }
+
+export const easyFilter = (arr: any) => {
+    let result = students.filter(e => e.scores >= 100)
+    return result
+}

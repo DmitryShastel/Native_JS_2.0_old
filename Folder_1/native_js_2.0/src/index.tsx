@@ -4,10 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {changeName, copyUsers, newUser, user, users} from "./Native_JS_2.0/Native_JS_Monday/JS_TS_Objects";
-import {CourseType, getName, getValue, students} from "./Native_JS_2.0/Native_JS_Monday/JS_TS_Filter_Map";
+import {CourseType, easyFilter, getName, getValue, students} from "./Native_JS_2.0/Native_JS_Monday/JS_TS_Filter_Map";
 
 
-console.log(getValue(students))
+console.log(easyFilter(students))
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
