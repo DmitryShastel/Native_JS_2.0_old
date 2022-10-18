@@ -61,7 +61,7 @@ export const getName = (arr: any) => {
 }
 
 export const getValue = (arr: any) => {
-    let result = students.map(e => `${e.name} , ${e.age + ' y.o'}, ${e.scores + ' scores'}`
+    let result = students.map(e => `${e.name} , ${e.age} y.o, ${e.scores} scores`
     )
     return result
 }
