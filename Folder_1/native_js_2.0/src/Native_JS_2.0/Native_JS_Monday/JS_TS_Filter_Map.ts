@@ -23,7 +23,7 @@ let sortCourses = (course: CourseType) => {
 }
 
 
-const students = [
+export const students = [
     {
         id: 1,
         name: 'Bob',
@@ -53,3 +53,9 @@ const students = [
         scores: 100,
     }
 ]
+
+export const getName = (arr: any) => {
+    let result = students.map(e => e.name
+     )
+    return result
+}
