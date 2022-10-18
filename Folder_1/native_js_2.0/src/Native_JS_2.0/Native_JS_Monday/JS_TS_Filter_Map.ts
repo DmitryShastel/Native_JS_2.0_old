@@ -70,3 +70,8 @@ export const easyFilter = (arr: any) => {
     let result = students.filter(e => e.scores >= 100)
     return result
 }
+
+export const easyFind = (arr: any) => {
+    let result = students.find(e => e.scores = 100)
+    return result
+}
