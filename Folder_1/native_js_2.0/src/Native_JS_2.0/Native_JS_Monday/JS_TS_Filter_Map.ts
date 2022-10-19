@@ -53,25 +53,28 @@ export const students = [
         scores: 100,
     }
 ]
-
 export const getName = (arr: any) => {
     let result = students.map(e => e.name
      )
     return result
 }
-
 export const getValue = (arr: any) => {
     let result = students.map(e => `${e.name} , ${e.age} y.o, ${e.scores} scores`
     )
     return result
 }
-
 export const easyFilter = (arr: any) => {
     let result = students.filter(e => e.scores >= 100)
     return result
 }
-
 export const easyFind = (arr: any) => {
     let result = students.find(e => e.scores = 100)
     return result
 }
+
+
+const people = [
+    {name: 'Andrew', age: 33},
+    {name: 'Alex', age: 18},
+    {name: 'Dmitry', age: 24}
+]

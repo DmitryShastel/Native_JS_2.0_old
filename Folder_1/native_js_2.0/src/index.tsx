@@ -3,15 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {changeName, copyUsers, newUser, user, users} from "./Native_JS_2.0/Native_JS_Monday/JS_TS_Objects";
-import {
-    CourseType,
-    easyFilter,
-    easyFind,
-    getName,
-    getValue,
-    students
-} from "./Native_JS_2.0/Native_JS_Monday/JS_TS_Filter_Map";
+import {easyFind, students} from "./Native_JS_2.0/Native_JS_Monday/JS_TS_Filter_Map";
 
 
 console.log(easyFind(students))
