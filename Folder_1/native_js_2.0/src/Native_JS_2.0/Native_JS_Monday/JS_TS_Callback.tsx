@@ -12,8 +12,13 @@ export const User = () => {
         alert('the user is saved')
     }
 
+    const onChangeName = () => {
+        console.log('name is changed')
+    }
+
     return (
-        <div>Dima
+        <div>
+            <textarea onChange={onChangeName}>Dima</textarea>
             <button onClick={deleteUser}>delete</button>
             <button onClick={saveUser}>save</button>
         </div>
