@@ -78,3 +78,5 @@ const people = [
     {name: 'Alex', age: 18},
     {name: 'Dmitry', age: 24}
 ]
+const names = ['Dima', 'Alex', 'Victor']
+
