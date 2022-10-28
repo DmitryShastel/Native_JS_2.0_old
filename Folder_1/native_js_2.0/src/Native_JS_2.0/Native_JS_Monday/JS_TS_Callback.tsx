@@ -1,10 +1,10 @@
-
+import React, {MouseEvent}  from 'react';
 
 
 
 export const User = () => {
 
-    const deleteUser = () => {
+    const deleteUser = (event: MouseEvent<HTMLButtonElement>) => {
         alert('the user should be deleted')
     }
 
