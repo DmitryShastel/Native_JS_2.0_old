@@ -8,12 +8,9 @@ import {
     repairHouse,
     toFireStaff, toHireStaff
 } from "../JS_TS_Functions";
+import {ManType} from "../JS_TS_Destructuring";
 
-type ManType = {
-    name: string
-    age: number
-    lessons: Array<{title: string}>
-}
+
 
 let props: ManType;
 
@@ -25,7 +22,7 @@ beforeEach(() => {
     }
 })
 
-test('', () => {
+test('1', () => {
     // const age = props.age
     // const lessons = props.lessons
     const{age, lessons} = props
@@ -40,6 +37,14 @@ test('', () => {
     expect(l.length).toBe(2)
 })
 
+test ('2', ()=>{
+    const l1 = props.lessons[0];
+    const l2 = props.lessons[1];
+
+    expect(l1.title).toBe('1')
+    expect(l2.title).toBe('2')
+
+})
 
 
 
