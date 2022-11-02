@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-
-
+import {Fullinput} from "./Native_JS_2.0/Native_JS_Monday/Fullinput";
 
 
 function App() {
@@ -12,17 +11,13 @@ function App() {
 
     return (
         <div className="App">
-            <div className='block'>
-                <input/>
-                <button className='button'>+</button>
-                {message.map((el, index) => {
-                    return (
-                        <div key={index}>{el.message} </div>
-                    )
-                })}
-            </div>
+            <Fullinput/>
 
-
+            {message.map((el, index) => {
+                return (
+                    <div key={index}>{el.message} </div>
+                )
+            })}
         </div>
     )
 }
