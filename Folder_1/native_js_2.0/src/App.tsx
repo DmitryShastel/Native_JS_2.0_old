@@ -12,12 +12,14 @@ function App() {
     return (
         <div className="App">
             <Fullinput/>
+            <div className='block'>
+                {message.map((el, index) => {
+                    return (
+                        <div key={index}>{el.message} </div>
+                    )
+                })}
+            </div>
 
-            {message.map((el, index) => {
-                return (
-                    <div key={index}>{el.message} </div>
-                )
-            })}
         </div>
     )
 }
