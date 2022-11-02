@@ -1,5 +1,7 @@
 import React, {ChangeEvent, useState} from 'react';
 import {Fullinput} from "./Native_JS_2.0/Native_JS_Monday/Fullinput";
+import {Input} from "./Native_JS_2.0/Native_JS_Monday/Input";
+import {Button} from "./Native_JS_2.0/Native_JS_Monday/Button";
 
 
 function App() {
@@ -17,7 +19,12 @@ function App() {
 
     return (
         <div className="App">
-            <Fullinput addMessage={addMessage}/>
+
+            <Input/>
+            <Button callback={()=> {}} name='button'/>
+
+
+            {/*<Fullinput addMessage={addMessage}/>*/}
             <div className='block'>
                 {message.map((el, index) => {
                     return (
