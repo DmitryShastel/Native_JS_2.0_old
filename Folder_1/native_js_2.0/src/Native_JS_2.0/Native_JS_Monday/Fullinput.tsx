@@ -1,11 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 
 
 export const Fullinput = () => {
+    let[title, setTitle] = useState('')
     return(
         <div className='block'>
             <input/>
-            <button className='button'>+</button>
+            <button className='button' onClick={() => {}}>+</button>
         </div>
     )
 }
