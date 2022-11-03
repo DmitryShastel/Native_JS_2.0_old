@@ -1,19 +1,26 @@
 import React, {ChangeEvent, useState} from "react"
 
 
-export const Fullinput = () => {
+type InputType = {
+    addMessage: (title: string) => void
+}
+
+export const Fullinput = (props: InputType) => {
     let[title, setTitle] = useState('')
 
     const onChangeHandler = (event:ChangeEvent<HTMLInputElement>) => {
         setTitle(event.currentTarget.value)
-        console.log(title)
+    }
+
+    const onClickButtonHandler = () => {
+        props.addMessage(title)
     }
 
 
     return (
         <div className='block'>
             <input onChange={onChangeHandler}/>
-            <button>+</button>
+            <button onClick={onClickButtonHandler}>+</button>
         </div>
     )
 }
