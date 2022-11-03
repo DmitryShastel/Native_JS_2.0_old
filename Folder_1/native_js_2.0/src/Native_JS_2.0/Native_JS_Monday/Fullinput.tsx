@@ -20,7 +20,7 @@ export const Fullinput = (props: InputType) => {
 
     return (
         <div className='block'>
-            <input onChange={onChangeHandler}/>
+            <input value={title} onChange={onChangeHandler}/>
             <button onClick={onClickButtonHandler}>+</button>
         </div>
     )
