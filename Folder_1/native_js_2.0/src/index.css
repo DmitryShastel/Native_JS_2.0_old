@@ -7,10 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.App {
-  display: inline-block
-}
-
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -24,14 +20,14 @@ code {
 .block input {
   margin-right: 20px;
   height: 25px;
-  width: 20%
+
 }
 .input textarea{
   font-size: 25px;
 }
 
 .button {
-  height: 30px;
+  height: 15%;
   width: 5%
 }
 

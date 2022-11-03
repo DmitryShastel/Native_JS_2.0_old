@@ -11,28 +11,10 @@ function App() {
         {message: 'message3'},
     ])
 
-    let [title, setTitle] = useState('')
-    
-
-    const addMessage = (title: string) => {
-        let newMessage = {message: title}
-        setMessage([newMessage, ...message])
-
-    }
-
-    const callBackButtonHandler = () => {
-        addMessage(title)
-        setTitle('')
-    }
 
     return (
         <div className="App">
-
-            <Input title={title} setTitle={setTitle}/>
-            <Button callback={callBackButtonHandler} name='+'/>
-
-
-            {/*<Fullinput addMessage={addMessage}/>*/}
+            <Fullinput/>
             <div className='block'>
                 {message.map((el, index) => {
                     return (
