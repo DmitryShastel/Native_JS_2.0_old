@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
-import {Fullinput} from "./Native_JS_2.0/Native_JS_Monday/Fullinput";
-import {UseStateComponent} from "./Native_JS_2.0/Native_JS_Monday/useState";
+import React from 'react';
+import {UseStateComponent2} from "./Native_JS_2.0/Native_JS_Monday/useState";
 
 
 function App() {
@@ -19,7 +18,8 @@ function App() {
     return (
         <div className="App">
 
-            <UseStateComponent/>
+            {/*<UseStateComponent1/>*/}
+            <UseStateComponent2/>
 
 
             {/*<Fullinput addMessage={addMessage}/>*/}
