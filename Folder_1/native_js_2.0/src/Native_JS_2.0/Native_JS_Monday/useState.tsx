@@ -16,18 +16,21 @@ import React, {useState} from 'react';
 
 
 export const UseStateComponent2 = () => {
+    let [count1, setCount1] = useState(10)
+    let [count2, setCount2] = useState(10)
+
     return (
         <div>
             <div>
                 <h4>Иван Иванов</h4>
-                <div>10</div>
-                <button>+</button>
+                <div>{count1}</div>
+                <button onClick={() => setCount1(count1 => count1 + 1)}>+</button>
             </div>
             <hr/>
             <div>
                 <h4>Петр Петров</h4>
-                <div>10</div>
-                <button>+</button>
+                <div>{count2}</div>
+                <button onClick={() => setCount2(count2 => count2 + 1)}>+</button>
             </div>
             <hr/>
             <button>-</button>
