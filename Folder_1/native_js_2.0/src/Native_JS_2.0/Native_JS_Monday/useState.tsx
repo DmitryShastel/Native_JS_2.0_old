@@ -33,7 +33,12 @@ export const UseStateComponent2 = () => {
                 <button onClick={() => setCount2(count2 => count2 + 1)}>+</button>
             </div>
             <hr/>
-            <button>-</button>
+            <button onClick={() => {
+                setCount1(count1 => count1 - 1)
+                setCount2(count2 => count2 - 1)
+            }}>
+                -
+            </button>
         </div>
     )
 }
