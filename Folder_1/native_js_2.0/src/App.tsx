@@ -1,7 +1,5 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {useState} from 'react';
 import {Fullinput} from "./Native_JS_2.0/Native_JS_Monday/Fullinput";
-import {Input} from "./Native_JS_2.0/Native_JS_Monday/Input";
-import {Button} from "./Native_JS_2.0/Native_JS_Monday/Button";
 
 
 function App() {
@@ -12,7 +10,8 @@ function App() {
     ])
 
     const addMessage = (title: string) => {
-        console.log(title)
+        let newMessage = {message: title};
+        setMessage([newMessage ,...message])
     }
 
 

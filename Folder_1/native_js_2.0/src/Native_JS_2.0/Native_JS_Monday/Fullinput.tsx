@@ -14,6 +14,7 @@ export const Fullinput = (props: InputType) => {
 
     const onClickButtonHandler = () => {
         props.addMessage(title)
+        setTitle('')
     }
 
 
