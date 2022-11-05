@@ -12,7 +12,7 @@ export const Fullinput = () => {
     return (
         <div className='block'>
             <input onChange={onChangeInputHandler}/>
-            <button onClick={() => {}}>+
+            <button onClick={onClickButtonHandler}>+
             </button>
         </div>
     )

@@ -9,11 +9,13 @@ function App() {
         {message: 'message3'},
     ])
 
-
+const addMessage = () => {
+        console.log('hello')
+}
 
     return (
         <div className="App">
-            <Fullinput />
+            <Fullinput addMessage={addMessage}/>
             <div className='block'>
                 {message.map((el, index) => {
                     return (
