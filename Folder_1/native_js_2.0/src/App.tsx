@@ -9,8 +9,8 @@ function App() {
         {message: 'message3'},
     ])
 
-const addMessage = () => {
-        console.log('hello')
+const addMessage = (title: string) => {
+        console.log(title)
 }
 
     return (

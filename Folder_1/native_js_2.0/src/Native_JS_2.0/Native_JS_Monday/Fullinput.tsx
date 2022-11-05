@@ -2,7 +2,7 @@ import React, {ChangeEvent, useState} from "react"
 
 
 type FullinputType = {
-    addMessage: () => void
+    addMessage: (title: string) => void
 }
 
 export const Fullinput = (props: FullinputType) => {
@@ -14,7 +14,7 @@ export const Fullinput = (props: FullinputType) => {
     }
 
     const onClickButtonHandler = () => {
-        props.addMessage()
+        props.addMessage(title)
     }
 
     return (
