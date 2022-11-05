@@ -10,8 +10,8 @@ function App() {
     ])
 
     const addMessage = (title: string) => {
-        let newTitle = {message: 'messageNEW'}
-        setMessage([...message, newTitle])
+        let newTitle = {message: title}
+        setMessage([newTitle,...message])
     }
 
     return (
