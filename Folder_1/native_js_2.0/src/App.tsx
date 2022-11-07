@@ -1,13 +1,8 @@
 import React, {useState} from 'react';
 import {FullInput} from "./Native_JS_2.0/Native_JS_Monday/Fullinput";
-import {Buttons} from "./Native_JS_2.0/Native_JS_Monday/Buttons";
-import {Button} from "./Native_JS_2.0/Native_JS_Monday/Button";
 
-
-export type FilterType = 'all' | 'high' | 'middle' | 'low';
 
 function App() {
-    let [filter, setFilter] = useState<FilterType>('all')
     let [task, setTask] = useState([
         {id: 1, name: 'htm & css', priority: 'low'},
         {id: 2, name: 'js', priority: 'high'},
@@ -18,35 +13,21 @@ function App() {
 
     ])
 
-    let listOfTasks = task
-    if (filter === 'high') {
-        listOfTasks = task.filter(t => t.priority === 'high')
-    }
-    if (filter === 'middle') {
-        listOfTasks = task.filter(t => t.priority === 'middle')
-    }
-    if (filter === 'low') {
-        listOfTasks = task.filter(t => t.priority === 'low')
-    }
 
-    const changeFilter = (value: FilterType) => {
-        setFilter(value);
-    }
 
     return (
         <div className="App">
 
 
-            <FullInput changeFilter={changeFilter}/>
-            <Button/>
-            <Buttons changeFilter={changeFilter}/>
+            <FullInput />
+
 
 
 
             <div className='block'>
-                {listOfTasks.map((el, index) => {
+                {task.map((t, index) => {
                     return (
-                        <div key={index}>{el.name} </div>
+                        <div key={index}>{t.name} </div>
                     )
                 })}
             </div>

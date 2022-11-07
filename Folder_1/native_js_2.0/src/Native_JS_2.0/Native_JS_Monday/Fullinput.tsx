@@ -1,17 +1,15 @@
-import React from "react"
-import {FilterType} from "../../App";
-
-export type FulinputType = {
-    changeFilter: (value: FilterType) => void
-}
+import React, {useState} from "react"
 
 
-export const FullInput = (props: FulinputType) => {
+export const FullInput = () => {
+
+    let [title, setTitle] = useState('')
 
     return (
         <div className='block'>
             <div>
                 <input  onChange={() => {}}/>
+                <button>+</button>
             </div>
         </div>
     )
