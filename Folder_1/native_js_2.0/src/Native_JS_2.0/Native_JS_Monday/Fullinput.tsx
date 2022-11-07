@@ -1,7 +1,12 @@
 import React from "react"
+import {FilterType} from "../../App";
+
+export type FulinputType = {
+    changeFilter: (value: FilterType) => void
+}
 
 
-export const Fullinput = () => {
+export const FullInput = (props: FulinputType) => {
 
     return (
         <div className='block'>
@@ -9,8 +14,6 @@ export const Fullinput = () => {
                 <input  onChange={() => {}}/>
                 <button onClick={() => {}}>+</button>
             </div>
-
-
         </div>
     )
 }
