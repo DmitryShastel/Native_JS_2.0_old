@@ -12,7 +12,6 @@ export const FullInput = (props: FulinputType) => {
         <div className='block'>
             <div>
                 <input  onChange={() => {}}/>
-                <button onClick={() => {}}>+</button>
             </div>
         </div>
     )

@@ -1,18 +1,15 @@
 import React from 'react';
-import {FulinputType} from "./Fullinput";
 
 
+type ButtonType = {
+    name: string
+    callback: (id: number) => void
+}
 
 
-export const Button = (props: FulinputType) => {
-
+export const Button = () => {
     return (
-        <div>
-            <button onClick={() => {props.changeFilter('all')}}>All</button>
-            <button onClick={() => {props.changeFilter('high')}}>High</button>
-            <button onClick={() => {props.changeFilter('low')}}>Low</button>
-            <button onClick={() => {props.changeFilter('middle')}}>Middle</button>
-        </div>
-
+        <button>+</button>
     );
 };
+
