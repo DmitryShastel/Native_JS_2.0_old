@@ -9,7 +9,7 @@ function App() {
         {message: 'message3', priority: 'low'}
     ])
 
-    let[filter, setFilter] = useState('all')
+    let [filter, setFilter] = useState('all')
 
 
     const addMessage = (title: string) => {
@@ -18,6 +18,15 @@ function App() {
     }
 
     let filterMessage = message
+    if (filter === 'all') {
+        return filterMessage = message.filter(m => m.priority === 'all')
+    }
+    if (filter === 'high') {
+        return filterMessage = message.filter(m => m.priority === 'high')
+    }
+    if (filter === 'middle') {
+        return filterMessage = message.filter(m => m.priority === 'middle')
+    }
 
     return (
         <div className="App">
