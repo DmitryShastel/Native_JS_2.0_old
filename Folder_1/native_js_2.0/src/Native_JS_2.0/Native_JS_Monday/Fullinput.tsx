@@ -23,6 +23,11 @@ export const FullInput = (props: FullInputType) => {
                 <input value={title} onChange={onChangeHandler}/>
                 <button onClick={onclickHandler}>+</button>
             </div>
+            <div>
+                <button onClick={() => {}}>High</button>
+                <button onClick={() => {}}>Middle</button>
+                <button onClick={() => {}}>Low</button>
+            </div>
         </div>
     )
 }
