@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {FullInput} from "./Native_JS_2.0/Native_JS_Monday/Fullinput";
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
     return (
         <div className="App">
 
-
+            <FullInput/>
             <div className='block'>
                 {
                     message.map((el, index) => {
