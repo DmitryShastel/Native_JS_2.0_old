@@ -24,6 +24,7 @@ export const FullInput = (props: FullInputType) => {
                 <button onClick={onclickHandler}>+</button>
             </div>
             <div>
+                <button onClick={() => {}}>All</button>
                 <button onClick={() => {}}>High</button>
                 <button onClick={() => {}}>Middle</button>
                 <button onClick={() => {}}>Low</button>

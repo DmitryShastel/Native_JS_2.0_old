@@ -9,11 +9,15 @@ function App() {
         {message: 'message3', priority: 'low'}
     ])
 
+    let[filter, setFilter] = useState('all')
+
 
     const addMessage = (title: string) => {
         let newMessage = {message: title, priority: ''}
         setMessage([newMessage, ...message])
     }
+
+    let filterMessage = message
 
     return (
         <div className="App">
