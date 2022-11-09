@@ -1,34 +1,40 @@
-import React, {ChangeEvent, useState} from "react"
+import React from "react"
 
 
-type FullInputType = {
-    addMessage: (title: string) => void
+type TaskType = {
+    id: number
+    title: string
+    isDone: boolean
 }
 
+type FullInputType = {
+    title: string
+    tasks: Array<TaskType>
+}
+
+
 export const FullInput = (props: FullInputType) => {
-    let[title, setTitle] = useState('')
-
-    const onChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
-        setTitle(event.currentTarget.value)
-    }
-
-    const onclickHandler = () =>{
-        props.addMessage(title)
-        setTitle('')
-    }
 
     return (
         <div className='block'>
             <div>
-                <input value={title} onChange={onChangeHandler}/>
-                <button onClick={onclickHandler}>+</button>
+                <h3>{props.title}</h3>
+                <input/>
+                <button>+</button>
+                <ul>
+                    {
+                        props.tasks.map((t) => {
+                            return  <li key={t.id}>
+                                <input type='checkbox' checked={t.isDone}/>
+                                <span>{t.title}</span>
+                                <button onClick={() => {}}>x</button>
+                            </li>
+                        })
+                    }
+                </ul>
             </div>
-            <div>
-                <button onClick={() => {}}>All</button>
-                <button onClick={() => {}}>High</button>
-                <button onClick={() => {}}>Middle</button>
-                <button onClick={() => {}}>Low</button>
-            </div>
+
         </div>
     )
 }
+

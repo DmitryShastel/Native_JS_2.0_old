@@ -3,43 +3,22 @@ import {FullInput} from "./Native_JS_2.0/Native_JS_Monday/Fullinput";
 
 
 function App() {
-    let [message, setMessage] = useState([
-        {message: 'message1', priority: 'high'},
-        {message: 'message2', priority: 'middle'},
-        {message: 'message3', priority: 'low'}
-    ])
+       let tasks = [
+        {id: 1, title: 'message1', isDone: true},
+        {id: 2, title: 'message2', isDone: true},
+        {id: 3, title: 'message3', isDone: false},
+        {id: 4, title: 'message4', isDone: false},
+        {id: 5, title: 'message5', isDone: true},
 
-    let [filter, setFilter] = useState('all')
+    ]
 
-
-    const addMessage = (title: string) => {
-        let newMessage = {message: title, priority: ''}
-        setMessage([newMessage, ...message])
-    }
-
-    let filterMessage = message
-    if (filter === 'all') {
-        return filterMessage = message.filter(m => m.priority === 'all')
-    }
-    if (filter === 'high') {
-        return filterMessage = message.filter(m => m.priority === 'high')
-    }
-    if (filter === 'middle') {
-        return filterMessage = message.filter(m => m.priority === 'middle')
-    }
 
     return (
         <div className="App">
 
-            <FullInput addMessage={addMessage}/>
+
             <div className='block'>
-                {
-                    message.map((el, index) => {
-                        return (
-                            <div key={index}>{el.message}</div>
-                        )
-                    })
-                }
+                <FullInput tasks={tasks} title='Tasks'/>
             </div>
 
 
