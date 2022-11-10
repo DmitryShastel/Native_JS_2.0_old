@@ -3,6 +3,7 @@ import {FullInput} from "./Native_JS_2.0/Native_JS_Monday/Fullinput";
 
 
 function App() {
+    let[filter, setFilter] = useState('all')
     let [tasks, setTasks] = useState([
         {id: 1, title: 'message1', isDone: true},
         {id: 2, title: 'message2', isDone: true},

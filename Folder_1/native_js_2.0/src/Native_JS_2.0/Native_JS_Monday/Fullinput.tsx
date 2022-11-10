@@ -16,9 +16,6 @@ type FullInputType = {
 
 export const FullInput = (props: FullInputType) => {
 
-    const removeTask2 = () => {
-        props.removeTask(id)
-    }
 
     return (
         <div className='block'>
@@ -32,11 +29,18 @@ export const FullInput = (props: FullInputType) => {
                             return <li key={t.id}>
                                 <input type='checkbox' checked={t.isDone}/>
                                 <span>{t.title}</span>
-                                <button onClick={removeTask2}>x</button>
+                                <button onClick={() => {
+                                    props.removeTask(t.id)}}>x
+                                </button>
                             </li>
                         })
                     }
                 </ul>
+                <div>
+                    <button>All</button>
+                    <button>Active</button>
+                    <button>Completed</button>
+                </div>
             </div>
 
         </div>
