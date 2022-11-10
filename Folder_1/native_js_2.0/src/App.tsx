@@ -3,7 +3,7 @@ import {FullInput} from "./Native_JS_2.0/Native_JS_Monday/Fullinput";
 
 
 function App() {
-    let[filter, setFilter] = useState('all')
+    let [filter, setFilter] = useState('all')
     let [tasks, setTasks] = useState([
         {id: 1, title: 'message1', isDone: true},
         {id: 2, title: 'message2', isDone: true},
@@ -13,11 +13,21 @@ function App() {
 
     ])
 
-    let taskForTodolist = tasks;
 
     let removeTask = (id: number) => {
         let removedTask = tasks.filter(t => t.id !== id)
         setTasks(removedTask)
+    }
+
+    let taskForTodolist = tasks;
+    if (filter === 'all') {
+        return taskForTodolist = tasks.filter(t => t.isDone === true)
+    }
+    if (filter === 'active') {
+        return taskForTodolist = tasks.filter(t => t.isDone === true)
+    }
+    if (filter === 'completed') {
+        return taskForTodolist = tasks.filter(t => t.isDone === true)
     }
 
     return (
@@ -26,7 +36,7 @@ function App() {
 
             <div className='block'>
                 <FullInput
-                    tasks={tasks}
+                    tasks={taskForTodolist}
                     title='Tasks'
                     removeTask={removeTask}/>
             </div>
