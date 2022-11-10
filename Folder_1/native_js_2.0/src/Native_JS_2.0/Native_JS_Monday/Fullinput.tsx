@@ -10,10 +10,15 @@ type TaskType = {
 type FullInputType = {
     title: string
     tasks: Array<TaskType>
+    removeTask: (id: number) => void
 }
 
 
 export const FullInput = (props: FullInputType) => {
+
+    const removeTask2 = () => {
+        props.removeTask(id)
+    }
 
     return (
         <div className='block'>
@@ -24,10 +29,10 @@ export const FullInput = (props: FullInputType) => {
                 <ul>
                     {
                         props.tasks.map((t) => {
-                            return  <li key={t.id}>
+                            return <li key={t.id}>
                                 <input type='checkbox' checked={t.isDone}/>
                                 <span>{t.title}</span>
-                                <button onClick={() => {alert(t.id)}}>x</button>
+                                <button onClick={removeTask2}>x</button>
                             </li>
                         })
                     }
