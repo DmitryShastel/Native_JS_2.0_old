@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
-import {FullInput} from "./Native_JS_2.0/Native_JS_Monday/Fullinput";
+import {FullInput, TaskType} from "./Native_JS_2.0/Native_JS_Monday/Fullinput";
 
+
+type FilterType = 'all' | 'completed' | 'active' ;
 
 function App() {
-    let [filter, setFilter] = useState('all')
-    let [tasks, setTasks] = useState([
+    let [filter, setFilter] = useState<FilterType>('all')
+    let [tasks, setTasks] = useState<Array<TaskType>>([
         {id: 1, title: 'message1', isDone: true},
         {id: 2, title: 'message2', isDone: true},
         {id: 3, title: 'message3', isDone: false},
