@@ -13,6 +13,7 @@ function App() {
 
     ])
 
+    let taskForTodolist = tasks;
 
     let removeTask = (id: number) => {
         let removedTask = tasks.filter(t => t.id !== id)
