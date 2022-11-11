@@ -33,6 +33,10 @@ function App() {
         setFilter(value)
     }
 
+    // let filteredTasks = (value: FilterType) => {
+    //     setFilter(value)
+    // }
+
     return (
         <div className="App">
             <div className='block'>
