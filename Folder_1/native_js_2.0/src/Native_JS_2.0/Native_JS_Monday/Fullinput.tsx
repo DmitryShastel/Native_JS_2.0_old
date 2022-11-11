@@ -1,4 +1,5 @@
 import React from "react"
+import {FilterType} from "../../App";
 
 
  export type TaskType = {
@@ -11,6 +12,7 @@ type FullInputType = {
     title: string
     tasks: Array<TaskType>
     removeTask: (id: number) => void
+    filteredTasks: (value: FilterType) => void
 }
 
 
@@ -37,9 +39,9 @@ export const FullInput = (props: FullInputType) => {
                     }
                 </ul>
                 <div>
-                    <button>All</button>
-                    <button>Active</button>
-                    <button>Completed</button>
+                    <button onClick={()=> {props.filteredTasks('all')}}>All</button>
+                    <button onClick={()=> {props.filteredTasks('active')}}>Active</button>
+                    <button onClick={()=> {props.filteredTasks('completed')}}>Completed</button>
                 </div>
             </div>
 

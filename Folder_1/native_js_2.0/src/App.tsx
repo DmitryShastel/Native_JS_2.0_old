@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {FullInput, TaskType} from "./Native_JS_2.0/Native_JS_Monday/Fullinput";
 
 
-type FilterType = 'all' | 'completed' | 'active' ;
+export type FilterType = 'all' | 'completed' | 'active';
 
 function App() {
     let [filter, setFilter] = useState<FilterType>('all')
@@ -22,25 +22,26 @@ function App() {
     }
 
     let taskForTodolist = tasks;
-    if (filter === 'all') {
-        return taskForTodolist = tasks.filter(t => t.isDone === true)
-    }
     if (filter === 'active') {
-        return taskForTodolist = tasks.filter(t => t.isDone === true)
+         taskForTodolist = tasks.filter(t => t.isDone === false)
     }
     if (filter === 'completed') {
-        return taskForTodolist = tasks.filter(t => t.isDone === true)
+         taskForTodolist = tasks.filter(t => t.isDone === true)
+    }
+
+    let filteredTasks = (value: FilterType) => {
+        setFilter(value)
     }
 
     return (
         <div className="App">
-
-
             <div className='block'>
                 <FullInput
                     tasks={taskForTodolist}
                     title='Tasks'
-                    removeTask={removeTask}/>
+                    removeTask={removeTask}
+                    filteredTasks={filteredTasks}
+                />
             </div>
 
 
