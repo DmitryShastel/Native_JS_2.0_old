@@ -11,11 +11,19 @@ function App() {
         {id: 5, title: 'English', isDone: true},
     ])
 
+    const removeTask = (id: number) => {
+        let filteredTasks = tasks.filter(t => t.id !== id)
+        setTasks(filteredTasks)
+    }
+
 
     return (
         <div className="App">
             <div className='block'>
-                <ToDoList title='Technologies' tasks={tasks}/>
+                <ToDoList
+                    title='Technologies'
+                    tasks={tasks}
+                    removeTask={removeTask}/>
             </div>
 
         </div>
