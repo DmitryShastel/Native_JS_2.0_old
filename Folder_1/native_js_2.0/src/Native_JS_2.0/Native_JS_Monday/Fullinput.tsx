@@ -1,7 +1,7 @@
 import React from "react"
 
 
-export const FullInput = () => {
+export const ToDolist = () => {
 
 
     return (
