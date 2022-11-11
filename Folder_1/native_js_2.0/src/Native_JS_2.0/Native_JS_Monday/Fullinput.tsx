@@ -24,8 +24,13 @@ export const ToDoList = (props: ToDoListType) => {
                 <button>+</button>
                 <ul>
                     {
-
-
+                        props.tasks.map(t =>
+                            <li key={t.id}>
+                                <input type='checkbox' checked={t.isDone}/>
+                                <span>{t.title}</span>
+                                <button>+</button>
+                            </li>
+                        )
                     }
                 </ul>
                 <div>
