@@ -1,4 +1,5 @@
 import React from 'react';
+import {ToDolist} from "./Native_JS_2.0/Native_JS_Monday/Fullinput";
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
     return (
         <div className="App">
             <div className='block'>
-
+                <ToDolist title='Technologies'/>
             </div>
         </div>
     )
