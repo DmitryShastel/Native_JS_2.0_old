@@ -18,7 +18,6 @@ function App() {
         let filteredTasks = tasks.filter(t => t.id !== id)
         setTasks(filteredTasks)
     }
-
     let filterTask = tasks;
     if( filter === 'active'){
         filterTask = tasks.filter(t => t.isDone === false)
@@ -26,9 +25,14 @@ function App() {
     if( filter === 'completed'){
         filterTask = tasks.filter(t => t.isDone === true)
     }
-
     const filteredTask = (value: FilterType) => {
         setFilter(value)
+    }
+
+    const addTask = (title: string) => {
+        let task = {id: 1, title: title, isDone: true};
+        let newTasks = [task, ...tasks]
+        setTasks(newTasks)
     }
 
     return (
@@ -38,7 +42,8 @@ function App() {
                     title='Technologies'
                     tasks={filterTask}
                     removeTask={removeTask}
-                    filteredTask={filteredTask}/>
+                    filteredTask={filteredTask}
+                    addTask={addTask}/>
             </div>
 
         </div>

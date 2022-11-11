@@ -1,4 +1,4 @@
-import React from "react"
+import React, {ChangeEvent, useState} from "react"
 import {FilterType} from "../../App";
 
 
@@ -13,23 +13,36 @@ type ToDoListType = {
     tasks: Array<TaskType>
     removeTask: (id: number) => void
     filteredTask: (value: FilterType) => void
+    addTask: (title: string) => void
 }
 
 
+
 export const ToDoList = (props: ToDoListType) => {
+
+     let [title, setTitle] = useState('')
+
+    const onChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
+        setTitle(event.currentTarget.value)
+    }
+
+    const addTask = () => {
+         props.addTask(title)
+        setTitle('')
+    }
 
 
     return (
         <div className='block'>
             <div>
                 <h3>{props.title}</h3>
-                <input/>
-                <button>+</button>
+                <input value={title} onChange={onChangeHandler}/>
+                <button onClick={addTask}>+</button>
                 <ul>
                     {
                         props.tasks.map(t =>
                             <li key={t.id}>
-                                <input type='checkbox' checked={t.isDone}/>
+                                <input type='checkbox' checked={t.isDone}  />
                                 <span>{t.title}</span>
                                 <button onClick={() => {props.removeTask(t.id)}}>x</button>
                             </li>
