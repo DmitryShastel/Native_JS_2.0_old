@@ -33,7 +33,7 @@ function App() {
         setFilter(value)
     }
 
-    
+
 
     return (
         <div className="App">
