@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {ToDoList} from "./Native_JS_2.0/Native_JS_Monday/Fullinput";
+import {OnClick} from "./Native_JS_2.0/Native_JS_Monday/OnClick";
 
 export type FilterType = 'all' | 'completed' | 'active'
 
@@ -38,12 +39,14 @@ function App() {
     return (
         <div className="App">
             <div className='block'>
-                <ToDoList
-                    title='Technologies'
-                    tasks={filterTask}
-                    removeTask={removeTask}
-                    filteredTask={filteredTask}
-                    addTask={addTask}/>
+                {/*<ToDoList*/}
+                {/*    title='Technologies'*/}
+                {/*    tasks={filterTask}*/}
+                {/*    removeTask={removeTask}*/}
+                {/*    filteredTask={filteredTask}*/}
+                {/*    addTask={addTask}/>*/}
+
+                <OnClick/>
             </div>
 
         </div>

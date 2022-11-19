@@ -1,0 +1,49 @@
+//событие =>
+//генерирует объект, со сведениями о произошедшем событии =>
+//вызов функции-обработчика с этим объектом в качестве параметра
+
+//объект, со сведениями о событии => e && ev && event
+//Функция => обработчик, handler, сдушатель, listener, подписчик, subscriber
+//eTarget => элемент, который сгенерировал событие(первый получил клик)
+//e.currentTarget => элемент, который вызвал обработчик в процессе всплытия, оно меняется при всплытии события
+
+
+const sml = document.getElementById("small")
+const mdm = document.getElementById("medium")
+const big = document.getElementById("big")
+const link = document.getElementById("link")
+
+function onClickHandler(e) {//e => объект
+    e.stopPropagation()//не травмирует родителей
+    alert(e.currentTarget.id)
+}
+
+sml.onclick = onClickHandler
+mdm.onclick = ()=>alert("Hi")
+big.onclick = ()=>alert("dfsdfsdfsdfsd")
+
+link.onclick = (e)=>{
+    e.preventDefault()
+    alert('Гугл')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
