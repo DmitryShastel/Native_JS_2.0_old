@@ -9,23 +9,68 @@
 
 
 const sml = document.getElementById("small")
-const mdm = document.getElementById("medium")
-const big = document.getElementById("big")
-const link = document.getElementById("link")
+// const mdm = document.getElementById("medium")
+// const big = document.getElementById("big")
+// const link = document.getElementById("link")
 
-function onClickHandler(e) {//e => объект
-    e.stopPropagation()//не травмирует родителей
-    alert(e.currentTarget.id)
+// function onClickHandler(e) {//e => объект
+//     e.stopPropagation()//не травмирует родителей
+//     alert(e.currentTarget.id)
+// }
+
+//sml.onclick = onClickHandler
+// mdm.onclick = ()=>alert("Hi")
+// big.onclick = ()=>alert("dfsdfsdfsdfsd")
+
+// link.onclick = (e)=>{
+//     e.preventDefault()
+//     alert('Гугл')
+// }
+
+
+let handler = (e) => console.log(e.target)
+sml.addEventListener(handler)
+
+
+
+
+
+const todoList = [
+    {id: 1, title: 'What to learn'},
+    {id: 2, title: 'What to buy'}
+]
+
+const tasks = {
+    1: [
+        {name: 'HTML', isDone: true},
+        {name: 'CSS', isDone: false}
+    ],
+    2: [
+        {name: 'Beer', isDone: true},
+        {name: 'Fish', isDone: false}
+    ],
 }
 
-sml.onclick = onClickHandler
-mdm.onclick = ()=>alert("Hi")
-big.onclick = ()=>alert("dfsdfsdfsdfsd")
 
-link.onclick = (e)=>{
-    e.preventDefault()
-    alert('Гугл')
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
