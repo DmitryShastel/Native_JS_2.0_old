@@ -107,6 +107,10 @@ console.log(students.reduce((acc, el) => {
     return acc + el.scores
 }, 0))
 
+console.log(students.reduce((acc, el) => {
+    return acc.age > el.age ? acc : el
+}))
+
 
 
 
