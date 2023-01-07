@@ -67,6 +67,9 @@ console.log(nums.reduce((acc, el) => {
     return acc + el
 }, 0))
 
+console.log(nums.reduce((acc, el) => {
+    return acc > el ? acc : el
+}, 0))
 
 
 
