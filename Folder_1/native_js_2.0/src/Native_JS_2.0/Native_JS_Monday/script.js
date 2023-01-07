@@ -35,17 +35,20 @@ sml.addEventListener(handler)
 
 
 
+const todoListId_1 = '12457-dd4474'
+const todoListId_2 = '12rr54-d7474'
+
 const todoList = [
     {id: 1, title: 'What to learn'},
     {id: 2, title: 'What to buy'}
 ]
 
 const tasks = {
-    1: [
+    [todoListId_1]: [
         {name: 'HTML', isDone: true},
         {name: 'CSS', isDone: false}
     ],
-    2: [
+    [todoListId_2]: [
         {name: 'Beer', isDone: true},
         {name: 'Fish', isDone: false}
     ],
