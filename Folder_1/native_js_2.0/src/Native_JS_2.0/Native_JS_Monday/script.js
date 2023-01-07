@@ -32,9 +32,6 @@
 // sml.addEventListener(handler)
 
 
-
-
-
 const todoListId_1 = '12457-dd4474'
 const todoListId_2 = '12rr54-d7474'
 
@@ -62,6 +59,13 @@ console.log(tasks[todoLists[0].id].filter(t => t.name !== 'HTML'))
 console.log([...tasks[todoListId_1], {name: 'React', isDone: true}])
 
 
+// reduce: [1,2,3,4,5,6] => @
+
+const nums = [1, 2, 3, 4, 5, 6]
+
+console.log(nums.reduce((acc, el) => {
+    return acc + el
+}, 0))
 
 
 
