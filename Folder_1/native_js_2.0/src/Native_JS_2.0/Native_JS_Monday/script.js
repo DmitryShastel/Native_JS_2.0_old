@@ -8,7 +8,7 @@
 //e.currentTarget => элемент, который вызвал обработчик в процессе всплытия, оно меняется при всплытии события
 
 
-const sml = document.getElementById("small")
+// const sml = document.getElementById("small")
 // const mdm = document.getElementById("medium")
 // const big = document.getElementById("big")
 // const link = document.getElementById("link")
@@ -27,9 +27,9 @@ const sml = document.getElementById("small")
 //     alert('Гугл')
 // }
 
-
-let handler = (e) => console.log(e.target)
-sml.addEventListener(handler)
+//
+// let handler = (e) => console.log(e.target)
+// sml.addEventListener(handler)
 
 
 
@@ -53,6 +53,11 @@ const tasks = {
         {name: 'Fish', isDone: false}
     ],
 }
+
+console.log(tasks[todoListId_1])
+console.log(tasks[todoListId_1][0])
+console.log(tasks[todoListId_1][0].name)
+
 
 
 
