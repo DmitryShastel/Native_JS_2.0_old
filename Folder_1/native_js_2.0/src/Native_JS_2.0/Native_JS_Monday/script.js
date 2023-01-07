@@ -38,9 +38,9 @@
 const todoListId_1 = '12457-dd4474'
 const todoListId_2 = '12rr54-d7474'
 
-const todoList = [
-    {id: 1, title: 'What to learn'},
-    {id: 2, title: 'What to buy'}
+const todoLists = [
+    {id: todoListId_1, title: 'What to learn'},
+    {id: todoListId_2, title: 'What to buy'}
 ]
 
 const tasks = {
@@ -57,6 +57,9 @@ const tasks = {
 console.log(tasks[todoListId_1])
 console.log(tasks[todoListId_1][0])
 console.log(tasks[todoListId_1][0].name)
+
+console.log(tasks[todoLists[0].id].filter(t => t.name !== 'HTML'))
+console.log([...tasks[todoListId_1], {name: 'React', isDone: true}])
 
 
 
