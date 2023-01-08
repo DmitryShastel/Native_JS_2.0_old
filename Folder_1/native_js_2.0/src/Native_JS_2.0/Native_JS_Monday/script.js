@@ -92,16 +92,16 @@ const students = [
     }
 ]
 
-console.log(students.map((s) => {
-    if (s.scores < 90) {
-        s.scores += 15;
-    }
-    return s;
-}).filter((s) => {
-    return s.scores > 101
-}).reduce((acc, el) => {
-    return acc + el.scores
-}, 0))
+// console.log(students.map((s) => {
+//     if (s.scores < 90) {
+//         s.scores += 15;
+//     }
+//     return s;
+// }).filter((s) => {
+//     return s.scores > 101
+// }).reduce((acc, el) => {
+//     return acc + el.scores
+// }, 0))
 
 //     .filter(s => s.scores > 90).reduce((acc, el) => {
 //     return acc + el.scores
@@ -167,6 +167,12 @@ let arr2 = [1, -2, -3, 4, 5, -6];
 //     }
 // }, 0))
 
+
+let arr3 = [1, 2, 3, 0, 4, 5, 6]
+
+console.log(arr3.reduce((acc, el) => {
+    return acc + el
+}, 0))
 
 
 
