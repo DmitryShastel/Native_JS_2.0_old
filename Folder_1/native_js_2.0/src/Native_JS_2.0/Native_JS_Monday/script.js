@@ -92,12 +92,15 @@ const students = [
     }
 ]
 
+console.log(students.filter((st) => {
+    return st.scores > 90 && st.id > 2
+}))
 
 console.log(students.reduce((acc, el) => {
     if (el.scores > 90 && el.id > 2) {
         return el
     } else {
-        return acc
+        return
     }
 }))
 
