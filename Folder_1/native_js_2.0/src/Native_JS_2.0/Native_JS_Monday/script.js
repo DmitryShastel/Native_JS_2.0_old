@@ -97,6 +97,8 @@ console.log(students.map((s) => {
         s.scores += 15;
     }
     return s;
+}).filter((s) => {
+    return s.scores > 101
 }))
 
 //     .filter(s => s.scores > 90).reduce((acc, el) => {
