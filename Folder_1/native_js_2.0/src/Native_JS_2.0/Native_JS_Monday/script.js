@@ -170,11 +170,28 @@ let arr2 = [1, -2, -3, 4, 5, -6];
 
 let arr3 = [1, 2, 3, 0, 4, 5, 6]
 
-console.log(arr3.reduce((acc, el) => {
-    return acc + el
-}, 0))
+// console.log(arr3.reduce((acc, el) => {
+//     if(el >= 1) {
+//         return acc + el
+//     } else {
+//         return acc
+//     }
+// }, 0))
 
 
+
+let user = {
+    name: 'Dima',
+    age: 32,
+    address: {
+        city: {
+            title: 'Minsk'
+        }
+    }
+}
+
+console.log(user.address.city.title)
+console.log(user['address']['city']['title'])
 
 
 
