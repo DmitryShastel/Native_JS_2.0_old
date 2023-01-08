@@ -95,18 +95,19 @@ const students = [
 
 const nums = [1, 2, 3, 4, 5, 6]
 
-console.log(nums.reduce((acc, el) => {
-    return acc + el
-}, 0))
-
-console.log(nums.reduce((acc, el) => {
-    return acc > el ? acc : el
-}, 0))
-
 console.log(students.reduce((acc, el) => {
     return acc + el.scores
 }, 0))
 
+console.log(nums.reduce((acc, el) => {
+    return acc + el
+}, 0))
+console.log(nums.reduce((acc, el) => {
+    return acc > el ? acc : el
+}, 0))
+console.log(students.reduce((acc, el) => {
+    return acc + el.scores
+}, 0))
 console.log(students.reduce((acc, el) => {
     return acc.age > el.age ? acc : el
 }))
@@ -127,13 +128,22 @@ console.log(arr.get('key1'))
 console.log(arr.has('key2'))
 
 let box = {
-    "accessories" : "наушники", // "ключ" : "значение",
-    "product" : "шоколадка",
-    "perfume" : "флакон духов",
+    "accessories": "наушники", // "ключ" : "значение",
+    "product": "шоколадка",
+    "perfume": "флакон духов",
 }
 
 console.log(box)
 
+let arr2 = [1, -2, -3, 4, 5, -6];
+
+console.log(arr2.reduce((acc, el) => {
+    if (el > 0) {
+        return acc + el
+    } else {
+        return acc
+    }
+}, 0))
 
 
 
