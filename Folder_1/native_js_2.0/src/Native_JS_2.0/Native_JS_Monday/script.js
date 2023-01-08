@@ -51,12 +51,12 @@ const tasks = {
     ],
 }
 
-console.log(tasks[todoListId_1])
-console.log(tasks[todoListId_1][0])
-console.log(tasks[todoListId_1][0].name)
-
-console.log(tasks[todoLists[0].id].filter(t => t.name !== 'HTML'))
-console.log([...tasks[todoListId_1], {name: 'React', isDone: true}])
+// console.log(tasks[todoListId_1])
+// console.log(tasks[todoListId_1][0])
+// console.log(tasks[todoListId_1][0].name)
+//
+// console.log(tasks[todoLists[0].id].filter(t => t.name !== 'HTML'))
+// console.log([...tasks[todoListId_1], {name: 'React', isDone: true}])
 
 
 // reduce: [1,2,3,4,5,6] => @
@@ -93,24 +93,29 @@ const students = [
 ]
 
 
+console.log(students.reduce((acc, el) => {
+    if (el.scores > 90 && el.id > 2) {
+        return el
+    } else {
+        return acc
+    }
+}))
+
 const nums = [1, 2, 3, 4, 5, 6]
 
-console.log(students.reduce((acc, el) => {
-    return acc + el.scores
-}, 0))
 
-console.log(nums.reduce((acc, el) => {
-    return acc + el
-}, 0))
-console.log(nums.reduce((acc, el) => {
-    return acc > el ? acc : el
-}, 0))
-console.log(students.reduce((acc, el) => {
-    return acc + el.scores
-}, 0))
-console.log(students.reduce((acc, el) => {
-    return acc.age > el.age ? acc : el
-}))
+// console.log(nums.reduce((acc, el) => {
+//     return acc + el
+// }, 0))
+// console.log(nums.reduce((acc, el) => {
+//     return acc > el ? acc : el
+// }, 0))
+// console.log(students.reduce((acc, el) => {
+//     return acc + el.scores
+// }, 0))
+// console.log(students.reduce((acc, el) => {
+//     return acc.age > el.age ? acc : el
+// }))
 
 
 const arr = new Map([
@@ -123,9 +128,9 @@ arr.set('key5', 'value5');
 arr.delete('key1')
 
 
-console.log(arr.size)
-console.log(arr.get('key1'))
-console.log(arr.has('key2'))
+// console.log(arr.size)
+// console.log(arr.get('key1'))
+// console.log(arr.has('key2'))
 
 let box = {
     "accessories": "наушники", // "ключ" : "значение",
@@ -133,17 +138,17 @@ let box = {
     "perfume": "флакон духов",
 }
 
-console.log(box)
+// console.log(box)
 
 let arr2 = [1, -2, -3, 4, 5, -6];
 
-console.log(arr2.reduce((acc, el) => {
-    if (el > 0) {
-        return acc + el
-    } else {
-        return acc
-    }
-}, 0))
+// console.log(arr2.reduce((acc, el) => {
+//     if (el > 0) {
+//         return acc + el
+//     } else {
+//         return acc
+//     }
+// }, 0))
 
 
 
