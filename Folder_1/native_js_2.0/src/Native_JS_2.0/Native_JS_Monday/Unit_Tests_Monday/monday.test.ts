@@ -9,6 +9,7 @@ import {
     toFireStaff, toHireStaff
 } from "../JS_TS_Functions";
 import {ManType} from "../JS_TS_Destructuring";
+import {userObj} from "../script";
 
 
 
@@ -350,7 +351,12 @@ test.skip('get only completed tasks', ()=> {
     expect(completedTasks[1].id).toBe(4)
 })
 
-
+test('should select corresponding user from obj', () => {
+    expect(userObj[0]).toBe('Dima1');
+    expect(userObj[1]).toBe('Dima2');
+    expect(userObj[2]).toBe('Dima3');
+    expect(userObj[3]).toBe('Dima4');
+})
 
 
 

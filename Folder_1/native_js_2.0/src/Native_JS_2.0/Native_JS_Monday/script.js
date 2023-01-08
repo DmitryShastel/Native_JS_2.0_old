@@ -190,8 +190,30 @@ let user = {
     }
 }
 
-console.log(user.address.city.title)
-console.log(user['address']['city']['title'])
+// console.log(user.address.city.title)
+// console.log(user['address']['city']['title'])
+
+
+
+
+
+
+
+export let userObj = {
+    '0': 'Dima1',
+    '1': 'Dima2',
+    '2': 'Dima3',
+    '3': 'Dima4'
+}
+
+export const users = {
+    '1255': {id: 1255, name: 'Dima1'},
+    '18998989': {id: 18998989, name: 'Dima1'},
+    '1111': {id: 1111, name: 'Dima1'},
+    '1': {id: 1, name: 'Dima1'},
+}
+
+
 
 
 
