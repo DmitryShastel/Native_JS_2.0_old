@@ -92,17 +92,27 @@ const students = [
     }
 ]
 
-console.log(students.filter((st) => {
-    return st.scores > 90 && st.id > 2
+console.log(students.map((s) => {
+    if (s.scores < 90) {
+        s.scores += 15;
+    }
+    return s;
 }))
 
-console.log(students.reduce((acc, el) => {
-    if (el.scores > 90 && el.id > 2) {
-        return el
-    } else {
-        return
-    }
-}))
+//     .filter(s => s.scores > 90).reduce((acc, el) => {
+//     return acc + el.scores
+// })
+
+// console.log(students.filter((st) => {
+//     return st.scores > 90 && st.id > 2
+// }))
+// console.log(students.reduce((acc, el) => {
+//     if (el.scores > 90 && el.id > 2) {
+//         return el
+//     } else {
+//         return
+//     }
+// }))
 
 const nums = [1, 2, 3, 4, 5, 6]
 
