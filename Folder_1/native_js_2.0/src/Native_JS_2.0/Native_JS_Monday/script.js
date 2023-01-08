@@ -113,9 +113,16 @@ console.log(students.reduce((acc, el) => {
 
 
 
+const arr = new Map([
+    ['key1', 'value1'],
+    ['key2', 'value2'],
+    ['key3', 'value3'],
+    ['key4', 'value4']
+])
+arr.set('key5', 'value5');
 
-
-
+console.log(arr.size)
+console.log(arr.get('key1'))
 
 
 
