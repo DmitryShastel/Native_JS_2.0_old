@@ -1,6 +1,10 @@
 import React, {useState} from 'react';
 import {ToDoList} from "./Native_JS_2.0/Native_JS_Monday/Fullinput";
 import {OnClick} from "./Native_JS_2.0/Native_JS_Monday/OnClick";
+import {Header} from "./Native_JS_2.0/Native_JS_Monday/Components/Header";
+import {Body} from "./Native_JS_2.0/Native_JS_Monday/Components/Body";
+import {Footer} from "./Native_JS_2.0/Native_JS_Monday/Components/Footer";
+import {NewComponent} from "./Native_JS_2.0/Native_JS_Monday/Components/NewComponent";
 
 export type FilterType = 'all' | 'completed' | 'active'
 
@@ -20,21 +24,34 @@ function App() {
         setTasks(filteredTasks)
     }
     let filterTask = tasks;
-    if( filter === 'active'){
+    if (filter === 'active') {
         filterTask = tasks.filter(t => t.isDone === false)
     }
-    if( filter === 'completed'){
+    if (filter === 'completed') {
         filterTask = tasks.filter(t => t.isDone === true)
     }
     const filteredTask = (value: FilterType) => {
         setFilter(value)
     }
-
     const addTask = (title: string) => {
         let task = {id: 1, title: title, isDone: true};
         let newTasks = [task, ...tasks]
         setTasks(newTasks)
     }
+
+
+
+
+
+
+
+
+
+    let [students, setStudent] = useState([
+        {id: 1, name: 'Dima', age: 22},
+        {id: 2, name: 'Sacha', age: 21},
+        {id: 3, name: 'Alex', age: 19},
+    ])
 
     return (
         <div className="App">
@@ -45,8 +62,12 @@ function App() {
                 {/*    removeTask={removeTask}*/}
                 {/*    filteredTask={filteredTask}*/}
                 {/*    addTask={addTask}/>*/}
+                {/*<OnClick/>*/}
+                {/*<Header headerTitle={'Header'}/>*/}
+                {/*<Body bodyTitle={'Body'}/>*/}
+                {/*<Footer footerTitle={'Footer'}/>*/}
 
-                <OnClick/>
+                <NewComponent students={students}/>
             </div>
 
         </div>

@@ -179,7 +179,6 @@ let arr3 = [1, 2, 3, 0, 4, 5, 6]
 // }, 0))
 
 
-
 let user = {
     name: 'Dima',
     age: 32,
@@ -192,11 +191,6 @@ let user = {
 
 // console.log(user.address.city.title)
 // console.log(user['address']['city']['title'])
-
-
-
-
-
 
 
 export let userObj = {
@@ -213,7 +207,12 @@ export const users = {
     '1': {id: 1, name: 'Dima1'},
 }
 
-
+export const userArray = [
+    {id: 1255, name: 'Dima1'},
+    {id: 18998989, name: 'Dima1'},
+    {id: 1111, name: 'Dima1'},
+    {id: 1, name: 'Dima1'},
+]
 
 
 
