@@ -5,6 +5,7 @@ import {Header} from "./Native_JS_2.0/Native_JS_Monday/Components/Header";
 import {Body} from "./Native_JS_2.0/Native_JS_Monday/Components/Body";
 import {Footer} from "./Native_JS_2.0/Native_JS_Monday/Components/Footer";
 import {NewComponent} from "./Native_JS_2.0/Native_JS_Monday/Components/NewComponent";
+import {Button} from "./Native_JS_2.0/Native_JS_Monday/Components/Button";
 
 export type FilterType = 'all' | 'completed' | 'active'
 
@@ -45,13 +46,6 @@ function App() {
     ])
 
 
-    const f1 = () => {
-        console.log(100200)
-    }
-
-    const f2 = (a: number) => {
-        console.log(a)
-    }
 
 
     return (
@@ -70,8 +64,7 @@ function App() {
                 {/*<NewComponent students={students}/>*/}
 
 
-                <button onClick={f1}>MyYouTubeChanel-1</button>
-                <button onClick={() => {f2(100200)}}>MyYouTubeChanel-2</button>
+               <Button/>
             </div>
 
         </div>
