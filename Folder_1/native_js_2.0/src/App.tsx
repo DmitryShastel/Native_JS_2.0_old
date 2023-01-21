@@ -46,12 +46,29 @@ function App() {
     ])
 
 
-    const f1 = () => {
+
+    const [money, setMoney] = useState([
+        { banknots: 'Dollars', value: 100, number: ' a1234567890' },
+        { banknots: 'Dollars', value: 50, number: ' z1234567890' },
+        { banknots: 'RUBLS', value: 100, number: ' w1234567890' },
+        { banknots: 'Dollars', value: 100, number: ' e1234567890' },
+        { banknots: 'Dollars', value: 50, number: ' c1234567890' },
+        { banknots: 'RUBLS', value: 100, number: ' r1234567890' },
+        { banknots: 'Dollars', value: 50, number: ' x1234567890' },
+        { banknots: 'RUBLS', value: 50, number: ' v1234567890' },
+    ])
+
+
+    const f1 = (sub: string) => {
         console.log('Dima')
     }
 
-    const f2 = () => {
+    const f2 = (sub: string) => {
         console.log('Vanya')
+    }
+
+    const f3 = () => {
+        console.log('I am stupid button')
     }
 
     return (
@@ -70,8 +87,9 @@ function App() {
                 {/*<NewComponent students={students}/>*/}
 
 
-               <Button name={'MyYouTubeChanel-1'} callback={f1}/>
-               <Button name={'MyYouTubeChanel-2'} callback={f2}/>
+                <Button name={'MyYouTubeChanel-1'} callback={() => f1('Dima')}/>
+                <Button name={'MyYouTubeChanel-2'} callback={() => f2('Vanya')}/>
+                <Button name={'MyYouTubeChanel-3'} callback={f3}/>
             </div>
 
         </div>
