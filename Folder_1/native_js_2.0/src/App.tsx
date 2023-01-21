@@ -38,20 +38,24 @@ function App() {
         let newTasks = [task, ...tasks]
         setTasks(newTasks)
     }
-
-
-
-
-
-
-
-
-
     let [students, setStudent] = useState([
         {id: 1, name: 'Dima', age: 22},
         {id: 2, name: 'Sacha', age: 21},
         {id: 3, name: 'Alex', age: 19},
     ])
+
+
+    let myFirstSubscription = () => {
+        console.log('hello one')
+    }
+    let mySecondSubscription = () => {
+        console.log('hello two')
+    }
+
+    const onClickHandler = (name: string) => {
+        console.log(name)
+    }
+
 
     return (
         <div className="App">
@@ -66,8 +70,13 @@ function App() {
                 {/*<Header headerTitle={'Header'}/>*/}
                 {/*<Body bodyTitle={'Body'}/>*/}
                 {/*<Footer footerTitle={'Footer'}/>*/}
+                {/*<NewComponent students={students}/>*/}
 
-                <NewComponent students={students}/>
+
+                <button onClick={() => {onClickHandler('Dima')}}>MyYouTubeChanel-1
+                </button>
+                <button onClick={() => {onClickHandler('Vasa')}}>MyYouTubeChanel-2
+                </button>
             </div>
 
         </div>
