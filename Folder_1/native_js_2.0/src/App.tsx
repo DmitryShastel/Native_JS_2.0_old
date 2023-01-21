@@ -59,8 +59,9 @@ function App() {
     ])
 
 
-    const f1 = (sub: string) => {
-        console.log('Dima')
+    const f1 = () => {
+        let dolllar = money.filter(m => m.banknots === 'Dollars')
+        console.log(dolllar)
     }
 
     const f2 = (sub: string) => {
@@ -87,7 +88,7 @@ function App() {
                 {/*<NewComponent students={students}/>*/}
 
 
-                <Button name={'MyYouTubeChanel-1'} callback={() => f1('Dima')}/>
+                <Button name={'MyYouTubeChanel-1'} callback={f1}/>
                 <Button name={'MyYouTubeChanel-2'} callback={() => f2('Vanya')}/>
                 <Button name={'MyYouTubeChanel-3'} callback={f3}/>
             </div>
