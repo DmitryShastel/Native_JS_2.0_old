@@ -58,18 +58,22 @@ function App() {
         { banknots: 'RUBLS', value: 50, number: ' v1234567890' },
     ])
 
+    console.log(money.length)
+
 
     const f1 = () => {
-        let dolllar = money.filter(m => m.banknots === 'Dollars')
-        console.log(dolllar)
+        let dollar = money.filter(m => m.banknots === 'Dollars')
+        console.log(dollar)
     }
 
-    const f2 = (sub: string) => {
-        console.log('Vanya')
+    const f2 = () => {
+        let rubl = money.filter(m => m.banknots  === 'RUBLS')
+        console.log(rubl)
     }
 
     const f3 = () => {
-        console.log('I am stupid button')
+        let allMoney = money.filter(m => `${m.banknots === 'RUBLS'}  ${m.banknots === 'Dollars'}`)
+        console.log(allMoney)
     }
 
     return (
@@ -89,7 +93,7 @@ function App() {
 
 
                 <Button name={'MyYouTubeChanel-1'} callback={f1}/>
-                <Button name={'MyYouTubeChanel-2'} callback={() => f2('Vanya')}/>
+                <Button name={'MyYouTubeChanel-2'} callback={f2}/>
                 <Button name={'MyYouTubeChanel-3'} callback={f3}/>
             </div>
 
