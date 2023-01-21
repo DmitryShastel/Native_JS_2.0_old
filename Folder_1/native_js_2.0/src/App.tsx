@@ -64,7 +64,8 @@ function App() {
                 {/*<NewComponent students={students}/>*/}
 
 
-               <Button/>
+               <Button name={'MyYouTubeChanel-1'}/>
+               <Button name={'MyYouTubeChanel-2'}/>
             </div>
 
         </div>
