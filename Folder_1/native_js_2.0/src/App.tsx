@@ -46,7 +46,13 @@ function App() {
     ])
 
 
+    const f1 = () => {
+        console.log('Dima')
+    }
 
+    const f2 = () => {
+        console.log('Vanya')
+    }
 
     return (
         <div className="App">
@@ -64,8 +70,8 @@ function App() {
                 {/*<NewComponent students={students}/>*/}
 
 
-               <Button name={'MyYouTubeChanel-1'}/>
-               <Button name={'MyYouTubeChanel-2'}/>
+               <Button name={'MyYouTubeChanel-1'} callback={f1}/>
+               <Button name={'MyYouTubeChanel-2'} callback={f2}/>
             </div>
 
         </div>
