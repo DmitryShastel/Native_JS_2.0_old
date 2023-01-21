@@ -46,34 +46,37 @@ function App() {
     ])
 
 
-
     const [money, setMoney] = useState([
-        { banknots: 'Dollars', value: 100, number: ' a1234567890' },
-        { banknots: 'Dollars', value: 50, number: ' z1234567890' },
-        { banknots: 'RUBLS', value: 100, number: ' w1234567890' },
-        { banknots: 'Dollars', value: 100, number: ' e1234567890' },
-        { banknots: 'Dollars', value: 50, number: ' c1234567890' },
-        { banknots: 'RUBLS', value: 100, number: ' r1234567890' },
-        { banknots: 'Dollars', value: 50, number: ' x1234567890' },
-        { banknots: 'RUBLS', value: 50, number: ' v1234567890' },
+        {banknots: 'Dollars', value: 100, number: ' a1234567890'},
+        {banknots: 'Dollars', value: 50, number: ' z1234567890'},
+        {banknots: 'RUBLS', value: 100, number: ' w1234567890'},
+        {banknots: 'Dollars', value: 100, number: ' e1234567890'},
+        {banknots: 'Dollars', value: 50, number: ' c1234567890'},
+        {banknots: 'RUBLS', value: 100, number: ' r1234567890'},
+        {banknots: 'Dollars', value: 50, number: ' x1234567890'},
+        {banknots: 'RUBLS', value: 50, number: ' v1234567890'},
     ])
-
-    console.log(money.length)
-
-
     const f1 = () => {
         let dollar = money.filter(m => m.banknots === 'Dollars')
         console.log(dollar)
     }
-
     const f2 = () => {
-        let rubl = money.filter(m => m.banknots  === 'RUBLS')
+        let rubl = money.filter(m => m.banknots === 'RUBLS')
         console.log(rubl)
     }
-
     const f3 = () => {
         let allMoney = money.filter(m => `${m.banknots === 'RUBLS'}  ${m.banknots === 'Dollars'}`)
         console.log(allMoney)
+    }
+
+    let [a, setA] = useState(0)
+
+    const onClickHandler = () => {
+        setA(++a)
+    }
+
+    const onClickHandlerSet = () => {
+        setA(0)
     }
 
     return (
@@ -90,11 +93,14 @@ function App() {
                 {/*<Body bodyTitle={'Body'}/>*/}
                 {/*<Footer footerTitle={'Footer'}/>*/}
                 {/*<NewComponent students={students}/>*/}
+                {/*<Button name={'MyYouTubeChanel-1'} callback={f1}/>*/}
+                {/*<Button name={'MyYouTubeChanel-2'} callback={f2}/>*/}
+                {/*<Button name={'MyYouTubeChanel-3'} callback={f3}/>*/}
 
+                <h3>{a}</h3>
+                <button onClick={onClickHandler}>Number</button>
+                <button onClick={onClickHandlerSet}>Set</button>
 
-                <Button name={'MyYouTubeChanel-1'} callback={f1}/>
-                <Button name={'MyYouTubeChanel-2'} callback={f2}/>
-                <Button name={'MyYouTubeChanel-3'} callback={f3}/>
             </div>
 
         </div>
