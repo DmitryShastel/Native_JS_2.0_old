@@ -45,15 +45,12 @@ function App() {
     ])
 
 
-    let myFirstSubscription = () => {
-        console.log('hello one')
-    }
-    let mySecondSubscription = () => {
-        console.log('hello two')
+    const f1 = () => {
+        console.log(100200)
     }
 
-    const onClickHandler = (name: string) => {
-        console.log(name)
+    const f2 = (a: number) => {
+        console.log(a)
     }
 
 
@@ -73,10 +70,8 @@ function App() {
                 {/*<NewComponent students={students}/>*/}
 
 
-                <button onClick={() => {onClickHandler('Dima')}}>MyYouTubeChanel-1
-                </button>
-                <button onClick={() => {onClickHandler('Vasa')}}>MyYouTubeChanel-2
-                </button>
+                <button onClick={f1}>MyYouTubeChanel-1</button>
+                <button onClick={() => {f2(100200)}}>MyYouTubeChanel-2</button>
             </div>
 
         </div>
