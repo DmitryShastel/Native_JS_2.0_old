@@ -1,6 +1,7 @@
 import React, {ChangeEvent, useState} from "react"
-import {FilterType} from "../../App";
 
+
+export type FilterType = 'all' | 'active' | 'completed'
 
 export type TaskType = {
     id: number

@@ -1,39 +1,38 @@
 import React from 'react';
+import {FilterType} from "../../../App";
 
-type NewComponent = {
-    students: Array<StudentsType>
+
+export type NewComponentType = {
+    money: Array<MoneyType>
+    filterForMoney: (value: FilterType) => void
 }
 
-type StudentsType = {
-    id: number
-    name: string
-    age: number
+export type MoneyType = {
+    banknots: string
+    value: number
+    number: string
 }
 
 
-export const NewComponent = (props: NewComponent) => {
+export const NewComponent = (props: NewComponentType) => {
 
-
-    const topCars = [
-        {manufacturer: 'BMW', model: 'm5cs'},
-        {manufacturer: 'Mercedes', model: 'e63s'},
-        {manufacturer: 'Audi', model: 'rs6'}
-    ]
 
     return (
         <div>
-            <table>
-
-                {topCars.map((c, index) => {
+            <ul>
+                {props.money.map((m, index) => {
                     return (
-                        <tr>
-                            <th>{c.manufacturer}</th>
-                            <th>{c.model}</th>
-                        </tr>
+                        <li >
+                            <span>{m.banknots}</span>
+                            <span>{m.value}</span>
+                            <span>{m.number}</span>
+                        </li>
                     )
                 })}
-
-            </table>
+            </ul>
+            <button onClick={() => props.filterForMoney('All')}>All</button>
+            <button onClick={() => props.filterForMoney('Dollars')}>Dollars</button>
+            <button onClick={() => props.filterForMoney('RUBLS')}>Rubuls</button>
 
         </div>
     );
