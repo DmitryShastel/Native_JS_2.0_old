@@ -1,10 +1,7 @@
-import React, {ChangeEvent} from 'react';
-
+import React from 'react';
 
 
 export const Input = () => {
-
-
 
     return (
         <div>
