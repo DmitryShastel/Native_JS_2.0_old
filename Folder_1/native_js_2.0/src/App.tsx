@@ -9,7 +9,7 @@ function App() {
         {message: 'message3'},
     ])
 
-    let addMessage = () => {
+    let addMessage = (title: string) => {
         console.log('hello')
     }
 

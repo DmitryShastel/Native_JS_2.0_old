@@ -2,7 +2,7 @@ import React, {ChangeEvent, useState} from 'react';
 
 
 type InputType = {
-    addMessage: () => void
+    addMessage: (title: string) => void
 }
 
 
@@ -13,10 +13,14 @@ export const Input = (props: InputType) => {
         setTitle(e.currentTarget.value)
     }
 
+    const onClickButtonHandler = () => {
+        props.addMessage(title)
+    }
+
     return (
         <div>
             <input onChange={onChangeHandler}/>
-            <button onClick={props.addMessage}>+</button>
+            <button onClick={onClickButtonHandler}>+</button>
 
         </div>
     );
