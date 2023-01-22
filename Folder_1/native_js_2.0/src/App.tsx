@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Input} from "./Native_JS_2.0/Native_JS_Monday/Input";
+import {Button} from "./Native_JS_2.0/Native_JS_Monday/Button";
 
 
 function App() {
@@ -9,15 +10,19 @@ function App() {
         {message: 'message3'}
     ])
 
-    let addMessage = (title: string) => {
-        let newMessage = {message: title}
-        setMessage([newMessage, ...message])
-        console.log('title')
-    }
+    // let addMessage = (title: string) => {
+    //     let newMessage = {message: title}
+    //     setMessage([newMessage, ...message])
+    //     console.log('title')
+    // }
 
     return (
         <div className="App">
-            <Input addMessage={addMessage}/>
+
+                <Input/>
+                <Button name={'Add Message'} callBack={() => {}}/>
+
+
             {message.map((m, index) => {
                 return (
                     <div key={index}>{m.message}</div>
