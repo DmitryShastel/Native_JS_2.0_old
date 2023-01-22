@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Input} from "./Native_JS_2.0/Native_JS_Monday/Input";
 
 
 function App() {
@@ -10,10 +11,7 @@ function App() {
 
     return (
         <div className="App">
-            <div className='block'>
-                <input/>
-                <button>+</button>
-            </div>
+            <Input/>
             {message.map((m, index) => {
                 return (
                     <div key={index}>{m.message}</div>
