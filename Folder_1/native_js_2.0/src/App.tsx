@@ -6,10 +6,12 @@ function App() {
     let [message, setMessage] = useState([
         {message: 'message1'},
         {message: 'message2'},
-        {message: 'message3'},
+        {message: 'message3'}
     ])
 
     let addMessage = (title: string) => {
+        let newMessage =  {message: 'messageNEW'}
+        setMessage([...message, newMessage])
         console.log('hello')
     }
 
