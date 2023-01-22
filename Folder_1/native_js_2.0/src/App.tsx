@@ -9,9 +9,13 @@ function App() {
         {message: 'message3'},
     ])
 
+    let addMessage = () => {
+        console.log('hello')
+    }
+
     return (
         <div className="App">
-            <Input/>
+            <Input addMessage={addMessage}/>
             {message.map((m, index) => {
                 return (
                     <div key={index}>{m.message}</div>
