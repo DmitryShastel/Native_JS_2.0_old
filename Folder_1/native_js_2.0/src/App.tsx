@@ -10,9 +10,9 @@ function App() {
     ])
 
     let addMessage = (title: string) => {
-        let newMessage =  {message: 'messageNEW'}
-        setMessage([...message, newMessage])
-        console.log('hello')
+        let newMessage = {message: title}
+        setMessage([newMessage, ...message])
+        console.log('title')
     }
 
     return (
