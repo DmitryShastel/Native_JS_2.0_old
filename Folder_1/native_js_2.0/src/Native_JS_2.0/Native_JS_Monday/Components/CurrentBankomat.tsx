@@ -1,5 +1,6 @@
 import React from 'react';
-import {MoneyType} from "./App";
+import {MoneyType} from "../../../App";
+
 
 type CurrentBankomatPropsType = {
     money: MoneyType

@@ -1,7 +1,7 @@
-
 import React, {useState} from 'react';
 import './App.css';
-import {Country} from "./Country";
+import {Country} from "./Native_JS_2.0/Native_JS_Monday/Components/Country";
+
 
 export type BanknotsType = '' // создадим типы для banknotes -он может быть 'Dollars', 'RUBLS' или 'All'
 export type MoneyType = {
@@ -34,7 +34,7 @@ function App() {
 
     // а вот сейчас притормаживаем. И вдумчиво: константа filteredMoney получает результат функции moneyFilter
     // в функцию передаем деньги и фильтр, по которому ихбудем выдавать(ретёрнуть)
-    const filteredMoney = moneyFilter(грошы, фильтръ)
+    const filteredMoney = moneyFilter('грошы', 'фильтръ')
     return (
         <div className="App">
             <Country
