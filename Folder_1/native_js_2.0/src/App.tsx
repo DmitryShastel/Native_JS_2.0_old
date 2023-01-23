@@ -37,6 +37,7 @@ export function App() {
 
     const [todos, setTodos] = useState<TodosType[]>([])
     const [newTitle, setNewTitle] = useState('')
+    console.log(newTitle)
 
     const myFeatch = () => {
         fetch('https://jsonplaceholder.typicode.com/todos')
@@ -71,7 +72,7 @@ export function App() {
 
     return (
         <div>
-            <UniversalInput/>
+            <UniversalInput setNewTitle={setNewTitle} newTitle={newTitle}/>
             <Button name={'Show Users'} callBack={onGetUsers}/>
             <Button name={'Delete'} callBack={onDeleteUsers}/>
             <ul>

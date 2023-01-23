@@ -1,8 +1,18 @@
-import React from 'react';
+import React, {ChangeEvent} from 'react';
+
+type InputType = {
+    setNewTitle: (newTitle: string) => void
+    newTitle: string
+}
 
 
-export const UniversalInput = () => {
+export const UniversalInput = (props: InputType) => {
+
+    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        props.setNewTitle(e.currentTarget.value)
+    }
+
     return (
-        <input onChange={() => {}}/>
+        <input value={props.newTitle} onChange={onChangeHandler}/>
     )
 }
