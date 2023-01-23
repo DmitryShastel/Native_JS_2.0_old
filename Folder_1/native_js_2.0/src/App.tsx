@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
-import {Country} from "./Native_JS_2.0/Native_JS_Monday/Components/Country";
+import {Button} from "./Native_JS_2.0/Native_JS_Monday/Button";
 
 
 export type BanknotsType = '' // создадим типы для banknotes -он может быть 'Dollars', 'RUBLS' или 'All'
@@ -8,6 +8,12 @@ export type MoneyType = {
     banknotes: BanknotsType
     value: any// не ленимся, убираем заглушку, и пишем правильный тип)
     number: any// ложку за Димыча, за...
+}
+export type TodosType = {
+    completed: boolean
+    id: number
+    title: string
+    userId: number
 }
 
 let defaultMoney: any = [  // типизируем
@@ -20,7 +26,6 @@ let defaultMoney: any = [  // типизируем
     {banknotes: 'Dollars', value: 50, number: ' x1234567890'},
     {banknotes: 'RUBLS', value: 50, number: ' v1234567890'},
 ]
-
 // типизируем на входе и выходе
 export const moneyFilter = (money: any, filter: any): any => {
     //если пришел filter со значением 'All', то возвращаем все банкноты
@@ -28,23 +33,69 @@ export const moneyFilter = (money: any, filter: any): any => {
 }
 
 export function App() {
-    // убираем заглушки в типизации и вставляем в качестве инициализационного значения defaultMoney
-    const [money, setMoney] = useState<any>([])
-    const [filterValue, setFilterValue] = useState<any>('')   // по умолчанию указываем все банкноты
 
-    // а вот сейчас притормаживаем. И вдумчиво: константа filteredMoney получает результат функции moneyFilter
-    // в функцию передаем деньги и фильтр, по которому ихбудем выдавать(ретёрнуть)
-//     const filteredMoney = moneyFilter(money: any, money: any)  //грошы, фильтръ
-//     return (
-//         <div className="App">
-//             <Country
-//                 data={filteredMoney}   //отрисовать будем деньги после фильтрации
-//                 setFilterValue={setFilterValue}  //useState передаем? Так можно было?!
-//
-//             />
-//         </div>
-//     );
-// }
-// 
-// Итого: в этой компоненте у нас мозги. А вот отрисовка где-то глубже. Погружаемся в Country
+    const [todos, setTodos] = useState<TodosType[]>([])
+
+    const myFeatch = () => {
+        fetch('https://jsonplaceholder.typicode.com/todos')
+            .then(response => response.json())
+            .then(json => setTodos(json))
+    }
+
+    useEffect(() => {
+        myFeatch()
+    }, [])
+
+    const onGetUsers = () => {
+        myFeatch()
+    }
+
+    const onDeleteUsers = () => {
+        fetch('https://jsonplaceholder.typicode.com/todos')
+            .then(response => response.json())
+            .then(json => setTodos([]))
+    }
+
+    const mappeedTodos = todos.map((t, index) => {
+        return (
+            <li key={index}>
+                <span>id:{t.id}  </span>
+                <span>userId: {t.userId}  </span>
+                <input type='checkbox' checked={t.completed}/>
+                <span>{t.title}</span>
+            </li>
+        )
+    })
+
+    return (
+        <div>
+            <Button name={'Show Users'} callBack={onGetUsers}/>
+            <Button name={'Delete'} callBack={onDeleteUsers}/>
+            <ul>
+                {mappeedTodos}
+            </ul>
+
+        </div>
+    )
 }
+
+
+// убираем заглушки в типизации и вставляем в качестве инициализационного значения defaultMoney
+// const [money, setMoney] = useState<any>([])
+//const [filterValue, setFilterValue] = useState<any>('')   // по умолчанию указываем все банкноты
+
+// а вот сейчас притормаживаем. И вдумчиво: константа filteredMoney получает результат функции moneyFilter
+// в функцию передаем деньги и фильтр, по которому ихбудем выдавать(ретёрнуть)
+//const filteredMoney = moneyFilter(money: any, money: any)  //грошы, фильтръ
+//return (
+//  <div className="App">
+//         <Country
+//             data={filteredMoney}   //отрисовать будем деньги после фильтрации
+//             setFilterValue={setFilterValue}  //useState передаем? Так можно было?!
+//
+//         />
+//     </div>
+// );
+
+
+//Итого: в этой компоненте у нас мозги. А вот отрисовка где-то глубже. Погружаемся в Country

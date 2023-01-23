@@ -8,13 +8,13 @@ type ButtonType = {
 
 export const Button = (props: ButtonType) => {
 
-    const onClickHandler = () => {
+    const onGetUsers = () => {
         props.callback()
     }
 
     return (
         <div>
-            <button onClick={onClickHandler}>{props.name}</button>
+            <button onClick={onGetUsers}>{props.name}</button>
         </div>
     );
 };
