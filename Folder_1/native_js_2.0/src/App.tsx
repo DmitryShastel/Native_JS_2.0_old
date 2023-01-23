@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import {Button} from "./Native_JS_2.0/Native_JS_Monday/Button";
+import {UniversalInput} from "./Native_JS_2.0/Native_JS_Monday/Components/UniversalInput";
 
 
 export type BanknotsType = '' // создадим типы для banknotes -он может быть 'Dollars', 'RUBLS' или 'All'
@@ -35,6 +36,7 @@ export const moneyFilter = (money: any, filter: any): any => {
 export function App() {
 
     const [todos, setTodos] = useState<TodosType[]>([])
+    const [newTitle, setNewTitle] = useState('')
 
     const myFeatch = () => {
         fetch('https://jsonplaceholder.typicode.com/todos')
@@ -69,7 +71,7 @@ export function App() {
 
     return (
         <div>
-            <input/>
+            <UniversalInput/>
             <Button name={'Show Users'} callBack={onGetUsers}/>
             <Button name={'Delete'} callBack={onDeleteUsers}/>
             <ul>
