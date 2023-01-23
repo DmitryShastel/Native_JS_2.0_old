@@ -10,6 +10,7 @@ export const UniversalInput = (props: InputType) => {
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         props.setNewTitle(e.currentTarget.value)
+        e.currentTarget.value = ''
     }
 
     return (

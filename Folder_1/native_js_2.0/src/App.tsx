@@ -70,11 +70,18 @@ export function App() {
         )
     })
 
+    const addNewTitleHandler = () => {
+        let newTodo = {completed: false,  id: todos.length + 1 , title: newTitle, userId: 55}
+        setTodos([newTodo, ...todos])
+        setNewTitle('')
+    }
+
     return (
         <div>
             <UniversalInput setNewTitle={setNewTitle} newTitle={newTitle}/>
             <Button name={'Show Users'} callBack={onGetUsers}/>
             <Button name={'Delete'} callBack={onDeleteUsers}/>
+            <Button name={'AddNewTitle'} callBack={addNewTitleHandler}/>
             <ul>
                 {mappeedTodos}
             </ul>
