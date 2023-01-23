@@ -69,6 +69,7 @@ export function App() {
 
     return (
         <div>
+            <input/>
             <Button name={'Show Users'} callBack={onGetUsers}/>
             <Button name={'Delete'} callBack={onDeleteUsers}/>
             <ul>
