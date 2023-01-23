@@ -9,6 +9,7 @@
         body {
             background-color: aliceblue;
         }
+
         #big {
             background-color: rgb(74, 36, 109);
             border: 2px solid blue;
@@ -17,6 +18,7 @@
             width: 300px;
             height: 300px;
         }
+
         #medium {
             background-color: rgb(134, 82, 184);
             border: 2px solid blue;
@@ -26,6 +28,7 @@
             height: 200px;
 
         }
+
         #small {
             background-color: rgb(193, 162, 223);
             border: 2px solid blue;
@@ -48,81 +51,111 @@
 <!--    </div>-->
 <!--</div>-->
 
+<!--1// Correct inputElement = document.getElementById('moldova')-->
 
-<input id="slovenia" value="it-incubator"/>
-
-<script>
-    const inputElement = document.getElementById('slovenia');
-    inputElement.value = '';
-
-    /* Что нужно написать вместо XXX, чтобы значение в поле ввода зачищалось?
- В качестве ответа укажите строчку целиком.  */
-</script>
-<input id="search"/>
-<button id="find">find</button>
-
-<script>
-    const searchInputElement = document.getElementById('search')
-    const findButtonElement = document.getElementById('find')
-
-    event.addEventListener(YYY, () => {
-        console.log(searchInputElement.value)
-    })
-
-    /*
-    Что нужно написать внутри скобок вместо XXX и YYY, чтобы при нажатии на кнопку увидеть текст, введённый в input?
-    Ответ дайте через пробел.
-    Пример ответа: firstword secondword
-    */
+<!--    <input id="moldova" value="it-incubator"/>-->
+<!--    <button onClick='deleteA()'>clear</button>-->
+<!--<script>-->
+<!--    const deleteA = () => {-->
+<!--        inputElement = document.getElementById('moldova');-->
+<!--        inputElement.value = '';-->
+<!--    }-->
+<!--    /* Что нужно написать вместо XXX, чтобы значение в поле ввода зачищалось?-->
+<!--        В качестве ответа укажите строчку целиком.  */-->
+<!--</script>-->
 
 
-    <script>
-    let user = {age: 0};
-    for (let i = 0; i < 10; i++) {
-        user.age = i;
-    }
-</script>
+<!--2// correct: supersearchButtonElement 'click'-->
+<!--<input id="search"/>-->
+<!--<button id="find">find</button>-->
+
+<!--<script>-->
+<!--    const searchInputElement = document.getElementById('search')-->
+<!--    const supersearchButtonElement = document.getElementById('find')-->
+
+<!--    supersearchButtonElement.addEventListener('click', () => {-->
+<!--        console.log(searchInputElement.value)-->
+<!--    })-->
+
+<!--    /*-->
+<!--    Что нужно написать внутри скобок вместо XXX и YYY, чтобы при нажатии на кнопку увидеть текст, введённый в input?-->
+<!--    Ответ дайте через пробел.-->
+<!--    Пример ответа: firstword secondword-->
+<!--    */-->
+
+<!--</script>-->
+
+<!--3//-->
+<!--Что нужно написать вместо XXX, чтобы в консоли увидеть возраст пользователя?-->
+
+<!--<script>-->
+<!--    let user = {-->
+<!--        name: "samurai",-->
+<!--        age: 18-->
+<!--    }-->
+<!--    console.log(user.age)-->
+<!--</script>-->
+
+<!--4//-->
+<!--Чему равно значение св-ва age объекта user?-->
+<!--<script>-->
+<!--    let user = {age: 0};-->
+<!--    for (let i = 0; i < 10; i++) {-->
+<!--        user.age = i;-->
+<!--    }-->
+<!--    console.log(user.age)-->
+<!--</script>-->
+
+<!--5//-->
+<!--Что нужно написать вместо XXX, чтобы добавить в массив значение 'react'?-->
+<!--<script>-->
+<!--    let skills = ['css', 'html', 'js'];-->
+<!--    skills.push('react');-->
+<!--    console.log(skills)-->
+<!--</script>-->
+
+6//
+
+<!--<script> correct: 1-->
+<!--    let users = ['dimych', 'valera', 'artem', 'katya']-->
+
+<!--    yo();-->
+
+<!--    if (users.length > 4) {-->
+<!--        yo();-->
+<!--    } else {-->
+
+<!--    }-->
+
+<!--    if (users.length < 2 || window !== null) {-->
+<!--        yo()-->
+<!--    }-->
+
+<!--    for (let i = 0; i < 1; i++) {-->
+<!--        yo()-->
+<!--    }-->
+
+<!--    function yo() {-->
+<!--    }-->
+
+<!--    console.count(yo)-->
+
+<!--</script>-->
 
 
-<script>
-    let skills = ['css', 'html', 'js'];
-    skills.XXX('react');
-</script>
+<!--     //Что минимальное забыли написать внутри функции removeWhitespaces, чтобы в консоли увидеть 'you_are_JS_developer' вместо undefined?&ndash;&gt;&ndash;&gt;-->
+<!--     <script>-->
+<!--          function removeWhitespaces(string) {-->
+<!--              string.split(' ').filter(s => s !== '').join('_')-->
+<!--          }-->
 
-<script>
-    let users = ['dimych', 'valera', 'artem', 'katya']
-
-    yo();
-
-    if (users.length > 4) {
-        yo();
-    } else {
-
-    }
-
-    if (users.length < 2 || window !== null) {
-        yo()
-    }
-
-    for (let i=0;i<1;i++) {
-        yo()
-    }
-
-    function yo(){}
-
-</script>
-
-Что минимальное забыли написать внутри функции removeWhitespaces, чтобы в консоли увидеть 'you_are_JS_developer' вместо undefined?
-<script>
-    function removeWhitespaces(string) {
-        string.split(' ').filter(s => s !== '').join('_')
-    }
-
-    console.log(removeWhitespaces('you are JS developer'))
-</script>
+<!--         console.log(removeWhitespaces('you are JS developer'))-->
+<!--        </script>-->
 
 
-// <!--<a id ="link"href="https://www.google.ru/">Ссылка</a>-->
+
+
+<!--<a id ="link"href="https://www.google.ru/">Ссылка</a>-->
 <!--<script src="script.js"></script>-->
 </body>
 </html>
