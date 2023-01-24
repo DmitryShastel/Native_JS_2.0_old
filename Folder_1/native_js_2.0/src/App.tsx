@@ -10,7 +10,7 @@ export type MoneyType = {
     number: string
 }
 
-let defaultMoney: any = [  // типизируем
+let defaultMoney: Array<MoneyType> = [
     {banknotes: 'Dollars', value: 100, number: ' a1234567890'},
     {banknotes: 'Dollars', value: 50, number: ' z1234567890'},
     {banknotes: 'RUBLS', value: 100, number: ' w1234567890'},
@@ -18,7 +18,7 @@ let defaultMoney: any = [  // типизируем
     {banknotes: 'Dollars', value: 50, number: ' c1234567890'},
     {banknotes: 'RUBLS', value: 100, number: ' r1234567890'},
     {banknotes: 'Dollars', value: 50, number: ' x1234567890'},
-    {banknotes: 'RUBLS', value: 50, number: ' v1234567890'},
+    {banknotes: 'RUBLS', value: 50, number: ' v1234567890'}
 ]
 
 // типизируем на входе и выходе
@@ -29,7 +29,7 @@ export const moneyFilter = (money: any, filter: any): any => {
 
 function App() {
     // убираем заглушки в типизации и вставляем в качестве инициализационного значения defaultMoney
-    const [money, setMoney] = useState<any>([])
+    const [money, setMoney] = useState<Array<MoneyType>>([])
     const [filterValue, setFilterValue] = useState<any>('')   // по умолчанию указываем все банкноты
 
     // а вот сейчас притормаживаем. И вдумчиво: константа filteredMoney получает результат функции moneyFilter
