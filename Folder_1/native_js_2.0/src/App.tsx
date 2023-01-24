@@ -3,7 +3,7 @@ import './App.css';
 import {Country} from "./Native_JS_2.0/Native_JS_Monday/Components/Country";
 
 
-export type BanknotsType = '' // создадим типы для banknotes -он может быть 'Dollars', 'RUBLS' или 'All'
+export type BanknotsType = 'Dollars' | 'RUBLS' | 'All'
 export type MoneyType = {
     banknotes: BanknotsType
     value: any// не ленимся, убираем заглушку, и пишем правильный тип)
