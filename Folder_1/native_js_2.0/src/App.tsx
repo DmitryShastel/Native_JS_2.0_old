@@ -6,8 +6,8 @@ import {Country} from "./Native_JS_2.0/Native_JS_Monday/Components/Country";
 export type BanknotsType = 'Dollars' | 'RUBLS' | 'All'
 export type MoneyType = {
     banknotes: BanknotsType
-    value: any// не ленимся, убираем заглушку, и пишем правильный тип)
-    number: any// ложку за Димыча, за...
+    value: number
+    number: string
 }
 
 let defaultMoney: any = [  // типизируем
