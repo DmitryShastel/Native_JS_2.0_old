@@ -22,7 +22,7 @@ let defaultMoney: Array<MoneyType> = [
 ]
 
 // типизируем на входе и выходе
-export const moneyFilter = (money: any, filter: any): any => {
+export const moneyFilter = (money: any, filter: BanknotsType): any => {
     //если пришел filter со значением 'All', то возвращаем все банкноты
     //return money.filter... ну да, придется фильтровать
 }
@@ -30,7 +30,7 @@ export const moneyFilter = (money: any, filter: any): any => {
 function App() {
     // убираем заглушки в типизации и вставляем в качестве инициализационного значения defaultMoney
     const [money, setMoney] = useState<Array<MoneyType>>([])
-    const [filterValue, setFilterValue] = useState<any>('')   // по умолчанию указываем все банкноты
+    const [filterValue, setFilterValue] = useState<BanknotsType>('All')   // по умолчанию указываем все банкноты
 
     // а вот сейчас притормаживаем. И вдумчиво: константа filteredMoney получает результат функции moneyFilter
     // в функцию передаем деньги и фильтр, по которому ихбудем выдавать(ретёрнуть)
