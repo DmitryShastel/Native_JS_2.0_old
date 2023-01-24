@@ -11,22 +11,22 @@ type CountryPropsType = {
 
 export const Country = (props: CountryPropsType) => {
     const setAll = () => {
-        // засетаем 'All'
+        props.moneyFilter("All")
     }
 
     const setDollars = () => {
-        // засетаем 'Dollars'
+        props.moneyFilter("Dollars")
     }
 
     const setRUBLS = () => {
-        // засетаем 'RUBLS'
+        props.moneyFilter("RUBLS")
     }
 
     return (
         <div>
-            <button onClick={()=>{'засетаем All'}}>All</button>
-            <button onClick={()=>{'засетаем Dollars'}}>Dollars</button>
-            <button onClick={()=>{'засетаем RUBLS'}}>RUBLS</button>
+            <button onClick={setAll}>All</button>
+            <button onClick={setDollars}>Dollars</button>
+            <button onClick={setRUBLS}>RUBLS</button>
             <City data={"передаем денюжки в город"}/>
         </div>
     );
