@@ -4,7 +4,7 @@ import {BanknotsType, MoneyType} from "../../../App";
 
 
 type CountryPropsType = {
-    data: any
+    data: Array<MoneyType>
     setFilterValue: any
     moneyFilter: (value: BanknotsType) => void
 }
@@ -27,7 +27,7 @@ export const Country = (props: CountryPropsType) => {
             <button onClick={setAll}>All</button>
             <button onClick={setDollars}>Dollars</button>
             <button onClick={setRUBLS}>RUBLS</button>
-            <City data={"передаем денюжки в город"}/>
+            <City data={props.data}/>
         </div>
     );
 };

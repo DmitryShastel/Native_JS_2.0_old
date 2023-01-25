@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
 import {Country} from "./Native_JS_2.0/Native_JS_Monday/Components/Country";
-import any = jasmine.any;
 
 
 export type BanknotsType = 'Dollars' | 'RUBLS' | 'All'
@@ -10,17 +9,6 @@ export type MoneyType = {
     value: number
     number: string
 }
-
-// let defaultMoney: Array<MoneyType> = [
-//     {banknotes: 'Dollars', value: 100, number: ' a1234567890'},
-//     {banknotes: 'Dollars', value: 50, number: ' z1234567890'},
-//     {banknotes: 'RUBLS', value: 100, number: ' w1234567890'},
-//     {banknotes: 'Dollars', value: 100, number: ' e1234567890'},
-//     {banknotes: 'Dollars', value: 50, number: ' c1234567890'},
-//     {banknotes: 'RUBLS', value: 100, number: ' r1234567890'},
-//     {banknotes: 'Dollars', value: 50, number: ' x1234567890'},
-//     {banknotes: 'RUBLS', value: 50, number: ' v1234567890'}
-// ]
 
 function App() {
     const [money, setMoney] = useState<Array<MoneyType>>([
@@ -49,10 +37,6 @@ function App() {
         setFilterValue(value)
     }
 
-    // const moneyFilter = (money: MoneyType, filter: BanknotsType): any => {
-    //
-    //
-    // }
 
     return (
         <div className="App">

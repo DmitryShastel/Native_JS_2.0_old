@@ -2,26 +2,29 @@ import React from 'react';
 import {CurrentBankomat} from "./CurrentBankomat";
 import {MoneyType} from "../../../App";
 
+
 type CityPropsType = {
-    data: any //встречаем денюжки
+    data: Array<MoneyType> //встречаем денюжки
+
 }
 
 export const City = (props: CityPropsType) => {
 
-    // пока это пропускам
-    // const mappedMoney = props.data.map((el: MoneyType, index) => (
-    //     <CurrentBankomat
-    //         key={index}
-    //         money={el}
-    //     />
-    // ))
+
+    const mappedMoney = props.data.map((el: MoneyType, index: number) => (
+
+        <CurrentBankomat
+            key={index}
+            money={el}
+        />
+    ))
 
 
     return (
         <div>
             <div>Ну все парни, мапимся -выводим наши денюжки</div>
             <div>На верстку ПОКА не обращаем внимания , сейчас занимаемся логикой</div>
-            {/*<div>{mappedMoney}</div>*/}
+            <div>{mappedMoney}</div>
         </div>
     );
 };
