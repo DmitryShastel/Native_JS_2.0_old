@@ -13,8 +13,8 @@ export const Counter = (props: CounterType) => {
                 <span>{props.counter}</span>
             </div>
 
-            <button>inc</button>
-            <button>reset</button>
+            <button onClick={() => {}}>inc</button>
+            <button onClick={() => {}}>reset</button>
         </div>
     );
 };
