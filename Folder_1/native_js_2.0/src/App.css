@@ -1,7 +1,19 @@
+/*classes for todolist*/
 .App {
-    text-align: center;
+    /*text-align: center;*/
+    padding: 30px;
+    display: flex;
 }
 
+.App > div {
+    margin-right: 50px;
+}
+
+button {
+    margin-left: 5px;
+    cursor: pointer;
+}
+__________________________________________________________
 .App-logo {
     height: 40vmin;
     pointer-events: none;
@@ -37,3 +49,18 @@
     }
 }
 
+.disabled-inc {
+    background-color: aquamarine;
+    opacity: 0.5;
+}
+
+
+.disabled-reset {
+    background-color: aquamarine;
+    opacity: 0.5;
+}
+
+
+.error-color {
+    color: red;
+}

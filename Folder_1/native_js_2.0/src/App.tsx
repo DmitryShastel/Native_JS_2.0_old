@@ -1,23 +1,15 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Counter} from "./Native_JS_2.0/Native_JS_Monday/Counter/Buttons";
+import {ToDoList} from "./Native_JS_2.0/Native_JS_Monday/ToDoList/ToDoList";
 
 
 function App() {
 
-    let [counter, setCounter] = useState(0)
-
-    let inc = () => {
-
-    }
-
-    let reset = () => {
-    
-    }
+    let [task, setTask] = useState('')
 
     return (
         <div className="App">
-            <Counter counter={counter}/>
+            <ToDoList/>
         </div>
     );
 }
