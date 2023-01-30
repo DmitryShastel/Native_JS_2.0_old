@@ -1,20 +1,27 @@
 import React, {useState} from 'react';
 import './App.css';
-import {TaskType, ToDoList} from "./Native_JS_2.0/Native_JS_Monday/ToDoList/ToDoList";
+import {ToDoList} from "./Native_JS_2.0/Native_JS_Monday/ToDoList/ToDoList";
+import {v1} from "uuid";
 
 
-function App() {
 
-    let [task, setTask] = useState([
-        {id: 1, title: 'HTML&CSS', isDone: true},
-        {id: 2, title: 'JS', isDone: true},
-        {id: 3, title: 'React', isDone: false},
-        {id: 4, title: 'TypeScript', isDone: false}
+export function App() {
+
+    let [tasks, setTasks] = useState([
+        {id: v1(), title: 'HTML&CSS', isDone: true},
+        {id: v1(), title: 'JS', isDone: true},
+        {id: v1(), title: 'React', isDone: false},
+        {id: v1(), title: 'TypeScript', isDone: false}
     ])
 
-    let removeTask = (id: number) => {
-        let removedTask = task.filter(t => t.id !== id)
-        setTask(removedTask)
+    const removeTask = (id: string) => {
+        let removedTask = tasks.filter(t => t.id !== id)
+        setTasks(removedTask)
+    }
+
+    const addTask = (title: string) => {
+        let newTask = {id: v1(), title: title, isDone: false}
+        setTasks([newTask, ...tasks])
     }
 
 
@@ -22,12 +29,13 @@ function App() {
         <div className="App">
             <ToDoList
                 title={'What to learn'}
-                task={task}
+                tasks={tasks}
                 removeTask={removeTask}
+                addTask={addTask}
             />
         </div>
     );
 }
 
 
-export default App;
+
