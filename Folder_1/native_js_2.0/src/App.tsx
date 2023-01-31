@@ -4,7 +4,7 @@ import {TaskType, ToDoList} from "./Native_JS_2.0/Native_JS_Monday/ToDoList/ToDo
 import {v1} from "uuid";
 
 
-type FilterType = 'All' | 'Active' | 'Completed'
+export type FilterType = 'All' | 'Active' | 'Completed'
 
 export function App() {
 
@@ -17,12 +17,12 @@ export function App() {
 
     let [filter, setFilter] = useState<FilterType>('All')
 
-    let filteredTask = tasks
+    let filterForTask = tasks
     if(filter === 'Active') {
-        filteredTask.filter(t => t.isDone === false)
+        filterForTask.filter(t => t.isDone === false)
     }
     if(filter === 'Completed'){
-        filteredTask.filter(t => t.isDone === true)
+        filterForTask.filter(t => t.isDone === true)
     }
 
 
@@ -36,14 +36,19 @@ export function App() {
         setTasks([newTask, ...tasks])
     }
 
+    const filteredTasks = (value: FilterType) => {
+        setFilter(value)
+    }
+
 
     return (
         <div className="App">
             <ToDoList
                 title={'What to learn'}
-                tasks={filteredTask}
+                tasks={filterForTask}
                 removeTask={removeTask}
                 addTask={addTask}
+                filteredTasks={filteredTasks}
             />
         </div>
     );

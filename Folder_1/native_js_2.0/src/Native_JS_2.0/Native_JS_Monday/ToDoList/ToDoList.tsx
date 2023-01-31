@@ -1,4 +1,5 @@
 import React, {ChangeEvent, useState} from 'react';
+import {FilterType} from "../../../App";
 
 export type TaskType = {
     id: string
@@ -11,6 +12,7 @@ type TodoListType = {
     title: string
     removeTask: (id: string) => void
     addTask: (title: string) => void
+    filteredTasks: (value: FilterType) => void
 }
 
 export const ToDoList = (props: TodoListType) => {
