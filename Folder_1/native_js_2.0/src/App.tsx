@@ -16,6 +16,16 @@ export function App() {
 
     let [filter, setFilter] = useState('All')
 
+    let filteredTask = tasks
+    if(filter === 'Active') {
+        filteredTask.filter(t => t.isDone === false)
+    }
+    if(filter === 'Completed'){
+        filteredTask.filter(t => t.isDone === true)
+    }
+
+    
+
     const removeTask = (id: string) => {
         let removedTask = tasks.filter(t => t.id !== id)
         setTasks(removedTask)
