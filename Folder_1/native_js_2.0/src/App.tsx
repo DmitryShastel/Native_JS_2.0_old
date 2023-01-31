@@ -1,20 +1,21 @@
 import React, {useState} from 'react';
 import './App.css';
-import {ToDoList} from "./Native_JS_2.0/Native_JS_Monday/ToDoList/ToDoList";
+import {TaskType, ToDoList} from "./Native_JS_2.0/Native_JS_Monday/ToDoList/ToDoList";
 import {v1} from "uuid";
 
 
+type FilterType = 'All' | 'Active' | 'Completed'
 
 export function App() {
 
-    let [tasks, setTasks] = useState([
+    let [tasks, setTasks] = useState<Array<TaskType>>([
         {id: v1(), title: 'HTML&CSS', isDone: true},
         {id: v1(), title: 'JS', isDone: true},
         {id: v1(), title: 'React', isDone: false},
         {id: v1(), title: 'TypeScript', isDone: false}
     ])
 
-    let [filter, setFilter] = useState('All')
+    let [filter, setFilter] = useState<FilterType>('All')
 
     let filteredTask = tasks
     if(filter === 'Active') {
@@ -24,7 +25,7 @@ export function App() {
         filteredTask.filter(t => t.isDone === true)
     }
 
-    
+
 
     const removeTask = (id: string) => {
         let removedTask = tasks.filter(t => t.id !== id)
@@ -40,7 +41,7 @@ export function App() {
         <div className="App">
             <ToDoList
                 title={'What to learn'}
-                tasks={tasks}
+                tasks={filteredTask}
                 removeTask={removeTask}
                 addTask={addTask}
             />
