@@ -14,6 +14,8 @@ export function App() {
         {id: v1(), title: 'TypeScript', isDone: false}
     ])
 
+    let [filter, setFilter] = useState('All')
+
     const removeTask = (id: string) => {
         let removedTask = tasks.filter(t => t.id !== id)
         setTasks(removedTask)
