@@ -18,7 +18,6 @@ export function App() {
         let removedTask = tasks.filter(t => t.id !== id)
         setTasks(removedTask)
     }
-
     const addTask = (title: string) => {
         let newTask = {id: v1(), title: title, isDone: false}
         setTasks([newTask, ...tasks])

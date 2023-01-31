@@ -36,9 +36,11 @@ export const ToDoList = (props: TodoListType) => {
                 <div>
                     <ul>
                         {props.tasks.map((t) => {
+
                             const onClickHandlerRemove = () => {
                                 props.removeTask(t.id)
                             }
+
                             return (
                                 <li key={t.id}>
                                     <input type='checkbox' checked={t.isDone}/>
