@@ -17,12 +17,12 @@ export function App() {
 
     let [filter, setFilter] = useState<FilterType>('All')
 
-    let filterForTask = tasks
+    let taskForToDoList = tasks
     if(filter === 'Active') {
-        filterForTask.filter(t => t.isDone === false)
+        taskForToDoList = tasks.filter(t => t.isDone === false)
     }
     if(filter === 'Completed'){
-        filterForTask.filter(t => t.isDone === true)
+        taskForToDoList = tasks.filter(t => t.isDone === true)
     }
 
 
@@ -45,7 +45,7 @@ export function App() {
         <div className="App">
             <ToDoList
                 title={'What to learn'}
-                tasks={filterForTask}
+                tasks={taskForToDoList}
                 removeTask={removeTask}
                 addTask={addTask}
                 filteredTasks={filteredTasks}
