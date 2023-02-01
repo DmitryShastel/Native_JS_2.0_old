@@ -13,6 +13,7 @@ type TodoListType = {
     removeTask: (id: string) => void
     addTask: (title: string) => void
     filteredTasks: (value: FilterType) => void
+    changeStatus: (id: string, isDone: boolean) => void
 }
 
 export const ToDoList = (props: TodoListType) => {

@@ -39,6 +39,14 @@ export function App() {
         setFilter(value)
     }
 
+    const changeStatus = (id: string, isDone: boolean) => {
+        let task = tasks.find(t => t.id === id)
+        if(task) {
+            task.isDone = isDone
+            setTasks([...tasks])
+        }
+    }
+
 
     return (
         <div className="App">
@@ -48,6 +56,7 @@ export function App() {
                 removeTask={removeTask}
                 addTask={addTask}
                 filteredTasks={filteredTasks}
+                changeStatus={changeStatus}
             />
         </div>
     );
