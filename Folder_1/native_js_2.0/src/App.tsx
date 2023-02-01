@@ -35,7 +35,6 @@ export function App() {
         let newTask = {id: v1(), title: title, isDone: false}
         setTasks([newTask, ...tasks])
     }
-
     const filteredTasks = (value: FilterType) => {
         setFilter(value)
     }
