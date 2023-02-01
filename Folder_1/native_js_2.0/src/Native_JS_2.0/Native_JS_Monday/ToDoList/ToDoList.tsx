@@ -23,6 +23,9 @@ export const ToDoList = (props: TodoListType) => {
         setTitle(e.currentTarget.value)
     }
     const addTask = () => {
+        if (title.trim() === '') {
+            return
+        }
         props.addTask(title)
         setTitle('')
     }
