@@ -22,13 +22,16 @@ export const ToDoList = (props: TodoListType) => {
 
     const onChangeHandlerAddTask = (e: ChangeEvent<HTMLInputElement>) => {
         setTitle(e.currentTarget.value)
+        setError(null)
     }
     const addTask = () => {
-        if (title.trim() === '') {
-            return
+
+        if (title.trim() !== '') {
+            props.addTask(title)
+            setTitle('')
+        } else {
+            setError('Title is required')
         }
-        props.addTask(title)
-        setTitle('')
     }
 
     const onAllClickHandler = () => {
@@ -46,8 +49,9 @@ export const ToDoList = (props: TodoListType) => {
         <div>
             <h3>{props.title}</h3>
             <div>
-                <input value={title} onChange={onChangeHandlerAddTask}/>
+                <input value={title} onChange={onChangeHandlerAddTask} className={error ? 'error' : ''}/>
                 <button onClick={addTask}>+</button>
+                {error && <div className={'error-message'}>{error}</div>}
             </div>
             <div>
                 <ul>
@@ -63,7 +67,11 @@ export const ToDoList = (props: TodoListType) => {
 
                         return (
                             <li key={t.id}>
-                                <input type='checkbox' checked={t.isDone} onChange={onChangeHandler}/>
+                                <input
+                                    type='checkbox'
+                                    checked={t.isDone}
+                                    onChange={onChangeHandler}
+                                />
                                 <span>{t.title}</span>
                                 <button onClick={onClickHandlerRemove}>x</button>
                             </li>
