@@ -61,6 +61,14 @@ __________________________________________________________
 }
 
 
-.error-color {
+/*.error-color {*/
+/*    color: red;*/
+/*}*/
+
+.error {
+    border: red 1px solid;
+}
+
+.error-message {
     color: red;
 }

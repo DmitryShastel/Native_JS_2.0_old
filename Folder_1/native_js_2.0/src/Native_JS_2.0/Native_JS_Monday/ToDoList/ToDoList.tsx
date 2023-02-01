@@ -18,6 +18,7 @@ type TodoListType = {
 
 export const ToDoList = (props: TodoListType) => {
     let [title, setTitle] = useState('')
+    let [error, setError] = useState<string | null>(null)
 
     const onChangeHandlerAddTask = (e: ChangeEvent<HTMLInputElement>) => {
         setTitle(e.currentTarget.value)
