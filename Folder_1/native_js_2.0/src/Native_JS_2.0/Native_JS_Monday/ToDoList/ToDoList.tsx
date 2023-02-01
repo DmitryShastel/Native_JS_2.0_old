@@ -51,10 +51,14 @@ export const ToDoList = (props: TodoListType) => {
                         const onClickHandlerRemove = () => {
                             props.removeTask(t.id)
                         }
+                        const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+                            let newIsDoneValue = e.currentTarget.checked
+                            props.changeStatus(t.id, newIsDoneValue)
+                        }
 
                         return (
                             <li key={t.id}>
-                                <input type='checkbox' checked={t.isDone}/>
+                                <input type='checkbox' checked={t.isDone} onChange={onChangeHandler}/>
                                 <span>{t.title}</span>
                                 <button onClick={onClickHandlerRemove}>x</button>
                             </li>
