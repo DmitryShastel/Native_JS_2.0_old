@@ -57,6 +57,7 @@ export function App() {
                 addTask={addTask}
                 filteredTasks={filteredTasks}
                 changeStatus={changeStatus}
+                filter={filter}
             />
         </div>
     );

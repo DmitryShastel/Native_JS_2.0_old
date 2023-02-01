@@ -6,7 +6,6 @@ export type TaskType = {
     title: string
     isDone: boolean
 }
-
 type TodoListType = {
     tasks: Array<TaskType>
     title: string
@@ -14,6 +13,7 @@ type TodoListType = {
     addTask: (title: string) => void
     filteredTasks: (value: FilterType) => void
     changeStatus: (id: string, isDone: boolean) => void
+    filter: FilterType
 }
 
 export const ToDoList = (props: TodoListType) => {
@@ -33,7 +33,6 @@ export const ToDoList = (props: TodoListType) => {
             setError('Title is required')
         }
     }
-
     const onAllClickHandler = () => {
         props.filteredTasks('All')
     }
@@ -66,7 +65,7 @@ export const ToDoList = (props: TodoListType) => {
                         }
 
                         return (
-                            <li key={t.id}>
+                            <li key={t.id} className={t.isDone ? 'is-done' : ''}>
                                 <input
                                     type='checkbox'
                                     checked={t.isDone}
@@ -80,10 +79,15 @@ export const ToDoList = (props: TodoListType) => {
 
                 </ul>
             </div>
-            <button onClick={onAllClickHandler}>All</button>
-            <button onClick={onActiveClickHandler}>Active</button>
-            <button onClick={onCompletedClickHandler}>Completed</button>
+            <button className={props.filter === 'All' ? 'active-filter' : ''}
+                    onClick={onAllClickHandler}>All
+            </button>
+            <button className={props.filter === 'Active' ? 'active-filter' : ''}
+                    onClick={onActiveClickHandler}>Active
+            </button>
+            <button className={props.filter === 'Completed' ? 'active-filter' : ''}
+                    onClick={onCompletedClickHandler}>Completed
+            </button>
         </div>
     );
 }
-

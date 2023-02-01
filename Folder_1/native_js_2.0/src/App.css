@@ -61,9 +61,10 @@ __________________________________________________________
 }
 
 
-/*.error-color {*/
-/*    color: red;*/
-/*}*/
+.active-filter {
+    background-color: aquamarine;
+}
+
 
 .error {
     border: red 1px solid;
@@ -71,4 +72,8 @@ __________________________________________________________
 
 .error-message {
     color: red;
+}
+
+.is-done {
+    opacity: 0.5;
 }
