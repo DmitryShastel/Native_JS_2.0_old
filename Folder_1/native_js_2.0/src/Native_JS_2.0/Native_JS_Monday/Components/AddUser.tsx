@@ -21,12 +21,15 @@ export const AddUser = () => {
     const addUser = () => {
         let user = {id: v1(), name: name}
         setUsers([...users, user])
+        alert('Hello' + ' ' + `${name}`)
+        console.log(user)
+        setName('')
     }
 
     return (
         <div>
             <input value={name} onChange={onChangeHandler}/>
-            <button>Add</button>
+            <button onClick={addUser}>Add</button>
             <div>Count:{totalUsers}</div>
         </div>
 
