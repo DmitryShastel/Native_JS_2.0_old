@@ -12,11 +12,12 @@ export const AddUser = () => {
 
     let [users, setUsers] = useState<UserType[]>([])
     let [name, setName] = useState('')
-    let [error, seterror] = useState<string | null>(null)
+    let [error, setError] = useState<string | null>(null)
 
     const totalUsers = users.length
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setName(e.currentTarget.value)
+        setError(null)
     }
 
     const addUser = () => {
@@ -24,19 +25,24 @@ export const AddUser = () => {
 
         if (name.trim() !== '') {
             setUsers([...users, user])
+            alert('Hello' + ' ' + `${name}`)
+            console.log(user)
             setName('')
         } else {
-            seterror('The name is required')
+            setError('The name is required')
         }
-        alert('Hello' + ' ' + `${name}`)
-        console.log(user)
-
     }
+
+    
 
     return (
         <div>
-            <input value={name} onChange={onChangeHandler}/>
+            <input
+                value={name}
+                onChange={onChangeHandler}
+                className={error ? 'error' : ''} />
             <button onClick={addUser}>Add</button>
+            {error && <div className={'error-message'}>{error}</div>}
             <div>Count:{totalUsers}</div>
         </div>
 
