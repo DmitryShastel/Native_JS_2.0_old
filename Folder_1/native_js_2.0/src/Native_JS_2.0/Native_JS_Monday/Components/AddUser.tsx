@@ -33,13 +33,19 @@ export const AddUser = () => {
         }
     }
 
-    
+    const onEnter = (e: KeyboardEvent | React.KeyboardEvent) => {
+        if (e.key === 'Enter' && name) {
+            addUser()
+            setName('')
+        }
+    }
 
     return (
         <div>
             <input
                 value={name}
                 onChange={onChangeHandler}
+                onKeyDown={onEnter}
                 className={error ? 'error' : ''} />
             <button onClick={addUser}>Add</button>
             {error && <div className={'error-message'}>{error}</div>}
