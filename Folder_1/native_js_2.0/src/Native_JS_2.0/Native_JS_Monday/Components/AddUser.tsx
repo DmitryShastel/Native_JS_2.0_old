@@ -7,7 +7,6 @@ export type UserType = {
     name: string
 }
 
-
 export const AddUser = () => {
 
     let [users, setUsers] = useState<UserType[]>([])

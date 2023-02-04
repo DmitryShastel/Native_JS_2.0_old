@@ -11,3 +11,7 @@ beforeEach(() => {
     ]
 })
 
+// test.skip('add one user', () => {
+//     // const oneUser = addUser(initialState,2)
+//     expect(oneUser.length).toBe(3)
+// })
