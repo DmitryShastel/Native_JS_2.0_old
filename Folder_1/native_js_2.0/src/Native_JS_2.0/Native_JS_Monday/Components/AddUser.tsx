@@ -2,7 +2,7 @@ import React, {ChangeEvent, useState} from 'react';
 import {v1} from "uuid";
 
 
-type UserType = {
+export type UserType = {
     id: string
     name: string
 }
@@ -31,6 +31,7 @@ export const AddUser = () => {
         } else {
             setError('The name is required')
         }
+        console.log(users)
     }
 
     const onEnter = (e: KeyboardEvent | React.KeyboardEvent) => {
