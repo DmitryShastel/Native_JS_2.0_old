@@ -12,6 +12,7 @@ export const AddUser = () => {
 
     let [users, setUsers] = useState<UserType[]>([])
     let [name, setName] = useState('')
+    let [error, seterror] = useState<string | null>(null)
 
     const totalUsers = users.length
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
@@ -20,10 +21,16 @@ export const AddUser = () => {
 
     const addUser = () => {
         let user = {id: v1(), name: name}
-        setUsers([...users, user])
+
+        if (name.trim() !== '') {
+            setUsers([...users, user])
+            setName('')
+        } else {
+            seterror('The name is required')
+        }
         alert('Hello' + ' ' + `${name}`)
         console.log(user)
-        setName('')
+
     }
 
     return (
