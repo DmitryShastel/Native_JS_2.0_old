@@ -63,7 +63,8 @@ console.log(students.sort(compareObjByName))
 //б. РегистроНЕзависимоя
 console.log(students.sort((a,b) => a.name.localeCompare(b.name)))
 
-
+//Сортировка массива объектов по числовым значениям
+console.log(students.sort((a,b) => a.name - b.name))
 
 
 
