@@ -16,7 +16,6 @@ test ('reference type test', () => {
 
     expect(user.age).toBe(31)
 })
-
 test ('array reference type test', () => {
    let admins = users
 
@@ -24,7 +23,6 @@ test ('array reference type test', () => {
 
     expect(users[2]).toEqual({ name: 'Alex', age: 10})
 })
-
 test ('change address', () => {
     let addr = user.address
 
