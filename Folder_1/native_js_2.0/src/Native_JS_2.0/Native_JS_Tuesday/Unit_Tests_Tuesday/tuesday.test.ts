@@ -1,4 +1,12 @@
-import {increaseHair, moveUser, upgradeUserLaptop, users, UserType, UserWithLaptopType} from "../JS_TS_Mutability";
+import {
+    increaseHair,
+    moveUser,
+    upgradeUserLaptop,
+    users,
+    UserType,
+    UserWithLaptopOptions,
+    UserWithLaptopType
+} from "../JS_TS_Mutability";
 
 test ('reference type test', () => {
 
@@ -63,8 +71,7 @@ test ('change user address', () => {
     expect(user.laptop).toBe(movedUser.laptop)
     expect(movedUser.address.city).toBe('Kiev')
 })
-
-test ('upgrade laptop to macbook  ', () => {
+test ('upgrade laptop to macbook', () => {
 
     let user: UserWithLaptopType = {
         name: 'Dima',
@@ -85,4 +92,32 @@ test ('upgrade laptop to macbook  ', () => {
     expect(user.laptop).not.toBe(upgradedUser.laptop)
     expect(upgradedUser.laptop.title).toBe('Macbook')
     expect(user.laptop.title).toBe('ZenBook')
+})
+
+test ('upgrade laptop serial number', () => {
+
+    let user: UserWithLaptopOptions = {
+        name: 'Dima',
+        hair: 30,
+        address: {
+            city: 'Minsk',
+            house: 12
+        },
+        laptop: {
+            title: 'ZenBook',
+            serialNumber: {
+                number: 8
+            }
+        },
+
+    }
+
+    const upgradedUserLaptope = upgradeUserLaptopOptions(user, 'Macbook')
+
+    expect(user).not.toBe(upgradedUserLaptope)
+    expect(user.address).toBe(upgradedUserLaptope.address)
+    expect(user.laptop).toBe(upgradedUserLaptope.laptop)
+    expect(upgradedUserLaptope.laptop.title).toBe('Macbook')
+    expect(user.laptop.title).toBe('ZenBook')
+    expect(upgradedUserLaptope.laptop.serialNumber.number).toBe(8)
 })

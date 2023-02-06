@@ -12,6 +12,19 @@ export type UserWithLaptopType = UserType & {
     laptop: LaptopType
 }
 
+
+export type  LaptopType2 = {
+    title: string
+    serialNumber: SerialNumberType
+}
+
+export type  SerialNumberType = {
+    number: number
+}
+export type UserWithLaptopOptions =  UserType & {
+    laptop: LaptopType2
+}
+
 export let users = [
     {name: 'Dima', age: 30},
     {name: 'Bob', age: 23}
@@ -23,7 +36,6 @@ export let increaseHair = (user: UserType, power: number) => {
     copy.hair = copy.hair / power
     return copy
 }
-
 export let moveUser = (user: UserWithLaptopType, city: string) => {
     let moveUser = {...user}
     moveUser.address = {
