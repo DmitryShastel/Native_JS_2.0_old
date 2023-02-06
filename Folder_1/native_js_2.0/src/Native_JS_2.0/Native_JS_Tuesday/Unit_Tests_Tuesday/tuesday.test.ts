@@ -7,7 +7,7 @@ type UserType = {
     address: {title: string}
 }
 
-let increaseAge = (user: UserType , power: number) => {
+let increaseHair = (user: UserType , power: number) => {
     let copy = {...user}
     copy.hair = copy.hair / power
     return copy
@@ -15,11 +15,12 @@ let increaseAge = (user: UserType , power: number) => {
 
 test ('reference type test', () => {
 
-    let cutUser = increaseAge(user, 2)
+    let cutUser = increaseHair(user, 2)
 
 
     expect(user.hair).toBe(30)
     expect(cutUser.hair).toBe(15)
+    expect(cutUser.address).toBe(user.address)
 })
 
 
