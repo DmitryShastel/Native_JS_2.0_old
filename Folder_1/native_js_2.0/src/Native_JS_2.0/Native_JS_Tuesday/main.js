@@ -66,12 +66,16 @@ console.log(students.sort((a, b) => a.name.localeCompare(b.name)))
 //Сортировка массива объектов по числовым значениям
 console.log(students.sort((a, b) => a.name - b.name))
 
-let x = 10
+// let x = 10
+// let y = x
+//
+// x = 2
+// console.log(y)
+
+let x = [1, 3, 8, 55]
 let y = x
-
-x = 2
+x[0] = 22
 console.log(y)
-
 
 
 
