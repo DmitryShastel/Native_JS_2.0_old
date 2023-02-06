@@ -1,7 +1,7 @@
 export type UserType = {
     name: string
     hair: number
-    address: {title: string}
+    address: { city: string, house?: number }
 }
 
 export type  LaptopType = {
@@ -18,8 +18,28 @@ export let users = [
 ]
 
 //fun
-export let increaseHair = (user: UserType , power: number) => {
+export let increaseHair = (user: UserType, power: number) => {
     let copy = {...user}
     copy.hair = copy.hair / power
     return copy
+}
+
+export let moveUser = (user: UserWithLaptopType, city: string) => {
+    let moveUser = {...user}
+    moveUser.address = {
+        ...moveUser.address,
+        city: city
+    }
+    return moveUser
+
+}
+
+export let upgradeUserLaptop = (user: UserWithLaptopType, title: string) => {
+    let upgradedUser = {...user}
+    upgradedUser.laptop = {
+        ...upgradedUser.laptop,
+        title: title
+    }
+    return upgradedUser
+
 }
