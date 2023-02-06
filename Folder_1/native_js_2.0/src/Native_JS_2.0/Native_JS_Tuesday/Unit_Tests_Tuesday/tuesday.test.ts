@@ -1,7 +1,7 @@
 import {
     increaseHair,
     moveUser,
-    upgradeUserLaptop,
+    upgradeUserLaptop, upgradeUserLaptopOptions,
     users,
     UserType,
     UserWithLaptopOptions,
@@ -112,12 +112,15 @@ test ('upgrade laptop serial number', () => {
 
     }
 
-    const upgradedUserLaptope = upgradeUserLaptopOptions(user, 'Macbook')
+    const upgradedUserLaptop = upgradeUserLaptopOptions(user, 9)
 
-    expect(user).not.toBe(upgradedUserLaptope)
-    expect(user.address).toBe(upgradedUserLaptope.address)
-    expect(user.laptop).toBe(upgradedUserLaptope.laptop)
-    expect(upgradedUserLaptope.laptop.title).toBe('Macbook')
-    expect(user.laptop.title).toBe('ZenBook')
-    expect(upgradedUserLaptope.laptop.serialNumber.number).toBe(8)
+    expect(user).not.toBe(upgradedUserLaptop)
+    expect(user.name).toBe('Dima')
+    expect(user.hair).toBe(30)
+    expect(user.address.city).toBe(upgradedUserLaptop.address.city)
+    expect(user.address.house).toBe(upgradedUserLaptop.address.house)
+    expect(user.laptop.title).toBe(upgradedUserLaptop.laptop.title)
+    expect(user.laptop.title).toBe(upgradedUserLaptop.laptop.title)
+    expect(user.laptop.serialNumber.number).not.toBe(upgradedUserLaptop.laptop.serialNumber.number)
+    expect(upgradedUserLaptop.laptop.serialNumber.number).toBe(9)
 })

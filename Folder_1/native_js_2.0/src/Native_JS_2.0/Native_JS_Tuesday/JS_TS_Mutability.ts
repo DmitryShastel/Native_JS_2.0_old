@@ -45,7 +45,6 @@ export let moveUser = (user: UserWithLaptopType, city: string) => {
     return moveUser
 
 }
-
 export let upgradeUserLaptop = (user: UserWithLaptopType, title: string) => {
     let upgradedUser = {...user}
     upgradedUser.laptop = {
@@ -54,4 +53,16 @@ export let upgradeUserLaptop = (user: UserWithLaptopType, title: string) => {
     }
     return upgradedUser
 
+}
+
+export let upgradeUserLaptopOptions = (user: UserWithLaptopOptions, number: number) => {
+    return {
+        ...user,
+        laptop: {
+            ...user.laptop,
+            serialNumber: {
+                number: number
+            }
+        }
+    }
 }
