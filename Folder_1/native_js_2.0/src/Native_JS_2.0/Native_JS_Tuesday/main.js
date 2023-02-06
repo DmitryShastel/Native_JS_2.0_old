@@ -51,7 +51,7 @@ const students = [
 //а. Регистрозависимоя
 
 const compareObjByName = (a, b) => {
-    if(a.name > b.name) {
+    if (a.name > b.name) {
         return 1
     } else {
         return -1
@@ -61,13 +61,16 @@ const compareObjByName = (a, b) => {
 console.log(students.sort(compareObjByName))
 
 //б. РегистроНЕзависимоя
-console.log(students.sort((a,b) => a.name.localeCompare(b.name)))
+console.log(students.sort((a, b) => a.name.localeCompare(b.name)))
 
 //Сортировка массива объектов по числовым значениям
-console.log(students.sort((a,b) => a.name - b.name))
+console.log(students.sort((a, b) => a.name - b.name))
 
+let x = 10
+let y = x
 
-
+x = 2
+console.log(y)
 
 
 
