@@ -72,10 +72,10 @@ console.log(students.sort((a, b) => a.name - b.name))
 // x = 2
 // console.log(y)
 
-let x = [1, 3, 8, 55]
-let y = x
-x[0] = 22
-console.log(y)
+// let x = [1, 3, 8, 55]
+// let y = x
+// x[0] = 22
+// console.log(y)
 
 
 

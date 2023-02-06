@@ -3,19 +3,26 @@ import {user, users} from "../JS_TS_Mutability";
 
 type UserType = {
     name: string
-    age: number
+    hair: number
     address: {title: string}
 }
 
-let increaseAge = (u: UserType) => {
-    u.age = u.age + 1
+let increaseAge = (user: UserType , power: number) => {
+    let copy = {...user}
+    copy.hair = copy.hair / power
+    return copy
 }
 
 test ('reference type test', () => {
-    increaseAge(user)
 
-    expect(user.age).toBe(31)
+    let cutUser = increaseAge(user, 2)
+
+
+    expect(user.hair).toBe(30)
+    expect(cutUser.hair).toBe(15)
 })
+
+
 test ('array reference type test', () => {
    let admins = users
 
@@ -34,3 +41,4 @@ test ('change address', () => {
     user2.address.title = 'Сanary'
     expect(user.address.title).toBe( 'Сanary')
 })
+
