@@ -1,6 +1,6 @@
 import {
     increaseHair,
-    moveUser,
+    moveUser, upgradeUserHouseNumber,
     upgradeUserLaptop, upgradeUserLaptopOptions,
     users,
     UserType, UserWithBookType,
@@ -8,7 +8,7 @@ import {
     UserWithLaptopType
 } from "../JS_TS_Mutability";
 
-test ('reference type test', () => {
+test('reference type test', () => {
 
     let user: UserType = {
         name: 'Dima',
@@ -24,14 +24,14 @@ test ('reference type test', () => {
     expect(cutUser.hair).toBe(15)
     expect(cutUser.address).toBe(user.address)
 })
-test ('array reference type test', () => {
-   let admins = users
+test('array reference type test', () => {
+    let admins = users
 
-    admins.push({ name: 'Alex', age: 10})
+    admins.push({name: 'Alex', age: 10})
 
-    expect(users[2]).toEqual({ name: 'Alex', age: 10})
+    expect(users[2]).toEqual({name: 'Alex', age: 10})
 })
-test ('change address', () => {
+test('change address', () => {
     let user: UserType = {
         name: 'Dima',
         hair: 30,
@@ -48,9 +48,9 @@ test ('change address', () => {
         address: addr
     }
     user2.address.city = 'Сanary'
-    expect(user.address.city).toBe( 'Сanary')
+    expect(user.address.city).toBe('Сanary')
 })
-test ('change user address', () => {
+test('change user address', () => {
 
     let user: UserWithLaptopType = {
         name: 'Dima',
@@ -71,7 +71,7 @@ test ('change user address', () => {
     expect(user.laptop).toBe(movedUser.laptop)
     expect(movedUser.address.city).toBe('Kiev')
 })
-test ('upgrade laptop to macbook', () => {
+test('upgrade laptop to macbook', () => {
 
     let user: UserWithLaptopType = {
         name: 'Dima',
@@ -93,7 +93,7 @@ test ('upgrade laptop to macbook', () => {
     expect(upgradedUser.laptop.title).toBe('Macbook')
     expect(user.laptop.title).toBe('ZenBook')
 })
-test ('upgrade laptop serial number', () => {
+test('upgrade laptop serial number', () => {
 
     let user: UserWithLaptopOptions = {
         name: 'Dima',
@@ -124,9 +124,9 @@ test ('upgrade laptop serial number', () => {
     expect(upgradedUserLaptop.laptop.serialNumber.number).toBe(9)
 })
 
-test ('upgrade address - house number', () => {
+test('upgrade address - house number', () => {
 
-    let user: UserWithLaptopOptions & UserWithBookType= {
+    let user: UserWithLaptopOptions & UserWithBookType = {
         name: 'Dima',
         hair: 30,
         address: {
@@ -142,15 +142,12 @@ test ('upgrade address - house number', () => {
         books: ['css', 'html', 'js', 'react']
     }
 
-    const upgradedUserLaptop = upgradeUserLaptopOptions(user, 9)
+    const userCopy = upgradeUserHouseNumber(user, 99)
 
-    expect(user).not.toBe(upgradedUserLaptop)
-    expect(user.name).toBe('Dima')
-    expect(user.hair).toBe(30)
-    expect(user.address.city).toBe(upgradedUserLaptop.address.city)
-    expect(user.address.house).toBe(upgradedUserLaptop.address.house)
-    expect(user.laptop.title).toBe(upgradedUserLaptop.laptop.title)
-    expect(user.laptop.title).toBe(upgradedUserLaptop.laptop.title)
-    expect(user.laptop.serialNumber.number).not.toBe(upgradedUserLaptop.laptop.serialNumber.number)
-    expect(upgradedUserLaptop.laptop.serialNumber.number).toBe(9)
+    expect(user).not.toBe(userCopy)
+    expect(user.laptop.title).toBe(userCopy.laptop.title)
+    expect(user.laptop.serialNumber.number).toBe(userCopy.laptop.serialNumber.number)
+    expect(user.books).toBe(userCopy.books)
+    expect(user.address.house).not.toBe(userCopy.address.house)
+    expect(userCopy.address.house).toBe(99)
 })

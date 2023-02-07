@@ -26,7 +26,7 @@ export type  LaptopType2 = {
 export type  SerialNumberType = {
     number: number
 }
-export type UserWithLaptopOptions =  UserType & {
+export type UserWithLaptopOptions = UserType & {
     laptop: LaptopType2
 }
 
@@ -71,3 +71,25 @@ export let upgradeUserLaptopOptions = (user: UserWithLaptopOptions, number: numb
         }
     }
 }
+
+export let upgradeUserHouseNumber = (user: UserWithLaptopOptions & UserWithBookType, house: number) => {
+    return {
+        ...user,
+        address: {
+            ...user.address,
+            house: house
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
