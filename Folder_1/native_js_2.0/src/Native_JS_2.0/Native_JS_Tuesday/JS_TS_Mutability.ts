@@ -124,10 +124,10 @@ export let upgradeUserRemoveBook = (user: UserWithLaptopOptions & UserWithBookTy
 }
 
 
-export let upgradeUserAddCompany = (user: UserWithLaptopOptions & UserWithBookType, newBook: string) => {
+export let upgradeUserAddCompany = (user: UserWithLaptopOptions & UserWithCompanyType, newCompany: CompanyType) => {
     return {
         ...user,
-        books: [...user.books, newBook]
+        companies: [...user.companies,  newCompany]
     }
 }
 

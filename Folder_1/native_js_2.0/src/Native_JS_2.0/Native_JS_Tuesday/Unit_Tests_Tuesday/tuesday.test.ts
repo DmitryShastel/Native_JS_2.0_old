@@ -261,7 +261,6 @@ test('upgrade books - remove book', () => {
     expect(userCopy.books.length).toBe(3)
     expect(userCopy.books[2]).toBe('react')
 })
-
 test('upgrade company - add company', () => {
 
     let user: UserWithLaptopOptions & UserWithCompanyType = {
@@ -282,13 +281,39 @@ test('upgrade company - add company', () => {
         companies: [{id: 1, title: 'Epam'}, {id: 2, title: 'IT-INCUBATOR'}]
     }
 
-    const userCopy = upgradeUserAddCompany(user, 'js')
+    const userCopy = upgradeUserAddCompany(user, {id: 3, title: 'Google'})
+
+    expect(userCopy.companies.length).toBe(3)
+    expect(userCopy.companies[2].title).toBe('Google')
+    expect(userCopy.companies[2].id).toBe(3)
+})
+
+test('upgrade company - company title', () => {
+
+    let user: UserWithLaptopOptions & UserWithCompanyType = {
+        name: 'Dima',
+        hair: 30,
+        address: {
+            city: 'Minsk',
+            house: 12
+        },
+        laptop: {
+            title: 'ZenBook',
+            serialNumber: {
+                number: 8
+            }
+        },
+        books: ['css', 'html', 'js', 'react'],
+        skills: [10, 25, 36, 88],
+        companies: [{id: 1, title: 'epam'}, {id: 2, title: 'IT-INCUBATOR'}]
+    }
+
+    const userCopy = upgradeUserCompanyTitle(user, 1, 'EPAM')
 
     expect(user).not.toBe(userCopy)
+    expect(user.laptop.title).toBe(userCopy.laptop.title)
+    expect(user.laptop.serialNumber.number).toBe(userCopy.laptop.serialNumber.number)
+    expect(user.books).toBe(userCopy.books)
     expect(user.address).toBe(userCopy.address)
-    expect(user.laptop).toBe(userCopy.laptop)
-    expect(user.books).not.toBe(userCopy.books)
-    expect(user.skills.length).toBe(4)
-    expect(userCopy.books.length).toBe(3)
-    expect(userCopy.books[2]).toBe('react')
+    expect(userCopy.companies[0].title).toBe('EPAM')
 })
