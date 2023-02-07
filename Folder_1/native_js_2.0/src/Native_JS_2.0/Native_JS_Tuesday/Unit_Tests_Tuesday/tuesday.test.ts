@@ -151,3 +151,32 @@ test('upgrade address - house number', () => {
     expect(user.address.house).not.toBe(userCopy.address.house)
     expect(userCopy.address.house).toBe(99)
 })
+
+test('upgrade books - add new books to user', () => {
+
+    let user: UserWithLaptopOptions & UserWithBookType = {
+        name: 'Dima',
+        hair: 30,
+        address: {
+            city: 'Minsk',
+            house: 12
+        },
+        laptop: {
+            title: 'ZenBook',
+            serialNumber: {
+                number: 8
+            }
+        },
+        books: ['css', 'html', 'js', 'react']
+    }
+
+    const userCopy = upgradeUserBooks(user, 'ts', 'rest api')
+
+    expect(user).not.toBe(userCopy)
+    expect(user.address).toBe(userCopy.address)
+    expect(user.laptop).toBe(userCopy.laptop)
+    expect(user.books).not.toBe(userCopy.books)
+    expect(userCopy.books[4]).toBe('ts')
+    expect(userCopy.books[5]).toBe('rest api')
+
+})
