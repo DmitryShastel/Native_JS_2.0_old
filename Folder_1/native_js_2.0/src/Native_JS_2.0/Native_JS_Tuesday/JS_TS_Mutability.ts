@@ -1,3 +1,8 @@
+export let users = [
+    {name: 'Dima', age: 30},
+    {name: 'Bob', age: 23}
+]
+
 export type UserType = {
     name: string
     hair: number
@@ -25,10 +30,11 @@ export type UserWithLaptopOptions =  UserType & {
     laptop: LaptopType2
 }
 
-export let users = [
-    {name: 'Dima', age: 30},
-    {name: 'Bob', age: 23}
-]
+export type UserWithBookType = UserType & {
+    laptop: LaptopType2
+    books: Array<string>
+}
+
 
 //fun
 export let increaseHair = (user: UserType, power: number) => {
@@ -54,7 +60,6 @@ export let upgradeUserLaptop = (user: UserWithLaptopType, title: string) => {
     return upgradedUser
 
 }
-
 export let upgradeUserLaptopOptions = (user: UserWithLaptopOptions, number: number) => {
     return {
         ...user,

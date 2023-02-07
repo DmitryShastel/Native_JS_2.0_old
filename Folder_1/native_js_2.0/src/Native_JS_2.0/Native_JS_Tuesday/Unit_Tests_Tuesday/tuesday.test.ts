@@ -3,7 +3,7 @@ import {
     moveUser,
     upgradeUserLaptop, upgradeUserLaptopOptions,
     users,
-    UserType,
+    UserType, UserWithBookType,
     UserWithLaptopOptions,
     UserWithLaptopType
 } from "../JS_TS_Mutability";
@@ -93,7 +93,6 @@ test ('upgrade laptop to macbook', () => {
     expect(upgradedUser.laptop.title).toBe('Macbook')
     expect(user.laptop.title).toBe('ZenBook')
 })
-
 test ('upgrade laptop serial number', () => {
 
     let user: UserWithLaptopOptions = {
@@ -110,6 +109,37 @@ test ('upgrade laptop serial number', () => {
             }
         },
 
+    }
+
+    const upgradedUserLaptop = upgradeUserLaptopOptions(user, 9)
+
+    expect(user).not.toBe(upgradedUserLaptop)
+    expect(user.name).toBe('Dima')
+    expect(user.hair).toBe(30)
+    expect(user.address.city).toBe(upgradedUserLaptop.address.city)
+    expect(user.address.house).toBe(upgradedUserLaptop.address.house)
+    expect(user.laptop.title).toBe(upgradedUserLaptop.laptop.title)
+    expect(user.laptop.title).toBe(upgradedUserLaptop.laptop.title)
+    expect(user.laptop.serialNumber.number).not.toBe(upgradedUserLaptop.laptop.serialNumber.number)
+    expect(upgradedUserLaptop.laptop.serialNumber.number).toBe(9)
+})
+
+test ('upgrade address - house number', () => {
+
+    let user: UserWithLaptopOptions & UserWithBookType= {
+        name: 'Dima',
+        hair: 30,
+        address: {
+            city: 'Minsk',
+            house: 12
+        },
+        laptop: {
+            title: 'ZenBook',
+            serialNumber: {
+                number: 8
+            }
+        },
+        books: ['css', 'html', 'js', 'react']
     }
 
     const upgradedUserLaptop = upgradeUserLaptopOptions(user, 9)
