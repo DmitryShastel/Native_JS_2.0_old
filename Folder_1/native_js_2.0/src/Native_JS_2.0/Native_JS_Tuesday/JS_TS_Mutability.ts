@@ -105,12 +105,12 @@ export let upgradeUserReplaceBook = (user: UserWithLaptopOptions & UserWithBookT
     }
 }
 
-export let upgradeUserSkills = (user: UserWithLaptopOptions & UserWithBookType,
+export let upgradeUserSkills = (user: UserWithLaptopOptions & UserWithSkillsType,
                                      oldSkill: number,
                                      newSkill: number) => {
     return {
         ...user,
-        books: user.books.map(b => b === oldBook ? newBook : oldBook)
+        skills: user.skills.map(s => s === oldSkill ? newSkill : oldSkill)
     }
 }
 

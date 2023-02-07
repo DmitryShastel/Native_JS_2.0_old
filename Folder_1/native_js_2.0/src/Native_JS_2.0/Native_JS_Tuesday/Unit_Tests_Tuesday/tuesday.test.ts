@@ -204,7 +204,6 @@ test('upgrade books - replace js to ts', () => {
     expect(userCopy.books[2]).toBe('ts')
     expect(user.books.length).toBe(4)
 })
-
 test('upgrade skills - replace 10 to 11', () => {
 
     let user: UserWithLaptopOptions & UserWithSkillsType = {
@@ -229,7 +228,7 @@ test('upgrade skills - replace 10 to 11', () => {
     expect(user).not.toBe(userCopy)
     expect(user.address).toBe(userCopy.address)
     expect(user.laptop).toBe(userCopy.laptop)
-    expect(user.books).not.toBe(userCopy.books)
-    expect(userCopy.books[2]).toBe('ts')
-    expect(user.books.length).toBe(4)
+    expect(user.books).toBe(userCopy.books)
+    expect(user.skills.length).toBe(4)
+    expect(userCopy.skills[0]).toBe(11)
 })
