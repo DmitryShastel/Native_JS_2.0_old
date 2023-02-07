@@ -1,5 +1,7 @@
 //1 this method is sorting out of the box without additional parameters
 
+import {LaptopType2, UserType, UserWithBookType, UserWithLaptopOptions} from "./JS_TS_Mutability";
+
 const str1 = ['Bob', 'Alex', 'John']
 console.log(str1.sort()) //['Alex', 'Bob', 'John']
 
@@ -76,8 +78,6 @@ console.log(students.sort((a, b) => a.name - b.name))
 // let y = x
 // x[0] = 22
 // console.log(y)
-
-
 
 
 

@@ -1,7 +1,7 @@
 import {
     increaseHair,
     moveUser, upgradeUserBooks, upgradeUserHouseNumber,
-    upgradeUserLaptop, upgradeUserLaptopOptions,
+    upgradeUserLaptop, upgradeUserLaptopOptions, upgradeUserReplaceBook,
     users,
     UserType, UserWithBookType,
     UserWithLaptopOptions,
@@ -123,7 +123,6 @@ test('upgrade laptop serial number', () => {
     expect(user.laptop.serialNumber.number).not.toBe(upgradedUserLaptop.laptop.serialNumber.number)
     expect(upgradedUserLaptop.laptop.serialNumber.number).toBe(9)
 })
-
 test('upgrade address - house number', () => {
 
     let user: UserWithLaptopOptions & UserWithBookType = {
@@ -151,7 +150,6 @@ test('upgrade address - house number', () => {
     expect(user.address.house).not.toBe(userCopy.address.house)
     expect(userCopy.address.house).toBe(99)
 })
-
 test('upgrade books - add new books to user', () => {
 
     let user: UserWithLaptopOptions & UserWithBookType = {
@@ -177,5 +175,33 @@ test('upgrade books - add new books to user', () => {
     expect(user.laptop).toBe(userCopy.laptop)
     expect(user.books).not.toBe(userCopy.books)
     expect(userCopy.books[4]).toBe('ts')
+    expect(user.books.length).toBe(4)
+})
+
+test('upgrade books - replace js to ts', () => {
+
+    let user: UserWithLaptopOptions & UserWithBookType = {
+        name: 'Dima',
+        hair: 30,
+        address: {
+            city: 'Minsk',
+            house: 12
+        },
+        laptop: {
+            title: 'ZenBook',
+            serialNumber: {
+                number: 8
+            }
+        },
+        books: ['css', 'html', 'js', 'react']
+    }
+
+    const userCopy = upgradeUserReplaceBook(user, 'js','ts')
+
+    expect(user).not.toBe(userCopy)
+    expect(user.address).toBe(userCopy.address)
+    expect(user.laptop).toBe(userCopy.laptop)
+    expect(user.books).not.toBe(userCopy.books)
+    expect(userCopy.books[2]).toBe('ts')
     expect(user.books.length).toBe(4)
 })

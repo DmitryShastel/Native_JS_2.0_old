@@ -1,3 +1,5 @@
+import {user} from "../Native_JS_Monday/JS_TS_Objects";
+
 export let users = [
     {name: 'Dima', age: 30},
     {name: 'Bob', age: 23}
@@ -71,7 +73,6 @@ export let upgradeUserLaptopOptions = (user: UserWithLaptopOptions, number: numb
         }
     }
 }
-
 export let upgradeUserHouseNumber = (user: UserWithLaptopOptions & UserWithBookType, house: number) => {
     return {
         ...user,
@@ -90,7 +91,15 @@ export let upgradeUserBooks = (user: UserWithLaptopOptions & UserWithBookType, n
 }
 
 
-
+export let upgradeUserReplaceBook = (user: UserWithLaptopOptions & UserWithBookType,
+                                     oldBook: string,
+                                     newBook: string) => {
+    const copy = {
+        ...user,
+        books: user.books.map(b => b === oldBook ? newBook : oldBook)
+    }
+    return copy
+}
 
 
 
