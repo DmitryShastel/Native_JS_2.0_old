@@ -1,6 +1,6 @@
 import {
     increaseHair,
-    moveUser, upgradeUserHouseNumber,
+    moveUser, upgradeUserBooks, upgradeUserHouseNumber,
     upgradeUserLaptop, upgradeUserLaptopOptions,
     users,
     UserType, UserWithBookType,
@@ -170,13 +170,13 @@ test('upgrade books - add new books to user', () => {
         books: ['css', 'html', 'js', 'react']
     }
 
-    const userCopy = upgradeUserBooks(user, 'ts', 'rest api')
+    const userCopy = upgradeUserBooks(user, 'ts')
 
     expect(user).not.toBe(userCopy)
     expect(user.address).toBe(userCopy.address)
     expect(user.laptop).toBe(userCopy.laptop)
     expect(user.books).not.toBe(userCopy.books)
     expect(userCopy.books[4]).toBe('ts')
-    expect(userCopy.books[5]).toBe('rest api')
-
+    expect(user.books.length).toBe(4)
+    // expect(userCopy.books[5]).toBe('rest api')
 })

@@ -82,6 +82,15 @@ export let upgradeUserHouseNumber = (user: UserWithLaptopOptions & UserWithBookT
     }
 }
 
+export let upgradeUserBooks = (user: UserWithLaptopOptions & UserWithBookType, newBook: string) => {
+    const copy = {
+        ...user,
+        books: [...user.books]
+    }
+    copy.books.push(newBook)
+
+    return copy
+}
 
 
 
