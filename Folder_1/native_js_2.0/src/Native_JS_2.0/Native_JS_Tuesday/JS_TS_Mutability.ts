@@ -37,6 +37,12 @@ export type UserWithBookType = UserType & {
     books: Array<string>
 }
 
+export type UserWithSkillsType = UserType & {
+    laptop: LaptopType2
+    books: Array<string>
+    skills: Array<number>
+}
+
 
 //fun
 export let increaseHair = (user: UserType, power: number) => {
@@ -82,7 +88,6 @@ export let upgradeUserHouseNumber = (user: UserWithLaptopOptions & UserWithBookT
         }
     }
 }
-
 export let upgradeUserBooks = (user: UserWithLaptopOptions & UserWithBookType, newBook: string) => {
     return {
         ...user,
@@ -94,13 +99,20 @@ export let upgradeUserBooks = (user: UserWithLaptopOptions & UserWithBookType, n
 export let upgradeUserReplaceBook = (user: UserWithLaptopOptions & UserWithBookType,
                                      oldBook: string,
                                      newBook: string) => {
-    const copy = {
+    return {
         ...user,
         books: user.books.map(b => b === oldBook ? newBook : oldBook)
     }
-    return copy
 }
 
+export let upgradeUserSkills = (user: UserWithLaptopOptions & UserWithBookType,
+                                     oldSkill: number,
+                                     newSkill: number) => {
+    return {
+        ...user,
+        books: user.books.map(b => b === oldBook ? newBook : oldBook)
+    }
+}
 
 
 

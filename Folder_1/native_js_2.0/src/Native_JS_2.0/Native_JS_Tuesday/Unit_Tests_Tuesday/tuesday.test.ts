@@ -1,11 +1,11 @@
 import {
     increaseHair,
     moveUser, upgradeUserBooks, upgradeUserHouseNumber,
-    upgradeUserLaptop, upgradeUserLaptopOptions, upgradeUserReplaceBook,
+    upgradeUserLaptop, upgradeUserLaptopOptions, upgradeUserReplaceBook, upgradeUserSkills,
     users,
     UserType, UserWithBookType,
     UserWithLaptopOptions,
-    UserWithLaptopType
+    UserWithLaptopType, UserWithSkillsType
 } from "../JS_TS_Mutability";
 
 test('reference type test', () => {
@@ -177,7 +177,6 @@ test('upgrade books - add new books to user', () => {
     expect(userCopy.books[4]).toBe('ts')
     expect(user.books.length).toBe(4)
 })
-
 test('upgrade books - replace js to ts', () => {
 
     let user: UserWithLaptopOptions & UserWithBookType = {
@@ -196,7 +195,36 @@ test('upgrade books - replace js to ts', () => {
         books: ['css', 'html', 'js', 'react']
     }
 
-    const userCopy = upgradeUserReplaceBook(user, 'js','ts')
+    const userCopy = upgradeUserReplaceBook(user, 'js', 'ts')
+
+    expect(user).not.toBe(userCopy)
+    expect(user.address).toBe(userCopy.address)
+    expect(user.laptop).toBe(userCopy.laptop)
+    expect(user.books).not.toBe(userCopy.books)
+    expect(userCopy.books[2]).toBe('ts')
+    expect(user.books.length).toBe(4)
+})
+
+test('upgrade skills - replace 10 to 11', () => {
+
+    let user: UserWithLaptopOptions & UserWithSkillsType = {
+        name: 'Dima',
+        hair: 30,
+        address: {
+            city: 'Minsk',
+            house: 12
+        },
+        laptop: {
+            title: 'ZenBook',
+            serialNumber: {
+                number: 8
+            }
+        },
+        books: ['css', 'html', 'js', 'react'],
+        skills: [10, 25, 36, 88]
+    }
+
+    const userCopy = upgradeUserSkills(user, 10, 11)
 
     expect(user).not.toBe(userCopy)
     expect(user.address).toBe(userCopy.address)
