@@ -1,7 +1,7 @@
 import {
     increaseHair,
     moveUser, upgradeUserBooks, upgradeUserHouseNumber,
-    upgradeUserLaptop, upgradeUserLaptopOptions, upgradeUserReplaceBook, upgradeUserSkills,
+    upgradeUserLaptop, upgradeUserLaptopOptions, upgradeUserRemoveBook, upgradeUserReplaceBook, upgradeUserSkills,
     users,
     UserType, UserWithBookType,
     UserWithLaptopOptions,
@@ -204,6 +204,7 @@ test('upgrade books - replace js to ts', () => {
     expect(userCopy.books[2]).toBe('ts')
     expect(user.books.length).toBe(4)
 })
+
 test('upgrade skills - replace 10 to 11', () => {
 
     let user: UserWithLaptopOptions & UserWithSkillsType = {
@@ -231,4 +232,34 @@ test('upgrade skills - replace 10 to 11', () => {
     expect(user.books).toBe(userCopy.books)
     expect(user.skills.length).toBe(4)
     expect(userCopy.skills[0]).toBe(11)
+})
+
+test('upgrade books - remove js', () => {
+
+    let user: UserWithLaptopOptions & UserWithSkillsType = {
+        name: 'Dima',
+        hair: 30,
+        address: {
+            city: 'Minsk',
+            house: 12
+        },
+        laptop: {
+            title: 'ZenBook',
+            serialNumber: {
+                number: 8
+            }
+        },
+        books: ['css', 'html', 'js', 'react'],
+        skills: [10, 25, 36, 88]
+    }
+
+    const userCopy = upgradeUserRemoveBook(user, 'js')
+
+    expect(user).not.toBe(userCopy)
+    expect(user.address).toBe(userCopy.address)
+    expect(user.laptop).toBe(userCopy.laptop)
+    expect(user.books).toBe(userCopy.books)
+    expect(user.skills.length).toBe(4)
+    expect(userCopy.books.length).toBe(3)
+    expect(userCopy.books[2]).toBe('react')
 })

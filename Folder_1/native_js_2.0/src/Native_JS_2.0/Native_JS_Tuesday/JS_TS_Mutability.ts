@@ -94,8 +94,6 @@ export let upgradeUserBooks = (user: UserWithLaptopOptions & UserWithBookType, n
         books: [...user.books, newBook]
     }
 }
-
-
 export let upgradeUserReplaceBook = (user: UserWithLaptopOptions & UserWithBookType,
                                      oldBook: string,
                                      newBook: string) => {
@@ -114,6 +112,13 @@ export let upgradeUserSkills = (user: UserWithLaptopOptions & UserWithSkillsType
     }
 }
 
+
+export let upgradeUserRemoveBook = (user: UserWithLaptopOptions & UserWithBookType, oldBook: string,) => {
+    return {
+        ...user,
+        skills: user.skills.map(s => s === oldSkill ? newSkill : oldSkill)
+    }
+}
 
 
 
