@@ -1,5 +1,3 @@
-import {user} from "../Native_JS_Monday/JS_TS_Objects";
-
 export let users = [
     {name: 'Dima', age: 30},
     {name: 'Bob', age: 23}
@@ -37,10 +35,22 @@ export type UserWithBookType = UserType & {
     books: Array<string>
 }
 
+export type CompanyType = {
+    id: number
+    title: string
+}
+
 export type UserWithSkillsType = UserType & {
     laptop: LaptopType2
     books: Array<string>
     skills: Array<number>
+}
+
+export type UserWithCompanyType = UserType & {
+    laptop: LaptopType2
+    books: Array<string>
+    skills: Array<number>
+    companies: Array<CompanyType>
 }
 
 
@@ -94,34 +104,32 @@ export let upgradeUserBooks = (user: UserWithLaptopOptions & UserWithBookType, n
         books: [...user.books, newBook]
     }
 }
-export let upgradeUserReplaceBook = (user: UserWithLaptopOptions & UserWithBookType,
-                                     oldBook: string,
-                                     newBook: string) => {
+export let upgradeUserReplaceBook = (user: UserWithLaptopOptions & UserWithBookType, oldBook: string, newBook: string) => {
     return {
         ...user,
         books: user.books.map(b => b === oldBook ? newBook : oldBook)
     }
 }
-
-export let upgradeUserSkills = (user: UserWithLaptopOptions & UserWithSkillsType,
-                                     oldSkill: number,
-                                     newSkill: number) => {
+export let upgradeUserSkills = (user: UserWithLaptopOptions & UserWithSkillsType, oldSkill: number, newSkill: number) => {
     return {
         ...user,
         skills: user.skills.map(s => s === oldSkill ? newSkill : oldSkill)
     }
 }
-
-
 export let upgradeUserRemoveBook = (user: UserWithLaptopOptions & UserWithBookType, oldBook: string,) => {
     return {
         ...user,
-        skills: user.skills.map(s => s === oldSkill ? newSkill : oldSkill)
+        books: user.books.filter(b => b !== oldBook )
     }
 }
 
 
-
+export let upgradeUserAddCompany = (user: UserWithLaptopOptions & UserWithBookType, newBook: string) => {
+    return {
+        ...user,
+        books: [...user.books, newBook]
+    }
+}
 
 
 
