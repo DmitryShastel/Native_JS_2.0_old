@@ -98,8 +98,10 @@ let copyStudents = [...students]
 console.log(students === copyStudents)
 console.log(students[1] === copyStudents[1])
 
-let deepCopyStudents = students.map(s => ({...s}))
-console.log(deepCopyStudents === students)
+const deepCopyStudents = students.map((st) => ({ ...st }))
+console.log(deepCopyStudents)
+console.log(students)
+
 console.log(deepCopyStudents[1] === students[1])
 
 
@@ -135,10 +137,13 @@ console.log(sortByScores);
 
 
 //Сформируйте массив студентов у которых 100 и более баллов
-let bestStudents = students.filter(s => s.scores >= 100)
+let bestStudents = deepCopyStudents.filter(s => s.scores >= 100)
 console.log(bestStudents)
 
+//Получите массив ('вырежте') из трех лучших студентов из массива deepCopyStudents
 
+let topStudents = deepCopyStudents.splice(2, 3);
+console.log(topStudents);
 
 
 
