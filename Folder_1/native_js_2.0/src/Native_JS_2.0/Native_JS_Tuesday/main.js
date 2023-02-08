@@ -132,3 +132,32 @@ let sortFnScore = (a, b) => {
 }
 let sortByScores = students.sort(sortFnScore)
 console.log(sortByScores);
+
+
+//Сформируйте массив студентов у которых 100 и более баллов
+let bestStudents = students.filter(s => s.scores >= 100)
+console.log(bestStudents)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
