@@ -102,7 +102,9 @@ let deepCopyStudents = students.map(s => ({...s}))
 console.log(deepCopyStudents === students)
 console.log(deepCopyStudents[1] === students[1])
 
-let sortFn = (a, b) => {
+
+//Отсортируйте students по алфовиту
+let sortFnName = (a, b) => {
     switch (a.name > b.name) {
         case true:
             return 1
@@ -113,7 +115,20 @@ let sortFn = (a, b) => {
     }
 }
 
-let sortByName = students.sort(sortFn);
+let sortByName = students.sort(sortFnName);
 console.log(sortByName);
 
 
+//Отсортируйте students по успеваймости
+let sortFnScore = (a, b) => {
+    switch (a.scores > b.scores) {
+        case true:
+            return 1
+        case false:
+            return -1
+        default:
+            return 0
+    }
+}
+let sortByScores = students.sort(sortFnScore)
+console.log(sortByScores);
