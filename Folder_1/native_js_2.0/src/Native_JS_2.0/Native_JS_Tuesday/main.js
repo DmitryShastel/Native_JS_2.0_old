@@ -40,7 +40,7 @@ const students = [
     },
     {
         id: 5,
-        name: 'alex',
+        name: 'Alex',
         age: 23,
         isMarried: false,
         scores: 105,
@@ -98,12 +98,22 @@ let copyStudents = [...students]
 console.log(students === copyStudents)
 console.log(students[1] === copyStudents[1])
 
+let deepCopyStudents = students.map(s => ({...s}))
+console.log(deepCopyStudents === students)
+console.log(deepCopyStudents[1] === students[1])
 
+let sortFn = (a, b) => {
+    switch (a.name > b.name) {
+        case true:
+            return 1
+        case false:
+            return -1
+        default:
+            return 0
+    }
+}
 
-
-
-
-
-
+let sortByName = students.sort(sortFn);
+console.log(sortByName);
 
 
