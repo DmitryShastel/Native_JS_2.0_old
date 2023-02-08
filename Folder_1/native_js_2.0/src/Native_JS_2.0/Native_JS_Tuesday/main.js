@@ -90,7 +90,9 @@ let userCopy = {...user}
 console.log(user === userCopy)
 console.log(user.friends === userCopy.friends)
 
-
+let deepCopy = {...user, friends: [...user.friends]}
+console.log(user === deepCopy)
+console.log(user.friends === deepCopy.friends)
 
 
 
