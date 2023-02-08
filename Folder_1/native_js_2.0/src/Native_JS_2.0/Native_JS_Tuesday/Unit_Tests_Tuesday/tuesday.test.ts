@@ -287,7 +287,6 @@ test('upgrade company - add company', () => {
     expect(userCopy.companies[2].title).toBe('Google')
     expect(userCopy.companies[2].id).toBe(3)
 })
-
 test('upgrade company - company title', () => {
 
     let user: UserWithLaptopOptions & UserWithCompanyType = {

@@ -1,14 +1,12 @@
 //1 this method is sorting out of the box without additional parameters
 
-import {LaptopType2, UserType, UserWithBookType, UserWithLaptopOptions} from "./JS_TS_Mutability";
-
 const str1 = ['Bob', 'Alex', 'John']
-console.log(str1.sort()) //['Alex', 'Bob', 'John']
+//console.log(str1.sort()) //['Alex', 'Bob', 'John']
 
 //2 it's sorts type strings alphabetically
 
 const str2 = ['Bob', 'Alex', 'John', 'john', '123', 'игорь', 'Юрий']
-console.log(str2.sort()) //['123', 'Alex', 'Bob', 'John', 'john', 'Юрий', 'игорь']
+//console.log(str2.sort()) //['123', 'Alex', 'Bob', 'John', 'john', 'Юрий', 'игорь']
 
 
 const students = [
@@ -49,6 +47,12 @@ const students = [
     }
 ]
 
+const user = {
+    name: 'Bob',
+    age: 23,
+    friends: ['Alex', 'Nick', 'John']
+}
+
 //сортировка массива объектов по строковым значениям
 //а. Регистрозависимоя
 
@@ -60,13 +64,13 @@ const compareObjByName = (a, b) => {
     }
 }
 
-console.log(students.sort(compareObjByName))
+//console.log(students.sort(compareObjByName))
 
 //б. РегистроНЕзависимоя
-console.log(students.sort((a, b) => a.name.localeCompare(b.name)))
+//console.log(students.sort((a, b) => a.name.localeCompare(b.name)))
 
 //Сортировка массива объектов по числовым значениям
-console.log(students.sort((a, b) => a.name - b.name))
+//console.log(students.sort((a, b) => a.name - b.name))
 
 // let x = 10
 // let y = x
@@ -80,8 +84,11 @@ console.log(students.sort((a, b) => a.name - b.name))
 // console.log(y)
 
 
+let userCopy = {...user}
 
-
+//check
+console.log(user === userCopy)
+console.log(user.friends === userCopy.friends)
 
 
 

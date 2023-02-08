@@ -8,44 +8,35 @@ export type UserType = {
     hair: number
     address: { city: string, house?: number }
 }
-
 export type  LaptopType = {
     title: string
 }
-
 export type UserWithLaptopType = UserType & {
     laptop: LaptopType
 }
-
-
 export type  LaptopType2 = {
     title: string
     serialNumber: SerialNumberType
 }
-
 export type  SerialNumberType = {
     number: number
 }
 export type UserWithLaptopOptions = UserType & {
     laptop: LaptopType2
 }
-
 export type UserWithBookType = UserType & {
     laptop: LaptopType2
     books: Array<string>
 }
-
 export type CompanyType = {
     id: number
     title: string
 }
-
 export type UserWithSkillsType = UserType & {
     laptop: LaptopType2
     books: Array<string>
     skills: Array<number>
 }
-
 export type UserWithCompanyType = UserType & {
     laptop: LaptopType2
     books: Array<string>
@@ -122,15 +113,12 @@ export let upgradeUserRemoveBook = (user: UserWithLaptopOptions & UserWithBookTy
         books: user.books.filter(b => b !== oldBook )
     }
 }
-
-
 export let upgradeUserAddCompany = (user: UserWithLaptopOptions & UserWithCompanyType, newCompany: CompanyType) => {
     return {
         ...user,
         companies: [...user.companies, newCompany]
     }
 }
-
 export let upgradeUserCompanyTitle = (user: UserWithCompanyType & UserWithCompanyType  , id: number, newTitle: string) => {
     return {
         ...user,
