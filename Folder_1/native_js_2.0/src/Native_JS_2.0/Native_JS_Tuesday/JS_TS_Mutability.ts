@@ -127,9 +127,15 @@ export let upgradeUserRemoveBook = (user: UserWithLaptopOptions & UserWithBookTy
 export let upgradeUserAddCompany = (user: UserWithLaptopOptions & UserWithCompanyType, newCompany: CompanyType) => {
     return {
         ...user,
-        companies: [...user.companies,  newCompany]
+        companies: [...user.companies, newCompany]
     }
 }
 
+export let upgradeUserCompanyTitle = (user: UserWithCompanyType & UserWithCompanyType  , id: number, newTitle: string) => {
+    return {
+        ...user,
+        companies: user.companies.map(c => c.id === id ? {...c, title: newTitle} : c)
 
+    }
+}
 

@@ -1,6 +1,6 @@
 import {
     increaseHair,
-    moveUser, upgradeUserAddCompany, upgradeUserBooks, upgradeUserHouseNumber,
+    moveUser, upgradeUserAddCompany, upgradeUserBooks, upgradeUserCompanyTitle, upgradeUserHouseNumber,
     upgradeUserLaptop, upgradeUserLaptopOptions, upgradeUserRemoveBook, upgradeUserReplaceBook, upgradeUserSkills,
     users,
     UserType, UserWithBookType, UserWithCompanyType,
@@ -281,7 +281,7 @@ test('upgrade company - add company', () => {
         companies: [{id: 1, title: 'Epam'}, {id: 2, title: 'IT-INCUBATOR'}]
     }
 
-    const userCopy = upgradeUserAddCompany(user, {id: 3, title: 'Google'})
+    const userCopy = upgradeUserAddCompany(user,  {id:3, title:'Google'})
 
     expect(userCopy.companies.length).toBe(3)
     expect(userCopy.companies[2].title).toBe('Google')
@@ -308,7 +308,7 @@ test('upgrade company - company title', () => {
         companies: [{id: 1, title: 'epam'}, {id: 2, title: 'IT-INCUBATOR'}]
     }
 
-    const userCopy = upgradeUserCompanyTitle(user, 1, 'EPAM')
+    const userCopy = upgradeUserCompanyTitle(user,  1, 'EPAM')
 
     expect(user).not.toBe(userCopy)
     expect(user.laptop.title).toBe(userCopy.laptop.title)
