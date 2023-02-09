@@ -163,8 +163,9 @@ console.log(nameWithSpace);
 let namesWithComma = studentsNames.join()
 console.log(namesWithComma);
 
-
-
+//Добавте всем студентам свойство 'isStudent' со значением true
+let trueStudents = students.map(s => ({...s, isStudent: true}) )
+console.log(trueStudents);
 
 
 
