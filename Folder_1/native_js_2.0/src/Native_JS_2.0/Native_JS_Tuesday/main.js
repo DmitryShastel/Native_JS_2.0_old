@@ -145,9 +145,9 @@ console.log(bestStudents)
 let topStudents = deepCopyStudents.splice(2, 3);
 console.log(topStudents);
 
-
-
-
+//Обедините массивы deepCopyStudents topStudents так, чтобы сохранился порядок сортировки
+let newDeepCopyStudents = [...deepCopyStudents, ...topStudents]
+console.log(newDeepCopyStudents);
 
 
 
