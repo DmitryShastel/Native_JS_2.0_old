@@ -175,5 +175,6 @@ console.log(studentsWithMarriedNick);
 let ann = students.find(f => f.name === 'Ann')
 console.log(ann);
 
-
-
+//Найти студента с самым высоким баллом
+let bestStudent = students.reduce((acc,s) => acc.scores > s.scores ? acc : s)
+console.log(bestStudent);
