@@ -149,6 +149,9 @@ console.log(topStudents);
 let newDeepCopyStudents = [...deepCopyStudents, ...topStudents]
 console.log(newDeepCopyStudents);
 
+//Сформировать массив холостых студентов
+let studentsName = students.filter(f => !f.isMarried)
+console.log(studentsName);
 
 
 
