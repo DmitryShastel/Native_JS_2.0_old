@@ -153,10 +153,15 @@ console.log(newDeepCopyStudents);
 let studentsName = students.filter(f => !f.isMarried)
 console.log(studentsName);
 
+//Сформируйте массив имен студентов
+let studentsNames = students.map(s => s.name)
+console.log(studentsNames);
 
-
-
-
+//Сформируйте строку из имен студентов, разделенных: запятой, пробелом
+let nameWithSpace = studentsNames.join(', ')
+console.log(nameWithSpace);
+let namesWithComma = studentsNames.join()
+console.log(namesWithComma);
 
 
 
