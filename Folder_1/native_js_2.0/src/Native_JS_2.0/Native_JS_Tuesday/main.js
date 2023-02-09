@@ -167,8 +167,9 @@ console.log(namesWithComma);
 let trueStudents = students.map(s => ({...s, isStudent: true}) )
 console.log(trueStudents);
 
-
-
+//Nick женился. Выполните соотвецтвующее преобразование массива students
+let studentsWithMarriedNick = students.map(s => s.name === 'Nick' ? {...s, isMarried: true} : s)
+console.log(studentsWithMarriedNick);
 
 
 
