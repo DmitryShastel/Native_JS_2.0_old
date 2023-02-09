@@ -98,7 +98,7 @@ let copyStudents = [...students]
 console.log(students === copyStudents)
 console.log(students[1] === copyStudents[1])
 
-const deepCopyStudents = students.map((st) => ({ ...st }))
+const deepCopyStudents = students.map((st) => ({...st}))
 console.log(deepCopyStudents)
 console.log(students)
 
@@ -164,7 +164,7 @@ let namesWithComma = studentsNames.join()
 console.log(namesWithComma);
 
 //Добавте всем студентам свойство 'isStudent' со значением true
-let trueStudents = students.map(s => ({...s, isStudent: true}) )
+let trueStudents = students.map(s => ({...s, isStudent: true}))
 console.log(trueStudents);
 
 //Nick женился. Выполните соотвецтвующее преобразование массива students
@@ -176,5 +176,9 @@ let ann = students.find(f => f.name === 'Ann')
 console.log(ann);
 
 //Найти студента с самым высоким баллом
-let bestStudent = students.reduce((acc,s) => acc.scores > s.scores ? acc : s)
+let bestStudent = students.reduce((acc, s) => acc.scores > s.scores ? acc : s)
 console.log(bestStudent);
+
+//Найти сумму баллов студентов
+let scoresSum = students.reduce((acc, s) => acc + s.scores, 0)
+console.log(scoresSum);
