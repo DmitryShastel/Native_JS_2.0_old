@@ -33,7 +33,7 @@ const students = [
     },
     {
         id: 4,
-        name: 'John',
+        name: 'Ann',
         age: 22,
         isMarried: false,
         scores: 100,
@@ -171,8 +171,9 @@ console.log(trueStudents);
 let studentsWithMarriedNick = students.map(s => s.name === 'Nick' ? {...s, isMarried: true} : s)
 console.log(studentsWithMarriedNick);
 
-
-
+//Найти студента по имени Ann
+let ann = students.find(f => f.name === 'Ann')
+console.log(ann);
 
 
 
