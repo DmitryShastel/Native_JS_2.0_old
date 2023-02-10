@@ -182,3 +182,17 @@ console.log(bestStudent);
 //Найти сумму баллов студентов
 let scoresSum = students.reduce((acc, s) => acc + s.scores, 0)
 console.log(scoresSum);
+
+//Напишите функцию addFriends, которая принимает параметром массив students
+//и добавляет каждому студенту свойство 'friends',
+//значением которого является массив имен всех остальных студентов из массива,
+//за исключением собственного имени студента. Т.е. в друзьях у Боба Боба быть не должно
+
+const addFriends = (students) => {
+    let friends = students.map((s) => {
+      return  {...s, friends: [s.name]}
+    })
+
+    return friends
+}
+console.log(addFriends(students));
