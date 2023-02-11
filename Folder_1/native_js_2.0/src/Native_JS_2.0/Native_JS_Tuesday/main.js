@@ -149,7 +149,10 @@ let man5 = {
     }
 };
 
-let man5FullCopy = {...man5, mother: {...man5.mother, work: {...man5.mother.work}, parents: [...man5.mother.parents.map(e => ({...e}))]}}
+let man5FullCopy = {
+    ...man5,
+    mother: {...man5.mother, work: {...man5.mother.work}, parents: [...man5.mother.parents.map(e => ({...e}))]}
+}
 
 man5.name = 'Dima'
 man5.mother.name = 'Eva'
@@ -198,16 +201,22 @@ let man6 = {
     }
 };
 
-let man6FullCopy = {...man6, mother: {...man6.mother, work: {...man6.mother.work}, parents: [...man6.mother.parents.map(e =>  ({...e, favoriteDish: {...e.favoriteDish} })) ]}}
+// let man6FullCopy = {
+//     ...man6,
+//     mother: {
+//         ...man6.mother,
+//         work: {...man6.mother.work},
+//         parents: [...man6.mother.parents.map(e => ({...e, favoriteDish: {...e.favoriteDish}}))]
+//     }
+// }
 
-console.log(man6 === man6FullCopy)
-console.log(man6.mother === man6FullCopy.mother)
-console.log(man6.mother.work === man6FullCopy.mother.work)
-console.log(man6.mother.parents === man6FullCopy.mother.parents)
-console.log(man6.mother.parents[0].favoriteDish === man6FullCopy.mother.parents[0].favoriteDish)
-
-console.log(man6)
-console.log(man6FullCopy)
+// console.log(man6 === man6FullCopy)
+// console.log(man6.mother === man6FullCopy.mother)
+// console.log(man6.mother.work === man6FullCopy.mother.work)
+// console.log(man6.mother.parents === man6FullCopy.mother.parents)
+// console.log(man6.mother.parents[0].favoriteDish === man6FullCopy.mother.parents[0].favoriteDish)
+// console.log(man6)
+// console.log(man6FullCopy)
 
 
 //10 Array of objects inside an object -> object -> array -> object ->  object
@@ -249,7 +258,39 @@ let man7 = {
     }
 };
 
-let man7FullCopy  //  your code
+let man6FullCopy = {
+    ...man6,
+    mother: {
+        ...man6.mother,
+        work: {...man6.mother.work},
+        parents: [...man6.mother.parents.map(e => ({...e, favoriteDish: {...e.favoriteDish}}))]
+    }
+}
+
+let man7FullCopy = {
+    ...man7, mother: {
+        ...man7.mother,
+        work: {...man7.mother.work},
+        parents: [...man7.mother.parents.map(e => ({
+            ...e,
+            favoriteDish: {
+                ...e.favoriteDish,
+                ingredients: [...e.favoriteDish.ingredients.map(e => ({...e.ingredients}))]
+            }
+        }))]
+    }
+}
+
+console.log(man7 === man7FullCopy)
+
+console.log(man7.mother === man7FullCopy.mother)
+console.log(man7.mother.work === man7FullCopy.mother.work)
+console.log(man7.mother.parents === man7FullCopy.mother.parents)
+console.log(man7.mother.parents[0].favoriteDish === man7FullCopy.mother.parents[0].favoriteDish)
+console.log(man7.mother.parents[0].favoriteDish.ingredients === man7FullCopy.mother.parents[0].favoriteDish.ingredients)
+console.log(man7.mother.parents[0].favoriteDish.ingredients[0].title === man7FullCopy.mother.parents[0].favoriteDish.ingredients[0].title)
+console.log(man7)
+console.log(man7FullCopy)
 
 
 //1 this method is sorting out of the box without additional parameters
