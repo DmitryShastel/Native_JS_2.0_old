@@ -77,9 +77,9 @@ let peopleFullCopy  = people.map(e => ({...e}))
 people[0].name = 'Dima'
 peopleFullCopy[0].age = 20
 
-console.log(people === peopleFullCopy)
-console.log(people)
-console.log(peopleFullCopy)
+// console.log(people === peopleFullCopy)
+// console.log(people)
+// console.log(peopleFullCopy)
 
 
 // 6 Array of objects inside object
@@ -93,7 +93,17 @@ let man3 = {
     ]
 };
 
-let man3FullCopy //  your code
+let man3FullCopy = {...man3, friends: [...man3.friends.map(e => ({...e}))]}
+
+man3.name = 'Dima'
+man3.friends[0].name = 'Vasa'
+man3FullCopy.age = 38
+man3FullCopy.friends[0].age = 20
+
+console.log(man3 === man3FullCopy)
+console.log(man3.friends === man3FullCopy.friends)
+console.log(man3)
+console.log(man3FullCopy)
 
 
 // 7 Object inside an object, inside an object
