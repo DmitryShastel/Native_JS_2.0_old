@@ -61,9 +61,9 @@ man2.friends[0] = 12
 man2FullCopy.age = 38
 man2FullCopy.friends.push(222)
 
-console.log(man2 === man2FullCopy)
-console.log(man2)
-console.log(man2FullCopy)
+// console.log(man2 === man2FullCopy)
+// console.log(man2)
+// console.log(man2FullCopy)
 
 // 5 Array of objects
 let people = [
@@ -72,8 +72,14 @@ let people = [
     {name: "William", age: 28}
 ];
 
+let peopleFullCopy  = people.map(e => ({...e}))
 
-let peopleFullCopy  // your code
+people[0].name = 'Dima'
+peopleFullCopy[0].age = 20
+
+console.log(people === peopleFullCopy)
+console.log(people)
+console.log(peopleFullCopy)
 
 
 // 6 Array of objects inside object
