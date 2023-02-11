@@ -15,7 +15,6 @@ manFullCopy.name = 'Dima'
 // console.log(manFullCopy)
 
 
-
 // 2. Array of primitives
 let numbers = [1, 2, 3];
 
@@ -36,12 +35,16 @@ let man1 = {
     }
 };
 
-console.log(numbers === numbersFullCopy)
-console.log(numbers)
-console.log(numbersFullCopy)
+let man1FullCopy = {...man1, mother: {...man1.mother}}
 
+man1.name = 'Dima'
+man1.mother.name = 'Masha'
+man1FullCopy.age = 32
+man1FullCopy.mother.age = 26
 
-let man1FullCopy // your code
+console.log(man1 === man1FullCopy)
+console.log(man1)
+console.log(man1FullCopy)
 
 
 // 4. Array of primitives inside an object
@@ -189,14 +192,6 @@ let man7 = {
 };
 
 let man7FullCopy  //  your code
-
-
-
-
-
-
-
-
 
 
 //1 this method is sorting out of the box without additional parameters
