@@ -161,14 +161,12 @@ man5FullCopy.mother.age = 40
 man5FullCopy.mother.work.experience = 25
 man5FullCopy.mother.parents[0].age = 90
 
-
-
-console.log(man5 === man5FullCopy)
-console.log(man5.mother === man5FullCopy.mother)
-console.log(man5.mother.work === man5FullCopy.mother.work)
-console.log(man5.mother.parents === man5FullCopy.mother.parents)
-console.log(man5)
-console.log(man5FullCopy)
+// console.log(man5 === man5FullCopy)
+// console.log(man5.mother === man5FullCopy.mother)
+// console.log(man5.mother.work === man5FullCopy.mother.work)
+// console.log(man5.mother.parents === man5FullCopy.mother.parents)
+// console.log(man5)
+// console.log(man5FullCopy)
 
 // 9 Object inside an object -> array -> object ->  object
 let man6 = {
@@ -200,7 +198,16 @@ let man6 = {
     }
 };
 
-let man6FullCopy  //  your code
+let man6FullCopy = {...man6, mother: {...man6.mother, work: {...man6.mother.work}, parents: [...man6.mother.parents.map(e =>  ({...e, favoriteDish: {...e.favoriteDish} })) ]}}
+
+console.log(man6 === man6FullCopy)
+console.log(man6.mother === man6FullCopy.mother)
+console.log(man6.mother.work === man6FullCopy.mother.work)
+console.log(man6.mother.parents === man6FullCopy.mother.parents)
+console.log(man6.mother.parents[0].favoriteDish === man6FullCopy.mother.parents[0].favoriteDish)
+
+console.log(man6)
+console.log(man6FullCopy)
 
 
 //10 Array of objects inside an object -> object -> array -> object ->  object
