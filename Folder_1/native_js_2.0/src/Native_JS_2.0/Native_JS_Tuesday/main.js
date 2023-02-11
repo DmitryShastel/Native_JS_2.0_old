@@ -42,9 +42,9 @@ man1.mother.name = 'Masha'
 man1FullCopy.age = 32
 man1FullCopy.mother.age = 26
 
-console.log(man1 === man1FullCopy)
-console.log(man1)
-console.log(man1FullCopy)
+// console.log(man1 === man1FullCopy)
+// console.log(man1)
+// console.log(man1FullCopy)
 
 
 // 4. Array of primitives inside an object
@@ -54,8 +54,16 @@ let man2 = {
     friends: ["Peter", "Steven", "William"]
 };
 
-let man2FullCopy  // your code
+let man2FullCopy  = {...man2, friends : [...man2.friends]}
 
+man2.name = 'Dima'
+man2.friends[0] = 12
+man2FullCopy.age = 38
+man2FullCopy.friends.push(222)
+
+console.log(man2 === man2FullCopy)
+console.log(man2)
+console.log(man2FullCopy)
 
 // 5 Array of objects
 let people = [
