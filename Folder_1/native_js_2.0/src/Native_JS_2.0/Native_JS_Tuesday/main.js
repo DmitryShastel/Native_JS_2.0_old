@@ -11,16 +11,20 @@ let man = {
 let manFullCopy = {...man}
 man.age = 36
 manFullCopy.name = 'Dima'
-console.log(man)
-console.log(manFullCopy)
+// console.log(man)
+// console.log(manFullCopy)
 
 
 
 // 2. Array of primitives
 let numbers = [1, 2, 3];
 
-let numbersFullCopy  //  your code
-
+let numbersFullCopy = [...numbers]
+numbers[0] = 'A'
+numbersFullCopy.push(4)
+// console.log(numbers === numbersFullCopy)
+// console.log(numbers)
+// console.log(numbersFullCopy)
 
 // 3. Object inside an object
 let man1 = {
@@ -31,6 +35,11 @@ let man1 = {
         age: 50
     }
 };
+
+console.log(numbers === numbersFullCopy)
+console.log(numbers)
+console.log(numbersFullCopy)
+
 
 let man1FullCopy // your code
 
