@@ -54,7 +54,7 @@ let man2 = {
     friends: ["Peter", "Steven", "William"]
 };
 
-let man2FullCopy  = {...man2, friends : [...man2.friends]}
+let man2FullCopy = {...man2, friends: [...man2.friends]}
 
 man2.name = 'Dima'
 man2.friends[0] = 12
@@ -72,7 +72,7 @@ let people = [
     {name: "William", age: 28}
 ];
 
-let peopleFullCopy  = people.map(e => ({...e}))
+let peopleFullCopy = people.map(e => ({...e}))
 
 people[0].name = 'Dima'
 peopleFullCopy[0].age = 20
@@ -125,11 +125,11 @@ let man4FullCopy = {...man4, mother: {...man4.mother, work: {...man4.mother.work
 man4.mother.work.experience = 10
 man4FullCopy.mother.age = 36
 
-console.log(man4 === man4FullCopy)
-console.log(man4.mother === man4FullCopy.mother)
-console.log(man4.mother.work === man4FullCopy.mother.work)
-console.log(man4)
-console.log(man4FullCopy)
+// console.log(man4 === man4FullCopy)
+// console.log(man4.mother === man4FullCopy.mother)
+// console.log(man4.mother.work === man4FullCopy.mother.work)
+// console.log(man4)
+// console.log(man4FullCopy)
 
 // 8 Array of objects inside object -> object
 let man5 = {
@@ -149,8 +149,26 @@ let man5 = {
     }
 };
 
-let man5FullCopy //  your code
+let man5FullCopy = {...man5, mother: {...man5.mother, work: {...man5.mother.work}, parents: [...man5.mother.parents.map(e => ({...e}))]}}
 
+man5.name = 'Dima'
+man5.mother.name = 'Eva'
+man5.mother.work.position = 'patient'
+man5.mother.parents[0].name = 'Alone at home'
+
+man5FullCopy.age = 38
+man5FullCopy.mother.age = 40
+man5FullCopy.mother.work.experience = 25
+man5FullCopy.mother.parents[0].age = 90
+
+
+
+console.log(man5 === man5FullCopy)
+console.log(man5.mother === man5FullCopy.mother)
+console.log(man5.mother.work === man5FullCopy.mother.work)
+console.log(man5.mother.parents === man5FullCopy.mother.parents)
+console.log(man5)
+console.log(man5FullCopy)
 
 // 9 Object inside an object -> array -> object ->  object
 let man6 = {
