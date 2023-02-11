@@ -266,118 +266,118 @@ const compareObjByName = (a, b) => {
 // console.log(y)
 
 
-let userCopy = {...user}
-
-//check
-console.log(user === userCopy)
-console.log(user.friends === userCopy.friends)
-
-let deepCopy = {...user, friends: [...user.friends]}
-console.log(user === deepCopy)
-console.log(user.friends === deepCopy.friends)
-
-let copyStudents = [...students]
-console.log(students === copyStudents)
-console.log(students[1] === copyStudents[1])
-
-const deepCopyStudents = students.map((st) => ({...st}))
-console.log(deepCopyStudents)
-console.log(students)
-
-console.log(deepCopyStudents[1] === students[1])
-
-
-//Отсортируйте students по алфовиту
-let sortFnName = (a, b) => {
-    switch (a.name > b.name) {
-        case true:
-            return 1
-        case false:
-            return -1
-        default:
-            return 0
-    }
-}
-
-let sortByName = students.sort(sortFnName);
-console.log(sortByName);
-
-
-//Отсортируйте students по успеваймости
-let sortFnScore = (a, b) => {
-    switch (a.scores > b.scores) {
-        case true:
-            return 1
-        case false:
-            return -1
-        default:
-            return 0
-    }
-}
-let sortByScores = students.sort(sortFnScore)
-console.log(sortByScores);
-
-
-//Сформируйте массив студентов у которых 100 и более баллов
-let bestStudents = deepCopyStudents.filter(s => s.scores >= 100)
-console.log(bestStudents)
-
-//Получите массив ('вырежте') из трех лучших студентов из массива deepCopyStudents
-
-let topStudents = deepCopyStudents.splice(2, 3);
-console.log(topStudents);
-
-//Обедините массивы deepCopyStudents topStudents так, чтобы сохранился порядок сортировки
-let newDeepCopyStudents = [...deepCopyStudents, ...topStudents]
-console.log(newDeepCopyStudents);
-
-//Сформировать массив холостых студентов
-let studentsName = students.filter(f => !f.isMarried)
-console.log(studentsName);
-
-//Сформируйте массив имен студентов
-let studentsNames = students.map(s => s.name)
-console.log(studentsNames);
-
-//Сформируйте строку из имен студентов, разделенных: запятой, пробелом
-let nameWithSpace = studentsNames.join(', ')
-console.log(nameWithSpace);
-let namesWithComma = studentsNames.join()
-console.log(namesWithComma);
-
-//Добавте всем студентам свойство 'isStudent' со значением true
-let trueStudents = students.map(s => ({...s, isStudent: true}))
-console.log(trueStudents);
-
-//Nick женился. Выполните соотвецтвующее преобразование массива students
-let studentsWithMarriedNick = students.map(s => s.name === 'Nick' ? {...s, isMarried: true} : s)
-console.log(studentsWithMarriedNick);
-
-//Найти студента по имени Ann
-let ann = students.find(f => f.name === 'Ann')
-console.log(ann);
-
-//Найти студента с самым высоким баллом
-let bestStudent = students.reduce((acc, s) => acc.scores > s.scores ? acc : s)
-console.log(bestStudent);
-
-//Найти сумму баллов студентов
-let scoresSum = students.reduce((acc, s) => acc + s.scores, 0)
-console.log(scoresSum);
-
-//*Напишите функцию addFriends, которая принимает параметром массив students
-//и добавляет каждому студенту свойство 'friends',
-//значением которого является массив имен всех остальных студентов из массива,
-//за исключением собственного имени студента. Т.е. в друзьях у Боба Боба быть не должно
-
-const addFriends = (students) => {
-    let friends = students.map((s) => {
-      return  {...s, friends: [s.name]}
-    })
-
-    return friends
-}
-console.log(addFriends(students));
+// let userCopy = {...user}
+//
+// //check
+// console.log(user === userCopy)
+// console.log(user.friends === userCopy.friends)
+//
+// let deepCopy = {...user, friends: [...user.friends]}
+// console.log(user === deepCopy)
+// console.log(user.friends === deepCopy.friends)
+//
+// let copyStudents = [...students]
+// console.log(students === copyStudents)
+// console.log(students[1] === copyStudents[1])
+//
+// const deepCopyStudents = students.map((st) => ({...st}))
+// console.log(deepCopyStudents)
+// console.log(students)
+//
+// console.log(deepCopyStudents[1] === students[1])
+//
+//
+// //Отсортируйте students по алфовиту
+// let sortFnName = (a, b) => {
+//     switch (a.name > b.name) {
+//         case true:
+//             return 1
+//         case false:
+//             return -1
+//         default:
+//             return 0
+//     }
+// }
+//
+// let sortByName = students.sort(sortFnName);
+// console.log(sortByName);
+//
+//
+// //Отсортируйте students по успеваймости
+// let sortFnScore = (a, b) => {
+//     switch (a.scores > b.scores) {
+//         case true:
+//             return 1
+//         case false:
+//             return -1
+//         default:
+//             return 0
+//     }
+// }
+// let sortByScores = students.sort(sortFnScore)
+// console.log(sortByScores);
+//
+//
+// //Сформируйте массив студентов у которых 100 и более баллов
+// let bestStudents = deepCopyStudents.filter(s => s.scores >= 100)
+// console.log(bestStudents)
+//
+// //Получите массив ('вырежте') из трех лучших студентов из массива deepCopyStudents
+//
+// let topStudents = deepCopyStudents.splice(2, 3);
+// console.log(topStudents);
+//
+// //Обедините массивы deepCopyStudents topStudents так, чтобы сохранился порядок сортировки
+// let newDeepCopyStudents = [...deepCopyStudents, ...topStudents]
+// console.log(newDeepCopyStudents);
+//
+// //Сформировать массив холостых студентов
+// let studentsName = students.filter(f => !f.isMarried)
+// console.log(studentsName);
+//
+// //Сформируйте массив имен студентов
+// let studentsNames = students.map(s => s.name)
+// console.log(studentsNames);
+//
+// //Сформируйте строку из имен студентов, разделенных: запятой, пробелом
+// let nameWithSpace = studentsNames.join(', ')
+// console.log(nameWithSpace);
+// let namesWithComma = studentsNames.join()
+// console.log(namesWithComma);
+//
+// //Добавте всем студентам свойство 'isStudent' со значением true
+// let trueStudents = students.map(s => ({...s, isStudent: true}))
+// console.log(trueStudents);
+//
+// //Nick женился. Выполните соотвецтвующее преобразование массива students
+// let studentsWithMarriedNick = students.map(s => s.name === 'Nick' ? {...s, isMarried: true} : s)
+// console.log(studentsWithMarriedNick);
+//
+// //Найти студента по имени Ann
+// let ann = students.find(f => f.name === 'Ann')
+// console.log(ann);
+//
+// //Найти студента с самым высоким баллом
+// let bestStudent = students.reduce((acc, s) => acc.scores > s.scores ? acc : s)
+// console.log(bestStudent);
+//
+// //Найти сумму баллов студентов
+// let scoresSum = students.reduce((acc, s) => acc + s.scores, 0)
+// console.log(scoresSum);
+//
+// //*Напишите функцию addFriends, которая принимает параметром массив students
+// //и добавляет каждому студенту свойство 'friends',
+// //значением которого является массив имен всех остальных студентов из массива,
+// //за исключением собственного имени студента. Т.е. в друзьях у Боба Боба быть не должно
+//
+// const addFriends = (students) => {
+//     let friends = students.map((s) => {
+//       return  {...s, friends: [s.name]}
+//     })
+//
+//     return friends
+// }
+// console.log(addFriends(students));
 
 //_______________________________________________________________________
 
@@ -395,7 +395,15 @@ let a = {
     }
 }
 
+let b = {...a}
+b.classroom = {...a.classroom}
+b.classroom.teacher = {...a.classroom.teacher}
+b.students = [...a.students]
 
+b.classroom.teacher.name = 'Dmitry'
+
+console.log(a.classroom.teacher.name)
+console.log(b.classroom.teacher.name)
 
 
 
