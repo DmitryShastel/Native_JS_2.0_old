@@ -100,10 +100,10 @@ man3.friends[0].name = 'Vasa'
 man3FullCopy.age = 38
 man3FullCopy.friends[0].age = 20
 
-console.log(man3 === man3FullCopy)
-console.log(man3.friends === man3FullCopy.friends)
-console.log(man3)
-console.log(man3FullCopy)
+// console.log(man3 === man3FullCopy)
+// console.log(man3.friends === man3FullCopy.friends)
+// console.log(man3)
+// console.log(man3FullCopy)
 
 
 // 7 Object inside an object, inside an object
@@ -120,7 +120,16 @@ let man4 = {
     }
 };
 
-let man4FullCopy //  your code
+let man4FullCopy = {...man4, mother: {...man4.mother, work: {...man4.mother.work}}}
+
+man4.mother.work.experience = 10
+man4FullCopy.mother.age = 36
+
+console.log(man4 === man4FullCopy)
+console.log(man4.mother === man4FullCopy.mother)
+console.log(man4.mother.work === man4FullCopy.mother.work)
+console.log(man4)
+console.log(man4FullCopy)
 
 // 8 Array of objects inside object -> object
 let man5 = {
