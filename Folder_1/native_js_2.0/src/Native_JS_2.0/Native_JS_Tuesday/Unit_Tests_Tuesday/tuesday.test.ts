@@ -7,7 +7,7 @@ import {
     UserWithLaptopOptions,
     UserWithLaptopType, UserWithSkillsType
 } from "../JS_TS_Mutability";
-import {sum} from "../JS_TS_TDD";
+import {getSum, getTriangleType, sum} from "../JS_TS_TDD";
 
 test('reference type test', () => {
 
@@ -324,4 +324,19 @@ test("sum", () => {
     expect(sum(3, 5, 7, 6, 4, 9)).toBe(34)
     expect(sum(1, 1, 1, 6)).toBe(9)
     expect(sum(0)).toBe(0)
+})
+test("get Triangle Type", ()=> {
+    expect(getTriangleType(1, 1, 1)).toBe("10")
+    expect(getTriangleType(2, 3, 3)).toBe("01")
+    expect(getTriangleType(3, 3, 2)).toBe("01")
+    expect(getTriangleType(3, 2, 3)).toBe("01")
+    expect(getTriangleType(4, 5, 3)).toBe("11")
+    expect(getTriangleType(10, 2, 2)).toBe("00")
+})
+
+test("get Sum ", ()=> {
+    expect(getSum(1000)).toBe(1)
+    expect(getSum(0)).toBe(0)
+    expect(getSum(1234)).toBe(10)
+    expect(getSum(9999)).toBe(36)
 })
