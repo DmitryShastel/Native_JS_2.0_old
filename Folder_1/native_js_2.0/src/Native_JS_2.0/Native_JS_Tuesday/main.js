@@ -1,8 +1,13 @@
+import {sum} from "../JS_TS_TDD";
+
+
 // links to watch theory
 // https://www.youtube.com/watch?v=6napu-MGQDo&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8&index=47
 // https://www.youtube.com/watch?v=I8LNJpG60vI&feature=youtu.be
 
 // 1. Simple object
+
+
 let man = {
     name: 'John',
     age: 28
@@ -281,16 +286,16 @@ let man7FullCopy = {
     }
 }
 
-console.log(man7 === man7FullCopy)
-
-console.log(man7.mother === man7FullCopy.mother)
-console.log(man7.mother.work === man7FullCopy.mother.work)
-console.log(man7.mother.parents === man7FullCopy.mother.parents)
-console.log(man7.mother.parents[0].favoriteDish === man7FullCopy.mother.parents[0].favoriteDish)
-console.log(man7.mother.parents[0].favoriteDish.ingredients === man7FullCopy.mother.parents[0].favoriteDish.ingredients)
-console.log(man7.mother.parents[0].favoriteDish.ingredients[0].title === man7FullCopy.mother.parents[0].favoriteDish.ingredients[0].title)
-console.log(man7)
-console.log(man7FullCopy)
+// console.log(man7 === man7FullCopy)
+//
+// console.log(man7.mother === man7FullCopy.mother)
+// console.log(man7.mother.work === man7FullCopy.mother.work)
+// console.log(man7.mother.parents === man7FullCopy.mother.parents)
+// console.log(man7.mother.parents[0].favoriteDish === man7FullCopy.mother.parents[0].favoriteDish)
+// console.log(man7.mother.parents[0].favoriteDish.ingredients === man7FullCopy.mother.parents[0].favoriteDish.ingredients)
+// console.log(man7.mother.parents[0].favoriteDish.ingredients[0].title === man7FullCopy.mother.parents[0].favoriteDish.ingredients[0].title)
+// console.log(man7)
+// console.log(man7FullCopy)
 
 
 //1 this method is sorting out of the box without additional parameters
@@ -492,7 +497,6 @@ const compareObjByName = (a, b) => {
 // }
 // console.log(addFriends(students));
 
-//_______________________________________________________________________
 
 let a = {
     name: 'it-kamasutra.com',
@@ -514,6 +518,7 @@ b.classroom.teacher = {...a.classroom.teacher}
 b.students = [...a.students]
 b.classroom.teacher.name = 'Dmitry'
 
+//_______________________________________________________________________
 
 
 

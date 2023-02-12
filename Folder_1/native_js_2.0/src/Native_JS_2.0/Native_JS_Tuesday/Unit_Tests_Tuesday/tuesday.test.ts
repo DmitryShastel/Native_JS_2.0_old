@@ -7,6 +7,7 @@ import {
     UserWithLaptopOptions,
     UserWithLaptopType, UserWithSkillsType
 } from "../JS_TS_Mutability";
+import {sum} from "../JS_TS_TDD";
 
 test('reference type test', () => {
 
@@ -315,4 +316,12 @@ test('upgrade company - company title', () => {
     expect(user.books).toBe(userCopy.books)
     expect(user.address).toBe(userCopy.address)
     expect(userCopy.companies[0].title).toBe('EPAM')
+})
+
+
+
+test("sum", () => {
+    expect(sum(3, 5, 7, 6, 4, 9)).toBe(34)
+    expect(sum(1, 1, 1, 6)).toBe(9)
+    expect(sum(0)).toBe(0)
 })
