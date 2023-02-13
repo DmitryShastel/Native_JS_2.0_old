@@ -33,7 +33,21 @@ export function getTriangleType(a: number,b: number,c: number): any {
 export function getSum(number: number): number{
     let result = String(number) // '21'
         .split('')
-        .map(e => +e)
+        .map(e => Number(e))
         .reduce((acc, el) => acc + el )
     return result
+}
+
+// 4. Функция isEvenIndexSumGreater принимает  параметром массив чисел.
+// Если сумма чисел с чётными ИНДЕКСАМИ!!! (0 как чётный индекс) больше
+// суммы чисел с нечётными ИНДЕКСАМИ!!!, то функция возвращает true.
+// В противном случае - false.
+
+export const isEvenIndexSumGreater = (arr: Array<number>): any => {
+    let result = arr.map((e, i) => {
+        return i % 2 === 0 ? e  : 0
+    }).reduce((acc, el) => {
+        return acc + el
+    })
+
 }
