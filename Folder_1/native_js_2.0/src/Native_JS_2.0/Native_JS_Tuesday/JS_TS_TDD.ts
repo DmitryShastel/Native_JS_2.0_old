@@ -15,10 +15,10 @@ export function sum(...nums: Array<number>): number {
 //  - "11", если треугольник обычный,
 //  - "00", если такого треугольника не существует.
 
-export function getTriangleType(a: number,b: number,c: number): any {
-    if(a === b && b === c && c === a) {
+export function getTriangleType(a: number, b: number, c: number): any {
+    if (a === b && b === c && c === a) {
         return '10'
-    }  else if (b === c && c === b && c !== a || a === b && b === a && c !== a  ||  a === c && b !== a && c === a)  {
+    } else if (b === c && c === b && c !== a || a === b && b === a && c !== a || a === c && b !== a && c === a) {
         return '01'
     } else if (a !== b && b !== c && c !== a) {
         return '11'
@@ -30,11 +30,11 @@ export function getTriangleType(a: number,b: number,c: number): any {
 // 3. Функция getSum принимает параметром целое число и возвращает
 // сумму цифр этого числа
 
-export function getSum(number: number): number{
+export function getSum(number: number): number {
     let result = String(number) // '21'
         .split('')
         .map(e => Number(e))
-        .reduce((acc, el) => acc + el )
+        .reduce((acc, el) => acc + el)
     return result
 }
 
@@ -44,10 +44,19 @@ export function getSum(number: number): number{
 // В противном случае - false.
 
 export const isEvenIndexSumGreater = (arr: Array<number>): any => {
-    let result = arr.map((e, i) => {
-        return i % 2 === 0 ? e  : 0
+    let result1 = arr.map((el, index) => {
+        return index % 2 === 0 ? el : 0
     }).reduce((acc, el) => {
         return acc + el
     })
-
+    let result2 = arr.map((el, index) => {
+        return index % 2 !== 0 ? el : 0
+    }).reduce((acc, el) => {
+        return acc + el
+    })
+    if (result1 > result2) {
+        return true
+    } else {
+        return false
+    }
 }
