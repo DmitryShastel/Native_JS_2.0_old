@@ -7,7 +7,7 @@ import {
     UserWithLaptopOptions,
     UserWithLaptopType, UserWithSkillsType
 } from "../JS_TS_Mutability";
-import {getSum, getTriangleType, isEvenIndexSumGreater, sum} from "../JS_TS_TDD";
+import {getSquarePositiveIntegers, getSum, getTriangleType, isEvenIndexSumGreater, sum} from "../JS_TS_TDD";
 
 test('reference type test', () => {
 
@@ -345,4 +345,17 @@ test("is Even Sum Greater", ()=> {
     expect(isEvenIndexSumGreater([100, 1, 200, 2])).toBe(true)
     expect(isEvenIndexSumGreater([100, 1, 200, 2, 300, 4])).toBe(true)
     expect(isEvenIndexSumGreater([100, 1, 200, 2, 4])).toBe(true)
+})
+
+
+test("get Square Only Of Positive Integers", () => {
+    const array = [4, 5.6, -9.8, 3.14, 10, 6, 8.34, -2]
+    //const len = array.length
+    const result = getSquarePositiveIntegers(array)
+    //expect(result === array).toBe(false)
+    //expect(array.length).toBe(len)
+    //expect(result.length).toBe(3)
+    expect(result[0]).toBe(16)
+    //expect(result[1]).toBe(100)
+    expect(result[2]).toBe(36)
 })

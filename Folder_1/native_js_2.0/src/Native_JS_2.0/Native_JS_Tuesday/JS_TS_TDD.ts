@@ -60,3 +60,22 @@ export const isEvenIndexSumGreater = (arr: Array<number>): any => {
         return false
     }
 }
+
+// 5. Функция getSquarePositiveIntegers принимает параметром массив чисел и возвращает новый массив.
+// Новый массив состоит из квадратов целых положительных чисел, котрые являются элементами исходгого массива.
+// Исходный массив не мутирует.
+
+
+export function getSquarePositiveIntegers(array: Array<number>): any {
+    let result = array.map((el) => {
+        if (el % 1 == 0 || el !== 0 || Number.isInteger(el) == true) {
+            return el * el
+        } else {
+            return 0
+        }
+
+    })
+    return result
+}
+
+// el % 1 === 0
