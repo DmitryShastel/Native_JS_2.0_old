@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import {AddUser} from "./Native_JS_2.0/Native_JS_Monday/Components/AddUser";
+import AppRoot from "./Native_JS_2.0/Native_JS_Tuesday/MicroTask1_ToDoList_AssociativeArray/AppRoot";
 
 
 export function App() {
 
     return (
         <div className="App">
-            <AddUser/>
+            <AppRoot/>
         </div>
     );
 }

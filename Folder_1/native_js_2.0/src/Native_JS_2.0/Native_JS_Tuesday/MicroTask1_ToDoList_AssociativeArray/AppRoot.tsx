@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './App.css';
 import {Todolist} from './Todolist';
 import {v1} from 'uuid';
 
@@ -12,7 +11,7 @@ export type todolistsType = {
 
 export type FilterValuesType = "all" | "active" | "completed";
 
-function App() {
+function AppRoot() {
 
     // let [tasks, setTasks] = useState([
     //     {id: v1(), title: "HTML&CSS", isDone: true},
@@ -64,6 +63,7 @@ function App() {
         //
         // setTasks([...tasks]);
     }
+
     let tasksForTodolist = tasks;
     // if (filter === "active") {
     //     tasksForTodolist = tasks.filter(t => t.isDone === false);
@@ -72,23 +72,25 @@ function App() {
     //     tasksForTodolist = tasks.filter(t => t.isDone === true);
     // }
     //
-    // function changeFilter(value: FilterValuesType) {
-    //     setFilter(value);
-    // }
+    function changeFilter(value: FilterValuesType) {
+        // setFilter(value);
+    }
 
 
     return (
         <div className="App">
+
             {
-                todolists.map(t => {
+                todolists.map(mapTodolist => {
+                    let tasksForTodolist = tasks[mapTodolist.id];
                     return (
-                        <Todolist title={todolists[0].title}
+                        <Todolist title={mapTodolist.title}
                                   tasks={tasksForTodolist}
                                   removeTask={removeTask}
                                   changeFilter={changeFilter}
                                   addTask={addTask}
                                   changeTaskStatus={changeStatus}
-                                  filter={filter}
+                                  filter={mapTodolist.filter}
                         />
                     )
                 })
@@ -99,4 +101,4 @@ function App() {
     );
 }
 
-export default App;
+export default AppRoot;
