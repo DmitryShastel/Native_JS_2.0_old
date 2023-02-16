@@ -67,8 +67,6 @@ export const isEvenIndexSumGreater = (arr: Array<number>): any => {
 
 
 export function getSquarePositiveIntegers(array: Array<number>): any {
-    let result = array.map((el) => el % 1 === 0 || el !== 0 || Number.isInteger(el) == true ? el ** 2 : el )
+    let result = array.map((el) => el % 1 === 0 || el !== 0 || Number.isInteger(el) == true ? el ** 2 : '')
     return result
 }
-
-
