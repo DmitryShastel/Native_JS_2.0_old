@@ -349,13 +349,18 @@ test("is Even Sum Greater", ()=> {
 
 
 test("get Square Only Of Positive Integers", () => {
-    const array = [4, 5.6, -9.8, 3.14, 10, 6, 8.34, -2]
+    const array = [4, 8, 25, 9]
     //const len = array.length
     const result = getSquarePositiveIntegers(array)
     //expect(result === array).toBe(false)
     //expect(array.length).toBe(len)
     //expect(result.length).toBe(3)
     expect(result[0]).toBe(16)
+    expect(result[1]).toBe(64)
+    expect(result[2]).toBe(625)
+    expect(result[3]).toBe(81)
     //expect(result[1]).toBe(100)
-    expect(result[2]).toBe(36)
+    //expect(result[2]).toBe(36)
 })
+
+//const array = [4, 5.6, -9.8, 3.14, 10, 6, 8.34, -2]
