@@ -7,7 +7,15 @@ import {
     UserWithLaptopOptions,
     UserWithLaptopType, UserWithSkillsType
 } from "../JS_TS_Mutability";
-import {getSquarePositiveIntegers, getSum, getTriangleType, isEvenIndexSumGreater, sum} from "../JS_TS_TDD";
+import {
+    getBanknoteList,
+    getSquarePositiveIntegers,
+    getSum,
+    getTriangleType,
+    isEvenIndexSumGreater,
+    sum,
+    sumFirstNumbers
+} from "../JS_TS_TDD";
 
 test('reference type test', () => {
 
@@ -363,4 +371,20 @@ test("get Square Only Of Positive Integers", () => {
     expect(result[5]).toBe(36)
 })
 
-//const array = [4, 5.6, -9.8, 3.14, 10, 6, 8.34, -2]
+test("sum of first N numbers", () => {
+    expect(sumFirstNumbers(0)).toBe(0)
+    expect(sumFirstNumbers(4)).toBe(10)
+    expect(sumFirstNumbers(10)).toBe(55)
+})
+test("get banknote list", ()=> {
+    // надо бы проверять длинну резалтов и их сумму
+    const result2500 = getBanknoteList(2500)
+    const result23 = getBanknoteList(23)
+    expect(result2500[0]).toBe(1000)
+    expect(result2500[1]).toBe(1000)
+    expect(result2500[2]).toBe(500)
+    expect(result23[0]).toBe(20)
+    expect(result23[1]).toBe(2)
+    expect(result23[2]).toBe(1)
+
+})
