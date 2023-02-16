@@ -3,6 +3,13 @@ import './App.css';
 import {Todolist} from './Todolist';
 import {v1} from 'uuid';
 
+export type todolistsType = {
+    id: string
+    title: string
+    filter: FilterValuesType
+}
+
+
 export type FilterValuesType = "all" | "active" | "completed";
 
 function App() {
