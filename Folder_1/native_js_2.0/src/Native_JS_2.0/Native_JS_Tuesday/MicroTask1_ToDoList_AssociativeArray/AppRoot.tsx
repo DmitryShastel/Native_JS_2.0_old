@@ -51,13 +51,11 @@ function AppRoot() {
         // let filteredTasks = tasks.filter(t => t.id != id);
         // setTasks(filteredTasks);
     }
-
     function addTask(title: string) {
         // let task = {id: v1(), title: title, isDone: false};
         // let newTasks = [task, ...tasks];
         // setTasks(newTasks);
     }
-
     function changeStatus(taskId: string, isDone: boolean) {
         // let task = tasks.find(t => t.id === taskId);
         // if (task) {
@@ -76,8 +74,7 @@ function AppRoot() {
     // }
 
     function changeFilter(todolistId: string, value: FilterValuesType) {
-        console.log(todolistId)
-        // setTodolists(value, todolistId);
+        setTodolists(todolists.map(filtered => filtered.id === todolistId ? {...filtered, filter: value} : filtered ))
     }
 
 
