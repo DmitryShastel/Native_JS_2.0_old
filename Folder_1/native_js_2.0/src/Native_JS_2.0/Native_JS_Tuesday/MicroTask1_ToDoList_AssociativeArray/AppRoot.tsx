@@ -75,8 +75,9 @@ function AppRoot() {
     //     tasksForTodolist = tasks.filter(t => t.isDone === true);
     // }
 
-    function changeFilter(value: FilterValuesType) {
-        // setFilter(value);
+    function changeFilter(todolistId: string, value: FilterValuesType) {
+        console.log(todolistId)
+        // setTodolists(value, todolistId);
     }
 
 
