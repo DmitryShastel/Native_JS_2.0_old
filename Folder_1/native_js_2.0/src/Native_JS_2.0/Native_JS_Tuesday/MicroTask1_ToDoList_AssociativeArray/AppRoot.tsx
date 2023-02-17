@@ -53,8 +53,7 @@ function AppRoot() {
 
     function addTask(todolistId: string, title: string) {
         let newTask = {id: v1(), title: title, isDone: false};
-
-        setTasks({...tasks, [todolistId]: [...tasks[todolistId], newTask]});
+        setTasks({...tasks, [todolistId]: [newTask, ...tasks[todolistId]]});
     }
 
     function changeStatus(taskId: string, isDone: boolean) {
