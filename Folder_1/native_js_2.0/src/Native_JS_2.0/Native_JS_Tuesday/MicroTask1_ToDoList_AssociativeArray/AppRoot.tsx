@@ -51,10 +51,10 @@ function AppRoot() {
         setTasks({...tasks, [todolistId]: tasks[todolistId].filter(t => t.id != id)})
     }
 
-    function addTask(title: string) {
-        // let task = {id: v1(), title: title, isDone: false};
-        // let newTasks = [task, ...tasks];
-        // setTasks(newTasks);
+    function addTask(todolistId: string, title: string) {
+        let newTask = {id: v1(), title: title, isDone: false};
+
+        setTasks({...tasks, [todolistId]: [...tasks[todolistId], newTask]});
     }
 
     function changeStatus(taskId: string, isDone: boolean) {
