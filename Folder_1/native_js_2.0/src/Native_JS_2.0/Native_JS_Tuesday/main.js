@@ -521,10 +521,10 @@ b.classroom.teacher.name = 'Dmitry'
 //_______________________________________________________________________
 
 let user8 = {
-    name: 'John',
+    name: 'John222',
     age: 30,
     sayHi() {
-        console.log('hello')
+        console.log(user8.name)
     }
 }
 
