@@ -522,15 +522,14 @@ b.classroom.teacher.name = 'Dmitry'
 
 let user8 = {
     name: 'John',
-    age: 30
-}
-
-user.sayHi = () => {
-    console.log('hello')
+    age: 30,
+    sayHi() {
+        console.log('hello')
+    }
 }
 
 console.log(user8)
-user.sayHi()
+user8.sayHi()
 
 
 
