@@ -531,7 +531,18 @@ let user8 = {
 console.log(user8)
 user8.sayHi()
 
+let user9 = {name: 'Alex'};
+let admin = {name: 'Bob'};
 
+ function  f()  {
+    console.log(this.name)
+}
+
+user9.f = f
+admin.f = f
+
+user9.f()
+admin.f()
 
 
 
