@@ -1,4 +1,4 @@
-import {sum} from "../JS_TS_TDD";
+// import {sum} from "../JS_TS_TDD";
 
 
 // links to watch theory
@@ -520,10 +520,17 @@ b.classroom.teacher.name = 'Dmitry'
 
 //_______________________________________________________________________
 
+let user8 = {
+    name: 'John',
+    age: 30
+}
 
+user.sayHi = () => {
+    console.log('hello')
+}
 
-
-
+console.log(user8)
+user.sayHi()
 
 
 

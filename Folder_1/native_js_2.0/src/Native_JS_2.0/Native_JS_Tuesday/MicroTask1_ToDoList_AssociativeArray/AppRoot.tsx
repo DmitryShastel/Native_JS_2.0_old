@@ -59,7 +59,7 @@ function AppRoot() {
     function changeStatus(todolistId: string, id: string, isDone: boolean) {
         setTasks({...tasks, [todolistId]: tasks[todolistId].map(m => m.id === id ? {...m, isDone} : m)});
     }
-    
+
 
     function changeFilter(todolistId: string, value: FilterValuesType) {
         setTodolists(todolists.map(filtered => filtered.id === todolistId ? {...filtered, filter: value} : filtered))
