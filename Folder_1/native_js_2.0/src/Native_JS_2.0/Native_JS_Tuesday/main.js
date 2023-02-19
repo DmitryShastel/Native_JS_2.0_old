@@ -534,7 +534,7 @@ user8.sayHi()
 let user9 = {name: 'Alex'};
 let admin = {name: 'Bob'};
 
- function  f()  {
+function f() {
     console.log(this.name)
 }
 
@@ -544,16 +544,24 @@ admin.f = f
 user9.f()
 admin.f()
 
+
 let calculator = {
-     read(){
-         let a = prompt('a?')
-         let b = prompt('a?')
-     },
-    sum(){},
-    mul(){}
+    read() {
+        this.a = +prompt('a?')
+        this.b = +prompt('b?')
+    },
+    sum() {
+        return this.a + this.b
+    },
+    mul() {
+        return this.a * this.b
+    }
 }
 
+
 calculator.read()
+alert(calculator.sum());
+alert(calculator.mul());
 
 
 
