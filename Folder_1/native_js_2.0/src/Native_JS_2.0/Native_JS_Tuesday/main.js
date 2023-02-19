@@ -544,6 +544,16 @@ admin.f = f
 user9.f()
 admin.f()
 
+let calculator = {
+     read(){
+         let a = prompt('a?')
+         let b = prompt('a?')
+     },
+    sum(){},
+    mul(){}
+}
+
+calculator.read()
 
 
 
