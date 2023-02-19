@@ -528,27 +528,27 @@ let user8 = {
     }
 }
 
-console.log(user8)
-user8.sayHi()
+// console.log(user8)
+// user8.sayHi()
 
 let user9 = {name: 'Alex'};
 let admin = {name: 'Bob'};
 
 function f() {
-    console.log(this.name)
+    // console.log(this.name)
 }
 
 user9.f = f
 admin.f = f
 
-user9.f()
-admin.f()
+// user9.f()
+// admin.f()
 
 
 let calculator = {
     read() {
-        this.a = +prompt('a?')
-        this.b = +prompt('b?')
+        this.a = +prompt('a?', 0)
+        this.b = +prompt('b?',0)
     },
     sum() {
         return this.a + this.b
@@ -558,18 +558,38 @@ let calculator = {
     }
 }
 
-
-calculator.read()
-alert(calculator.sum());
-alert(calculator.mul());
-
+// calculator.read()
+// alert(calculator.sum());
+// alert(calculator.mul());
 
 
+let ladder = {
+    step: 0,
+    up() {
+        this.step++;
+    },
+    down() {
+        this.step--;
+    },
+    showStep: function() { // показывает текущую ступеньку
+        alert( this.step );
+    }
+};
 
 
+let obj = {
+    a: 100,
+    b: 200,
+}
+
+let func = function(c) {
+    return this.a + this.b + c
+}
+
+let newFunc = func.bind(obj,300)
 
 
-
+console.log(newFunc())
 
 
 
