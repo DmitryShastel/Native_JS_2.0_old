@@ -498,98 +498,97 @@ const compareObjByName = (a, b) => {
 // console.log(addFriends(students));
 
 
-let a = {
-    name: 'it-kamasutra.com',
-    protocol: 'https',
-    maxStudentsCount: 10,
-    isOnline: true,
-    students: ['Ivan', 'Andrey', 'Farid'],
-    classroom: {
-        teacher: {
-            name: 'Dima',
-            age: 18
-        }
-    }
-}
-
-let b = {...a}
-b.classroom = {...a.classroom}
-b.classroom.teacher = {...a.classroom.teacher}
-b.students = [...a.students]
-b.classroom.teacher.name = 'Dmitry'
+// let a = {
+//     name: 'it-kamasutra.com',
+//     protocol: 'https',
+//     maxStudentsCount: 10,
+//     isOnline: true,
+//     students: ['Ivan', 'Andrey', 'Farid'],
+//     classroom: {
+//         teacher: {
+//             name: 'Dima',
+//             age: 18
+//         }
+//     }
+// }
+//
+// let b = {...a}
+// b.classroom = {...a.classroom}
+// b.classroom.teacher = {...a.classroom.teacher}
+// b.students = [...a.students]
+// b.classroom.teacher.name = 'Dmitry'
 
 //_______________________________________________________________________
 
-let user8 = {
-    name: 'John222',
-    age: 30,
-    sayHi() {
-        console.log(user8.name)
-    }
-}
+// let user8 = {
+//     name: 'John222',
+//     age: 30,
+//     sayHi() {
+//         console.log(user8.name)
+//     }
+// }
 
 // console.log(user8)
 // user8.sayHi()
 
-let user9 = {name: 'Alex'};
-let admin = {name: 'Bob'};
-
-function f() {
-    // console.log(this.name)
-}
-
-user9.f = f
-admin.f = f
+// let user9 = {name: 'Alex'};
+// let admin = {name: 'Bob'};
+//
+// function f() {
+//     // console.log(this.name)
+// }
+//
+// user9.f = f
+// admin.f = f
 
 // user9.f()
 // admin.f()
 
 
-let calculator = {
-    read() {
-        this.a = +prompt('a?', 0)
-        this.b = +prompt('b?',0)
-    },
-    sum() {
-        return this.a + this.b
-    },
-    mul() {
-        return this.a * this.b
-    }
-}
+// let calculator = {
+//     read() {
+//         this.a = +prompt('a?', 0)
+//         this.b = +prompt('b?',0)
+//     },
+//     sum() {
+//         return this.a + this.b
+//     },
+//     mul() {
+//         return this.a * this.b
+//     }
+// }
 
 // calculator.read()
 // alert(calculator.sum());
 // alert(calculator.mul());
 
 
-let ladder = {
-    step: 0,
-    up() {
-        this.step++;
-    },
-    down() {
-        this.step--;
-    },
-    showStep: function() { // показывает текущую ступеньку
-        alert( this.step );
-    }
-};
-
-
-let obj = {
-    a: 100,
-    b: 200,
-}
-
-let func = function(c) {
-    return this.a + this.b + c
-}
-
-let newFunc = func.bind(obj,300)
-
-
-console.log(newFunc())
+// let ladder = {
+//     step: 0,
+//     up() {
+//         this.step++;
+//     },
+//     down() {
+//         this.step--;
+//     },
+//     showStep: function() { // показывает текущую ступеньку
+//         alert( this.step );
+//     }
+// };
+//
+//
+// let obj = {
+//     a: 100,
+//     b: 200,
+// }
+//
+// let func = function(c) {
+//     return this.a + this.b + c
+// }
+//
+// let newFunc = func.bind(obj,300)
+//
+// console.log(newFunc())
 
 
 
