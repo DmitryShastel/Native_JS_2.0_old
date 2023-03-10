@@ -16,6 +16,7 @@ let ages2: AgesType2 = [12, 2, 5, 88, 'aa', true]
 interface IMan {
     name: string
     height: number
+    surname?: string
 }
 
 interface ICar {
@@ -23,7 +24,7 @@ interface ICar {
     year: number
 }
 
-let man1: IMan = {name: 'Dima', height: 1.78}
+let man1: IMan = {name: 'Dima', height: 1.78, surname: 'test'}
 let man2: IMan = {name: 'Alex', height: 1.78}
 let car: ICar = {model: 'BMW', year: 2022}
 
