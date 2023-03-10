@@ -35,13 +35,39 @@ let arr: IArr = [
     {name: 'Alex', height: 1.78}
 ]
 
-type FtoUpperCase = Array<string>
 
-
-let toUpperCase = (strings: FtoUpperCase): FtoUpperCase => {
+let toUpperCase = (strings: Array<string>): Array<string> => {
     let result = strings.map(s => s.toString());
     return result;
 }
 
 
-export default 1
+type  CreateManType = {
+    name: string
+    height: number
+
+}
+
+let createMan = (name: string, height: number): CreateManType => {
+    return {
+        name, height
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
