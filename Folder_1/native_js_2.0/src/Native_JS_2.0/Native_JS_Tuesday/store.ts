@@ -26,7 +26,7 @@ interface ICar {
 
 let man1: IMan = {name: 'Dima', height: 1.78, surname: 'test'}
 let man2: IMan = {name: 'Alex', height: 1.78}
-let car: ICar = {model: 'BMW', year: 2022}
+let car1: ICar = {model: 'BMW', year: 2022}
 
 type IArr = Array<IMan>
 
@@ -55,6 +55,48 @@ let createMan = (name: string, height: number): CreateManType => {
 }
 
 
+let car: CarType = {
+    model: 'BMW',
+    year: 2016,
+    on: false,
+    turnOn() {
+        this.on = true;
+    },
+    rename(model: string) {
+        this.model = model
+    }
+
+}
+
+type CarType = {
+    model: string
+    year: number
+    on: boolean
+    turnOn: () => void
+    rename: (model: string) => void
+}
+
+type GarageType = {
+    addCar: (car: CarType) => void
+    logAllCarsNames: () => void
+    getAllCars: () => Array<CarType>
+}
+
+let createGarage = (): GarageType => {
+    let _cars: Array<CarType> = [];
+
+    return {
+        addCar(car: CarType) {
+            _cars.push(car);
+        },
+        logAllCarsNames() {
+            _cars.forEach(c => c.model)
+        },
+        getAllCars() {
+            return _cars
+        }
+    }
+}
 
 
 
