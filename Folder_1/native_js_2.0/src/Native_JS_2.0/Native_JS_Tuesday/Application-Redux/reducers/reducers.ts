@@ -1,4 +1,4 @@
-export type DefaultStateType = {
+export type DefaultCashStateType = {
     cash: number
 }
 
@@ -7,17 +7,42 @@ type ActionType = {
     payload: number
 }
 
-export const defaultState = {
+export const defaultCashState = {
     cash: 0
 }
 
-export const reducer = (state: DefaultStateType = defaultState, action: ActionType) : DefaultStateType => {
+export const cashReducer = (state: DefaultCashStateType = defaultCashState, action: ActionType) : DefaultCashStateType => {
     switch (action.type) {
 
         case 'ADD_MONEY':
             return {...state, cash: state.cash + action.payload}
 
         case 'GET_MONEY':
+            return {...state, cash: state.cash - action.payload}
+
+        default:
+            return state
+    }
+}
+
+
+export type DefaultCustomerStateType = {
+    customers: Array<[]>
+}
+
+
+export const defaultCustomerState = {
+    customers: []
+}
+
+
+export const customerReducer = (state: DefaultCustomerStateType = defaultCustomerState, action: ActionType) : DefaultCustomerStateType => {
+    switch (action.type) {
+
+        case 'ADD_CUSTOMER':
+            return {...state, cash: state.cash + action.payload}
+
+        case 'GET_CUSTOMER':
             return {...state, cash: state.cash - action.payload}
 
         default:

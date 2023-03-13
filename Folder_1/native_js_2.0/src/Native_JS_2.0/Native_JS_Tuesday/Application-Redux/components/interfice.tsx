@@ -1,12 +1,12 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {DefaultStateType} from "../reducers/reducers";
+import {DefaultCashStateType} from "../reducers/reducers";
 
 
 export const Interface = () => {
 
     const dispatch = useDispatch()
-    const cash = useSelector<DefaultStateType, number>(state => state.cash)
+    const cash = useSelector<DefaultCashStateType, number>(state => state.cash)
     console.log(cash)
 
     let addMoney = (cash: number) => {
