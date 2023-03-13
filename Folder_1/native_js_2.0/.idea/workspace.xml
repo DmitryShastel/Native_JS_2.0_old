@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0afec1fa-fd71-4a39-b1ca-a70ddeddead8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/Application-Redux/components/interfice.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/Application-Redux/components/interfice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/Application-Redux/components/interfice.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/Application-Redux/reducers/reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/Application-Redux/reducers/reducers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +184,7 @@
       <workItem from="1678108794097" duration="181000" />
       <workItem from="1678274225242" duration="1111000" />
       <workItem from="1678376750832" duration="12385000" />
-      <workItem from="1678653829371" duration="8004000" />
+      <workItem from="1678653829371" duration="8774000" />
     </task>
     <servers />
   </component>

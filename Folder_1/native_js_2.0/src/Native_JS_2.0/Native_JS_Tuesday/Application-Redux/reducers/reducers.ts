@@ -1,4 +1,4 @@
-type DefaultStateType = {
+export type DefaultStateType = {
     cash: number
 }
 
@@ -7,7 +7,7 @@ type ActionType = {
     payload: number
 }
 
-const defaultState = {
+export const defaultState = {
     cash: 0
 }
 
