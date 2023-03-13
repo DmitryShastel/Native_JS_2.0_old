@@ -5,7 +5,7 @@ import {App} from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux";
 import {store} from "./Native_JS_2.0/Native_JS_Tuesday/Application-Redux/redux/redux-store";
- 
+
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
