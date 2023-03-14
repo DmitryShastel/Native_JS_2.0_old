@@ -23,6 +23,13 @@ export const Interface = () => {
             <div>{customers}</div>
             <button onClick={() => {addMoney(Number(prompt()))}}>Add money</button>
             <button onClick={() => {getMoney(Number(prompt()))}}>Get Money</button>
+
+            <div>
+                {customers.length > 0 ?
+                    <div>{customers.map(customer => <div>{customer}</div>)}</div>
+                    : 'The client is missed'}
+
+            </div>
         </div>
     )
 }
