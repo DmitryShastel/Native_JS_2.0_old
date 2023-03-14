@@ -5,7 +5,7 @@ import {Interface} from "./Native_JS_2.0/Native_JS_Tuesday/Application-Redux/com
 
 export function App() {
     return (
-        <Interface/>
+        <Interface  />
     );
 }
 

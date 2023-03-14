@@ -65,8 +65,9 @@ export const customerReducer = (state: DefaultCustomerStateType = defaultCustome
     }
 }
 
-export const addCustomer = () => {
+export const addCustomerAC = (payload: any) => {
     return {
-
+        type: 'ADD_CUSTOMER',
+        payload
     }
 }
