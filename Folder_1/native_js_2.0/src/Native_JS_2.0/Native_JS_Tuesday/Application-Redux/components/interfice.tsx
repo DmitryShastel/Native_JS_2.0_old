@@ -30,30 +30,30 @@ export const Interface = () => {
 
     }
 
-    let removeCustomer = (customer: []) => {
-
+    let removeCustomer = (customer: CustomerType) => {
+        dispatch({type: 'REMOVE_CUSTOMER', payload: customer.id})
     }
 
 
     return (
 
         <div>
-            <div>{cash}</div>
-            <div>{customers}</div>
-            <button onClick={() => {addMoney(Number(prompt()))}}>Add money</button>
-            <button onClick={() => {getMoney(Number(prompt()))}}>Get Money</button>
-            <button onClick={() => {addCustomer(prompt())}}>Add customer</button>
+            <div>Balance: {cash}</div>
             <div>
+                <button onClick={() => {addMoney(Number(prompt()))}}>Add money</button>
+                <button onClick={() => {getMoney(Number(prompt()))}}>Get Money</button>
+                <button onClick={() => {addCustomer(prompt())}}>Add customer</button>
+            </div>
+
+
 
                 {customers.length > 0 ?
-                    <div onClick={() => removeCustomer}>{
-                        customers.map((c: any) => {
-                            <div>{c.name}</div>
-                        })}
+                    <div  onClick={() => {console.log('test')}}>{
+                        customers.map((c: any) => <div style={{border: '1px solid red'}}>{c.name}</div>)}
                     </div>
                     : <div>'The client is missed' </div>}
 
-            </div>
+
         </div>
     )
 }
