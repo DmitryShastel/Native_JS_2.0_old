@@ -25,9 +25,13 @@ export const cashReducer = (state: DefaultCashStateType = defaultCashState, acti
     }
 }
 
+export type CustomerType = {
+    id: number
+    name: string
+}
 
 export type DefaultCustomerStateType = {
-    customers: Array<[]>
+    customers: Array<CustomerType>
 }
 
 export const defaultCustomerState = {
@@ -39,14 +43,14 @@ type CustomerActionType = {
     payload: []
 }
 
-export const customerReducer = (state: DefaultCustomerStateType = defaultCustomerState, action: CustomerActionType) : DefaultCustomerStateType => {
+export const customerReducer = (state: DefaultCustomerStateType = defaultCustomerState, action: any) => {
     switch (action.type) {
 
         case 'ADD_CUSTOMER':
             return {...state, customers: [...state.customers, action.payload]}
 
         case 'REMOVE_CUSTOMER':
-            return {...state, customers: [...state.customers, action.payload]}
+            return {...state, customers: state.customers.filter(customer => customer.id !== action.payload)}
 
         default:
             return state
