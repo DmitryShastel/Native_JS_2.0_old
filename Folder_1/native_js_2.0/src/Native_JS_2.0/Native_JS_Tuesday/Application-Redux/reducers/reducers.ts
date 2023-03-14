@@ -36,10 +36,10 @@ export const defaultCustomerState = {
 
 type CustomerActionType = {
     type: string
-    payload: number
+    payload: []
 }
 
-export const customerReducer = (state: DefaultCustomerStateType = defaultCustomerState, action: any) : DefaultCustomerStateType => {
+export const customerReducer = (state: DefaultCustomerStateType = defaultCustomerState, action: CustomerActionType) : DefaultCustomerStateType => {
     switch (action.type) {
 
         case 'ADD_CUSTOMER':
