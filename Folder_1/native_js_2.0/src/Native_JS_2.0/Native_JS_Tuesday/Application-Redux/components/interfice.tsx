@@ -17,17 +17,28 @@ export const Interface = () => {
         dispatch({type:'GET_MONEY', payload: cash})
     }
 
+    let addCustomer = (name: any) => {
+
+    }
+
+    let removeCustomer = (name: any) => {
+
+    }
+
+
     return (
         <div>
             <div>{cash}</div>
             <div>{customers}</div>
             <button onClick={() => {addMoney(Number(prompt()))}}>Add money</button>
             <button onClick={() => {getMoney(Number(prompt()))}}>Get Money</button>
+            <button onClick={() => {addCustomer(Number(prompt()))}}>Add customer</button>
+            <button onClick={() => {removeCustomer(Number(prompt()))}}>Remove customer</button>
 
             <div>
                 {customers.length > 0 ?
                     <div>{customers.map(customer => <div>{customer}</div>)}</div>
-                    : 'The client is missed'}
+                    : <div>'The client is missed' </div>}
 
             </div>
         </div>
