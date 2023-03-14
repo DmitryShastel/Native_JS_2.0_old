@@ -2,7 +2,9 @@ import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {CustomerType} from "../reducers/reducers";
 
-// props: CustomerType
+type InterfaceType = {
+    addMoney: (cash: number) => void
+}
 
 export const Interface = () => {
 
@@ -11,14 +13,12 @@ export const Interface = () => {
     const customers: any = useSelector<any>(state => state.customers.customers)
 
 
-
-
     let addMoney = (cash: number) => {
-         dispatch({type:'ADD_MONEY', payload: cash})
+         dispatch({type: 'ADD-MONEY', payload: cash})
     }
 
     let getMoney = (cash: number) => {
-        dispatch({type:'GET_MONEY', payload: cash})
+        dispatch({type:'GET-MONEY', payload: cash})
     }
 
     let addCustomer = (name: any) => {
