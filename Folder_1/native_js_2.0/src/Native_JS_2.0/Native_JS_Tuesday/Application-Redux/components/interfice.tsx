@@ -1,13 +1,13 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {DefaultCashStateType} from "../reducers/reducers";
 
 
 export const Interface = () => {
 
     const dispatch = useDispatch()
-    const cash = useSelector<DefaultCashStateType, number>(state => state.cash)
-    console.log(cash)
+    const cash : any = useSelector<any>((state) => state.cash.cash)
+    const customers: any = useSelector<any>(state => state.customers.customers)
+
 
     let addMoney = (cash: number) => {
          dispatch({type:'ADD_MONEY', payload: cash})
@@ -20,6 +20,7 @@ export const Interface = () => {
     return (
         <div>
             <div>{cash}</div>
+            <div>{customers}</div>
             <button onClick={() => {addMoney(Number(prompt()))}}>Add money</button>
             <button onClick={() => {getMoney(Number(prompt()))}}>Get Money</button>
         </div>

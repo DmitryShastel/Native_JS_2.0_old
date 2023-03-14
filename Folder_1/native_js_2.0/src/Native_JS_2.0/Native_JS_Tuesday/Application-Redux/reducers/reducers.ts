@@ -11,7 +11,7 @@ export const defaultCashState = {
     cash: 0
 }
 
-export const cashReducer = (state: DefaultCashStateType = defaultCashState, action: CashActionType) : DefaultCashStateType => {
+export const cashReducer = (state: DefaultCashStateType = defaultCashState, action: CashActionType) => {
     switch (action.type) {
 
         case 'ADD_MONEY':
