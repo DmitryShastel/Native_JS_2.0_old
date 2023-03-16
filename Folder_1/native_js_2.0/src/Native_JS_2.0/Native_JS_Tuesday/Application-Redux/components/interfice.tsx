@@ -8,6 +8,8 @@ type InterfaceType = {
 
 export const Interface = () => {
 
+
+
     const dispatch = useDispatch()
     const cash : any = useSelector<any>((state) => state.cash.cash)
     const customers: any = useSelector<any>(state => state.customers.customers)
@@ -22,16 +24,16 @@ export const Interface = () => {
     }
 
      let addCustomer = (name: any) => {
-        let customer = {
-            name,
-            id: Date.now()
-        }
+         let customer = {
+             name,
+             id: Date.now()
+         }
         dispatch(addCustomerAC(customer))
          //dispatch({type: 'ADD-CUSTOMER', payload: customer})
     }
 
     let removeCustomer = (customer: CustomerType) => {
-        dispatch({type: 'REMOVE_CUSTOMER', payload: customer.id})
+        dispatch({type: 'REMOVE-CUSTOMER', payload: customer.id})
     }
 
 
@@ -45,15 +47,13 @@ export const Interface = () => {
                 <button onClick={() => {addCustomer(prompt())}}>Add customer</button>
             </div>
 
-
-
                 {customers.length > 0 ?
-                    <div  onClick={() => {removeCustomer(customers)}  }>{
-                        customers.map((c: any) => <div style={{border: '1px solid red'}}>{c.name}</div>)}
+                    <div>{
+                        customers.map((c: any) => <div
+                            onClick={() => {removeCustomer(c)}  }
+                            style={{border: '1px solid red'}}>{c.name}</div>)}
                     </div>
                     : <div>'The client is missed' </div>}
-
-
         </div>
     )
 }
