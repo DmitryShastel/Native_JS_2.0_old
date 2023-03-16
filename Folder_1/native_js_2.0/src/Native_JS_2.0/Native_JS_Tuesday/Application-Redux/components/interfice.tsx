@@ -27,8 +27,8 @@ export const Interface = () => {
             name,
             id: Date.now()
         }
-        //dispatch(addCustomerAC(customer))
-         dispatch({type: 'ADD-CUSTOMER', payload: customer})
+        dispatch(addCustomerAC(customer))
+         //dispatch({type: 'ADD-CUSTOMER', payload: customer})
     }
 
     let removeCustomer = (customer: CustomerType) => {

@@ -49,7 +49,7 @@ type CustomerActionType = {
 }
 
 const ADD_CUSTOMER = 'ADD-CUSTOMER'
-const REMOVE_CUSTOMER = 'REMOVE-CUSTOMER'
+//const REMOVE_CUSTOMER = 'REMOVE-CUSTOMER'
 
 export const customerReducer = (state: DefaultCustomerStateType = defaultCustomerState, action: CustomerActionType) => {
     debugger
@@ -58,8 +58,8 @@ export const customerReducer = (state: DefaultCustomerStateType = defaultCustome
         case ADD_CUSTOMER:
             return {...state, customers: [...state.customers, action.payload]}
 
-        case REMOVE_CUSTOMER:
-            return {...state, customers: state.customers.filter(customer => customer.id !== action.payload)}
+        // case REMOVE_CUSTOMER:
+        //     return {...state, customers: state.customers.filter(customer => customer.id !== action.payload)}
 
         default:
             return state
@@ -67,8 +67,9 @@ export const customerReducer = (state: DefaultCustomerStateType = defaultCustome
 }
 
 export const addCustomerAC = (payload: any) => {
+    debugger
     return {
-        type: 'ADD_CUSTOMER',
+        type: ADD_CUSTOMER,
         payload
     }
 }
