@@ -21,13 +21,13 @@ export const Interface = () => {
         dispatch({type:'GET-MONEY', payload: cash})
     }
 
-     let addCustomer = (payload: any) => {
+     let addCustomer = (name: any) => {
         let customer = {
             name: '',
             id: Date.now()
         }
-        dispatch(addCustomerAC(customer))
-
+        //dispatch(addCustomerAC(customer))
+         dispatch({type: 'ADD-CUSTOMER', payload: customer})
     }
 
     let removeCustomer = (customer: CustomerType) => {
