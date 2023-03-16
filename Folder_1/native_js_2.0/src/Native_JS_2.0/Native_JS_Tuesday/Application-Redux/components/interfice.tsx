@@ -2,13 +2,9 @@ import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {addCustomerAC, addMoneyAC, CustomerType, getMoneyAC, removeCustomerAC} from "../reducers/reducers";
 
-type InterfaceType = {
-    addCustomer: (cash: number) => void
-}
+
 
 export const Interface = () => {
-
-
 
     const dispatch = useDispatch()
     const cash : any = useSelector<any>((state) => state.cash.cash)
