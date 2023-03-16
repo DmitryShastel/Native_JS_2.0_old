@@ -22,7 +22,6 @@ export const Interface = () => {
     }
 
      let addCustomer = (name: any) => {
-         debugger
         let customer = {
             name,
             id: Date.now()
@@ -49,7 +48,7 @@ export const Interface = () => {
 
 
                 {customers.length > 0 ?
-                    <div  onClick={() => {console.log('test')}}>{
+                    <div  onClick={() => {removeCustomer(customers)}  }>{
                         customers.map((c: any) => <div style={{border: '1px solid red'}}>{c.name}</div>)}
                     </div>
                     : <div>'The client is missed' </div>}
