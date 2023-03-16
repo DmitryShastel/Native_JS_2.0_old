@@ -12,12 +12,7 @@ export const defaultCashState = {
 const ADD_MONEY = 'ADD-MONEY'
 const GET_MONEY = 'GET-MONEY'
 
-// export const addMoneyAC = (payload: number) => {
-//     return {
-//         type: 'ADD-MONEY',
-//         payload
-//     }
-// }
+
 
 export const cashReducer = (state: DefaultCashStateType = defaultCashState, action: CashActionType) => {
     switch (action.type) {
@@ -32,6 +27,17 @@ export const cashReducer = (state: DefaultCashStateType = defaultCashState, acti
             return state
     }
 }
+
+
+export const addMoneyAC = (payload: number) => {
+    return {
+        type: 'ADD-MONEY',
+        payload
+    }
+}
+
+
+
 
 export type CustomerType = {
     id: string
