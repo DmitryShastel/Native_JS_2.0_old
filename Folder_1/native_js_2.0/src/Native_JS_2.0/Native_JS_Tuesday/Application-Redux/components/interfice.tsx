@@ -22,8 +22,9 @@ export const Interface = () => {
     }
 
      let addCustomer = (name: any) => {
+         debugger
         let customer = {
-            name: '',
+            name,
             id: Date.now()
         }
         //dispatch(addCustomerAC(customer))

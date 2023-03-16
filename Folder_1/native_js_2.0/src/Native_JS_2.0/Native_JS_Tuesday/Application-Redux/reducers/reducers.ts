@@ -52,6 +52,7 @@ const ADD_CUSTOMER = 'ADD-CUSTOMER'
 const REMOVE_CUSTOMER = 'REMOVE-CUSTOMER'
 
 export const customerReducer = (state: DefaultCustomerStateType = defaultCustomerState, action: CustomerActionType) => {
+    debugger
     switch (action.type) {
 
         case ADD_CUSTOMER:
