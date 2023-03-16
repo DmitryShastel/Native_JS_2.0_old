@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {addCustomerAC, CustomerType} from "../reducers/reducers";
+import {addCustomerAC, CustomerType, removeCustomerAC} from "../reducers/reducers";
 
 type InterfaceType = {
     addCustomer: (cash: number) => void
@@ -33,7 +33,8 @@ export const Interface = () => {
     }
 
     let removeCustomer = (customer: CustomerType) => {
-        dispatch({type: 'REMOVE-CUSTOMER', payload: customer.id})
+        //dispatch({type: 'REMOVE-CUSTOMER', payload: customer.id})
+        dispatch(removeCustomerAC(customer.id))
     }
 
 
@@ -50,7 +51,7 @@ export const Interface = () => {
                 {customers.length > 0 ?
                     <div>{
                         customers.map((c: any) => <div
-                            onClick={() => {removeCustomer(c)}  }
+                            onClick={() => {removeCustomer(c)}}
                             style={{border: '1px solid red'}}>{c.name}</div>)}
                     </div>
                     : <div>'The client is missed' </div>}
