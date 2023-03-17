@@ -8,4 +8,4 @@ const reducers = combineReducers({
     customers: customerReducer
 })
 
-export const store : StoreType = createStore(reducers, composeWithDevTools())
+export const store: StoreType = createStore(reducers, composeWithDevTools())

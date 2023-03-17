@@ -9,7 +9,7 @@ export const Interface = () => {
 
     const dispatch = useDispatch()
     const cash : any = useSelector<typeof store>((state) => state.cash.cash)
-    const customers: any = useSelector<any>(state => state.customers.customers)
+    const customers: any = useSelector<typeof store>(state => state.customers.customers)
 
 
     let addMoney = (cash: number) => {
