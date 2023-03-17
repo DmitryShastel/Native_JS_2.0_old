@@ -4,11 +4,10 @@ import {addCustomerAC, addMoneyAC, CustomerType, getMoneyAC, removeCustomerAC} f
 import {store} from "../redux/redux-store";
 
 
-
 export const Interface = () => {
 
     const dispatch = useDispatch()
-    const cash : any = useSelector<typeof store>((state) => state.cash.cash)
+    const cash: any  = useSelector<typeof store>((state) => state.cash.cash)
     const customers: any = useSelector<typeof store>(state => state.customers.customers)
 
 
@@ -40,7 +39,9 @@ export const Interface = () => {
     return (
 
         <div>
-            <div>Balance: {cash}</div>
+            <div>
+                <h3>Balance: {cash}</h3>
+            </div>
             <div>
                 <button onClick={() => {addMoney(Number(prompt()))}}>Add money</button>
                 <button onClick={() => {getMoney(Number(prompt()))}}>Get Money</button>
@@ -51,7 +52,7 @@ export const Interface = () => {
                     <div>{
                         customers.map((c: any) => <div
                             onClick={() => {removeCustomer(c)}}
-                            style={{border: '1px solid red'}}>{c.name}</div>)}
+                            >{c.name}</div>)}
                     </div>
                     : <div>'The client is missed' </div>}
         </div>
