@@ -1,3 +1,8 @@
+export type StoreType = {
+    cash: DefaultCashStateType
+    customers: DefaultCustomerStateType
+}
+
 export type DefaultCashStateType = {
     cash: number
 }
