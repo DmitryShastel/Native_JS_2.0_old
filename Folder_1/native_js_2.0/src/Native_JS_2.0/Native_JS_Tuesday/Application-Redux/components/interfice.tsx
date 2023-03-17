@@ -1,13 +1,14 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {addCustomerAC, addMoneyAC, CustomerType, getMoneyAC, removeCustomerAC} from "../reducers/reducers";
+import {store} from "../redux/redux-store";
 
 
 
 export const Interface = () => {
 
     const dispatch = useDispatch()
-    const cash : any = useSelector<any>((state) => state.cash.cash)
+    const cash : any = useSelector<typeof store>((state) => state.cash.cash)
     const customers: any = useSelector<any>(state => state.customers.customers)
 
 
