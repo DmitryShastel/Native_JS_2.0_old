@@ -13,6 +13,11 @@ export type ManeType = {
 
 export const ManComponent: React.FC<ManeType> = (props) => {
     return (
-        <div></div>
+        <div>
+            <h1>{props.address.street.title}</h1>
+            <div>
+                {props.name}
+            </div>
+        </div>
     )
 }
