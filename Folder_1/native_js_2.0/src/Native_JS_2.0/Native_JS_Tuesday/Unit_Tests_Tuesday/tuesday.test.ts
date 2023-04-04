@@ -16,6 +16,7 @@ import {
     sum,
     sumFirstNumbers
 } from "../JS_TS_TDD";
+import {ManeType} from "../Destructuring";
 
 test.skip('reference type test', () => {
 
@@ -383,16 +384,7 @@ test.skip("get banknote list", () => {
 })
 
 
-type ManeType = {
-    name: string
-    age: number
-    lessons: Array<{title: string}>
-    address: {
-        street: {
-            title: string
-        }
-    }
-}
+
 
 let props: ManeType;
 
@@ -413,7 +405,6 @@ let props: ManeType;
 
 test("", () => {
 
-
     // const age = props.age
     // const lessons = props.lessons
 
@@ -423,30 +414,4 @@ test("", () => {
     expect(age).toBe(30)
     expect(lessons.length).toBe(2)
     expect(title).toBe('Minsk')
-
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
