@@ -11,12 +11,20 @@ export type ManeType = {
     }
 }
 
-export const ManComponent: React.FC<ManeType> = (props) => {
+type PropsType = {
+    title: string
+    man: ManeType
+}
+
+export const ManComponent: React.FC<PropsType> = (props) => {
+
+    const {title, man: {name}} = props
+
     return (
         <div>
-            <h1>{props.address.street.title}</h1>
+            <h1>{name}</h1>
             <div>
-                {props.name}
+                {title}
             </div>
         </div>
     )
