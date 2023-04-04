@@ -325,8 +325,6 @@ test.skip('upgrade company - company title', () => {
     expect(user.address).toBe(userCopy.address)
     expect(userCopy.companies[0].title).toBe('EPAM')
 })
-
-
 test.skip("sum", () => {
     expect(sum(3, 5, 7, 6, 4, 9)).toBe(34)
     expect(sum(1, 1, 1, 6)).toBe(9)
@@ -346,15 +344,12 @@ test.skip("get Sum ", () => {
     expect(getSum(1234)).toBe(10)
     expect(getSum(9999)).toBe(36)
 })
-
 test.skip("is Even Sum Greater", () => {
     expect(isEvenIndexSumGreater([1, 100, 2, 200])).toBe(false)
     expect(isEvenIndexSumGreater([100, 1, 200, 2])).toBe(true)
     expect(isEvenIndexSumGreater([100, 1, 200, 2, 300, 4])).toBe(true)
     expect(isEvenIndexSumGreater([100, 1, 200, 2, 4])).toBe(true)
 })
-
-
 test.skip("get Square Only Of Positive Integers", () => {
     const array = [4, 5.6, -9.8, 3.14, 10, 6, 8.34, -2]
     //const len = array.length
@@ -369,7 +364,6 @@ test.skip("get Square Only Of Positive Integers", () => {
     expect(result[4]).toBe(100)
     expect(result[5]).toBe(36)
 })
-
 test.skip("sum of first N numbers", () => {
     expect(sumFirstNumbers(0)).toBe(0)
     expect(sumFirstNumbers(4)).toBe(10)
@@ -389,15 +383,24 @@ test.skip("get banknote list", () => {
 })
 
 
+
+
+
+
 test("", () => {
     let props = {
         name: 'Dima',
         age: 30,
         lessons: [{title: '1'}, {title: '2'}]
     }
-  
-    expect(props.age).toBe(30)
-    expect(props.name).toBe('Dima')
+
+    // const age = props.age
+    // const lessons = props.lessons
+
+    const {age, lessons} = props
+
+    expect(age).toBe(30)
+    expect(lessons.length).toBe(2)
 
 })
 
