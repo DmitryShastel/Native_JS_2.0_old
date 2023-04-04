@@ -383,12 +383,21 @@ test.skip("get banknote list", () => {
 })
 
 
+type ManeType = {
+    name: string
+    age: number
+    lessons: Array<{title: string}>
+    address: {
+        street: {
+            title: string
+        }
+    }
+}
 
+let props: ManeType;
 
-
-
-test("", () => {
-    let props = {
+    beforeEach(() => {
+    props = {
         name: 'Dima',
         age: 30,
         lessons: [{title: '1'}, {title: '2'}],
@@ -398,6 +407,12 @@ test("", () => {
             }
         }
     }
+})
+
+
+
+test("", () => {
+
 
     // const age = props.age
     // const lessons = props.lessons
