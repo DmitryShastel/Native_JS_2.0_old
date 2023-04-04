@@ -4,7 +4,7 @@
     <list default="true" id="0afec1fa-fd71-4a39-b1ca-a70ddeddead8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/Application-Redux/components/interfice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/Application-Redux/components/interfice.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/Unit_Tests_Tuesday/tuesday.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/Unit_Tests_Tuesday/tuesday.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,23 +33,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jsx.switch.disabled&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/incubator/Incubator_2.0/Native_JS_2.0/Folder_1/native_js_2.0&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;C:/incubator/Incubator_2.0/Native_JS_2.0/Folder_1/native_js_2.0/node_modules/react-scripts&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\incubator\\Incubator_2.0\\Native_JS_2.0\\Folder_1\\native_js_2.0\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jsx.switch.disabled": "true",
+    "last_opened_file_path": "C:/incubator/Incubator_2.0/Native_JS_2.0/Folder_1/native_js_2.0",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs.jest.jest_package": "C:/incubator/Incubator_2.0/Native_JS_2.0/Folder_1/native_js_2.0/node_modules/react-scripts",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "ts.external.directory.path": "C:\\incubator\\Incubator_2.0\\Native_JS_2.0\\Folder_1\\native_js_2.0\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\incubator\Incubator_2.0\Native_JS_2.0\Folder_1\native_js_2.0\src\Native_JS_2.0\Native_JS_Tuesday" />
@@ -62,7 +62,7 @@
       <recent name="C:\incubator\Incubator_2.0\Native_JS_2.0\Folder_1\native_js_2.0\src\Native_JS_2.0\Native_JS_Monday\" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.get Square Only Of Positive Integers">
+  <component name="RunManager" selected="Jest.is Even Sum Greater">
     <configuration name="get Square Only Of Positive Integers" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -89,7 +89,7 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="get Triangle Type" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="get banknote list" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
@@ -98,7 +98,7 @@
       <scope-kind value="TEST" />
       <test-file value="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/Unit_Tests_Tuesday/tuesday.test.ts" />
       <test-names>
-        <test-name value="get Triangle Type" />
+        <test-name value="get banknote list" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -115,7 +115,7 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="sum" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="sum of first N numbers" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
@@ -124,17 +124,17 @@
       <scope-kind value="TEST" />
       <test-file value="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/Unit_Tests_Tuesday/tuesday.test.ts" />
       <test-names>
-        <test-name value="sum" />
+        <test-name value="sum of first N numbers" />
       </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.get Square Only Of Positive Integers" />
         <item itemvalue="Jest.is Even Sum Greater" />
+        <item itemvalue="Jest.get Square Only Of Positive Integers" />
+        <item itemvalue="Jest.sum of first N numbers" />
+        <item itemvalue="Jest.get banknote list" />
         <item itemvalue="Jest.get Sum " />
-        <item itemvalue="Jest.get Triangle Type" />
-        <item itemvalue="Jest.sum" />
       </list>
     </recent_temporary>
   </component>
@@ -185,7 +185,8 @@
       <workItem from="1678274225242" duration="1111000" />
       <workItem from="1678376750832" duration="12385000" />
       <workItem from="1678653829371" duration="23692000" />
-      <workItem from="1678985224497" duration="14394000" />
+      <workItem from="1678985224497" duration="14693000" />
+      <workItem from="1680631489435" duration="1375000" />
     </task>
     <servers />
   </component>

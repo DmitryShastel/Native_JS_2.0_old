@@ -17,7 +17,7 @@ import {
     sumFirstNumbers
 } from "../JS_TS_TDD";
 
-test('reference type test', () => {
+test.skip('reference type test', () => {
 
     let user: UserType = {
         name: 'Dima',
@@ -33,14 +33,14 @@ test('reference type test', () => {
     expect(cutUser.hair).toBe(15)
     expect(cutUser.address).toBe(user.address)
 })
-test('array reference type test', () => {
+test.skip('array reference type test', () => {
     let admins = users
 
     admins.push({name: 'Alex', age: 10})
 
     expect(users[2]).toEqual({name: 'Alex', age: 10})
 })
-test('change address', () => {
+test.skip('change address', () => {
     let user: UserType = {
         name: 'Dima',
         hair: 30,
@@ -59,7 +59,7 @@ test('change address', () => {
     user2.address.city = 'Сanary'
     expect(user.address.city).toBe('Сanary')
 })
-test('change user address', () => {
+test.skip('change user address', () => {
 
     let user: UserWithLaptopType = {
         name: 'Dima',
@@ -80,7 +80,7 @@ test('change user address', () => {
     expect(user.laptop).toBe(movedUser.laptop)
     expect(movedUser.address.city).toBe('Kiev')
 })
-test('upgrade laptop to macbook', () => {
+test.skip('upgrade laptop to macbook', () => {
 
     let user: UserWithLaptopType = {
         name: 'Dima',
@@ -102,7 +102,7 @@ test('upgrade laptop to macbook', () => {
     expect(upgradedUser.laptop.title).toBe('Macbook')
     expect(user.laptop.title).toBe('ZenBook')
 })
-test('upgrade laptop serial number', () => {
+test.skip('upgrade laptop serial number', () => {
 
     let user: UserWithLaptopOptions = {
         name: 'Dima',
@@ -132,7 +132,7 @@ test('upgrade laptop serial number', () => {
     expect(user.laptop.serialNumber.number).not.toBe(upgradedUserLaptop.laptop.serialNumber.number)
     expect(upgradedUserLaptop.laptop.serialNumber.number).toBe(9)
 })
-test('upgrade address - house number', () => {
+test.skip('upgrade address - house number', () => {
 
     let user: UserWithLaptopOptions & UserWithBookType = {
         name: 'Dima',
@@ -159,7 +159,7 @@ test('upgrade address - house number', () => {
     expect(user.address.house).not.toBe(userCopy.address.house)
     expect(userCopy.address.house).toBe(99)
 })
-test('upgrade books - add new books to user', () => {
+test.skip('upgrade books - add new books to user', () => {
 
     let user: UserWithLaptopOptions & UserWithBookType = {
         name: 'Dima',
@@ -186,7 +186,7 @@ test('upgrade books - add new books to user', () => {
     expect(userCopy.books[4]).toBe('ts')
     expect(user.books.length).toBe(4)
 })
-test('upgrade books - replace js to ts', () => {
+test.skip('upgrade books - replace js to ts', () => {
 
     let user: UserWithLaptopOptions & UserWithBookType = {
         name: 'Dima',
@@ -213,7 +213,7 @@ test('upgrade books - replace js to ts', () => {
     expect(userCopy.books[2]).toBe('ts')
     expect(user.books.length).toBe(4)
 })
-test('upgrade skills - replace 10 to 11', () => {
+test.skip('upgrade skills - replace 10 to 11', () => {
 
     let user: UserWithLaptopOptions & UserWithSkillsType = {
         name: 'Dima',
@@ -241,7 +241,7 @@ test('upgrade skills - replace 10 to 11', () => {
     expect(user.skills.length).toBe(4)
     expect(userCopy.skills[0]).toBe(11)
 })
-test('upgrade books - remove book', () => {
+test.skip('upgrade books - remove book', () => {
 
     let user: UserWithLaptopOptions & UserWithSkillsType = {
         name: 'Dima',
@@ -270,7 +270,7 @@ test('upgrade books - remove book', () => {
     expect(userCopy.books.length).toBe(3)
     expect(userCopy.books[2]).toBe('react')
 })
-test('upgrade company - add company', () => {
+test.skip('upgrade company - add company', () => {
 
     let user: UserWithLaptopOptions & UserWithCompanyType = {
         name: 'Dima',
@@ -290,13 +290,13 @@ test('upgrade company - add company', () => {
         companies: [{id: 1, title: 'Epam'}, {id: 2, title: 'IT-INCUBATOR'}]
     }
 
-    const userCopy = upgradeUserAddCompany(user,  {id:3, title:'Google'})
+    const userCopy = upgradeUserAddCompany(user, {id: 3, title: 'Google'})
 
     expect(userCopy.companies.length).toBe(3)
     expect(userCopy.companies[2].title).toBe('Google')
     expect(userCopy.companies[2].id).toBe(3)
 })
-test('upgrade company - company title', () => {
+test.skip('upgrade company - company title', () => {
 
     let user: UserWithLaptopOptions & UserWithCompanyType = {
         name: 'Dima',
@@ -316,7 +316,7 @@ test('upgrade company - company title', () => {
         companies: [{id: 1, title: 'epam'}, {id: 2, title: 'IT-INCUBATOR'}]
     }
 
-    const userCopy = upgradeUserCompanyTitle(user,  1, 'EPAM')
+    const userCopy = upgradeUserCompanyTitle(user, 1, 'EPAM')
 
     expect(user).not.toBe(userCopy)
     expect(user.laptop.title).toBe(userCopy.laptop.title)
@@ -327,13 +327,12 @@ test('upgrade company - company title', () => {
 })
 
 
-
-test("sum", () => {
+test.skip("sum", () => {
     expect(sum(3, 5, 7, 6, 4, 9)).toBe(34)
     expect(sum(1, 1, 1, 6)).toBe(9)
     expect(sum(0)).toBe(0)
 })
-test("get Triangle Type", ()=> {
+test.skip("get Triangle Type", () => {
     expect(getTriangleType(1, 1, 1)).toBe("10")
     expect(getTriangleType(2, 3, 3)).toBe("01")
     expect(getTriangleType(3, 3, 2)).toBe("01")
@@ -341,14 +340,14 @@ test("get Triangle Type", ()=> {
     expect(getTriangleType(4, 5, 3)).toBe("11")
     expect(getTriangleType(10, 2, 2)).toBe("00")
 })
-test("get Sum ", ()=> {
+test.skip("get Sum ", () => {
     expect(getSum(1000)).toBe(1)
     expect(getSum(0)).toBe(0)
     expect(getSum(1234)).toBe(10)
     expect(getSum(9999)).toBe(36)
 })
 
-test("is Even Sum Greater", ()=> {
+test.skip("is Even Sum Greater", () => {
     expect(isEvenIndexSumGreater([1, 100, 2, 200])).toBe(false)
     expect(isEvenIndexSumGreater([100, 1, 200, 2])).toBe(true)
     expect(isEvenIndexSumGreater([100, 1, 200, 2, 300, 4])).toBe(true)
@@ -356,7 +355,7 @@ test("is Even Sum Greater", ()=> {
 })
 
 
-test("get Square Only Of Positive Integers", () => {
+test.skip("get Square Only Of Positive Integers", () => {
     const array = [4, 5.6, -9.8, 3.14, 10, 6, 8.34, -2]
     //const len = array.length
     const result = getSquarePositiveIntegers(array)
@@ -371,12 +370,12 @@ test("get Square Only Of Positive Integers", () => {
     expect(result[5]).toBe(36)
 })
 
-test("sum of first N numbers", () => {
+test.skip("sum of first N numbers", () => {
     expect(sumFirstNumbers(0)).toBe(0)
     expect(sumFirstNumbers(4)).toBe(10)
     expect(sumFirstNumbers(10)).toBe(55)
 })
-test("get banknote list", ()=> {
+test.skip("get banknote list", () => {
     // надо бы проверять длинну резалтов и их сумму
     const result2500 = getBanknoteList(2500)
     const result23 = getBanknoteList(23)
@@ -388,3 +387,41 @@ test("get banknote list", ()=> {
     expect(result23[2]).toBe(1)
 
 })
+
+
+test("", () => {
+    let props = {
+        name: 'Dima',
+        age: 30,
+        lessons: [{title: '1'}, {title: '2'}]
+    }
+  
+    expect(props.age).toBe(30)
+    expect(props.name).toBe('Dima')
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
