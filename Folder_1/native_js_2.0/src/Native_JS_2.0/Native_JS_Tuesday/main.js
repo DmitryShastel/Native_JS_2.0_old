@@ -598,7 +598,10 @@ let userObg = {
     '1': 'Vasa',
     '2': 'Valera'
 }
+
+
 userObg['3'] = 100
+userObg['test'] = 'test'
 console.log(userObg)
 console.log()
 
