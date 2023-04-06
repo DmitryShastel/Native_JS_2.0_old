@@ -428,3 +428,25 @@ test ("2", () => {
     expect(ls1.title).toBe('1')
     expect(ls2.title).toBe('2')
 })
+
+
+
+type UsersType = {
+    [key: string] : {id: number, name: string}
+}
+
+let usesrs: UsersType
+
+beforeEach(() => {
+    usesrs = {
+        '21': {id: 21, name: 'Dima'},
+        '44': {id: 44, name: 'Vasa'},
+        '2': {id: 2, name: 'Valera'}
+    }
+})
+
+
+
+
+
+

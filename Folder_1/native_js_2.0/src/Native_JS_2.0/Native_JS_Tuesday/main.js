@@ -346,12 +346,12 @@ const students = [
         scores: 105,
     }
 ]
-
-const user = {
-    name: 'Bob',
-    age: 23,
-    friends: ['Alex', 'Nick', 'John']
-}
+//
+// const user = {
+//     name: 'Bob',
+//     age: 23,
+//     friends: ['Alex', 'Nick', 'John']
+// }
 
 //сортировка массива объектов по строковым значениям
 //а. Регистрозависимоя
@@ -602,13 +602,19 @@ let userObg = {
 
 userObg['3'] = 100
 userObg['test'] = 'test'
-console.log(userObg)
+
 console.log()
 
+const usesrs = {
+    '21': {id: 21, name: 'Dima'},
+    '44': {id: 44, name: 'Vasa'},
+    '2': {id: 2, name: 'Valera'}
+}
 
+let user = {id: 88, name: 'Bob'}
+usesrs[user.id] = user;
 
-
-
+console.log(usesrs)
 
 
 
