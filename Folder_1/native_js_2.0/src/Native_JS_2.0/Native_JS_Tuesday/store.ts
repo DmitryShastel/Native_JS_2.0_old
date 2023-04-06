@@ -90,6 +90,14 @@ let createGarage = (): GarageType => {
 }
 
 
+const usesrs = {
+    '21': {id: 21, name: 'Dima'},
+    '44': {id: 44, name: 'Vasa'},
+    '2': {id: 2, name: 'Valera'}
+}
+
+
+
 
 
 
