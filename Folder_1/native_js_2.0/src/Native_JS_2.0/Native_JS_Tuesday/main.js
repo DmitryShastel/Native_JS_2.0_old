@@ -593,6 +593,15 @@ const compareObjByName = (a, b) => {
 
 
 
+let userObg = {
+    '0': 'Dima',
+    '1': 'Vasa',
+    '2': 'Valera'
+}
+
+console.log(userObg)
+
+
 
 
 
