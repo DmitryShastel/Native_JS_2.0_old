@@ -435,17 +435,21 @@ type UsersType = {
     [key: string] : {id: number, name: string}
 }
 
-let usesrs: UsersType
+let users2: UsersType
 
 beforeEach(() => {
-    usesrs = {
+    users2 = {
         '21': {id: 21, name: 'Dima'},
         '44': {id: 44, name: 'Vasa'},
         '2': {id: 2, name: 'Valera'}
     }
 })
 
+test ('123',() => {
+    users2['2'].name = 'Test'
 
+    expect(users2['2'].name).toBe('Test')
+})
 
 
 
