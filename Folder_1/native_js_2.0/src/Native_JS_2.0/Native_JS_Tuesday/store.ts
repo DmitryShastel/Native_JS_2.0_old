@@ -96,6 +96,9 @@ const usesrs = {
     '2': {id: 2, name: 'Valera'}
 }
 
+let user = {id: 88, name: 'Bob'}
+usesrs[user.id.toString()] = user;
+
 
 
 
