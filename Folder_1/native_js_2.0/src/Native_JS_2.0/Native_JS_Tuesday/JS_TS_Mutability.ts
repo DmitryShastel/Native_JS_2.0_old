@@ -132,13 +132,20 @@ export let upgradeUserCompanyTitle = (user: UserWithCompanyType & UserWithCompan
     }
 }
 
+export type LaptopType3 = {
+    title: string
+}
+export type UserWithLaptopType3 = UserType2 & {
+    laptop: LaptopType3
+}
+
 
 export let makeHairsstyle = (u: UserType2, power: number) => {
     let copyUser = {...u, hair: u.hair / power}
     return copyUser
 }
 
-export let moveUser2 = (u: UserType2, title: string) => {
+export let movedUser2 = (u: UserWithLaptopType3, title: string) => {
     let copyUser = {...u, address: {...u, address: title } }
     return copyUser
 }
