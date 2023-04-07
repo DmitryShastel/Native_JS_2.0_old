@@ -131,6 +131,11 @@ export let upgradeUserCompanyTitle = (user: UserWithCompanyType & UserWithCompan
 
     }
 }
+
+
 export let hairdresser = (u:UserType2, power: number ) => {
-    u.hair = u.hair / power
+    let copyUser = {...u}
+    copyUser.hair = u.hair / power
+
+    return copyUser
 }
