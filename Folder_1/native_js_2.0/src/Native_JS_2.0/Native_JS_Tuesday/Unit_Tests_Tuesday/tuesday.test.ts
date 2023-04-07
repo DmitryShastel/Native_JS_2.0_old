@@ -1,12 +1,29 @@
 import {
     makeHairsstyle,
     increaseHair,
-    moveUser, upgradeUserAddCompany, upgradeUserBooks, upgradeUserCompanyTitle, upgradeUserHouseNumber,
-    upgradeUserLaptop, upgradeUserLaptopOptions, upgradeUserRemoveBook, upgradeUserReplaceBook, upgradeUserSkills,
+    moveUser,
+    upgradeUserAddCompany,
+    upgradeUserBooks,
+    upgradeUserCompanyTitle,
+    upgradeUserHouseNumber,
+    upgradeUserLaptop,
+    upgradeUserLaptopOptions,
+    upgradeUserRemoveBook,
+    upgradeUserReplaceBook,
+    upgradeUserSkills,
     users,
-    UserType, UserType2, UserWithBookType, UserWithCompanyType,
+    UserType,
+    UserType2,
+    UserWithBookType,
+    UserWithCompanyType,
     UserWithLaptopOptions,
-    UserWithLaptopType, UserWithSkillsType, movedUser2, UserWithLaptopType3, upgradedUser2, UserBooksType2
+    UserWithLaptopType,
+    UserWithSkillsType,
+    movedUser2,
+    UserWithLaptopType3,
+    upgradedUser2,
+    UserBooksType2,
+    addNewBooksToUser
 } from "../JS_TS_Mutability";
 import {
     getBanknoteList,
@@ -518,7 +535,7 @@ test('upgrade laptop to macbook2', () => {
     expect(newUserLaptop.laptop.title).toBe('macbook')
 })
 
-test('upgr', () => {
+test('add new books to user', () => {
     let user: UserWithLaptopType3 &  UserBooksType2= {
         name: 'Dima',
         hair: 32,
@@ -532,12 +549,14 @@ test('upgr', () => {
         books: ['js', 'html', 'css']
     }
 
-    let newUserLaptop = upgradedUser2(user, 'macbook')
+    let userCopy = addNewBooksToUser(user, 'ts')
 
-    expect(user).not.toBe(newUserLaptop)
-    expect(user.laptop).not.toBe(newUserLaptop.laptop)
-    expect(user.address).toBe(newUserLaptop.address)
-    expect(newUserLaptop.laptop.title).toBe('macbook')
+    expect(user).not.toBe(userCopy)
+    expect(user.laptop).toBe(userCopy.laptop)
+    expect(user.address).toBe(userCopy.address)
+    expect(user.books).not.toBe(userCopy.books)
+    expect(userCopy.books[3]).toBe('ts')
+    expect(user.books.length).toBe(3)
 })
 
 

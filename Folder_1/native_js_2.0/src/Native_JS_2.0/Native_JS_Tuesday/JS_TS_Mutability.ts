@@ -161,3 +161,9 @@ export let upgradedUser2 = (u: UserWithLaptopType3, title: string) => {
         ...u, laptop: {...u.laptop, title: title}
     }
 }
+
+export let addNewBooksToUser = (u: UserWithLaptopType3 & UserBooksType2, books: string) => {
+    return {
+        ...u, books: [...u.books, books]
+    }
+}
