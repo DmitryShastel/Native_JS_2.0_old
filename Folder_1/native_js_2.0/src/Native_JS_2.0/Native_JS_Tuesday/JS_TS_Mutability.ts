@@ -115,7 +115,7 @@ export let upgradeUserSkills = (user: UserWithLaptopOptions & UserWithSkillsType
 export let upgradeUserRemoveBook = (user: UserWithLaptopOptions & UserWithBookType, oldBook: string,) => {
     return {
         ...user,
-        books: user.books.filter(b => b !== oldBook )
+        books: user.books.filter(b => b !== oldBook)
     }
 }
 export let upgradeUserAddCompany = (user: UserWithLaptopOptions & UserWithCompanyType, newCompany: CompanyType) => {
@@ -124,7 +124,7 @@ export let upgradeUserAddCompany = (user: UserWithLaptopOptions & UserWithCompan
         companies: [...user.companies, newCompany]
     }
 }
-export let upgradeUserCompanyTitle = (user: UserWithCompanyType & UserWithCompanyType  , id: number, newTitle: string) => {
+export let upgradeUserCompanyTitle = (user: UserWithCompanyType & UserWithCompanyType, id: number, newTitle: string) => {
     return {
         ...user,
         companies: user.companies.map(c => c.id === id ? {...c, title: newTitle} : c)
@@ -133,9 +133,7 @@ export let upgradeUserCompanyTitle = (user: UserWithCompanyType & UserWithCompan
 }
 
 
-export let hairdresser = (u:UserType2, power: number ) => {
-    let copyUser = {...u}
-    copyUser.hair = u.hair / power
-
+export let makeHairsstyle = (u: UserType2, power: number) => {
+    let copyUser = {...u, hair: u.hair / power}
     return copyUser
 }

@@ -1,5 +1,5 @@
 import {
-    hairdresser,
+    makeHairsstyle,
     increaseHair,
     moveUser, upgradeUserAddCompany, upgradeUserBooks, upgradeUserCompanyTitle, upgradeUserHouseNumber,
     upgradeUserLaptop, upgradeUserLaptopOptions, upgradeUserRemoveBook, upgradeUserReplaceBook, upgradeUserSkills,
@@ -468,7 +468,7 @@ test('reference type test2', () => {
         }
     }
 
-    let newUser = hairdresser(user, 2)
+    let newUser = makeHairsstyle(user, 2)
     expect(newUser.hair).toBe(16)
     expect(user.hair).toBe(32)
 })
