@@ -471,6 +471,7 @@ test('reference type test2', () => {
     let newUser = makeHairsstyle(user, 2)
     expect(newUser.hair).toBe(16)
     expect(user.hair).toBe(32)
+    expect(newUser.address).toEqual(user.address)
 })
 
 
