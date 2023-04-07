@@ -6,7 +6,7 @@ import {
     users,
     UserType, UserType2, UserWithBookType, UserWithCompanyType,
     UserWithLaptopOptions,
-    UserWithLaptopType, UserWithSkillsType,  movedUser2, UserWithLaptopType3
+    UserWithLaptopType, UserWithSkillsType, movedUser2, UserWithLaptopType3, upgradedUser2, UserBooksType2
 } from "../JS_TS_Mutability";
 import {
     getBanknoteList,
@@ -464,7 +464,7 @@ test('reference type test2', () => {
         name: 'Dima',
         hair: 32,
         address: {
-            title: 'Minsk'
+            city: 'Minsk'
         }
     }
 
@@ -480,7 +480,8 @@ test('change address2', () => {
         name: 'Dima',
         hair: 32,
         address: {
-            title: 'Minsk'
+            city: 'Minsk',
+            house: 12
         },
         laptop : {
             title: 'ZenBook'
@@ -493,10 +494,51 @@ test('change address2', () => {
     expect(user).not.toBe(newUser)
     expect(user.laptop).toBe(newUser.laptop)
     expect(user.address).not.toBe(newUser.address)
-    expect(newUser.address.address).toBe('Kiev')
+    expect(newUser.address.city).toBe('Kiev')
 })
 
+test('upgrade laptop to macbook2', () => {
+    let user: UserWithLaptopType3 = {
+        name: 'Dima',
+        hair: 32,
+        address: {
+            city: 'Minsk',
+            house: 12
+        },
+        laptop : {
+            title: 'ZenBook'
+        }
+    }
 
+    let newUserLaptop = upgradedUser2(user, 'macbook')
+
+    expect(user).not.toBe(newUserLaptop)
+    expect(user.laptop).not.toBe(newUserLaptop.laptop)
+    expect(user.address).toBe(newUserLaptop.address)
+    expect(newUserLaptop.laptop.title).toBe('macbook')
+})
+
+test('upgr', () => {
+    let user: UserWithLaptopType3 &  UserBooksType2= {
+        name: 'Dima',
+        hair: 32,
+        address: {
+            city: 'Minsk',
+            house: 12
+        },
+        laptop : {
+            title: 'ZenBook'
+        },
+        books: ['js', 'html', 'css']
+    }
+
+    let newUserLaptop = upgradedUser2(user, 'macbook')
+
+    expect(user).not.toBe(newUserLaptop)
+    expect(user.laptop).not.toBe(newUserLaptop.laptop)
+    expect(user.address).toBe(newUserLaptop.address)
+    expect(newUserLaptop.laptop.title).toBe('macbook')
+})
 
 
 

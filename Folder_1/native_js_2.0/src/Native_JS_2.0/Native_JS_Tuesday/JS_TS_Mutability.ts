@@ -8,11 +8,7 @@ export type UserType = {
     hair: number
     address: { city: string, house?: number }
 }
-export type UserType2 = {
-    name: string
-    hair: number
-    address: { title: string }
-}
+
 export type  LaptopType = {
     title: string
 }
@@ -132,11 +128,21 @@ export let upgradeUserCompanyTitle = (user: UserWithCompanyType & UserWithCompan
     }
 }
 
+
+export type UserType2 = {
+    name: string
+    hair: number
+    address: { city: string, house?: number }
+}
 export type LaptopType3 = {
     title: string
 }
 export type UserWithLaptopType3 = UserType2 & {
     laptop: LaptopType3
+}
+
+export type UserBooksType2 = {
+    books: Array<string>
 }
 
 
@@ -146,6 +152,12 @@ export let makeHairsstyle = (u: UserType2, power: number) => {
 }
 
 export let movedUser2 = (u: UserWithLaptopType3, title: string) => {
-    let copyUser = {...u, address: {...u, address: title } }
+    let copyUser = {...u, address: {city: title}}
     return copyUser
+}
+
+export let upgradedUser2 = (u: UserWithLaptopType3, title: string) => {
+    return {
+        ...u, laptop: {...u.laptop, title: title}
+    }
 }
