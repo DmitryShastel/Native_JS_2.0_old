@@ -444,12 +444,40 @@ beforeEach(() => {
         '2': {id: 2, name: 'Valera'}
     }
 })
-
 test ('123',() => {
     users2['2'].name = 'Test'
 
     expect(users2['2'].name).toBe('Test')
 })
+
+
+
+
+
+
+type UserType2 = {
+    name: string
+    hair: number
+    address: { title: string }
+}
+
+
+test('reference type test2', () => {
+    let user: UserType2 = {
+        name: 'Dima',
+        hair: 32,
+        address: {
+            title: 'Minsk'
+        }
+    }
+})
+
+
+
+
+
+
+
 
 
 
