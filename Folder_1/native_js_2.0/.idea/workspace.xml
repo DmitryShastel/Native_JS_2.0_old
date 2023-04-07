@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0afec1fa-fd71-4a39-b1ca-a70ddeddead8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/JS_TS_Mutability.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/JS_TS_Mutability.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/Unit_Tests_Tuesday/tuesday.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/Unit_Tests_Tuesday/tuesday.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +60,7 @@
       <recent name="C:\incubator\Incubator_2.0\Native_JS_2.0\Folder_1\native_js_2.0\src\Native_JS_2.0\Native_JS_Monday\" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.123">
+  <component name="RunManager" selected="Jest.reference type test2">
     <configuration name="123" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -114,7 +113,7 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="sum of first N numbers" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="reference type test2" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
@@ -123,17 +122,17 @@
       <scope-kind value="TEST" />
       <test-file value="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/Unit_Tests_Tuesday/tuesday.test.ts" />
       <test-names>
-        <test-name value="sum of first N numbers" />
+        <test-name value="reference type test2" />
       </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.reference type test2" />
         <item itemvalue="Jest.123" />
         <item itemvalue="Jest.Unnamed" />
         <item itemvalue="Jest.is Even Sum Greater" />
         <item itemvalue="Jest.get Square Only Of Positive Integers" />
-        <item itemvalue="Jest.sum of first N numbers" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +185,7 @@
       <workItem from="1678653829371" duration="23692000" />
       <workItem from="1678985224497" duration="14693000" />
       <workItem from="1680631489435" duration="7400000" />
-      <workItem from="1680798307506" duration="6983000" />
+      <workItem from="1680798307506" duration="7304000" />
     </task>
     <servers />
   </component>

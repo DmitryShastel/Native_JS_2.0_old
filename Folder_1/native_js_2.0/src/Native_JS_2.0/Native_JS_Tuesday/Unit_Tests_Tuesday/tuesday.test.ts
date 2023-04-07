@@ -1,4 +1,5 @@
 import {
+    hairdresser,
     increaseHair,
     moveUser, upgradeUserAddCompany, upgradeUserBooks, upgradeUserCompanyTitle, upgradeUserHouseNumber,
     upgradeUserLaptop, upgradeUserLaptopOptions, upgradeUserRemoveBook, upgradeUserReplaceBook, upgradeUserSkills,
@@ -466,6 +467,9 @@ test('reference type test2', () => {
             title: 'Minsk'
         }
     }
+
+    hairdresser(user, 2)
+    expect(user.hair).toBe(16)
 })
 
 
