@@ -3,7 +3,7 @@ import {
     moveUser, upgradeUserAddCompany, upgradeUserBooks, upgradeUserCompanyTitle, upgradeUserHouseNumber,
     upgradeUserLaptop, upgradeUserLaptopOptions, upgradeUserRemoveBook, upgradeUserReplaceBook, upgradeUserSkills,
     users,
-    UserType, UserWithBookType, UserWithCompanyType,
+    UserType, UserType2, UserWithBookType, UserWithCompanyType,
     UserWithLaptopOptions,
     UserWithLaptopType, UserWithSkillsType
 } from "../JS_TS_Mutability";
@@ -455,11 +455,7 @@ test ('123',() => {
 
 
 
-type UserType2 = {
-    name: string
-    hair: number
-    address: { title: string }
-}
+
 
 
 test('reference type test2', () => {

@@ -8,6 +8,11 @@ export type UserType = {
     hair: number
     address: { city: string, house?: number }
 }
+export type UserType2 = {
+    name: string
+    hair: number
+    address: { title: string }
+}
 export type  LaptopType = {
     title: string
 }
@@ -126,4 +131,6 @@ export let upgradeUserCompanyTitle = (user: UserWithCompanyType & UserWithCompan
 
     }
 }
-
+export let hairdresser = (u:UserType2, power: number ) => {
+    u.hair = u.hair / power
+}
