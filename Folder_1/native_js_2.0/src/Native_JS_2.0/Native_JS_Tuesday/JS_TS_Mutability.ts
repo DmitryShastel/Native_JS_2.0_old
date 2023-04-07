@@ -137,3 +137,8 @@ export let makeHairsstyle = (u: UserType2, power: number) => {
     let copyUser = {...u, hair: u.hair / power}
     return copyUser
 }
+
+export let moveUser2 = (u: UserType2, title: string) => {
+    let copyUser = {...u, address: {...u, address: title } }
+    return copyUser
+}

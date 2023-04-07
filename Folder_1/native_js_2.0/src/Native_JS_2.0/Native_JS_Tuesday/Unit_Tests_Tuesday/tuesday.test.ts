@@ -6,7 +6,7 @@ import {
     users,
     UserType, UserType2, UserWithBookType, UserWithCompanyType,
     UserWithLaptopOptions,
-    UserWithLaptopType, UserWithSkillsType
+    UserWithLaptopType, UserWithSkillsType, moveUser2
 } from "../JS_TS_Mutability";
 import {
     getBanknoteList,
@@ -475,6 +475,19 @@ test('reference type test2', () => {
 })
 
 
+test('change address2', () => {
+    let user: UserType2 = {
+        name: 'Dima',
+        hair: 32,
+        address: {
+            title: 'Minsk'
+        }
+    }
+
+    let newUser = moveUser2(user, 'Kiev')
+    expect(user.hair).toBe(32)
+    expect(newUser.address.address).toBe('Kiev')
+})
 
 
 
