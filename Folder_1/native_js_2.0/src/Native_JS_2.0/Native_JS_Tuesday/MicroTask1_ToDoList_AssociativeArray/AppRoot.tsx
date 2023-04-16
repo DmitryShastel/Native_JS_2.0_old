@@ -52,14 +52,21 @@ export function RootApp() {
     function addTask(todolistID: string, title: string) {
         let newTask = {id: v1(), title: title, isDone: false};
         setTasks({...tasks, [todolistID]: [newTask, ...tasks[todolistID]]})
-
-
-        // let task = {id: v1(), title: title, isDone: false};
-        // let newTasks = [task, ...tasks];
-        // setTasks(newTasks);
     }
 
-    function changeStatus(taskId: string, isDone: boolean) {
+    function changeStatus(todolistID: string, taskId: string, isDone: boolean) {
+
+        setTasks({...tasks,[todolistID]: tasks[todolistID].map(t => t.id === taskId ? {...t, isDone: isDone} : t)})
+
+
+        //own method
+        // let task = tasks[todolistID].find(t => t.id === taskId);
+        // if (task) {
+        //     task.isDone = isDone;
+        // }
+        // setTasks({...tasks, [todolistID]: tasks[todolistID]})
+
+        //old method
         // let task = tasks.find(t => t.id === taskId);
         // if (task) {
         //     task.isDone = isDone;
