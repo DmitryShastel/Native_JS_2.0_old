@@ -25,7 +25,7 @@ export function RootApp() {
 
     let [todolists, setTodolists] = useState<Array<TodolistsType>>([
         {id: todolistID1, title: 'What to learn', filter: 'all'},
-        {id: todolistID2, title: 'What to buy', filter: 'active'},
+        {id: todolistID2, title: 'What to buy', filter: 'all'},
     ])
 
     let [tasks, setTasks] = useState({
@@ -63,15 +63,6 @@ export function RootApp() {
     }
 
 
-    // let tasksForTodolist = tasks;
-
-    // if (todolists[0].filter === "active") {
-    //     tasksForTodolist = tasks.filter(t => t.isDone === false);
-    // }
-    // if (filter === "completed") {
-    //     tasksForTodolist = tasks.filter(t => t.isDone === true);
-    // }
-
     function changeFilter(value: FilterValuesType) {
         // setFilter(value);
     }
@@ -94,6 +85,8 @@ export function RootApp() {
 
                     return (
                         <Todolist
+                            key={td.id}
+                            todolistID={td.id}
                             title={td.title}
                             tasks={tasksForTodolist}
                             removeTask={removeTask}
