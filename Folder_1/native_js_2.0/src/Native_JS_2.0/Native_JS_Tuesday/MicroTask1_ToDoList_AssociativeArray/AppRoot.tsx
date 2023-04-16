@@ -64,7 +64,7 @@ export function RootApp() {
 
 
     function changeFilter(todolistID: string, value: FilterValuesType) {
-        // setFilter(value);
+        setTodolists( todolists.map(filtered => filtered.id === todolistID ? {...filtered, filter: value}: filtered));
     }
 
 
