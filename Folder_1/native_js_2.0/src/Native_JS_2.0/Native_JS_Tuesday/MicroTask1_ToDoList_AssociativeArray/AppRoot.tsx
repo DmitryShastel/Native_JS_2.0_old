@@ -63,7 +63,7 @@ export function RootApp() {
     }
 
 
-    function changeFilter(value: FilterValuesType) {
+    function changeFilter(todolistID: string, value: FilterValuesType) {
         // setFilter(value);
     }
 
