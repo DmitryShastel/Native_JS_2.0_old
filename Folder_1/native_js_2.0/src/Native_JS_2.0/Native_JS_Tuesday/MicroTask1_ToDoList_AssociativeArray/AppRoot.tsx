@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './App.css';
+// import './App.css';
 import {Todolist} from './Todolist';
 import {v1} from 'uuid';
 
@@ -64,14 +64,14 @@ export function RootApp() {
     }
 
 
-    let tasksForTodolist = tasks;
+    // let tasksForTodolist = tasks;
 
-    if (filter === "active") {
-        tasksForTodolist = tasks.filter(t => t.isDone === false);
-    }
-    if (filter === "completed") {
-        tasksForTodolist = tasks.filter(t => t.isDone === true);
-    }
+    // if (filter === "active") {
+    //     tasksForTodolist = tasks.filter(t => t.isDone === false);
+    // }
+    // if (filter === "completed") {
+    //     tasksForTodolist = tasks.filter(t => t.isDone === true);
+    // }
 
     function changeFilter(value: FilterValuesType) {
         // setFilter(value);
@@ -83,6 +83,9 @@ export function RootApp() {
 
             {
                 todolists.map((td) => {
+
+                    let tasksForTodolist = tasks[td.id];
+
                     return (
                         <Todolist
                             title={td.title}
@@ -91,7 +94,7 @@ export function RootApp() {
                             changeFilter={changeFilter}
                             addTask={addTask}
                             changeTaskStatus={changeStatus}
-                            filter={filter}
+                            filter={td.filter}
                         />
                     )
                 })
