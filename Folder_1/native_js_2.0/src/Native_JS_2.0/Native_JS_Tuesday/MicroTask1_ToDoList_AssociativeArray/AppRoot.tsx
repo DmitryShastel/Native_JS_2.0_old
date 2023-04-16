@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-// import './App.css';
 import {Todolist} from './Todolist';
 import {v1} from 'uuid';
 
@@ -26,7 +25,7 @@ export function RootApp() {
 
     let [todolists, setTodolists] = useState<Array<TodolistsType>>([
         {id: todolistID1, title: 'What to learn', filter: 'all'},
-        {id: todolistID2, title: 'What to buy', filter: 'all'},
+        {id: todolistID2, title: 'What to buy', filter: 'active'},
     ])
 
     let [tasks, setTasks] = useState({
@@ -66,7 +65,7 @@ export function RootApp() {
 
     // let tasksForTodolist = tasks;
 
-    // if (filter === "active") {
+    // if (todolists[0].filter === "active") {
     //     tasksForTodolist = tasks.filter(t => t.isDone === false);
     // }
     // if (filter === "completed") {
@@ -85,6 +84,13 @@ export function RootApp() {
                 todolists.map((td) => {
 
                     let tasksForTodolist = tasks[td.id];
+
+                    if (td.filter === "active") {
+                        tasksForTodolist = tasks[td.id].filter(t => t.isDone === false);
+                    }
+                    if (td.filter === "completed") {
+                        tasksForTodolist = tasks[td.id].filter(t => t.isDone === true);
+                    }
 
                     return (
                         <Todolist
