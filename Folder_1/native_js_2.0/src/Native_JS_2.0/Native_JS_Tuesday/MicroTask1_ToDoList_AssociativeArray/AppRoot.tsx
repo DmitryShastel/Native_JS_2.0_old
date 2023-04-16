@@ -49,7 +49,11 @@ export function RootApp() {
         setTasks({...tasks, [todolistID]: tasks[todolistID].filter(t => t.id != id)})
     }
 
-    function addTask(title: string) {
+    function addTask(todolistID: string, title: string) {
+        let newTask = {id: v1(), title: title, isDone: false};
+        setTasks({...tasks, [todolistID]: [newTask, ...tasks[todolistID]]})
+
+
         // let task = {id: v1(), title: title, isDone: false};
         // let newTasks = [task, ...tasks];
         // setTasks(newTasks);
