@@ -1,5 +1,6 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
 import {FilterValuesType} from "./AppRoot_6";
+import {AddItemForm} from "./AddItemForm";
 
 
 export type TaskType = {
@@ -33,9 +34,9 @@ export function Todolist_6(props: PropsType) {
     //         setError("Title is requared");
     //     }
     // };
-    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setTitle(e.currentTarget.value)
-    }
+    // const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    //     setTitle(e.currentTarget.value)
+    // }
     // const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
     //     setError(null);
     //     if (e.charCode === 13) {
@@ -67,6 +68,7 @@ export function Todolist_6(props: PropsType) {
             {/*    </button>*/}
             {/*    {error && <div className={"error-message"}>{error}</div>}*/}
             {/*</div>*/}
+            <AddItemForm addTask={props.addTask} todolistId={props.id}/>
             <ul>
                 {
                     props.tasks.map(t => {

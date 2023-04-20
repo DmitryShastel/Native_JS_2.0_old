@@ -1,9 +1,8 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {ChangeEvent,KeyboardEvent, useState} from 'react';
 
 
 type AddItemFormType = {
-    id: string
-    title: string
+    todolistId: string
     addTask: (title: string, todolistId: string) => void
 }
 
@@ -19,20 +18,19 @@ export const AddItemForm = (props: AddItemFormType) => {
 
     const addTask = () => {
         if (title.trim() !== "") {
-            props.addTask(title, props.id);
+            props.addTask(title, props.todolistId);
             setTitle("");
         } else {
             setError("Title is requared");
         }
     };
 
-
-    // const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
-    //     setError(null);
-    //     if (e.charCode === 13) {
-    //         props.addTask();
-    //     }
-    // }
+    const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
+        setError(null);
+        if (e.charCode === 13) {
+            addTask();
+        }
+    }
 
 
     return (
