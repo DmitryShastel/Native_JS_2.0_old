@@ -88,14 +88,14 @@ export function RootApp_6() {
         ]
     })
 
-    const addTodolist = ( title: string) => {
-        let newTodolist =  {id: v1, title: title, filter: "all"}
+    const addTodolist = (newTitle: string) => {
+        // let newTodolist =  {id: v1, title: newTitle, filter: "all"}
     }
 
     return (
         <div className="App">
 
-            <AddItemForm callBack={addTodolist} todolistId={''}/>
+            <AddItemForm callBack={addTodolist}/>
 
             {
                 todolists.map(tl => {
