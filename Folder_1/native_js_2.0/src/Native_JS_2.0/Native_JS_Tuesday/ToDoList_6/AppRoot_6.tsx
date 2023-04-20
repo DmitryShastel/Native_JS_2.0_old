@@ -96,6 +96,8 @@ export function RootApp_6() {
     return (
         <div className="App">
 
+            <AddItemForm addTask={() => {}} todolistId={''}/>
+
             {
                 todolists.map(tl => {
                     let allTodolistTasks = tasks[tl.id];

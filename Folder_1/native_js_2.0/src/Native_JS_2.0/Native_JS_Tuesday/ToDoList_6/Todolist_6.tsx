@@ -1,4 +1,4 @@
-import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
+import React, {ChangeEvent} from 'react';
 import {FilterValuesType} from "./AppRoot_6";
 import {AddItemForm} from "./AddItemForm";
 
@@ -23,26 +23,6 @@ type PropsType = {
 
 export function Todolist_6(props: PropsType) {
 
-    // let [title, setTitle] = useState(" ")
-    // let [error, setError] = useState<string | null>(null)
-
-    // const addTask = () => {
-    //     if (title.trim() !== "") {
-    //         props.addTask(title, props.id);
-    //         setTitle("");
-    //     } else {
-    //         setError("Title is requared");
-    //     }
-    // };
-    // const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    //     setTitle(e.currentTarget.value)
-    // }
-    // const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
-    //     setError(null);
-    //     if (e.charCode === 13) {
-    //         addTask();
-    //     }
-    // }
     const onAllClickHander = () => {
         props.changeFilter("all", props.id)
     }
@@ -60,14 +40,7 @@ export function Todolist_6(props: PropsType) {
     return (
         <div>
             <h3>{props.title}  <button onClick={removeTodolist}>x</button></h3>
-            {/*<div>*/}
-            {/*    <input value={title}*/}
-            {/*           onChange={onChangeHandler}*/}
-            {/*           onKeyPress={onKeyPressHandler}/>*/}
-            {/*    <button onClick={addTask}>+*/}
-            {/*    </button>*/}
-            {/*    {error && <div className={"error-message"}>{error}</div>}*/}
-            {/*</div>*/}
+
             <AddItemForm addTask={props.addTask} todolistId={props.id}/>
             <ul>
                 {
