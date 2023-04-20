@@ -33,15 +33,15 @@ export function Todolist_6(props: PropsType) {
             setError("Title is requared");
         }
     };
-    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setTitle(e.currentTarget.value)
-    }
-    const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
-        setError(null);
-        if (e.charCode === 13) {
-            addTask();
-        }
-    }
+    // const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    //     setTitle(e.currentTarget.value)
+    // }
+    // const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
+    //     setError(null);
+    //     if (e.charCode === 13) {
+    //         addTask();
+    //     }
+    // }
     const onAllClickHander = () => {
         props.changeFilter("all", props.id)
     }
@@ -59,14 +59,14 @@ export function Todolist_6(props: PropsType) {
     return (
         <div>
             <h3>{props.title}  <button onClick={removeTodolist}>x</button></h3>
-            <div>
-                <input value={title}
-                       onChange={onChangeHandler}
-                       onKeyPress={onKeyPressHandler}/>
-                <button onClick={addTask}>+
-                </button>
-                {error && <div className={"error-message"}>{error}</div>}
-            </div>
+            {/*<div>*/}
+            {/*    <input value={title}*/}
+            {/*           onChange={onChangeHandler}*/}
+            {/*           onKeyPress={onKeyPressHandler}/>*/}
+            {/*    <button onClick={addTask}>+*/}
+            {/*    </button>*/}
+            {/*    {error && <div className={"error-message"}>{error}</div>}*/}
+            {/*</div>*/}
             <ul>
                 {
                     props.tasks.map(t => {

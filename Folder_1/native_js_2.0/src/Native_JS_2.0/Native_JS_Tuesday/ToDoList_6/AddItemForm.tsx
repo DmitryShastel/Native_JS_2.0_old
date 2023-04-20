@@ -1,20 +1,31 @@
-import React, {useState} from 'react';
+import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
 
 
+type AddItemFormType = {
+    title: string
+    removeTodolist: (id: string) => void
+    addTask: (title: string, todolistId: string) => void
+}
 
 
-
-export const AddItemForm = () => {
+export const AddItemForm = (props: AddItemFormType) => {
 
     let [title, setTitle] = useState(" ")
-    let [error, setError] = useState<string | null>(null)
+
+
+    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        setTitle(e.currentTarget.value)
+    }
+    const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
+        setError(null);
+        if (e.charCode === 13) {
+            props.addTask();
+        }
+    }
 
 
     return (
         <div>
-            <h3>{props.title}
-                <button onClick={removeTodolist}>x</button>
-            </h3>
             <div>
                 <input value={title}
                        onChange={onChangeHandler}
