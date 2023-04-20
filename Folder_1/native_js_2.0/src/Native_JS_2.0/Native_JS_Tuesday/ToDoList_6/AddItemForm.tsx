@@ -3,7 +3,7 @@ import React, {ChangeEvent,KeyboardEvent, useState} from 'react';
 
 type AddItemFormType = {
     todolistId: string
-    addTask: (title: string, todolistId: string) => void
+    callBack: (title: string, todolistId: string) => void
 }
 
 
@@ -18,7 +18,7 @@ export const AddItemForm = (props: AddItemFormType) => {
 
     const addTask = () => {
         if (title.trim() !== "") {
-            props.addTask(title, props.todolistId);
+            props.callBack(title, props.todolistId);
             setTitle("");
         } else {
             setError("Title is requared");
