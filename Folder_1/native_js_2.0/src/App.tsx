@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import {RootApp} from "./Native_JS_2.0/Native_JS_Tuesday/MicroTask1_ToDoList_AssociativeArray/AppRoot";
+import {RootApp_6} from "./Native_JS_2.0/Native_JS_Tuesday/ToDoList_6/AppRoot_6";
 
 
 export function App() {
     return (
-       <RootApp/>
+       <RootApp_6/>
     );
 }
