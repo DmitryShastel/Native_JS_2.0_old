@@ -22,20 +22,20 @@ type PropsType = {
 
 export function Todolist_6(props: PropsType) {
 
-    let [title, setTitle] = useState(" ")
-    let [error, setError] = useState<string | null>(null)
+    // let [title, setTitle] = useState(" ")
+    // let [error, setError] = useState<string | null>(null)
 
-    const addTask = () => {
-        if (title.trim() !== "") {
-            props.addTask(title, props.id);
-            setTitle("");
-        } else {
-            setError("Title is requared");
-        }
-    };
-    // const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    //     setTitle(e.currentTarget.value)
-    // }
+    // const addTask = () => {
+    //     if (title.trim() !== "") {
+    //         props.addTask(title, props.id);
+    //         setTitle("");
+    //     } else {
+    //         setError("Title is requared");
+    //     }
+    // };
+    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        setTitle(e.currentTarget.value)
+    }
     // const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
     //     setError(null);
     //     if (e.charCode === 13) {
