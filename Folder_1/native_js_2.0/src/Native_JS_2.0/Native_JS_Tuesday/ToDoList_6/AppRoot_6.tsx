@@ -89,7 +89,7 @@ export function RootApp_6() {
     })
 
     const addTodolist = (newTitle: string) => {
-        // let newTodolist =  {id: v1, title: newTitle, filter: "all"}
+         let newTodolist =  {id: v1, title: newTitle, filter: "all"}
     }
 
     return (
@@ -126,3 +126,5 @@ export function RootApp_6() {
         </div>
     );
 }
+
+//55:45
