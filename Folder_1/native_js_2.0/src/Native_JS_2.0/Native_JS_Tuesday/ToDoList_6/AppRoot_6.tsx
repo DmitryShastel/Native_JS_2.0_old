@@ -34,9 +34,10 @@ export function RootApp_6() {
         ]
     })
 
-    const updateTask = (todolistId: string, taskId: string, updateTitle: string) => {
-        console.log(updateTitle)
+    // console.log(tasks[todolistId2].map(el => el.title == 'JS' ? {...el, title: 'true'} : el))
 
+    const updateTask = (todolistId: string, taskId: string, updateTitle: string) => {
+        setTasks({...tasks,[todolistId]: tasks[todolistId].map(el=> el.id === taskId ? {...el,title:updateTitle}: el)})
     }
 
     function removeTasks(id: string, todolistId: string) {
