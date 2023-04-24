@@ -40,7 +40,7 @@ export function RootApp_6() {
         setTasks({...tasks,[todolistId]: tasks[todolistId].map(el=> el.id === taskId ? {...el,title:updateTitle}: el)})
     }
 
-    const updateTodolist = () => {
+    const updateTodolistTitle = (todolistId: string, updateTitle: string) => {
 
     }
 
@@ -126,7 +126,7 @@ export function RootApp_6() {
                         changeStatus={changeStatus}
                         filter={tl.filter}
                         updateTask={updateTask}
-                        updateTodolist={updateTodolist}
+                        updateTodolistTitle={updateTodolistTitle}
                     />
                 })
             }

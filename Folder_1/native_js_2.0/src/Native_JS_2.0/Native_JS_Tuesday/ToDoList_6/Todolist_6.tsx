@@ -21,7 +21,7 @@ type PropsType = {
     changeStatus: (id: string, isDone: boolean, todolistId: string) => void
     filter:FilterValuesType
     updateTask: (todolistId: string, taskId: string, updateTitle: string) => void
-    updateTodolist: () => void
+    updateTodolistTitle: (todolistId: string, updateTitle: string) => void
 }
 
 export function Todolist_6(props: PropsType) {
@@ -40,14 +40,18 @@ export function Todolist_6(props: PropsType) {
     }
 
     const addTaskHandler = (newTitle: string) => {
-
         return props.addTask(newTitle, props.id)
     }
 
+    const updateTodolistHandler = (updateTitle: string) => {
+        props.addTask(updateTitle, props.id)
+    }
 
     return (
         <div>
-            <h3>{props.title}  <button onClick={removeTodolist}>x</button></h3>
+            <h3>
+                <EditableSpan oldTitle={props.title} callback={updateTodolistHandler}/>
+                <button onClick={removeTodolist}>x</button></h3>
 
             <AddItemForm callBack={addTaskHandler}/>
             <ul>
@@ -57,21 +61,16 @@ export function Todolist_6(props: PropsType) {
                         const onClickHandler = () => {
                             props.removeTasks(t.id, props.id)
                         }
-                        const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-                            let newIsDoneValue = e.currentTarget.checked;
-                            props.changeStatus(t.id, newIsDoneValue, props.id)
-                        }
+
 
                         const updateTaskHandler = (updateTitle: string) => {
                             props.updateTask(props.id, t.id,updateTitle )
                         }
 
                         return <li key={t.id} className={t.isDone ? "is-done" : ""}>
-                            {/*<input type="checkbox"*/}
-                            {/*       checked={t.isDone}*/}
-                            {/*       onChange={onChangeHandler}/>*/}
+
                             <EditableSpan oldTitle={t.title} callback={updateTaskHandler}/>
-                            {/*<span>{t.title}</span>*/}
+
                             <button onClick={onClickHandler}>X
                             </button>
                         </li>
