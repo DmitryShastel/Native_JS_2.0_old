@@ -3,6 +3,7 @@ import React, {ChangeEvent, useState} from 'react';
 
 type  EditableSpanType = {
     oldTitle: string
+    callback: (updateTitle: string) => void
 }
 
 export const EditableSpan = (props: EditableSpanType) => {
@@ -21,7 +22,7 @@ export const EditableSpan = (props: EditableSpanType) => {
     }
 
     const addTask = () => {
-
+        props.callback(updateTitle)
     };
 
     return (
