@@ -32,6 +32,7 @@ export function RootApp_6() {
         setTasks({...tasks});
 
     }
+
     function removeTodolist(id: string) {
         //засунем в стейт список тудулистов, id которых не равны тому, который нужно выкинуть
         setTodolists(todolists.filter(tl => tl.id != id));
@@ -40,6 +41,7 @@ export function RootApp_6() {
         //засетаем в стейт копию объекта, чтобы React отреагировал перерисовкой
         setTasks({...tasks});
     }
+
     function changeFilter(value: FilterValuesType, todolistId: string) {
         let todolist = todolists.find(tl => tl.id === todolistId);
         if (todolist) {
@@ -47,6 +49,7 @@ export function RootApp_6() {
             setTodolists([...todolists])
         }
     }
+
     function addTask(title: string, todolistId: string) {
         let task = {id: v1(), title: title, isDone: false};
         //достанем нужный массив по todolistId:
@@ -56,6 +59,7 @@ export function RootApp_6() {
         //засетаем в стейт копию объекта, чтобы React отреагировал перерисовкой
         setTasks({...tasks})
     }
+
     function changeStatus(id: string, isDone: boolean, todolistId: string) {
         //достанем нужный массив по todolistId:
         let todolistTasks = tasks[todolistId];
@@ -89,7 +93,10 @@ export function RootApp_6() {
     })
 
     const addTodolist = (newTitle: string) => {
-         let newTodolist =  {id: v1, title: newTitle, filter: "all"}
+        const newTodolistID = v1()
+        //type is required
+        let newTodolist: TodolistType = {id: newTodolistID, title: newTitle, filter: "all"}
+        setTodolists([...todolists, newTodolist])
     }
 
     return (
