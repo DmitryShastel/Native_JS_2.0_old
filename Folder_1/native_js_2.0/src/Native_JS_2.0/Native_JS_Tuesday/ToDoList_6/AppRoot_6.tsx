@@ -34,7 +34,8 @@ export function RootApp_6() {
         ]
     })
 
-    const updateTask = (todolistId: string, title: string) => {
+    const updateTask = (todolistId: string, taskId: string, updateTitle: string) => {
+        console.log(updateTitle)
 
     }
 
@@ -119,6 +120,7 @@ export function RootApp_6() {
                         addTask={addTask}
                         changeStatus={changeStatus}
                         filter={tl.filter}
+                        updateTask={updateTask}
                     />
                 })
             }
