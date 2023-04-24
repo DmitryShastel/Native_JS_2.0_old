@@ -14,11 +14,13 @@ export const EditableSpan = (props: EditableSpanType) => {
 
     const onDoubleClickHandler = () => {
         setEdit(!edit)
+        if (edit) {
+            addTask()
+        }
     }
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setUpdateTitle(e.currentTarget.value)
-        addTask()
     }
 
     const addTask = () => {
