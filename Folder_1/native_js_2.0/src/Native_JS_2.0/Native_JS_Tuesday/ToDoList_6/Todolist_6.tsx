@@ -43,14 +43,14 @@ export function Todolist_6(props: PropsType) {
         return props.addTask(newTitle, props.id)
     }
 
-    const updateTodolistHandler = (updateTitle: string) => {
-        props.addTask(updateTitle, props.id)
+    const updateTodolistTitleHandler = (updateTitle: string) => {
+        props.updateTodolistTitle(props.id ,updateTitle)
     }
 
     return (
         <div>
             <h3>
-                <EditableSpan oldTitle={props.title} callback={updateTodolistHandler}/>
+                <EditableSpan oldTitle={props.title} callback={updateTodolistTitleHandler}/>
                 <button onClick={removeTodolist}>x</button></h3>
 
             <AddItemForm callBack={addTaskHandler}/>

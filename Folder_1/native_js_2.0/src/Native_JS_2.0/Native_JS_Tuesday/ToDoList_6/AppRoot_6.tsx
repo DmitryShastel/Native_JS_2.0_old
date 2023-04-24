@@ -37,11 +37,14 @@ export function RootApp_6() {
     // console.log(tasks[todolistId2].map(el => el.title == 'JS' ? {...el, title: 'true'} : el))
 
     const updateTask = (todolistId: string, taskId: string, updateTitle: string) => {
-        setTasks({...tasks,[todolistId]: tasks[todolistId].map(el=> el.id === taskId ? {...el,title:updateTitle}: el)})
+        setTasks({
+            ...tasks,
+            [todolistId]: tasks[todolistId].map(el => el.id === taskId ? {...el, title: updateTitle} : el)
+        })
     }
 
     const updateTodolistTitle = (todolistId: string, updateTitle: string) => {
-
+        setTodolists( todolists.map(el => el.id === todolistId ? {...el, title: updateTitle} : el))
     }
 
     function removeTasks(id: string, todolistId: string) {
@@ -53,6 +56,7 @@ export function RootApp_6() {
         setTasks({...tasks});
 
     }
+
     function removeTodolist(id: string) {
         //засунем в стейт список тудулистов, id которых не равны тому, который нужно выкинуть
         setTodolists(todolists.filter(tl => tl.id != id));
@@ -61,6 +65,7 @@ export function RootApp_6() {
         //засетаем в стейт копию объекта, чтобы React отреагировал перерисовкой
         setTasks({...tasks});
     }
+
     function changeFilter(value: FilterValuesType, todolistId: string) {
         let todolist = todolists.find(tl => tl.id === todolistId);
         if (todolist) {
@@ -68,6 +73,7 @@ export function RootApp_6() {
             setTodolists([...todolists])
         }
     }
+
     function addTask(title: string, todolistId: string) {
         let task = {id: v1(), title: title, isDone: false};
         //достанем нужный массив по todolistId:
@@ -77,6 +83,7 @@ export function RootApp_6() {
         //засетаем в стейт копию объекта, чтобы React отреагировал перерисовкой
         setTasks({...tasks})
     }
+
     function changeStatus(id: string, isDone: boolean, todolistId: string) {
         //достанем нужный массив по todolistId:
         let todolistTasks = tasks[todolistId];
@@ -89,12 +96,13 @@ export function RootApp_6() {
             setTasks({...tasks})
         }
     }
+
     const addTodolist = (newTitle: string) => {
         const newTodolistID = v1()
         //type is required
         let newTodolist: TodolistType = {id: newTodolistID, title: newTitle, filter: "all"}
         setTodolists([...todolists, newTodolist])
-        setTasks({[newTodolistID]: [{id: v1(), title: "JS", isDone: true}] ,...tasks})
+        setTasks({[newTodolistID]: [{id: v1(), title: "JS", isDone: true}], ...tasks})
     }
 
     return (
