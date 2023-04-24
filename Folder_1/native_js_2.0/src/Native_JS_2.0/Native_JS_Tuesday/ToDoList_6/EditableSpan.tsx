@@ -12,12 +12,12 @@ export const EditableSpan = (props: EditableSpanType) => {
     const [edit, setEdit] = useState(false)
 
     const onDoubleClickHandler = () => {
-        setEdit(true)
+        setEdit(!edit)
     }
 
     return (
         edit
-            ? <input type='text' value={updateTitle}/>
+            ? <input type='text' value={updateTitle} onBlur={onDoubleClickHandler} autoFocus/>
             : <span onDoubleClick={onDoubleClickHandler}>{props.oldTitle}</span>
     );
 };
