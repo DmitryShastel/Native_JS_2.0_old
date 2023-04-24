@@ -15,13 +15,24 @@ type TaskStateType = {
 
 export function RootApp_6() {
 
-    /* let [tasks, setTasks] = useState([
-         {id: v1(), title: "HTML", isDone: true},
-         {id: v1(), title: "JS", isDone: true},
-         {id: v1(), title: "C#", isDone: false},
-         {id: v1(), title: "C#", isDone: false},
-         {id: v1(), title: "C#", isDone: false}
-     ]);*/
+    let todolistId1 = v1();
+    let todolistId2 = v1();
+
+    let [todolists, setTodolists] = useState<Array<TodolistType>>([
+        {id: todolistId1, title: "What to learn", filter: "all"},
+        {id: todolistId2, title: "What to buy", filter: "all"}
+    ])
+
+    let [tasks, setTasks] = useState<TaskStateType>({
+        [todolistId1]: [
+            {id: v1(), title: "Milk", isDone: true},
+            {id: v1(), title: "Book", isDone: true}
+        ],
+        [todolistId2]: [
+            {id: v1(), title: "JS", isDone: true},
+            {id: v1(), title: "C#", isDone: true}
+        ]
+    })
 
     function removeTasks(id: string, todolistId: string) {
         //достанем нужный массив по todolistId:
@@ -73,30 +84,13 @@ export function RootApp_6() {
         }
     }
 
-    let todolistId1 = v1();
-    let todolistId2 = v1();
-
-    let [todolists, setTodolists] = useState<Array<TodolistType>>([
-        {id: todolistId1, title: "What to learn", filter: "all"},
-        {id: todolistId2, title: "What to buy", filter: "all"}
-    ])
-
-    let [tasks, setTasks] = useState<TaskStateType>({
-        [todolistId1]: [
-            {id: v1(), title: "Milk", isDone: true},
-            {id: v1(), title: "Book", isDone: true}
-        ],
-        [todolistId2]: [
-            {id: v1(), title: "JS", isDone: true},
-            {id: v1(), title: "C#", isDone: true}
-        ]
-    })
 
     const addTodolist = (newTitle: string) => {
         const newTodolistID = v1()
         //type is required
         let newTodolist: TodolistType = {id: newTodolistID, title: newTitle, filter: "all"}
         setTodolists([...todolists, newTodolist])
+        setTasks({[newTodolistID]: [{id: v1(), title: "JS", isDone: true}] ,...tasks})
     }
 
     return (
