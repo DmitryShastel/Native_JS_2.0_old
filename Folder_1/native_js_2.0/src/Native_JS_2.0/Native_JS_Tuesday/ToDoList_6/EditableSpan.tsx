@@ -17,7 +17,12 @@ export const EditableSpan = (props: EditableSpanType) => {
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setUpdateTitle(e.currentTarget.value)
+        addTask()
     }
+
+    const addTask = () => {
+
+    };
 
     return (
         edit
