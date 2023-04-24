@@ -40,6 +40,10 @@ export function RootApp_6() {
         setTasks({...tasks,[todolistId]: tasks[todolistId].map(el=> el.id === taskId ? {...el,title:updateTitle}: el)})
     }
 
+    const updateTodolist = () => {
+
+    }
+
     function removeTasks(id: string, todolistId: string) {
         //достанем нужный массив по todolistId:
         let todolistTasks = tasks[todolistId];
@@ -122,6 +126,7 @@ export function RootApp_6() {
                         changeStatus={changeStatus}
                         filter={tl.filter}
                         updateTask={updateTask}
+                        updateTodolist={updateTodolist}
                     />
                 })
             }
