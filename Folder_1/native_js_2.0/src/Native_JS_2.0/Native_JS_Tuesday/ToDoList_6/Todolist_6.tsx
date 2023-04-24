@@ -64,7 +64,7 @@ export function Todolist_6(props: PropsType) {
                             <input type="checkbox"
                                    checked={t.isDone}
                                    onChange={onChangeHandler}/>
-                            <EditableSpan title={t.title}/>
+                            <EditableSpan oldTitle={t.title}/>
                             {/*<span>{t.title}</span>*/}
                             <button onClick={onClickHandler}>X
                             </button>
