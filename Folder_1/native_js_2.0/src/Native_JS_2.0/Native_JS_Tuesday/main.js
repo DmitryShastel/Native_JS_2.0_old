@@ -591,8 +591,6 @@ const compareObjByName = (a, b) => {
 // console.log(newFunc())
 
 
-
-
 // let userObg = {
 //     '0': 'Dima',
 //     '1': 'Vasa',
@@ -628,16 +626,21 @@ const compareObjByName = (a, b) => {
 // checkFun(5)
 
 //Напишите функцию copyArr(arr), которая копирует массив не изменяя иригинал.
+// let vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
+//
+// function arrayClone(arr) {
+//     return [...vegetables]
+// }
+//
+// let arr1 = arrayClone(vegetables);
+
+
+// Напишите код, который преобразовывает и объединяет все элементы массива в одно строковое значение. Элементы массива будут разделены запятой.
+// Получите результат двумя разными методами.
 let vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
-function arrayClone(arr) {
 
-return [...vegetables]
-
-}
-
-let arr1 = arrayClone(vegetables);
-console.log(arr1)
-
+let vegetables2 = vegetables.join(', ')
+console.log(vegetables2)
 
 
 
