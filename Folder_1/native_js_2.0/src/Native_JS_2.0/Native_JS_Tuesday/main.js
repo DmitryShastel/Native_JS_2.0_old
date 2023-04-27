@@ -637,12 +637,31 @@ const compareObjByName = (a, b) => {
 
 // Напишите код, который преобразовывает и объединяет все элементы массива в одно строковое значение. Элементы массива будут разделены запятой.
 // Получите результат двумя разными методами.
-let vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
+// let vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
+//
+// let vegetables2 = vegetables.join(', ')
+// console.log(vegetables2)
 
-let vegetables2 = vegetables.join(', ')
-console.log(vegetables2)
+//Двоеточие между нечётными числами
+// const num = prompt('Введите число', 55);
 
+function colonOdd(num) {
 
+    let string = num.toString()
+    string = string.split('')
+    let result = '';
+    for (let i = 0; i < string.length; i++)
+        if (string[i] % 2 === 0) {
+            result += string[i] + ':'
+        } else {
+            result += string[i]
+        }
+
+    // return result
+    console.log(result)
+}
+
+colonOdd(112358812)
 
 
 
