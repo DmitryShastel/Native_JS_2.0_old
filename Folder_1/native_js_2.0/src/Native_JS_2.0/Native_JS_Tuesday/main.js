@@ -618,17 +618,25 @@ const compareObjByName = (a, b) => {
 
 //Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
 
-let checkFun = (a) => {
-    if(a % 2 === 0){
-       return 'Even'
-    }else {
-        return 'Odd'
-    }
+// let checkFun = (a) => {
+//     if(a % 2 === 0){
+//        return 'Even'
+//     }else {
+//         return 'Odd'
+//     }
+// }
+// checkFun(5)
+
+//Напишите функцию copyArr(arr), которая копирует массив не изменяя иригинал.
+let vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
+function arrayClone(arr) {
+
+return [...vegetables]
+
 }
-checkFun(5)
 
-
-
+let arr1 = arrayClone(vegetables);
+console.log(arr1)
 
 
 
