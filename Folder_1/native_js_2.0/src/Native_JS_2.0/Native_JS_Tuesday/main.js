@@ -593,28 +593,39 @@ const compareObjByName = (a, b) => {
 
 
 
-let userObg = {
-    '0': 'Dima',
-    '1': 'Vasa',
-    '2': 'Valera'
+// let userObg = {
+//     '0': 'Dima',
+//     '1': 'Vasa',
+//     '2': 'Valera'
+// }
+//
+//
+// userObg['3'] = 100
+// userObg['test'] = 'test'
+//
+// console.log()
+//
+// const usesrs = {
+//     '21': {id: 21, name: 'Dima'},
+//     '44': {id: 44, name: 'Vasa'},
+//     '2': {id: 2, name: 'Valera'}
+// }
+//
+// let user = {id: 88, name: 'Bob'}
+// usesrs[user.id] = user;
+//
+// console.log(usesrs)
+
+//Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+let checkFun = (a) => {
+    if(a % 2 === 0){
+       return 'Even'
+    }else {
+        return 'Odd'
+    }
 }
-
-
-userObg['3'] = 100
-userObg['test'] = 'test'
-
-console.log()
-
-const usesrs = {
-    '21': {id: 21, name: 'Dima'},
-    '44': {id: 44, name: 'Vasa'},
-    '2': {id: 2, name: 'Valera'}
-}
-
-let user = {id: 88, name: 'Bob'}
-usesrs[user.id] = user;
-
-console.log(usesrs)
+checkFun(5)
 
 
 
