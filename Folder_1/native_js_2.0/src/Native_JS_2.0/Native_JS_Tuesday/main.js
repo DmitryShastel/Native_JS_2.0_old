@@ -645,23 +645,52 @@ const compareObjByName = (a, b) => {
 //Двоеточие между нечётными числами
 // const num = prompt('Введите число', 55);
 
-function colonOdd(num) {
+// function colonOdd(num) {
+//
+//     let string = num.toString()
+//     string = string.split('')
+//     let result = '';
+//     for (let i = 0; i < string.length; i++)
+//         if (string[i] % 2 === 0) {
+//             result += string[i] + ':'
+//         } else {
+//             result += string[i]
+//         }
+//
+//     // return result
+//     console.log(result)
+// }
+//
+// colonOdd(112358812)
 
-    let string = num.toString()
-    string = string.split('')
-    let result = '';
-    for (let i = 0; i < string.length; i++)
-        if (string[i] % 2 === 0) {
-            result += string[i] + ':'
-        } else {
-            result += string[i]
-        }
+//Замена регистра символов
 
-    // return result
-    console.log(result)
+// function changeRegister(str) {
+//
+//     if (str === str.toUpperCase()) return
+//
+//     let string = str.split('')
+//     let result = '';
+//     for (let i = 0; i < string.length; i++)
+//         if (string[i] == string.toUpperCase()) {
+//             result += string[i].toLowerCase()
+//         } else {
+//             result += string[i].toUpperCase()
+//
+//         }
+//     return result
+//     console.log(result)
+//
+// }
+//
+// changeRegister('aBcD')
+
+
+//Просто, учитывая строку слов, верните длину самого короткого слова(ов).
+
+let shortString = () => {
+
 }
-
-colonOdd(112358812)
 
 
 
