@@ -689,8 +689,11 @@ const compareObjByName = (a, b) => {
 //Просто, учитывая строку слов, верните длину самого короткого слова(ов).
 
 let shortString = () => {
+    let str = 'Hello a beautiful word'
+    let result =  str.split(' ').reduce((a,b) => (b.length < a.length) ? b : a)
+    console.log(result)
 
 }
 
-
+shortString()
 
