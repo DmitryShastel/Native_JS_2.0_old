@@ -2,6 +2,8 @@ import React from 'react';
 import {FilterValuesType} from "./AppRoot_7";
 import {AddItemForm7} from "./AddItemForm7";
 import {EditableSpan7} from "./EditableSpan7";
+import IconButton from '@mui/material/IconButton';
+import {Delete} from "@material-ui/icons";
 
 
 export type TaskType = {
@@ -57,7 +59,10 @@ export function Todolist_7(props: PropsType) {
         <div>
             <h3>
                 <EditableSpan7 oldTitle={props.title} callback={updateTodolistTitleHandler}/>
-                <button onClick={removeTodolist}>x</button>
+                <IconButton onClick={removeTodolist} size="small">
+                    <Delete color='secondary' />
+                </IconButton>
+                {/*<button onClick={removeTodolist}>x</button>*/}
             </h3>
 
             <AddItemForm7 callBack={addTaskHandler}/>
@@ -74,8 +79,11 @@ export function Todolist_7(props: PropsType) {
                             <EditableSpan7 oldTitle={t.title}
                                            callback={(updateTitle) => updateTaskHandler(t.id, updateTitle)}/>
 
-                            <button onClick={onClickHandler}>X
-                            </button>
+                            <IconButton onClick={onClickHandler} size="small">
+                                <Delete color='secondary' />
+                            </IconButton>
+                            {/*<button onClick={onClickHandler}>X*/}
+                            {/*</button>*/}
                         </li>
                     })
                 }
