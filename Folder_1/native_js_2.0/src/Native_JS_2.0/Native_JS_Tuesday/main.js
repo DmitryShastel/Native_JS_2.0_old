@@ -688,19 +688,19 @@ const compareObjByName = (a, b) => {
 
 //Просто, учитывая строку слов, верните длину самого короткого слова(ов).
 
-let shortString = () => {
-    let str = 'Hello a beautiful word'
-    let col = 0
-    //own solution
-    //let result =  str.split(' ').reduce((a,b) => (b.length < a.length) ? b : a)
-    //let result =  str.split(' ').reduce((a,b) => ({...a, [b]: (a[b] || 0) + 1}), {})
-
-    let result = str.split(" ").sort((a, b) => a.length - b.length);
-
-    return result[0].length
-    console.log(result[0].length)
-
-}
-
-shortString()
+// let shortString = () => {
+//     let str = 'Hello a beautiful word'
+//     let col = 0
+//     //own solution
+//     //let result =  str.split(' ').reduce((a,b) => (b.length < a.length) ? b : a)
+//     //let result =  str.split(' ').reduce((a,b) => ({...a, [b]: (a[b] || 0) + 1}), {})
+//
+//     let result = str.split(" ").sort((a, b) => a.length - b.length);
+//
+//     return result[0].length
+//     console.log(result[0].length)
+//
+// }
+//
+// shortString()
 
