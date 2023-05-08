@@ -2,6 +2,11 @@ import React, {useState} from 'react';
 import {TaskType, Todolist_7} from "./Todolist_7";
 import {v1} from "uuid";
 import {AddItemForm7} from "./AddItemForm7";
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import {Menu} from "@material-ui/icons";
+import {Typography} from "@mui/material";
 
 export type FilterValuesType = "all" | "active" | "completed"
 type TodolistType = {
@@ -44,7 +49,7 @@ export function RootApp_7() {
     }
 
     const updateTodolistTitle = (todolistId: string, updateTitle: string) => {
-        setTodolists( todolists.map(el => el.id === todolistId ? {...el, title: updateTitle} : el))
+        setTodolists(todolists.map(el => el.id === todolistId ? {...el, title: updateTitle} : el))
     }
 
     function removeTasks(id: string, todolistId: string) {
@@ -107,7 +112,16 @@ export function RootApp_7() {
 
     return (
         <div className="App">
-
+            <AppBar position='static'>
+                <Toolbar>
+                    <IconButton>
+                        <Menu/>
+                    </IconButton>
+                    <Typography>
+                        News
+                    </Typography>
+                </Toolbar>
+            </AppBar>
             <AddItemForm7 callBack={addTodolist}/>
 
             {
@@ -138,6 +152,7 @@ export function RootApp_7() {
                     />
                 })
             }
+
         </div>
     );
 }
