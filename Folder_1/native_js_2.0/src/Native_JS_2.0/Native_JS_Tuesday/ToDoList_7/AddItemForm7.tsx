@@ -49,6 +49,7 @@ export const AddItemForm7 = (props: AddItemFormType) => {
                     variant="outlined"
                     size='small'
                     value={title}
+                    error={!!error}
                     onChange={onChangeHandler}
                     onKeyPress={onKeyPressHandler}/>
                 <Button
