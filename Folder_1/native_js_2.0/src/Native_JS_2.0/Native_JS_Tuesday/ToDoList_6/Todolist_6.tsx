@@ -69,8 +69,14 @@ export function Todolist_6(props: PropsType) {
                             props.removeTasks(t.id, props.id)
                         }
 
+                        const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+                            let newIsDoneValue = e.currentTarget.checked
+                            props.changeStatus(t.id, newIsDoneValue, props.id)
+                        }
+
 
                         return <li key={t.id} className={t.isDone ? "is-done" : ""}>
+                            <input type='checkbox' onChange={onChangeHandler}checked={t.isDone}/>
                             <EditableSpan oldTitle={t.title}
                                           callback={(updateTitle) => updateTaskHandler(t.id, updateTitle)}/>
 
