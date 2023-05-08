@@ -2,13 +2,9 @@ import React, {useState} from 'react';
 import {TaskType, Todolist_7} from "./Todolist_7";
 import {v1} from "uuid";
 import {AddItemForm7} from "./AddItemForm7";
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import {Menu} from "@material-ui/icons";
-import {Typography} from "@mui/material";
-import Button from "@mui/material/Button";
-//import MenuIcon from '@mui/icons-material/Menu';
+import ButtonAppBar from "./ButtonAppBar";
+
+
 
 export type FilterValuesType = "all" | "active" | "completed"
 type TodolistType = {
@@ -115,17 +111,7 @@ export function RootApp_7() {
     return (
         <div className="App">
 
-            <AppBar position="static">
-                <Toolbar>
-                    <IconButton>
-                        <Menu/>
-                    </IconButton>
-                    <Typography variant="h6" sx={{flexGrow: 1}}>
-                        News
-                    </Typography>
-                    <Button color="inherit">Login</Button>
-                </Toolbar>
-            </AppBar>
+            <ButtonAppBar/>
 
             <AddItemForm7 callBack={addTodolist}/>
 
