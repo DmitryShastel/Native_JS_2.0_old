@@ -45,7 +45,8 @@ export const AddItemForm7 = (props: AddItemFormType) => {
         <div>
             <div>
                 <TextField
-                    label="Title"
+                    id='outlined-basic'
+                    label={error ? 'Title is required' : 'Enter a text'}
                     variant="outlined"
                     size='small'
                     value={title}
@@ -59,7 +60,7 @@ export const AddItemForm7 = (props: AddItemFormType) => {
                     color='primary'
                     onClick={addTask}>+</Button>
 
-                {error && <div className={"error-message"}>{error}</div>}
+                {/*{error && <div className={"error-message"}>{error}</div>}*/}
             </div>
         </div>
     )
