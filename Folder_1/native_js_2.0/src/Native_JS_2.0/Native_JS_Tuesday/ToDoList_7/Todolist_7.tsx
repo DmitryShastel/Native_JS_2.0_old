@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ChangeEvent} from 'react';
 import {FilterValuesType} from "./AppRoot_7";
 import {AddItemForm7} from "./AddItemForm7";
 import {EditableSpan7} from "./EditableSpan7";
@@ -74,10 +74,14 @@ export function Todolist_7(props: PropsType) {
                         const onClickHandler = () => {
                             props.removeTasks(t.id, props.id)
                         }
+                        const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+                            let newIsDoneValue = e.currentTarget.checked
+                            props.changeStatus(t.id, newIsDoneValue, props.id)
+                        }
 
 
                         return <li key={t.id} className={t.isDone ? "is-done" : ""}>
-                            <input type='checkbox' onChange={()=> {} }checked={t.isDone}/>
+                            <input type='checkbox' onChange={onChangeHandler}checked={t.isDone}/>
                             <EditableSpan7 oldTitle={t.title}
                                            callback={(updateTitle) => updateTaskHandler(t.id, updateTitle)}/>
 
