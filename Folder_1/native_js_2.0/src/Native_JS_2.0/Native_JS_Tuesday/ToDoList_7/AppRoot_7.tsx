@@ -115,7 +115,7 @@ export function RootApp_7() {
             <ButtonAppBar/>
             <Container fixed>
                 <Grid container>
-                    <Paper style={{padding: '15px', marginTop:'10px', marginBottom: '10px'}}>
+                    <Paper style={{padding: '15px', marginTop:'10px', marginBottom: '10px'}} elevation={5}>
                         <AddItemForm7 callBack={addTodolist}/>
                     </Paper>
                 </Grid>
@@ -132,8 +132,8 @@ export function RootApp_7() {
                                 tasksForTodolist = allTodolistTasks.filter(t => t.isDone === true);
                             }
 
-                            return <Grid item>
-                                <Paper style={{padding: '10px'}}>
+                            return <Grid item >
+                                <Paper style={{padding: '10px'}} elevation={5}>
                                     <Todolist_7
                                         key={tl.id}
                                         id={tl.id}
