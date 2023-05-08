@@ -5,6 +5,7 @@ import {EditableSpan7} from "./EditableSpan7";
 import IconButton from '@mui/material/IconButton';
 import {Delete} from "@material-ui/icons";
 import Button from "@mui/material/Button";
+import Checkbox from '@mui/material/Checkbox';
 
 
 export type TaskType = {
@@ -41,15 +42,12 @@ export function Todolist_7(props: PropsType) {
     const removeTodolist = () => {
         props.removeTodolist(props.id)
     }
-
     const addTaskHandler = (newTitle: string) => {
         return props.addTask(newTitle, props.id)
     }
-
     const updateTodolistTitleHandler = (updateTitle: string) => {
         props.updateTodolistTitle(props.id, updateTitle)
     }
-
     const updateTaskHandler = (taskID: string, updateTitle: string) => {
         props.updateTask(props.id, taskID, updateTitle)
     }
@@ -80,7 +78,7 @@ export function Todolist_7(props: PropsType) {
 
 
                         return <li key={t.id} className={t.isDone ? "is-done" : ""}>
-                            <input type='checkbox' onChange={onChangeHandler}checked={t.isDone}/>
+                            <Checkbox   onChange={onChangeHandler}checked={t.isDone} size="small" color='default'/>
                             <EditableSpan7 oldTitle={t.title}
                                            callback={(updateTitle) => updateTaskHandler(t.id, updateTitle)}/>
 
