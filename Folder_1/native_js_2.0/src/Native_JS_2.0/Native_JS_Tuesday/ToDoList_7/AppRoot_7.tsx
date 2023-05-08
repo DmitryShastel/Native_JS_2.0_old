@@ -119,7 +119,7 @@ export function RootApp_7() {
                         <AddItemForm7 callBack={addTodolist}/>
                     </Paper>
                 </Grid>
-                <Grid container spacing={4}>
+                <Grid container spacing={4} >
                     {
                         todolists.map(tl => {
                             let allTodolistTasks = tasks[tl.id];

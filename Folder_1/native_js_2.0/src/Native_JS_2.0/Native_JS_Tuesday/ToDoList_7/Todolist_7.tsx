@@ -64,7 +64,7 @@ export function Todolist_7(props: PropsType) {
             </h3>
 
             <AddItemForm7 callBack={addTaskHandler}/>
-            <ul>
+            <div>
                 {
                     props.tasks.map(t => {
 
@@ -77,7 +77,7 @@ export function Todolist_7(props: PropsType) {
                         }
 
 
-                        return <li key={t.id} className={t.isDone ? "is-done" : ""}>
+                        return <div key={t.id} className={t.isDone ? "is-done" : ""}>
                             <Checkbox   onChange={onChangeHandler}checked={t.isDone} size="small" color='default'/>
                             <EditableSpan7 oldTitle={t.title}
                                            callback={(updateTitle) => updateTaskHandler(t.id, updateTitle)}/>
@@ -87,10 +87,10 @@ export function Todolist_7(props: PropsType) {
                             </IconButton>
                             {/*<button onClick={onClickHandler}>X*/}
                             {/*</button>*/}
-                        </li>
+                        </div>
                     })
                 }
-            </ul>
+            </div>
             <div>
                 <Button
                     variant={props.filter === 'all' ? 'contained' : "outlined"}
