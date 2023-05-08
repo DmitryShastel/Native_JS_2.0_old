@@ -7,6 +7,8 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import {Menu} from "@material-ui/icons";
 import {Typography} from "@mui/material";
+import Button from "@mui/material/Button";
+//import MenuIcon from '@mui/icons-material/Menu';
 
 export type FilterValuesType = "all" | "active" | "completed"
 type TodolistType = {
@@ -112,16 +114,19 @@ export function RootApp_7() {
 
     return (
         <div className="App">
-            <AppBar position='static'>
+
+            <AppBar position="static">
                 <Toolbar>
                     <IconButton>
                         <Menu/>
                     </IconButton>
-                    <Typography>
+                    <Typography variant="h6" sx={{flexGrow: 1}}>
                         News
                     </Typography>
+                    <Button color="inherit">Login</Button>
                 </Toolbar>
             </AppBar>
+
             <AddItemForm7 callBack={addTodolist}/>
 
             {
