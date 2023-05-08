@@ -3,7 +3,7 @@ import {TaskType, Todolist_7} from "./Todolist_7";
 import {v1} from "uuid";
 import {AddItemForm7} from "./AddItemForm7";
 import ButtonAppBar from "./ButtonAppBar";
-
+import Container from '@mui/material/Container';
 
 
 export type FilterValuesType = "all" | "active" | "completed"
@@ -45,7 +45,6 @@ export function RootApp_7() {
             [todolistId]: tasks[todolistId].map(el => el.id === taskId ? {...el, title: updateTitle} : el)
         })
     }
-
     const updateTodolistTitle = (todolistId: string, updateTitle: string) => {
         setTodolists(todolists.map(el => el.id === todolistId ? {...el, title: updateTitle} : el))
     }
@@ -112,38 +111,38 @@ export function RootApp_7() {
         <div className="App">
 
             <ButtonAppBar/>
+            <Container fixed>
+                <AddItemForm7 callBack={addTodolist}/>
 
-            <AddItemForm7 callBack={addTodolist}/>
+                {
+                    todolists.map(tl => {
+                        let allTodolistTasks = tasks[tl.id];
+                        let tasksForTodolist = allTodolistTasks;
 
-            {
-                todolists.map(tl => {
-                    let allTodolistTasks = tasks[tl.id];
-                    let tasksForTodolist = allTodolistTasks;
+                        if (tl.filter === "active") {
+                            tasksForTodolist = allTodolistTasks.filter(t => t.isDone === false);
+                        }
+                        if (tl.filter === "completed") {
+                            tasksForTodolist = allTodolistTasks.filter(t => t.isDone === true);
+                        }
 
-                    if (tl.filter === "active") {
-                        tasksForTodolist = allTodolistTasks.filter(t => t.isDone === false);
-                    }
-                    if (tl.filter === "completed") {
-                        tasksForTodolist = allTodolistTasks.filter(t => t.isDone === true);
-                    }
-
-                    return <Todolist_7
-                        key={tl.id}
-                        id={tl.id}
-                        title={tl.title}
-                        tasks={tasksForTodolist}
-                        removeTasks={removeTasks}
-                        removeTodolist={removeTodolist}
-                        changeFilter={changeFilter}
-                        addTask={addTask}
-                        changeStatus={changeStatus}
-                        filter={tl.filter}
-                        updateTask={updateTask}
-                        updateTodolistTitle={updateTodolistTitle}
-                    />
-                })
-            }
-
+                        return <Todolist_7
+                            key={tl.id}
+                            id={tl.id}
+                            title={tl.title}
+                            tasks={tasksForTodolist}
+                            removeTasks={removeTasks}
+                            removeTodolist={removeTodolist}
+                            changeFilter={changeFilter}
+                            addTask={addTask}
+                            changeStatus={changeStatus}
+                            filter={tl.filter}
+                            updateTask={updateTask}
+                            updateTodolistTitle={updateTodolistTitle}
+                        />
+                    })
+                }
+            </Container>
         </div>
     );
 }
