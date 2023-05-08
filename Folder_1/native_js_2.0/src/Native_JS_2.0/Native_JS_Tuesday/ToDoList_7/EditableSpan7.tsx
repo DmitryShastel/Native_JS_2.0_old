@@ -1,4 +1,5 @@
 import React, {ChangeEvent, useState} from 'react';
+import TextField from '@mui/material/TextField';
 
 
 type  EditableSpanType = {
@@ -25,11 +26,13 @@ export const EditableSpan7 = (props: EditableSpanType) => {
 
     const addTask = () => {
         props.callback(updateTitle)
+
     };
 
     return (
         edit
-            ? <input
+            ? <TextField
+                variant="standard"
                 type='text'
                 value={updateTitle}
                 onBlur={onDoubleClickHandler}

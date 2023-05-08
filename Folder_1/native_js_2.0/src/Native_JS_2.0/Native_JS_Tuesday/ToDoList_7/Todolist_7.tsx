@@ -4,6 +4,7 @@ import {AddItemForm7} from "./AddItemForm7";
 import {EditableSpan7} from "./EditableSpan7";
 import IconButton from '@mui/material/IconButton';
 import {Delete} from "@material-ui/icons";
+import Button from "@mui/material/Button";
 
 
 export type TaskType = {
@@ -76,6 +77,7 @@ export function Todolist_7(props: PropsType) {
 
 
                         return <li key={t.id} className={t.isDone ? "is-done" : ""}>
+                            <input type='checkbox' onChange={()=> {} }checked={t.isDone}/>
                             <EditableSpan7 oldTitle={t.title}
                                            callback={(updateTitle) => updateTaskHandler(t.id, updateTitle)}/>
 
@@ -89,19 +91,25 @@ export function Todolist_7(props: PropsType) {
                 }
             </ul>
             <div>
-                <button
-                    className={props.filter === 'all' ? "active-filter" : ""}
+                <Button
+                    variant={props.filter === 'all' ? 'contained' : "outlined"}
+                    color='warning'
+                    //className={props.filter === 'all' ? {variant:'outlined'} : ""}
                     onClick={onAllClickHander}>
                     All
-                </button>
-                <button
-                    className={props.filter === 'active' ? "active-filter" : ""}
+                </Button>
+                <Button
+                    variant={props.filter === 'active' ? "contained" : "outlined"}
+                    color='secondary'
+                    //className={props.filter === 'active' ? "active-filter" : ""}
                     onClick={onActiveClickHander}>Active
-                </button>
-                <button
-                    className={props.filter === 'completed' ? "active-filter" : ""}
+                </Button>
+                <Button
+                    variant={props.filter === 'completed' ? "contained" : "outlined"}
+                    color='error'
+                    //className={props.filter === 'completed' ? "active-filter" : ""}
                     onClick={onCompletedClickHander}>Completed
-                </button>
+                </Button>
             </div>
         </div>
     )

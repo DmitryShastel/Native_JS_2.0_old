@@ -102,7 +102,7 @@ export function RootApp_7() {
         //type is required
         let newTodolist: TodolistType = {id: newTodolistID, title: newTitle, filter: "all"}
         setTodolists([...todolists, newTodolist])
-        setTasks({[newTodolistID]: [{id: v1(), title: "JS", isDone: true}], ...tasks})
+        setTasks({[newTodolistID]: [], ...tasks})
     }
 
     return (
