@@ -37,7 +37,7 @@ import {
 import {ManeType} from "../Destructuring";
 import {v1} from "uuid";
 import {TaskType} from "../ToDolist_8/Todolist_8";
-import {TaskReducer, removeTaskAC} from "../ToDolist_8/reducers/taskReducer";
+import {TaskReducer, removeTaskAC, addTaskAC} from "../ToDolist_8/reducers/taskReducer";
 
 test.skip('reference type test', () => {
 
@@ -571,6 +571,25 @@ test('correct task should be removed', () => {
     expect(endState[0].id).toBe(taskID2);
 })
 
+test('correct todolist should be added', ()=> {
+    let taskID1 = v1()
+    let taskID2 = v1()
+
+    let newTaskTile = 'New task'
+
+    const startState: TaskType[] = [
+        {id: taskID1, title: 'HTML&CSS', isDone: true},
+        {id: taskID2, title: 'JS', isDone: true},
+        {id: v1(), title: 'React', isDone: false},
+        {id: v1(), title: 'TypeScript', isDone: false}
+    ]
+
+   const endState = TaskReducer(startState, addTaskAC(newTaskTile))
+
+    expect(endState.length).toBe(5);
+    expect(endState[0].title).toBe(newTaskTile);
+    //expect(endState[2].filter).toBe('all');
+})
 
 
 
