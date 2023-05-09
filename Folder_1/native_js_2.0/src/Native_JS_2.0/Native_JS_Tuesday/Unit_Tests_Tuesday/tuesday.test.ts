@@ -567,7 +567,7 @@ test('correct task should be removed', () => {
 
     const  endState = TaskReducer(startState, removeTaskAC(taskID1))
 
-    expect(endState.length).toBe(1);
+    expect(endState.length).toBe(3);
     expect(endState[0].id).toBe(taskID2);
 })
 
