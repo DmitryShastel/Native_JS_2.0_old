@@ -35,6 +35,9 @@ import {
     sumFirstNumbers
 } from "../JS_TS_TDD";
 import {ManeType} from "../Destructuring";
+import {v1} from "uuid";
+import {TaskType} from "../ToDolist_8/Todolist_8";
+import {TaskReducer, removeTaskAC} from "../ToDolist_8/reducers/taskReducer";
 
 test.skip('reference type test', () => {
 
@@ -468,14 +471,6 @@ test ('123',() => {
     expect(users2['2'].name).toBe('Test')
 })
 
-
-
-
-
-
-
-
-
 test('reference type test2', () => {
     let user: UserType2 = {
         name: 'Dima',
@@ -557,6 +552,23 @@ test('add new books to user', () => {
     expect(user.books).not.toBe(userCopy.books)
     expect(userCopy.books[3]).toBe('ts')
     expect(user.books.length).toBe(3)
+})
+
+test('correct task should be removed', () => {
+    let taskID1 = v1()
+    let taskID2 = v1()
+
+    const startState: TaskType[] = [
+        {id: taskID1, title: 'HTML&CSS', isDone: true},
+        {id: taskID2, title: 'JS', isDone: true},
+        {id: v1(), title: 'React', isDone: false},
+        {id: v1(), title: 'TypeScript', isDone: false}
+    ]
+
+    const  endState = TaskReducer(startState, removeTaskAC(taskID1))
+
+    expect(endState.length).toBe(1);
+    expect(endState[0].id).toBe(taskID2);
 })
 
 
