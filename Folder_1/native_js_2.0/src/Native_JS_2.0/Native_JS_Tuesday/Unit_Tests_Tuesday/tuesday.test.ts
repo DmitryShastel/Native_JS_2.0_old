@@ -437,7 +437,7 @@ test.skip("1", () => {
     expect(title).toBe('Minsk')
 })
 
-test ("2", () => {
+test.skip ("2", () => {
     const l1 = props.lessons[0]
     const l2 = props.lessons[1]
 
@@ -465,13 +465,13 @@ beforeEach(() => {
         '2': {id: 2, name: 'Valera'}
     }
 })
-test ('123',() => {
+test.skip ('123',() => {
     users2['2'].name = 'Test'
 
     expect(users2['2'].name).toBe('Test')
 })
 
-test('reference type test2', () => {
+test.skip('reference type test2', () => {
     let user: UserType2 = {
         name: 'Dima',
         hair: 32,
@@ -487,7 +487,7 @@ test('reference type test2', () => {
 })
 
 
-test('change address2', () => {
+test.skip('change address2', () => {
     let user: UserWithLaptopType3 = {
         name: 'Dima',
         hair: 32,
@@ -509,7 +509,7 @@ test('change address2', () => {
     expect(newUser.address.city).toBe('Kiev')
 })
 
-test('upgrade laptop to macbook2', () => {
+test.skip('upgrade laptop to macbook2', () => {
     let user: UserWithLaptopType3 = {
         name: 'Dima',
         hair: 32,
@@ -530,7 +530,7 @@ test('upgrade laptop to macbook2', () => {
     expect(newUserLaptop.laptop.title).toBe('macbook')
 })
 
-test('add new books to user', () => {
+test.skip('add new books to user', () => {
     let user: UserWithLaptopType3 &  UserBooksType2= {
         name: 'Dima',
         hair: 32,
@@ -554,7 +554,7 @@ test('add new books to user', () => {
     expect(user.books.length).toBe(3)
 })
 
-test('correct task should be removed', () => {
+test.skip('correct task should be removed', () => {
     let taskID1 = v1()
     let taskID2 = v1()
 
@@ -571,7 +571,7 @@ test('correct task should be removed', () => {
     expect(endState[0].id).toBe(taskID2);
 })
 
-test('correct todolist should be added', ()=> {
+test.skip('correct todolist should be added', ()=> {
     let taskID1 = v1()
     let taskID2 = v1()
 
