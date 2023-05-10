@@ -1,8 +1,18 @@
-import React from 'react';
+import {v1} from "uuid";
+import {TodolistType} from "../AppRoot_9";
+import {TodolistsReducer} from "./todolists-reducer";
 
-export const TodolistsReducerTest = (state: any, action: any) => {
-    switch (action.type) {
-        default:
-            return state``
-    }
-}
+test('correct todolist should be removed', () => {
+    let todolistId1 = v1();
+    let todolistId2 = v1();
+
+    const startState: Array<TodolistType> = [
+        {id: todolistId1, title: "What to learn", filter: "all"},
+        {id: todolistId2, title: "What to buy", filter: "all"}
+    ]
+
+    const endState = TodolistsReducer(startState, { type: 'REMOVE-TODOLIST', id: todolistId1})
+
+    expect(endState.length).toBe(1);
+    expect(endState[0].id).toBe(todolistId2);
+});

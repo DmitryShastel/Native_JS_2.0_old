@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0afec1fa-fd71-4a39-b1ca-a70ddeddead8" name="Changes" comment="" />
+    <list default="true" id="0afec1fa-fd71-4a39-b1ca-a70ddeddead8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDolist_9/AppRoot_9.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDolist_9/AppRoot_9.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDolist_9/State/todolists-reducer.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDolist_9/State/todolists-reducer.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDolist_9/State/todolists-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDolist_9/State/todolists-reducer.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -192,7 +197,7 @@
       <workItem from="1682839052010" duration="6419000" />
       <workItem from="1683126126079" duration="357000" />
       <workItem from="1683355486253" duration="589000" />
-      <workItem from="1683472815853" duration="42300000" />
+      <workItem from="1683472815853" duration="43007000" />
     </task>
     <servers />
   </component>
