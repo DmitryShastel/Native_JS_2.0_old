@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0afec1fa-fd71-4a39-b1ca-a70ddeddead8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDolist_9/State/user-reducer.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDolist_9/State/user-reducer.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDolist_9/State/user-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDolist_9/State/user-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +63,7 @@
       <recent name="C:\incubator\Incubator_2.0\Native_JS_2.0\Folder_1\native_js_2.0\src\Native_JS_2.0\Native_JS_Monday\" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.reference type test2">
+  <component name="RunManager" selected="Jest.user reducer should increment only childrenCount">
     <configuration name="123" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -92,19 +90,6 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="is Even Sum Greater" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/Unit_Tests_Tuesday/tuesday.test.ts" />
-      <test-names>
-        <test-name value="is Even Sum Greater" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="reference type test2" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -115,6 +100,19 @@
       <test-file value="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/Unit_Tests_Tuesday/tuesday.test.ts" />
       <test-names>
         <test-name value="reference type test2" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="user reducer should increment only childrenCount" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDolist_9/State/user-reducer.test.ts" />
+      <test-names>
+        <test-name value="user reducer should increment only childrenCount" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -130,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.user reducer should increment only childrenCount" />
         <item itemvalue="npm.test" />
         <item itemvalue="Jest.reference type test2" />
         <item itemvalue="Jest.123" />
         <item itemvalue="Jest.Unnamed" />
-        <item itemvalue="Jest.is Even Sum Greater" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +194,7 @@
       <workItem from="1682839052010" duration="6419000" />
       <workItem from="1683126126079" duration="357000" />
       <workItem from="1683355486253" duration="589000" />
-      <workItem from="1683472815853" duration="40369000" />
+      <workItem from="1683472815853" duration="41112000" />
     </task>
     <servers />
   </component>
