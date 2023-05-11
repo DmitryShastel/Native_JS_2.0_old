@@ -1,6 +1,7 @@
 import {v1} from "uuid";
 import {TodolistType} from "../AppRoot_9";
 import {TodolistsReducer} from "./todolists-reducer";
+import {removeTodolistAC} from "./todolists-reducer";
 
 test('correct todolist should be removed', () => {
     let todolistId1 = v1();
@@ -12,7 +13,7 @@ test('correct todolist should be removed', () => {
     ]
 
     
-    const endState = TodolistsReducer(startState, { type: 'REMOVE-TODOLIST', id: todolistId1})
+    const endState = TodolistsReducer(startState,  removeTodolistAC(todolistId1))
 
 
     expect(endState.length).toBe(1);
