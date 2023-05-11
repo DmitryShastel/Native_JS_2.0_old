@@ -1,6 +1,8 @@
 import React from "react";
 import { TodolistType } from "../AppRoot_9";
 
+// type ActionTypes
+
 export const TodolistsReducer = (
   state: TodolistType[],
   action: any
@@ -14,9 +16,13 @@ export const TodolistsReducer = (
   }
 };
 
+
+type removeTodolistACType = ReturnType<typeof removeTodolistAC>
 export const removeTodolistAC = (todolistID: string) => {
   return {
     action: "REMOVE-TODOLIST",
-    id: todolistID,
-  };
+    payload: {
+      todolistID,
+    },
+  } as const;
 };
