@@ -1,20 +1,25 @@
 import React from "react";
 import { TodolistType } from "../AppRoot_9";
-
+import { v1 } from "uuid";
 
 export const TodolistsReducer = (state: TodolistType[],action: ActionTypes): TodolistType[] => {
   switch (action.type) {
     case "REMOVE-TODOLIST": {
-        return  state.filter((t) => t.id !== action.payload.todolistID);
-      }
+      return state.filter((t) => t.id !== action.payload.todolistID);
+    }
+
+    case "ADD-TODOLIST": {
+      return [
+        { id: v1(), title: action.payload.newTitle, filter: 'all' }, 
+        ...state];
+    }
+
     default:
       return state;
   }
 };
 
-
-
-type ActionTypes = removeTodolistACType | addTodolistACType
+type ActionTypes = removeTodolistACType | addTodolistACType;
 type removeTodolistACType = ReturnType<typeof removeTodolistAC>;
 export const removeTodolistAC = (todolistID: string) => {
   return {
@@ -25,18 +30,13 @@ export const removeTodolistAC = (todolistID: string) => {
   } as const;
 };
 
+type addTodolistACType = ReturnType<typeof addTodolistAC>;
+export const addTodolistAC = ( newTitle: string) => {
+  return {
+    type: "ADD-TODOLIST",
+    payload: {
 
-
-
-type addTodolistACType = ReturnType<typeof addTodolistAC>
-export const addTodolistAC = (todolistId: string, newTitle: string ) => {
-    return {
-        type: 'ADD-TODOLIST',
-        payload: {
-            todolistId,
-            newTitle
-        }
-    } as const
-}
-
-
+      newTitle,
+    },
+  } as const;
+};
