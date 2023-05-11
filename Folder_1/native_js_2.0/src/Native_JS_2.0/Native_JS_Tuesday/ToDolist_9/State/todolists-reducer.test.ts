@@ -1,7 +1,7 @@
 import {v1} from "uuid";
 import {TodolistType} from "../AppRoot_9";
-import {TodolistsReducer} from "./todolists-reducer";
-import {removeTodolistAC} from "./todolists-reducer";
+import {TodolistsReducer, removeTodolistAC} from "./todolists-reducer";
+
 
 test('correct todolist should be removed', () => {
     let todolistId1 = v1();
@@ -17,5 +17,5 @@ test('correct todolist should be removed', () => {
 
 
     expect(endState.length).toBe(1);
-    expect(endState[0].id).toBe(todolistId2);
+    expect(endState[0].id).toBe(todolistId2);    
 });
