@@ -25,11 +25,15 @@ export const TodolistsReducer = (state: TodolistType[],action: ActionTypes): Tod
         return state.map(el => el.id === action.payload.todolistID ?  {...el, title: action.payload.newTitle} : el)
     }
 
-    case changeFilterAC : {
-        return state
+    case 'CHANGE-TODOLIST-FILTER' : {
+        // let todolist = todolists.find(tl => tl.id === todolistId);
+        // if (todolist) {
+        //     todolist.filter = value;
+        //     setTodolists([...todolists])
+        // }
+        return state.map(el => el.id === action.payload.todolistID ? {...el, filter: action.payload.filter} : el)
     }
     
-
     default:
       return state;
   }
@@ -76,5 +80,5 @@ export const changeFilterAC = (todolistID: string, filter: FilterValuesType) => 
             todolistID,
             filter
         }
-    }
+    } as const
 }
