@@ -14,7 +14,8 @@ test('correct todolist should be removed', () => {
     
 
     const endState = TodolistsReducer(startState, { type: 'REMOVE-TODOLIST', id: todolistId1})
-           //const endState = TodolistsReducer(startState, { type: 'REMOVE-TODOLIST', id: todolistId1})
+              //const endState = TodolistsReducer(startState, { type: 'REMOVE-TODOLIST', id: todolistId1})
+               //const endState = TodolistsReducer(startState, { type: 'REMOVE-TODOLIST', id: todolistId1})
 
 
     expect(endState.length).toBe(1);
