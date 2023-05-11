@@ -1,6 +1,7 @@
 import React from "react";
 import { TodolistType } from "../AppRoot_9";
 import { v1 } from "uuid";
+import {FilterValuesType } from "../AppRoot_9";
 
 export const TodolistsReducer = (state: TodolistType[],action: ActionTypes): TodolistType[] => {
   switch (action.type) {
@@ -24,12 +25,17 @@ export const TodolistsReducer = (state: TodolistType[],action: ActionTypes): Tod
         return state.map(el => el.id === action.payload.todolistID ?  {...el, title: action.payload.newTitle} : el)
     }
 
+    case changeFilterAC : {
+        return state
+    }
+    
+
     default:
       return state;
   }
 };
 
-type ActionTypes = removeTodolistACType | addTodolistACType | changeTodolistACType;
+type ActionTypes = removeTodolistACType | addTodolistACType | changeTodolistACType | changeFilterACType;
 type removeTodolistACType = ReturnType<typeof removeTodolistAC>;
 export const removeTodolistAC = (todolistID: string) => {
   return {
@@ -60,4 +66,15 @@ export const changeTodolistAC = (todolistID: string, newTitle: string) => {
             newTitle
         }
     } as const
+}
+
+type changeFilterACType = ReturnType<typeof changeFilterAC>
+export const changeFilterAC = (todolistID: string, filter: FilterValuesType) => {
+    return {
+        type: 'CHANGE-TODOLIST-FILTER',
+        payload: {
+            todolistID,
+            filter
+        }
+    }
 }
