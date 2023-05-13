@@ -54,6 +54,8 @@ export function Todolist(props: PropsType) {
                 props.tasks.map(t => {
                     const onClickHandler = () => props.removeTask(t.id, props.id)
 
+                    //принимает как параметры  tID и newIsDone из callBack в SuperCheckbox
+                    //и добавляет props.id в вызове changeTaskStatus (может добавлять сколько угодно параметров)
                     const onChangeHandler = (tID: string, newIsDone: boolean) => {
                         props.changeTaskStatus(tID, newIsDone, props.id);
                     }
@@ -70,7 +72,10 @@ export function Todolist(props: PropsType) {
                             color="primary"
                             onChange={onChangeHandler}
                         /> */}
-
+                        колбек приходит из SuperCheckbox компоненты
+                        значение из props.callBack(event.currentTarget.checked) === newIsDone в колбеке  
+                        передаем в параметрах onChangeHandler + добавляем id
+                        все передаем выше в onChangeHandler
                         <SuperCheckbox callBack={(newIsDone)=> onChangeHandler(t.id, newIsDone)} isDone={t.isDone}/>
 
                         <EditableSpan value={t.title} onChange={onTitleChangeHandler} />

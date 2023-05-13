@@ -57,6 +57,9 @@ export function App() {
         setTasks({...tasks});
     }
 
+
+
+    //принимает как параметры из onChangeHandler > props.changeTaskStatus(tID, newIsDone, props.id)
     function changeStatus(id: string, isDone: boolean, todolistId: string) {
         //достанем нужный массив по todolistId:
         let todolistTasks = tasks[todolistId];

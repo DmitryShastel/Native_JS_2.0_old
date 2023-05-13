@@ -1,5 +1,7 @@
 import React, { ChangeEvent } from "react";
 
+
+//принимает только свои пропсы (id(s) не должны приходить)
 type PropsType = {
   callBack: (newIsDone: boolean) => void;
   isDone: boolean;
