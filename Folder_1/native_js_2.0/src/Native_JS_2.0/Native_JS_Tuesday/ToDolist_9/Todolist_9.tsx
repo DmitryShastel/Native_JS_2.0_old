@@ -4,6 +4,7 @@ import {Button, Checkbox, IconButton} from '@material-ui/core';
 import {Delete} from '@material-ui/icons';
 import {EditableSpan} from "./EditableSpan_9";
 import {FilterValuesType} from "./AppRoot_9";
+import {SuperCheckbox} from "./SuperCheckbox";
 
 export type TaskType = {
     id: string
@@ -62,11 +63,13 @@ export function Todolist(props: PropsType) {
 
 
                     return <div key={t.id} className={t.isDone ? "is-done" : ""}>
-                        <Checkbox
+                        {/* <Checkbox
                             checked={t.isDone}
                             color="primary"
                             onChange={onChangeHandler}
-                        />
+                        /> */}
+
+                        <SuperCheckbox callBack={onChangeHandler}/>
 
                         <EditableSpan value={t.title} onChange={onTitleChangeHandler} />
                         <IconButton onClick={onClickHandler}>

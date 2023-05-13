@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 
 type PropsType = {
   callBack: () => void;
@@ -6,7 +6,7 @@ type PropsType = {
 };
 
 export const SuperCheckbox = (props: PropsType) => {
-  let onChangeHandler = () => {
+  let onChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
     props.callBack();
   };
 
