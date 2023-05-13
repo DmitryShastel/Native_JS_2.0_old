@@ -53,10 +53,12 @@ export function Todolist(props: PropsType) {
             {
                 props.tasks.map(t => {
                     const onClickHandler = () => props.removeTask(t.id, props.id)
-                    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-                        let newIsDoneValue = e.currentTarget.checked;
-                        props.changeTaskStatus(t.id, newIsDoneValue, props.id);
+
+                    const onChangeHandler = (tID: string, newIsDone: boolean) => {
+                        props.changeTaskStatus(tID, newIsDone, props.id);
                     }
+
+
                     const onTitleChangeHandler = (newValue: string) => {
                         props.changeTaskTitle(t.id, newValue, props.id);
                     }
@@ -69,7 +71,7 @@ export function Todolist(props: PropsType) {
                             onChange={onChangeHandler}
                         /> */}
 
-                        <SuperCheckbox callBack={onChangeHandler}/>
+                        <SuperCheckbox callBack={(newIsDone)=> onChangeHandler(t.id, newIsDone)} isDone={t.isDone}/>
 
                         <EditableSpan value={t.title} onChange={onTitleChangeHandler} />
                         <IconButton onClick={onClickHandler}>
