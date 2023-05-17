@@ -75,6 +75,7 @@ export function RootApp_6() {
     }
 
     function addTask(todolistId: string, newTasktitle: string) {
+        debugger
         let task = {id: v1(), title: newTasktitle, isDone: false};
         //достанем нужный массив по todolistId:
         let todolistTasks = tasks[todolistId];
@@ -98,6 +99,7 @@ export function RootApp_6() {
     }
 
     const addTodolist = (newTitle: string) => {
+        debugger
         const newTodolistID = v1()
         //type is required
         let newTodolist: TodolistType = {id: newTodolistID, title: newTitle, filter: "all"}
