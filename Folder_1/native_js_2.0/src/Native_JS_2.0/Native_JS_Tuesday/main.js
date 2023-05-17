@@ -710,4 +710,8 @@ let user = {
     years: 30
 }  
 
-console.log(user)
+let {name, years: age, isAdmin= false} = user
+
+console.log(name)
+console.log(age)
+console.log(isAdmin)
