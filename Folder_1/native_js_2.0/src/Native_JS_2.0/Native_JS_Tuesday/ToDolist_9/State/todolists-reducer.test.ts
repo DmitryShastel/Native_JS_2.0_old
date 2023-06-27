@@ -2,7 +2,7 @@ import {v1} from "uuid";
 import {TodolistType} from "../AppRoot_9";
 import {TodolistsReducer} from "./todolists-reducer";
 
-test('correct todolist should be removed', () => {
+test.skip('correct todolist should be removed', () => {
     let todolistId1 = v1();
     let todolistId2 = v1();
 

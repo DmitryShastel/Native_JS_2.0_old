@@ -1,4 +1,3 @@
-import React from 'react';
 import {TodolistType} from "../AppRoot_9";
 
 export const TodolistsReducer = (state: TodolistType[], action: any): TodolistType[] => {

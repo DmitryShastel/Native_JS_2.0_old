@@ -38,6 +38,7 @@ import {ManeType} from "../Destructuring";
 import {v1} from "uuid";
 import {TaskType} from "../ToDolist_8/Todolist_8";
 import {TaskReducer, removeTaskAC, addTaskAC} from "../ToDolist_8/reducers/taskReducer";
+import {average, sum2} from "../../Native_JS_Monday/Test_Functions";
 
 test.skip('reference type test', () => {
 
@@ -405,11 +406,9 @@ test.skip("get banknote list", () => {
 })
 
 
-
-
 let props: ManeType;
 
-    beforeEach(() => {
+beforeEach(() => {
     props = {
         name: 'Dima',
         age: 30,
@@ -421,7 +420,6 @@ let props: ManeType;
         }
     }
 })
-
 
 
 test.skip("1", () => {
@@ -437,7 +435,7 @@ test.skip("1", () => {
     expect(title).toBe('Minsk')
 })
 
-test.skip ("2", () => {
+test.skip("2", () => {
     const l1 = props.lessons[0]
     const l2 = props.lessons[1]
 
@@ -451,9 +449,8 @@ test.skip ("2", () => {
 })
 
 
-
 type UsersType = {
-    [key: string] : {id: number, name: string}
+    [key: string]: { id: number, name: string }
 }
 
 let users2: UsersType
@@ -465,12 +462,11 @@ beforeEach(() => {
         '2': {id: 2, name: 'Valera'}
     }
 })
-test.skip ('123',() => {
+test.skip('123', () => {
     users2['2'].name = 'Test'
 
     expect(users2['2'].name).toBe('Test')
 })
-
 test.skip('reference type test2', () => {
     let user: UserType2 = {
         name: 'Dima',
@@ -485,8 +481,6 @@ test.skip('reference type test2', () => {
     expect(user.hair).toBe(32)
     expect(newUser.address).toEqual(user.address)
 })
-
-
 test.skip('change address2', () => {
     let user: UserWithLaptopType3 = {
         name: 'Dima',
@@ -495,7 +489,7 @@ test.skip('change address2', () => {
             city: 'Minsk',
             house: 12
         },
-        laptop : {
+        laptop: {
             title: 'ZenBook'
         }
     }
@@ -508,7 +502,6 @@ test.skip('change address2', () => {
     expect(user.address).not.toBe(newUser.address)
     expect(newUser.address.city).toBe('Kiev')
 })
-
 test.skip('upgrade laptop to macbook2', () => {
     let user: UserWithLaptopType3 = {
         name: 'Dima',
@@ -517,7 +510,7 @@ test.skip('upgrade laptop to macbook2', () => {
             city: 'Minsk',
             house: 12
         },
-        laptop : {
+        laptop: {
             title: 'ZenBook'
         }
     }
@@ -529,16 +522,15 @@ test.skip('upgrade laptop to macbook2', () => {
     expect(user.address).toBe(newUserLaptop.address)
     expect(newUserLaptop.laptop.title).toBe('macbook')
 })
-
 test.skip('add new books to user', () => {
-    let user: UserWithLaptopType3 &  UserBooksType2= {
+    let user: UserWithLaptopType3 & UserBooksType2 = {
         name: 'Dima',
         hair: 32,
         address: {
             city: 'Minsk',
             house: 12
         },
-        laptop : {
+        laptop: {
             title: 'ZenBook'
         },
         books: ['js', 'html', 'css']
@@ -553,7 +545,6 @@ test.skip('add new books to user', () => {
     expect(userCopy.books[3]).toBe('ts')
     expect(user.books.length).toBe(3)
 })
-
 test.skip('correct task should be removed', () => {
     let taskID1 = v1()
     let taskID2 = v1()
@@ -565,13 +556,12 @@ test.skip('correct task should be removed', () => {
         {id: v1(), title: 'TypeScript', isDone: false}
     ]
 
-    const  endState = TaskReducer(startState, removeTaskAC(taskID1))
+    const endState = TaskReducer(startState, removeTaskAC(taskID1))
 
     expect(endState.length).toBe(3);
     expect(endState[0].id).toBe(taskID2);
 })
-
-test.skip('correct todolist should be added', ()=> {
+test.skip('correct todolist should be added', () => {
     let taskID1 = v1()
     let taskID2 = v1()
 
@@ -584,7 +574,7 @@ test.skip('correct todolist should be added', ()=> {
         {id: v1(), title: 'TypeScript', isDone: false}
     ]
 
-   const endState = TaskReducer(startState, addTaskAC(newTaskTile))
+    const endState = TaskReducer(startState, addTaskAC(newTaskTile))
 
     expect(endState.length).toBe(5);
     expect(endState[0].title).toBe(newTaskTile);
@@ -592,7 +582,23 @@ test.skip('correct todolist should be added', ()=> {
 })
 
 
+test('sum of two numbers', () => {
+    let a: number = 1
+    let b: number = 3
+
+    let result = sum2(a, b)
+
+    expect(result).toBe(4)
+})
+
+test('average value', () => {
+    let nums = [1, 2, 5, 8]
+
+    let result = average(nums)
 
 
+    expect(nums.length).toBe(4)
+    expect(result).toBe(4)
 
+})
 
