@@ -741,16 +741,69 @@
 // let [,,,el1, el2] = arr
 // console.log(el1, el2)
 
-let numbers = [1, 8, 98, 3, 7];
+// let numbers = [1, 8, 98, 3, 7];
 
-let sumTwoSmallestNumbers = (numbers) => {
-  numbers.sort(function (a, b) {
-    return a - b;
-  });
+// let sumTwoSmallestNumbers = (numbers) => {
+//   numbers.sort(function (a, b) {
+//     return a - b;
+//   });
 
-  let sum = numbers[0] + numbers[1];
-  return sum;
-};
+//   let sum = numbers[0] + numbers[1];
+//   return sum;
+// };
+//
+// let sum = sumTwoSmallestNumbers(numbers);
 
-let sum = sumTwoSmallestNumbers(numbers);
-console.log(sum)
+// var a = 5
+// let b = 6
+// const c = 7
+//
+// let fun = () => {
+//     return (
+//         a = 8,
+//             b = 10,
+//             console.log(a, b)
+//     )
+// }
+//
+// {
+//     a = 20
+// }
+
+// fun()
+//
+// console.log(a, b, c)
+
+
+
+
+let dominator = () => {
+    let arr = [3,4,3,2,3,1,3,3]
+
+    let value = null
+    let count = 0
+
+    for (let i = 0; i < arr.length; i++) {
+        if(count === 0) {
+            value = arr[i]
+            count = 1
+        } else if (arr[i] === value){
+            count ++
+        } else {
+            count --
+        }
+    }
+
+    let dominatorCount = 0;
+    for(let i =0; i < arr.length; i++) {
+        if(arr[i] === value) {
+            dominatorCount++
+        }
+    }
+
+    return dominatorCount > arr.length / 2 ? value: -1
+}
+
+dominator()
+
+console.log(dominator())
