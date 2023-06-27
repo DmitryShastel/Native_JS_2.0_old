@@ -8,14 +8,16 @@ type AddItemFormType = {
 
 export const AddItemForm = (props: AddItemFormType) => {
 
-    let [title, setTitle] = useState(" ")
+    let [title, setTitle] = useState("")
     let [error, setError] = useState<string | null>(null)
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        debugger
         setTitle(e.currentTarget.value)
     }
 
     const addTask = () => {
+        debugger
         let newTitle=  title.trim()
         if (newTitle !== "") {
             props.callBack(newTitle);

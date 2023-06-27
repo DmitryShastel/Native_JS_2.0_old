@@ -1,134 +1,134 @@
 // import {sum} from "../JS_TS_TDD";
 
-
 // links to watch theory
 // https://www.youtube.com/watch?v=6napu-MGQDo&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8&index=47
 // https://www.youtube.com/watch?v=I8LNJpG60vI&feature=youtu.be
 
 // 1. Simple object
 
+// let man = {
+//   name: "John",
+//   age: 28,
+// };
 
-let man = {
-    name: 'John',
-    age: 28
-};
-
-let manFullCopy = {...man}
-man.age = 36
-manFullCopy.name = 'Dima'
+// let manFullCopy = { ...man };
+// man.age = 36;
+// manFullCopy.name = "Dima";
 // console.log(man)
 // console.log(manFullCopy)
 
-
 // 2. Array of primitives
-let numbers = [1, 2, 3];
+// let numbers = [1, 2, 3];
 
-let numbersFullCopy = [...numbers]
-numbers[0] = 'A'
-numbersFullCopy.push(4)
+// let numbersFullCopy = [...numbers];
+// numbers[0] = "A";
+// numbersFullCopy.push(4);
 // console.log(numbers === numbersFullCopy)
 // console.log(numbers)
 // console.log(numbersFullCopy)
 
 // 3. Object inside an object
-let man1 = {
-    name: 'John',
-    age: 28,
-    mother: {
-        name: 'Kate',
-        age: 50
-    }
-};
+// let man1 = {
+//   name: "John",
+//   age: 28,
+//   mother: {
+//     name: "Kate",
+//     age: 50,
+//   },
+// };
 
-let man1FullCopy = {...man1, mother: {...man1.mother}}
+// let man1FullCopy = { ...man1, mother: { ...man1.mother } };
 
-man1.name = 'Dima'
-man1.mother.name = 'Masha'
-man1FullCopy.age = 32
-man1FullCopy.mother.age = 26
+// man1.name = "Dima";
+// man1.mother.name = "Masha";
+// man1FullCopy.age = 32;
+// man1FullCopy.mother.age = 26;
 
 // console.log(man1 === man1FullCopy)
 // console.log(man1)
 // console.log(man1FullCopy)
 
-
 // 4. Array of primitives inside an object
-let man2 = {
-    name: 'John',
-    age: 28,
-    friends: ["Peter", "Steven", "William"]
-};
+// let man2 = {
+//   name: "John",
+//   age: 28,
+//   friends: ["Peter", "Steven", "William"],
+// };
 
-let man2FullCopy = {...man2, friends: [...man2.friends]}
+// let man2FullCopy = { ...man2, friends: [...man2.friends] };
 
-man2.name = 'Dima'
-man2.friends[0] = 12
-man2FullCopy.age = 38
-man2FullCopy.friends.push(222)
+// man2.name = "Dima";
+// man2.friends[0] = 12;
+// man2FullCopy.age = 38;
+// man2FullCopy.friends.push(222);
 
 // console.log(man2 === man2FullCopy)
 // console.log(man2)
 // console.log(man2FullCopy)
 
 // 5 Array of objects
-let people = [
-    {name: "Peter", age: 30},
-    {name: "Steven", age: 32},
-    {name: "William", age: 28}
-];
+// let people = [
+//   { name: "Peter", age: 30 },
+//   { name: "Steven", age: 32 },
+//   { name: "William", age: 28 },
+// ];
 
-let peopleFullCopy = people.map(e => ({...e}))
+// let peopleFullCopy = people.map((e) => ({ ...e }));
 
-people[0].name = 'Dima'
-peopleFullCopy[0].age = 20
+// people[0].name = "Dima";
+// peopleFullCopy[0].age = 20;
 
 // console.log(people === peopleFullCopy)
 // console.log(people)
 // console.log(peopleFullCopy)
 
-
 // 6 Array of objects inside object
-let man3 = {
-    name: 'John',
-    age: 28,
-    friends: [
-        {name: "Peter", age: 30},
-        {name: "Steven", age: 32},
-        {name: "William", age: 28}
-    ]
-};
+// let man3 = {
+//   name: "John",
+//   age: 28,
+//   friends: [
+//     { name: "Peter", age: 30 },
+//     { name: "Steven", age: 32 },
+//     { name: "William", age: 28 },
+//   ],
+// };
 
-let man3FullCopy = {...man3, friends: [...man3.friends.map(e => ({...e}))]}
+// let man3FullCopy = {
+//   ...man3,
+//   friends: [...man3.friends.map((e) => ({ ...e }))],
+// };
 
-man3.name = 'Dima'
-man3.friends[0].name = 'Vasa'
-man3FullCopy.age = 38
-man3FullCopy.friends[0].age = 20
+// man3.name = "Dima";
+// man3.friends[0].name = "Vasa";
+// man3FullCopy.age = 38;
+// man3FullCopy.friends[0].age = 20;
 
 // console.log(man3 === man3FullCopy)
 // console.log(man3.friends === man3FullCopy.friends)
 // console.log(man3)
 // console.log(man3FullCopy)
 
-
 // 7 Object inside an object, inside an object
-let man4 = {
-    name: 'John',
-    age: 28,
-    mother: {
-        name: "Kate",
-        age: 50,
-        work: {
-            position: "doctor",
-            experience: 15
-        }
-    }
-};
+// let man4 = {
+//   name: "John",
+//   age: 28,
+//   mother: {
+//     name: "Kate",
+//     age: 50,
+//     work: {
+//       position: "doctor",
+//       experience: 15,
+//     },
+//   },
+// };
 
-let man4FullCopy = {...man4, mother: {...man4.mother, work: {...man4.mother.work}}}
+// let man4FullCopy = {
+//   ...man4,
+//   mother: { ...man4.mother, work: { ...man4.mother.work } },
+// };
 
-man4.mother.work.experience = 10
-man4FullCopy.mother.age = 36
+// man4.mother.work.experience = 10;
+// man4FullCopy.mother.age = 36;
 
 // console.log(man4 === man4FullCopy)
 // console.log(man4.mother === man4FullCopy.mother)
@@ -137,37 +137,41 @@ man4FullCopy.mother.age = 36
 // console.log(man4FullCopy)
 
 // 8 Array of objects inside object -> object
-let man5 = {
-    name: 'John',
-    age: 28,
-    mother: {
-        name: "Kate",
-        age: 50,
-        work: {
-            position: "doctor",
-            experience: 15
-        },
-        parents: [
-            {name: "Kevin", age: 80},
-            {name: "Jennifer", age: 78},
-        ]
-    }
-};
+// let man5 = {
+//   name: "John",
+//   age: 28,
+//   mother: {
+//     name: "Kate",
+//     age: 50,
+//     work: {
+//       position: "doctor",
+//       experience: 15,
+//     },
+//     parents: [
+//       { name: "Kevin", age: 80 },
+//       { name: "Jennifer", age: 78 },
+//     ],
+//   },
+// };
 
-let man5FullCopy = {
-    ...man5,
-    mother: {...man5.mother, work: {...man5.mother.work}, parents: [...man5.mother.parents.map(e => ({...e}))]}
-}
+// let man5FullCopy = {
+//   ...man5,
+//   mother: {
+//     ...man5.mother,
+//     work: { ...man5.mother.work },
+//     parents: [...man5.mother.parents.map((e) => ({ ...e }))],
+//   },
+// };
 
-man5.name = 'Dima'
-man5.mother.name = 'Eva'
-man5.mother.work.position = 'patient'
-man5.mother.parents[0].name = 'Alone at home'
+// man5.name = "Dima";
+// man5.mother.name = "Eva";
+// man5.mother.work.position = "patient";
+// man5.mother.parents[0].name = "Alone at home";
 
-man5FullCopy.age = 38
-man5FullCopy.mother.age = 40
-man5FullCopy.mother.work.experience = 25
-man5FullCopy.mother.parents[0].age = 90
+// man5FullCopy.age = 38;
+// man5FullCopy.mother.age = 40;
+// man5FullCopy.mother.work.experience = 25;
+// man5FullCopy.mother.parents[0].age = 90;
 
 // console.log(man5 === man5FullCopy)
 // console.log(man5.mother === man5FullCopy.mother)
@@ -177,34 +181,34 @@ man5FullCopy.mother.parents[0].age = 90
 // console.log(man5FullCopy)
 
 // 9 Object inside an object -> array -> object ->  object
-let man6 = {
-    name: 'John',
-    age: 28,
-    mother: {
-        name: "Kate",
-        age: 50,
-        work: {
-            position: "doctor",
-            experience: 15
-        },
-        parents: [
-            {
-                name: "Kevin",
-                age: 80,
-                favoriteDish: {
-                    title: "borscht"
-                }
-            },
-            {
-                name: "Jennifer",
-                age: 78,
-                favoriteDish: {
-                    title: "sushi"
-                }
-            },
-        ]
-    }
-};
+// let man6 = {
+//   name: "John",
+//   age: 28,
+//   mother: {
+//     name: "Kate",
+//     age: 50,
+//     work: {
+//       position: "doctor",
+//       experience: 15,
+//     },
+//     parents: [
+//       {
+//         name: "Kevin",
+//         age: 80,
+//         favoriteDish: {
+//           title: "borscht",
+//         },
+//       },
+//       {
+//         name: "Jennifer",
+//         age: 78,
+//         favoriteDish: {
+//           title: "sushi",
+//         },
+//       },
+//     ],
+//   },
+// };
 
 // let man6FullCopy = {
 //     ...man6,
@@ -223,68 +227,77 @@ let man6 = {
 // console.log(man6)
 // console.log(man6FullCopy)
 
-
 //10 Array of objects inside an object -> object -> array -> object ->  object
-let man7 = {
-    name: 'John',
-    age: 28,
-    mother: {
-        name: "Kate",
-        age: 50,
-        work: {
-            position: "doctor",
-            experience: 15
-        },
-        parents: [
-            {
-                name: "Kevin",
-                age: 80,
-                favoriteDish: {
-                    title: "borscht",
-                    ingredients: [
-                        {title: "beet", amount: 3},
-                        {title: "potatoes", amount: 5},
-                        {title: "carrot", amount: 1},
-                    ]
-                }
-            },
-            {
-                name: "Jennifer",
-                age: 78,
-                favoriteDish: {
-                    title: "sushi",
-                    ingredients: [
-                        {title: "fish", amount: 1},
-                        {title: "rise", amount: 0.5}
-                    ]
-                }
-            },
-        ]
-    }
-};
+// let man7 = {
+//   name: "John",
+//   age: 28,
+//   mother: {
+//     name: "Kate",
+//     age: 50,
+//     work: {
+//       position: "doctor",
+//       experience: 15,
+//     },
+//     parents: [
+//       {
+//         name: "Kevin",
+//         age: 80,
+//         favoriteDish: {
+//           title: "borscht",
+//           ingredients: [
+//             { title: "beet", amount: 3 },
+//             { title: "potatoes", amount: 5 },
+//             { title: "carrot", amount: 1 },
+//           ],
+//         },
+//       },
+//       {
+//         name: "Jennifer",
+//         age: 78,
+//         favoriteDish: {
+//           title: "sushi",
+//           ingredients: [
+//             { title: "fish", amount: 1 },
+//             { title: "rise", amount: 0.5 },
+//           ],
+//         },
+//       },
+//     ],
+//   },
+// };
 
-let man6FullCopy = {
-    ...man6,
-    mother: {
-        ...man6.mother,
-        work: {...man6.mother.work},
-        parents: [...man6.mother.parents.map(e => ({...e, favoriteDish: {...e.favoriteDish}}))]
-    }
-}
+// let man6FullCopy = {
+//   ...man6,
+//   mother: {
+//     ...man6.mother,
+//     work: { ...man6.mother.work },
+//     parents: [
+//       ...man6.mother.parents.map((e) => ({
+//         ...e,
+//         favoriteDish: { ...e.favoriteDish },
+//       })),
+//     ],
+//   },
+// };
 
-let man7FullCopy = {
-    ...man7, mother: {
-        ...man7.mother,
-        work: {...man7.mother.work},
-        parents: [...man7.mother.parents.map(e => ({
-            ...e,
-            favoriteDish: {
-                ...e.favoriteDish,
-                ingredients: [...e.favoriteDish.ingredients.map(e => ({...e.ingredients}))]
-            }
-        }))]
-    }
-}
+// let man7FullCopy = {
+//   ...man7,
+//   mother: {
+//     ...man7.mother,
+//     work: { ...man7.mother.work },
+//     parents: [
+//       ...man7.mother.parents.map((e) => ({
+//         ...e,
+//         favoriteDish: {
+//           ...e.favoriteDish,
+//           ingredients: [
+//             ...e.favoriteDish.ingredients.map((e) => ({ ...e.ingredients })),
+//           ],
+//         },
+//       })),
+//     ],
+//   },
+// };
 
 // console.log(man7 === man7FullCopy)
 //
@@ -297,55 +310,53 @@ let man7FullCopy = {
 // console.log(man7)
 // console.log(man7FullCopy)
 
-
 //1 this method is sorting out of the box without additional parameters
 
-const str1 = ['Bob', 'Alex', 'John']
+// const str1 = ["Bob", "Alex", "John"];
 //console.log(str1.sort()) //['Alex', 'Bob', 'John']
 
 //2 it's sorts type strings alphabetically
 
-const str2 = ['Bob', 'Alex', 'John', 'john', '123', 'игорь', 'Юрий']
+// const str2 = ["Bob", "Alex", "John", "john", "123", "игорь", "Юрий"];
 //console.log(str2.sort()) //['123', 'Alex', 'Bob', 'John', 'john', 'Юрий', 'игорь']
 
-
-const students = [
-    {
-        id: 1,
-        name: 'Bob',
-        age: 22,
-        isMarried: true,
-        scores: 85,
-    },
-    {
-        id: 2,
-        name: 'Alex',
-        age: 29,
-        isMarried: true,
-        scores: 89,
-    },
-    {
-        id: 3,
-        name: 'Nick',
-        age: 20,
-        isMarried: false,
-        scores: 120,
-    },
-    {
-        id: 4,
-        name: 'Ann',
-        age: 22,
-        isMarried: false,
-        scores: 100,
-    },
-    {
-        id: 5,
-        name: 'Alex',
-        age: 23,
-        isMarried: false,
-        scores: 105,
-    }
-]
+// const students = [
+//   {
+//     id: 1,
+//     name: "Bob",
+//     age: 22,
+//     isMarried: true,
+//     scores: 85,
+//   },
+//   {
+//     id: 2,
+//     name: "Alex",
+//     age: 29,
+//     isMarried: true,
+//     scores: 89,
+//   },
+//   {
+//     id: 3,
+//     name: "Nick",
+//     age: 20,
+//     isMarried: false,
+//     scores: 120,
+//   },
+//   {
+//     id: 4,
+//     name: "Ann",
+//     age: 22,
+//     isMarried: false,
+//     scores: 100,
+//   },
+//   {
+//     id: 5,
+//     name: "Alex",
+//     age: 23,
+//     isMarried: false,
+//     scores: 105,
+//   },
+// ];
 //
 // const user = {
 //     name: 'Bob',
@@ -356,13 +367,13 @@ const students = [
 //сортировка массива объектов по строковым значениям
 //а. Регистрозависимоя
 
-const compareObjByName = (a, b) => {
-    if (a.name > b.name) {
-        return 1
-    } else {
-        return -1
-    }
-}
+// const compareObjByName = (a, b) => {
+//   if (a.name > b.name) {
+//     return 1;
+//   } else {
+//     return -1;
+//   }
+// };
 
 //console.log(students.sort(compareObjByName))
 
@@ -382,7 +393,6 @@ const compareObjByName = (a, b) => {
 // let y = x
 // x[0] = 22
 // console.log(y)
-
 
 // let userCopy = {...user}
 //
@@ -497,7 +507,6 @@ const compareObjByName = (a, b) => {
 // }
 // console.log(addFriends(students));
 
-
 // let a = {
 //     name: 'it-kamasutra.com',
 //     protocol: 'https',
@@ -544,7 +553,6 @@ const compareObjByName = (a, b) => {
 // user9.f()
 // admin.f()
 
-
 // let calculator = {
 //     read() {
 //         this.a = +prompt('a?', 0)
@@ -561,7 +569,6 @@ const compareObjByName = (a, b) => {
 // calculator.read()
 // alert(calculator.sum());
 // alert(calculator.mul());
-
 
 // let ladder = {
 //     step: 0,
@@ -589,7 +596,6 @@ const compareObjByName = (a, b) => {
 // let newFunc = func.bind(obj,300)
 //
 // console.log(newFunc())
-
 
 // let userObg = {
 //     '0': 'Dima',
@@ -633,7 +639,6 @@ const compareObjByName = (a, b) => {
 // }
 //
 // let arr1 = arrayClone(vegetables);
-
 
 // Напишите код, который преобразовывает и объединяет все элементы массива в одно строковое значение. Элементы массива будут разделены запятой.
 // Получите результат двумя разными методами.
@@ -685,7 +690,6 @@ const compareObjByName = (a, b) => {
 //
 // changeRegister('aBcD')
 
-
 //Просто, учитывая строку слов, верните длину самого короткого слова(ов).
 
 // let shortString = () => {
@@ -704,3 +708,102 @@ const compareObjByName = (a, b) => {
 //
 // shortString()
 
+// let user = {
+//     name: 'John',
+//     years: 30
+// }
+
+// let {name, years: age, isAdmin= false} = user
+
+// console.log(name)
+// console.log(age)
+// console.log(isAdmin)
+
+// let salaries = {
+//   John: 100,
+//   Pete: 300,
+//   Mary: 250,
+// };
+
+// let result  = (salaries) => {
+
+// }
+
+// result()
+
+// console.log(result)
+
+// arr = [1, 2, 3, 4, 5]
+// let [el1, el2, el, ...rest] = arr
+// console.log(rest)
+
+// arr = [1, 2, 3, 4, 5]
+// let [,,,el1, el2] = arr
+// console.log(el1, el2)
+
+// let numbers = [1, 8, 98, 3, 7];
+
+// let sumTwoSmallestNumbers = (numbers) => {
+//   numbers.sort(function (a, b) {
+//     return a - b;
+//   });
+
+//   let sum = numbers[0] + numbers[1];
+//   return sum;
+// };
+//
+// let sum = sumTwoSmallestNumbers(numbers);
+
+// var a = 5
+// let b = 6
+// const c = 7
+//
+// let fun = () => {
+//     return (
+//         a = 8,
+//             b = 10,
+//             console.log(a, b)
+//     )
+// }
+//
+// {
+//     a = 20
+// }
+
+// fun()
+//
+// console.log(a, b, c)
+
+
+
+
+let dominator = () => {
+    let arr = [3,4,3,2,3,1,3,3]
+
+    let value = null
+    let count = 0
+
+    for (let i = 0; i < arr.length; i++) {
+        if(count === 0) {
+            value = arr[i]
+            count = 1
+        } else if (arr[i] === value){
+            count ++
+        } else {
+            count --
+        }
+    }
+
+    let dominatorCount = 0;
+    for(let i =0; i < arr.length; i++) {
+        if(arr[i] === value) {
+            dominatorCount++
+        }
+    }
+
+    return dominatorCount > arr.length / 2 ? value: -1
+}
+
+dominator()
+
+console.log(dominator())
