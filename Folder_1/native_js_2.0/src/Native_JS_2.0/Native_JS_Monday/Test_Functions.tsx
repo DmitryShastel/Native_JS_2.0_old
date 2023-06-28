@@ -9,7 +9,15 @@ export let splitWords = (sentence: string) => {
 
     return words.filter(w => w !== '' && w !== '-')
         .map(w => w
-            .replace('!','')
-            .replace('.','')
-            .replace(',',''))
+            .replace('!', '')
+            .replace('.', '')
+            .replace(',', ''))
 }
+
+export const sum2 = (a: number, b: number) => a + b;
+
+export const average = (nums: number[]) => {
+    const sum = nums.reduce((acc, val) => acc + val, 0);
+    return sum / nums.length;
+}
+

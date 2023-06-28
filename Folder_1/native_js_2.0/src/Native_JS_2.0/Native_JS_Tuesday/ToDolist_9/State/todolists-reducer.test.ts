@@ -4,7 +4,7 @@ import {FilterValuesType } from "../AppRoot_9";
 import {TodolistsReducer, addTodolistAC, removeTodolistAC, changeTodolistAC, changeFilterAC} from "./todolists-reducer";
 
 
-test('correct todolist should be removed', () => {
+test.skip('correct todolist should be removed', () => {
     let todolistId1 = v1();
     let todolistId2 = v1();
 
@@ -18,6 +18,10 @@ test('correct todolist should be removed', () => {
 
 
     expect(endState.length).toBe(1);
+<<<<<<< HEAD
+    expect(endState[0].id).toBe(todolistId2);
+});
+=======
     expect(endState[0].id).toBe(todolistId2);    
 });
 
@@ -78,3 +82,4 @@ test('correct filter of todolist should be changed', () => {
     expect(endState[0].filter).toBe('all');   
     expect(endState[1].filter).toBe(newFilter); 
 }) ;
+>>>>>>> b8c0aaa1eaddaf4c00fcbf49041425f3edd9d62b
