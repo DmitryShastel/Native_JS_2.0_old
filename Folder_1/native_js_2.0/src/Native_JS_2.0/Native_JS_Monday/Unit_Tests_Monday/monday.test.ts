@@ -37,6 +37,36 @@ test('1', () => {
     expect(a).toBe(32)
     expect(l.length).toBe(2)
 })
+// test('1', () => {
+//     // const age = props.age
+//     // const lessons = props.lessons
+//     const{age, lessons} = props
+//
+//     const a = props.age
+//     const l = props.lessons
+//
+//     expect(age).toBe(32)
+//     expect(lessons.length).toBe(2)
+//
+//     expect(a).toBe(32)
+//     expect(l.length).toBe(2)
+// })
+// test('1', () => {
+//     // const age = props.age
+//     // const lessons = props.lessons
+//     const{age, lessons} = props
+//
+//     const a = props.age
+//     const l = props.lessons
+//
+//     expect(age).toBe(32)
+//     expect(lessons.length).toBe(2)
+//
+//     expect(a).toBe(32)
+//     expect(l.length).toBe(2)
+// })
+
+
 
 test ('2', ()=>{
     const l1 = props.lessons[0];
