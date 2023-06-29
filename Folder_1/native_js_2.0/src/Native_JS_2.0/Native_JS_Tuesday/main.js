@@ -775,35 +775,33 @@
 // console.log(a, b, c)
 
 
-
-
-let dominator = () => {
-    let arr = [3,4,3,2,3,1,3,3]
-
-    let value = null
-    let count = 0
-
-    for (let i = 0; i < arr.length; i++) {
-        if(count === 0) {
-            value = arr[i]
-            count = 1
-        } else if (arr[i] === value){
-            count ++
-        } else {
-            count --
-        }
-    }
-
-    let dominatorCount = 0;
-    for(let i =0; i < arr.length; i++) {
-        if(arr[i] === value) {
-            dominatorCount++
-        }
-    }
-
-    return dominatorCount > arr.length / 2 ? value: -1
-}
-
-dominator()
-
-console.log(dominator())
+// let dominator = () => {
+//     let arr = [3,4,3,2,3,1,3,3]
+//
+//     let value = null
+//     let count = 0
+//
+//     for (let i = 0; i < arr.length; i++) {
+//         if(count === 0) {
+//             value = arr[i]
+//             count = 1
+//         } else if (arr[i] === value){
+//             count ++
+//         } else {
+//             count --
+//         }
+//     }
+//
+//     let dominatorCount = 0;
+//     for(let i =0; i < arr.length; i++) {
+//         if(arr[i] === value) {
+//             dominatorCount++
+//         }
+//     }
+//
+//     return dominatorCount > arr.length / 2 ? value: -1
+// }
+//
+// dominator()
+//
+// console.log(dominator())
