@@ -1,18 +1,4 @@
-<<<<<<< HEAD
 import {TodolistType} from "../AppRoot_9";
-
-export const TodolistsReducer = (state: TodolistType[], action: any): TodolistType[] => {
-    switch (action.type) {
-        case 'REMOVE-TODOLIST': {
-            return  state.filter(t => t.id != action.id)
-        }
-        default:
-            return state
-    }
-}
-=======
-import React from "react";
-import { TodolistType } from "../AppRoot_9";
 import { v1 } from "uuid";
 import { FilterValuesType } from "../AppRoot_9";
 
@@ -101,5 +87,4 @@ export const changeFilterAC = (
       filter,
     },
   } as const;
-};
->>>>>>> b8c0aaa1eaddaf4c00fcbf49041425f3edd9d62b
+}

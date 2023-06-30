@@ -34,7 +34,7 @@ import {
   sum,
   sumFirstNumbers,
 } from "../JS_TS_TDD";
-<<<<<<< HEAD
+
 import {ManeType} from "../Destructuring";
 import {v1} from "uuid";
 import {TaskType} from "../ToDolist_8/Todolist_8";
@@ -349,17 +349,10 @@ test.skip('upgrade company - company title', () => {
     expect(user.address).toBe(userCopy.address)
     expect(userCopy.companies[0].title).toBe('EPAM')
 })
-=======
-import { ManeType } from "../Destructuring";
-import { v1 } from "uuid";
-import { TaskType } from "../ToDolist_8/Todolist_8";
-import {
-  TaskReducer,
-  removeTaskAC,
-  addTaskAC,
-} from "../ToDolist_8/reducers/taskReducer";
 
-test.skip("reference type test", () => {
+
+
+test.skip("reference type test2", () => {
   let user: UserType = {
     name: "Dima",
     hair: 30,
@@ -373,14 +366,14 @@ test.skip("reference type test", () => {
   expect(cutUser.hair).toBe(15);
   expect(cutUser.address).toBe(user.address);
 });
-test.skip("array reference type test", () => {
+test.skip("array reference type test2", () => {
   let admins = users;
 
   admins.push({ name: "Alex", age: 10 });
 
   expect(users[2]).toEqual({ name: "Alex", age: 10 });
 });
-test.skip("change address", () => {
+test.skip("change address2", () => {
   let user: UserType = {
     name: "Dima",
     hair: 30,
@@ -399,7 +392,7 @@ test.skip("change address", () => {
   user2.address.city = "Сanary";
   expect(user.address.city).toBe("Сanary");
 });
-test.skip("change user address", () => {
+test.skip("change user address2", () => {
   let user: UserWithLaptopType = {
     name: "Dima",
     hair: 30,
@@ -419,7 +412,7 @@ test.skip("change user address", () => {
   expect(user.laptop).toBe(movedUser.laptop);
   expect(movedUser.address.city).toBe("Kiev");
 });
-test.skip("upgrade laptop to macbook", () => {
+test.skip("upgrade laptop to macbook2", () => {
   let user: UserWithLaptopType = {
     name: "Dima",
     hair: 30,
@@ -440,7 +433,7 @@ test.skip("upgrade laptop to macbook", () => {
   expect(upgradedUser.laptop.title).toBe("Macbook");
   expect(user.laptop.title).toBe("ZenBook");
 });
-test.skip("upgrade laptop serial number", () => {
+test.skip("upgrade laptop serial number2", () => {
   let user: UserWithLaptopOptions = {
     name: "Dima",
     hair: 30,
@@ -470,7 +463,7 @@ test.skip("upgrade laptop serial number", () => {
   );
   expect(upgradedUserLaptop.laptop.serialNumber.number).toBe(9);
 });
-test.skip("upgrade address - house number", () => {
+test.skip("upgrade address - house number2", () => {
   let user: UserWithLaptopOptions & UserWithBookType = {
     name: "Dima",
     hair: 30,
@@ -498,7 +491,7 @@ test.skip("upgrade address - house number", () => {
   expect(user.address.house).not.toBe(userCopy.address.house);
   expect(userCopy.address.house).toBe(99);
 });
-test.skip("upgrade books - add new books to user", () => {
+test.skip("upgrade books - add new books to user2", () => {
   let user: UserWithLaptopOptions & UserWithBookType = {
     name: "Dima",
     hair: 30,
@@ -524,7 +517,7 @@ test.skip("upgrade books - add new books to user", () => {
   expect(userCopy.books[4]).toBe("ts");
   expect(user.books.length).toBe(4);
 });
-test.skip("upgrade books - replace js to ts", () => {
+test.skip("upgrade books - replace js to ts2", () => {
   let user: UserWithLaptopOptions & UserWithBookType = {
     name: "Dima",
     hair: 30,
@@ -550,7 +543,7 @@ test.skip("upgrade books - replace js to ts", () => {
   expect(userCopy.books[2]).toBe("ts");
   expect(user.books.length).toBe(4);
 });
-test.skip("upgrade skills - replace 10 to 11", () => {
+test.skip("upgrade skills - replace 10 to 112", () => {
   let user: UserWithLaptopOptions & UserWithSkillsType = {
     name: "Dima",
     hair: 30,
@@ -577,7 +570,7 @@ test.skip("upgrade skills - replace 10 to 11", () => {
   expect(user.skills.length).toBe(4);
   expect(userCopy.skills[0]).toBe(11);
 });
-test.skip("upgrade books - remove book", () => {
+test.skip("upgrade books - remove book2", () => {
   let user: UserWithLaptopOptions & UserWithSkillsType = {
     name: "Dima",
     hair: 30,
@@ -605,7 +598,7 @@ test.skip("upgrade books - remove book", () => {
   expect(userCopy.books.length).toBe(3);
   expect(userCopy.books[2]).toBe("react");
 });
-test.skip("upgrade company - add company", () => {
+test.skip("upgrade company - add company2", () => {
   let user: UserWithLaptopOptions & UserWithCompanyType = {
     name: "Dima",
     hair: 30,
@@ -633,7 +626,7 @@ test.skip("upgrade company - add company", () => {
   expect(userCopy.companies[2].title).toBe("Google");
   expect(userCopy.companies[2].id).toBe(3);
 });
-test.skip("upgrade company - company title", () => {
+test.skip("upgrade company - company title2", () => {
   let user: UserWithLaptopOptions & UserWithCompanyType = {
     name: "Dima",
     hair: 30,
@@ -665,8 +658,8 @@ test.skip("upgrade company - company title", () => {
   expect(user.books).toBe(userCopy.books);
   expect(user.address).toBe(userCopy.address);
   expect(userCopy.companies[0].title).toBe("EPAM");
-});
->>>>>>> b8c0aaa1eaddaf4c00fcbf49041425f3edd9d62b
+})
+
 test.skip("sum", () => {
   expect(sum(3, 5, 7, 6, 4, 9)).toBe(34);
   expect(sum(1, 1, 1, 6)).toBe(9);
@@ -712,7 +705,7 @@ test.skip("sum of first N numbers", () => {
   expect(sumFirstNumbers(10)).toBe(55);
 });
 test.skip("get banknote list", () => {
-<<<<<<< HEAD
+
     // надо бы проверять длинну резалтов и их сумму
     const result2500 = getBanknoteList(2500)
     const result23 = getBanknoteList(23)
@@ -725,23 +718,22 @@ test.skip("get banknote list", () => {
 
 })
 
-=======
+
   // надо бы проверять длинну резалтов и их сумму
-  const result2500 = getBanknoteList(2500);
-  const result23 = getBanknoteList(23);
-  expect(result2500[0]).toBe(1000);
-  expect(result2500[1]).toBe(1000);
-  expect(result2500[2]).toBe(500);
-  expect(result23[0]).toBe(20);
-  expect(result23[1]).toBe(2);
-  expect(result23[2]).toBe(1);
-});
->>>>>>> b8c0aaa1eaddaf4c00fcbf49041425f3edd9d62b
+//   const result2500 = getBanknoteList(2500);
+//   const result23 = getBanknoteList(23);
+//   expect(result2500[0]).toBe(1000);
+//   expect(result2500[1]).toBe(1000);
+//   expect(result2500[2]).toBe(500);
+//   expect(result23[0]).toBe(20);
+//   expect(result23[1]).toBe(2);
+//   expect(result23[2]).toBe(1);
+// })
 
 let props: ManeType;
 
 beforeEach(() => {
-<<<<<<< HEAD
+
     props = {
         name: 'Dima',
         age: 30,
@@ -754,7 +746,7 @@ beforeEach(() => {
     }
 })
 
-=======
+
   props = {
     name: "Dima",
     age: 30,
@@ -765,8 +757,7 @@ beforeEach(() => {
       },
     },
   };
-});
->>>>>>> b8c0aaa1eaddaf4c00fcbf49041425f3edd9d62b
+
 
 test.skip("1", () => {
   // const age = props.age
@@ -781,37 +772,27 @@ test.skip("1", () => {
 });
 
 test.skip("2", () => {
-<<<<<<< HEAD
+
     const l1 = props.lessons[0]
     const l2 = props.lessons[1]
-=======
-  const l1 = props.lessons[0];
-  const l2 = props.lessons[1];
->>>>>>> b8c0aaa1eaddaf4c00fcbf49041425f3edd9d62b
 
-  const [ls1, ls2] = props.lessons;
+    const [ls1, ls2] = props.lessons;
 
-  expect(l1.title).toBe("1");
-  expect(l2.title).toBe("2");
+    expect(l1.title).toBe("1");
+    expect(l2.title).toBe("2");
 
-<<<<<<< HEAD
-type UsersType = {
-    [key: string]: { id: number, name: string }
-}
-=======
   expect(ls1.title).toBe("1");
   expect(ls2.title).toBe("2");
 });
 
 type UsersType = {
   [key: string]: { id: number; name: string };
-};
->>>>>>> b8c0aaa1eaddaf4c00fcbf49041425f3edd9d62b
+}
 
 let users2: UsersType;
 
 beforeEach(() => {
-<<<<<<< HEAD
+
     users2 = {
         '21': {id: 21, name: 'Dima'},
         '44': {id: 44, name: 'Vasa'},
@@ -823,7 +804,7 @@ test.skip('123', () => {
 
     expect(users2['2'].name).toBe('Test')
 })
-test.skip('reference type test2', () => {
+test.skip('reference type test22', () => {
     let user: UserType2 = {
         name: 'Dima',
         hair: 32,
@@ -837,7 +818,7 @@ test.skip('reference type test2', () => {
     expect(user.hair).toBe(32)
     expect(newUser.address).toEqual(user.address)
 })
-test.skip('change address2', () => {
+test.skip('change address22', () => {
     let user: UserWithLaptopType3 = {
         name: 'Dima',
         hair: 32,
@@ -858,7 +839,7 @@ test.skip('change address2', () => {
     expect(user.address).not.toBe(newUser.address)
     expect(newUser.address.city).toBe('Kiev')
 })
-test.skip('upgrade laptop to macbook2', () => {
+test.skip('upgrade laptop to macbook22', () => {
     let user: UserWithLaptopType3 = {
         name: 'Dima',
         hair: 32,
@@ -958,78 +939,14 @@ test('average value', () => {
 
 })
 
-=======
-  users2 = {
-    "21": { id: 21, name: "Dima" },
-    "44": { id: 44, name: "Vasa" },
-    "2": { id: 2, name: "Valera" },
-  };
-});
-test.skip("123", () => {
+test.skip("1232", () => {
   users2["2"].name = "Test";
 
   expect(users2["2"].name).toBe("Test");
 });
 
-test.skip("reference type test2", () => {
-  let user: UserType2 = {
-    name: "Dima",
-    hair: 32,
-    address: {
-      city: "Minsk",
-    },
-  };
 
-  let newUser = makeHairsstyle(user, 2);
-  expect(newUser.hair).toBe(16);
-  expect(user.hair).toBe(32);
-  expect(newUser.address).toEqual(user.address);
-});
-
-test.skip("change address2", () => {
-  let user: UserWithLaptopType3 = {
-    name: "Dima",
-    hair: 32,
-    address: {
-      city: "Minsk",
-      house: 12,
-    },
-    laptop: {
-      title: "ZenBook",
-    },
-  };
-
-  let newUser = movedUser2(user, "Kiev");
-
-  expect(user.hair).toBe(32);
-  expect(user).not.toBe(newUser);
-  expect(user.laptop).toBe(newUser.laptop);
-  expect(user.address).not.toBe(newUser.address);
-  expect(newUser.address.city).toBe("Kiev");
-});
-
-test.skip("upgrade laptop to macbook2", () => {
-  let user: UserWithLaptopType3 = {
-    name: "Dima",
-    hair: 32,
-    address: {
-      city: "Minsk",
-      house: 12,
-    },
-    laptop: {
-      title: "ZenBook",
-    },
-  };
-
-  let newUserLaptop = upgradedUser2(user, "macbook");
-
-  expect(user).not.toBe(newUserLaptop);
-  expect(user.laptop).not.toBe(newUserLaptop.laptop);
-  expect(user.address).toBe(newUserLaptop.address);
-  expect(newUserLaptop.laptop.title).toBe("macbook");
-});
-
-test.skip("add new books to user", () => {
+test.skip("add new books to user2", () => {
   let user: UserWithLaptopType3 & UserBooksType2 = {
     name: "Dima",
     hair: 32,
@@ -1053,7 +970,7 @@ test.skip("add new books to user", () => {
   expect(user.books.length).toBe(3);
 });
 
-test.skip("correct task should be removed", () => {
+test.skip("correct task should be removed2", () => {
   let taskID1 = v1();
   let taskID2 = v1();
 
@@ -1070,7 +987,7 @@ test.skip("correct task should be removed", () => {
   expect(endState[0].id).toBe(taskID2);
 });
 
-test.skip("correct todolist should be added", () => {
+test.skip("correct todolist should be added2", () => {
   let taskID1 = v1();
   let taskID2 = v1();
 
@@ -1091,4 +1008,4 @@ test.skip("correct todolist should be added", () => {
 });
 
 test("", () => {});
->>>>>>> b8c0aaa1eaddaf4c00fcbf49041425f3edd9d62b
+

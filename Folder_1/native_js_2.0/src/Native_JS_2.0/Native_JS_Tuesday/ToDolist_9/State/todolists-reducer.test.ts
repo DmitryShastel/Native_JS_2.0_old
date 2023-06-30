@@ -18,10 +18,9 @@ test.skip('correct todolist should be removed', () => {
 
 
     expect(endState.length).toBe(1);
-<<<<<<< HEAD
+
     expect(endState[0].id).toBe(todolistId2);
-});
-=======
+
     expect(endState[0].id).toBe(todolistId2);    
 });
 
@@ -81,5 +80,4 @@ test('correct filter of todolist should be changed', () => {
     expect(endState.length).toBe(2);
     expect(endState[0].filter).toBe('all');   
     expect(endState[1].filter).toBe(newFilter); 
-}) ;
->>>>>>> b8c0aaa1eaddaf4c00fcbf49041425f3edd9d62b
+})
