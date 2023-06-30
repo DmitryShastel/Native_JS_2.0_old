@@ -3,21 +3,26 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import MenuIcon from '@material-ui/icons/Menu';
 
 export const Hearer = () => {
+
+    const styles = {
+        iconButton: {
+            marginLeft: '1%',
+            marginRight: '80%'
+        }
+    }
+
+
     return (
-        <div className={'margin: 0'}>
-            <AppBar position="static">
-                <Toolbar>
-                    <IconButton edge="start"  color="inherit" aria-label="menu">
+        <div>
+            <AppBar position="static" color="default" elevation={0}>
+                <Toolbar >
+                    <IconButton edge="start" color="inherit"  aria-label="menu" style={styles.iconButton}>
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6">
-                        News
-                    </Typography>
-                    <Button color="inherit">Login</Button>
+                    <Typography variant="h6" color="black">Pre-junior</Typography>
                 </Toolbar>
             </AppBar>
         </div>
