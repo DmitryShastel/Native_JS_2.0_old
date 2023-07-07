@@ -1,9 +1,10 @@
 import React from 'react';
 
-export const PreJunior = () => {
+export const JuniorPlus = () => {
     return (
         <div>
-            <h2>Pre-junior</h2>
+            <h2>JuniorPlus</h2>
+
         </div>
     );
 };

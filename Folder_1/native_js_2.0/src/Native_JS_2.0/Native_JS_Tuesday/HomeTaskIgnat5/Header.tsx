@@ -6,6 +6,9 @@ import Typography from "@mui/material/Typography";
 import MenuIcon from '@material-ui/icons/Menu';
 import {Drawer, List, ListItem, ListItemText} from "@mui/material";
 import CloseIcon from '@material-ui/icons/Close';
+import {NavLink, NavLinkProps} from "react-router-dom";
+import {PATH} from "./Routes";
+
 
 export const Header = () => {
 
@@ -47,10 +50,16 @@ export const Header = () => {
         },
         listItem: {
             cursor: 'pointer',
-            '&:active': {
+            // '&:active': {
+            //     color: '#ADD8E6',
+            // },
+            '&:hover': {
                 color: '#ADD8E6',
             },
-        }
+        },
+        activeLink: {
+            color: '#ADD8E6',
+        },
     }
 
 
@@ -80,12 +89,22 @@ export const Header = () => {
                             <ListItem sx={styles.prentItem}>
                                 <ListItemText sx={styles.firstListItem} primary='Pre-junior'/>
                             </ListItem>
+
                             <ListItem sx={styles.listItem}>
-                                <ListItemText primary='Junior'/>
+                                <NavLink to={PATH.JUNIOR}
+                                         onClick={handleDrawerClose}>
+                                    <ListItemText primary='Junior'/>
+                                </NavLink>
                             </ListItem>
+
                             <ListItem sx={styles.listItem}>
-                                <ListItemText primary='Junior PLUS'/>
+                                <NavLink to={PATH.JUNIOR_PLUS}
+                                         onClick={handleDrawerClose}>
+                                    <ListItemText primary='Junior PLUS'/>
+                                </NavLink>
                             </ListItem>
+
+
                         </List>
                     </div>
                 </div>
