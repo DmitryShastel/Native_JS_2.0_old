@@ -1,12 +1,19 @@
 import React from 'react';
-import {Hearer} from "./Hearer";
+import {Header} from "./Header";
 import {Routes} from "./Routes";
+import {HashRouter} from "react-router-dom";
 
 export const Hw5 = () => {
     return (
         <div>
-            <Hearer/>
-            <Routes/>
+
+            <HashRouter>
+
+                <Header/>
+                <Routes/>
+
+            </HashRouter>
+
         </div>
 
     );

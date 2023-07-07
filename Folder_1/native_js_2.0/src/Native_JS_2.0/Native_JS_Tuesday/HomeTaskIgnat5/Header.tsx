@@ -5,7 +5,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import MenuIcon from '@material-ui/icons/Menu';
 
-export const Hearer = () => {
+export const Header = () => {
 
     const styles = {
         iconButton: {
