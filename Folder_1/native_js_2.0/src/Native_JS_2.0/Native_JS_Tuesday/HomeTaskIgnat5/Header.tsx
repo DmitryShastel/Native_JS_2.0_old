@@ -6,21 +6,25 @@ import Typography from "@mui/material/Typography";
 import MenuIcon from '@material-ui/icons/Menu';
 import {Drawer, List, ListItem, ListItemText} from "@mui/material";
 import CloseIcon from '@material-ui/icons/Close';
-import {NavLink, NavLinkProps} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import {PATH} from "./Routes";
+import s from './Pages/Pages.module.css'
 
 
 export const Header = () => {
 
-    // Состояние для открытия/закрытия бокового меню
     const [open, setOpen] = useState(false)
+    const [title, setTitle] = useState('Menu')
 
     const handleDrawerClose = () => {
         setOpen(false)
     }
-
     const handleDrawerOpen = () => {
         setOpen(true)
+    }
+    const handleClick = (title: string) => {
+        setTitle(title);
+        //handleDrawerClose();
     }
 
     const styles = {
@@ -29,8 +33,9 @@ export const Header = () => {
         },
         list: {
             width: 250,
-            paddingTop: 35,
+            paddingTop: 25,
             paddingLeft: 25,
+            marginBottom: 2,
             color: 'black',
         },
 
@@ -39,20 +44,22 @@ export const Header = () => {
             top: '1%',
             right: '1%',
         },
+
         firstListItem: {
             color: 'blue',
             borderBottom: '1px solid #ADD8E6',
-            cursor: 'pointer',
+            cursor: 'context-menu',
         },
-        prentItem: {
+        menuItem: {
             width: 'fit-content',
             alignSelf: 'flex-start',
         },
         listItem: {
             cursor: 'pointer',
-            // '&:active': {
-            //     color: '#ADD8E6',
-            // },
+            color: 'black',
+            '&:active': {
+                color: '#ADD8E6',
+            },
             '&:hover': {
                 color: '#ADD8E6',
             },
@@ -63,6 +70,7 @@ export const Header = () => {
     }
 
 
+
     return (
         <div>
             <AppBar position="static" color="default" elevation={0}>
@@ -71,7 +79,7 @@ export const Header = () => {
                                 onClick={handleDrawerOpen}>
                         <MenuIcon/>
                     </IconButton>
-                    <Typography variant="h6" color="black">Pre-junior</Typography>
+                    <Typography variant="h6" color="black">{title}</Typography>
                 </Toolbar>
             </AppBar>
 
@@ -85,25 +93,32 @@ export const Header = () => {
 
                     <div style={styles.list} role='presentation'
                          onKeyDown={handleDrawerClose}>
-                        <List>
-                            <ListItem sx={styles.prentItem}>
-                                <ListItemText sx={styles.firstListItem} primary='Pre-junior'/>
+                        <List >
+                            <ListItem style={styles.menuItem}>
+                                <ListItemText sx={styles.firstListItem} primary='Menu'/>
                             </ListItem>
 
-                            <ListItem sx={styles.listItem}>
-                                <NavLink to={PATH.JUNIOR}
-                                         onClick={handleDrawerClose}>
+
+                            <ListItem >
+                                <NavLink className={s.listItem} to={PATH.PRE_JUNIOR}
+                                         onClick={() => handleClick('Pre-junior')}>
+                                    <ListItemText primary='Pre-junior'/>
+                                </NavLink>
+                            </ListItem>
+
+                            <ListItem >
+                                <NavLink className={s.listItem} to={PATH.JUNIOR}
+                                         onClick={() => handleClick('Junior')}>
                                     <ListItemText primary='Junior'/>
                                 </NavLink>
                             </ListItem>
 
-                            <ListItem sx={styles.listItem}>
-                                <NavLink to={PATH.JUNIOR_PLUS}
-                                         onClick={handleDrawerClose}>
+                            <ListItem >
+                                <NavLink className={s.listItem} to={PATH.JUNIOR_PLUS}
+                                         onClick={() => handleClick('Junior PLUS')}>
                                     <ListItemText primary='Junior PLUS'/>
                                 </NavLink>
                             </ListItem>
-
 
                         </List>
                     </div>

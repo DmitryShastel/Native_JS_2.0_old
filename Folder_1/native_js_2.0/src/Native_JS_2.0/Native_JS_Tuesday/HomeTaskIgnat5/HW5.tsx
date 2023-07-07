@@ -1,15 +1,15 @@
 import React from 'react';
 import {Header} from "./Header";
 import {NavbarRoutes} from "./Routes";
-import {HashRouter} from "react-router-dom";
+import {BrowserRouter} from "react-router-dom";
 
 export const Hw5 = () => {
     return (
         <div>
-            <HashRouter>
+            <BrowserRouter>
                 <Header/>
                 <NavbarRoutes/>
-            </HashRouter>
+            </BrowserRouter>
         </div>
 
     );

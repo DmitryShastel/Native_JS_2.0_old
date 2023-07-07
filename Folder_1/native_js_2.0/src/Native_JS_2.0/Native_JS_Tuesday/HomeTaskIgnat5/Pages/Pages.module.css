@@ -1,0 +1,23 @@
+.listItem {
+    text-decoration: none;
+    color: black;
+
+}
+
+nav:hover {
+    color: #ADD8E6
+}
+
+
+/*&*/
+/*:active {*/
+/*    color: #ADD8E6;*/
+/*}*/
+
+
+/*&:hover*/
+/* {*/
+/*    color: #ADD8E6;*/
+/*}*/
+
+
