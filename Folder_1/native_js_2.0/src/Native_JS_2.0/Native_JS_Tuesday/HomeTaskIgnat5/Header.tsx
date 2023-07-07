@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -6,6 +6,8 @@ import Typography from "@mui/material/Typography";
 import MenuIcon from '@material-ui/icons/Menu';
 
 export const Header = () => {
+
+    const [open, setOpen] = useState(false)
 
     const styles = {
         iconButton: {
