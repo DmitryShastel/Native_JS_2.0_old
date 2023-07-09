@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0afec1fa-fd71-4a39-b1ca-a70ddeddead8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat5/Pages/Error.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat5/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat5/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat5/Pages/Error404.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat5/Pages/Error404.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat5/Pages/Pages.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat5/Pages/Pages.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat5/Routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat5/Routes.tsx" afterDir="false" />
     </list>
@@ -44,7 +46,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "jsx.switch.disabled": "true",
-    "last_opened_file_path": "D:/dev/Incubator_2.0/Native_JS_2.0/Folder_1/native_js_2.0/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat5/Pages",
+    "last_opened_file_path": "C:/incubator/Incubator_2.0/Native_JS_2.0/Folder_1/native_js_2.0/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat5/Pages",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -59,11 +61,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\incubator\Incubator_2.0\Native_JS_2.0\Folder_1\native_js_2.0\src\Native_JS_2.0\Native_JS_Tuesday\HomeTaskIgnat5\Pages" />
       <recent name="D:\dev\Incubator_2.0\Native_JS_2.0\Folder_1\native_js_2.0\src\Native_JS_2.0\Native_JS_Tuesday\HomeTaskIgnat5\Pages" />
       <recent name="C:\incubator\Incubator_2.0\Native_JS_2.0\Folder_1\native_js_2.0\src\Native_JS_2.0\Native_JS_Tuesday\ToDolist_8" />
       <recent name="C:\incubator\Incubator_2.0\Native_JS_2.0\Folder_1\native_js_2.0\src\Native_JS_2.0\Native_JS_Tuesday" />
       <recent name="C:\incubator\Incubator_2.0\Native_JS_2.0\Folder_1\native_js_2.0\src\Native_JS_2.0\Native_JS_Tuesday\ToDoList_6" />
-      <recent name="C:\incubator\Incubator_2.0\Native_JS_2.0\Folder_1\native_js_2.0\src\Native_JS_2.0\Native_JS_Monday\Counter" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\incubator\Incubator_2.0\Native_JS_2.0\Folder_1\native_js_2.0\src\Native_JS_2.0\Native_JS_Tuesday\ToDolist_8" />
@@ -209,7 +211,7 @@
       <workItem from="1687957675690" duration="2588000" />
       <workItem from="1688125183067" duration="7401000" />
       <workItem from="1688709156967" duration="24616000" />
-      <workItem from="1688828195731" duration="9897000" />
+      <workItem from="1688828195731" duration="19957000" />
     </task>
     <servers />
   </component>

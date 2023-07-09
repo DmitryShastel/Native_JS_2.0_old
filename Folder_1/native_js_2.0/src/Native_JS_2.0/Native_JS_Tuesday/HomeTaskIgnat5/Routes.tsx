@@ -15,7 +15,6 @@ export const PATH = {
 }
 
 
-
 export const NavbarRoutes = () => {
 
     const location = useLocation()

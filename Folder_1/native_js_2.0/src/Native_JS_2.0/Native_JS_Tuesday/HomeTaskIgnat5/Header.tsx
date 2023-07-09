@@ -90,7 +90,7 @@ export const Header = () => {
 
     return (
         <div>
-            <AppBar position="static" color="default" elevation={0}>
+            <AppBar position="static" color="default" elevation={1}>
                 <Toolbar>
                     <IconButton edge="start" color="inherit" aria-label="menu" style={styles.iconButton}
                                 onClick={handleDrawerOpen}>
@@ -143,6 +143,7 @@ export const Header = () => {
                     </div>
                 </div>
             </Drawer>
+            {/*<div className={s.homeStyle}></div>*/}
 
         </div>
     );

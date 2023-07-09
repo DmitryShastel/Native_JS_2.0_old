@@ -12,7 +12,6 @@
     text-decoration: none;
 }
 
-/*.drawer {*/
-/*    width: 250px;*/
-/*    transition-duration:  3s ;*/
-/*}*/
+.homeStyle {
+    background: greenyellow;
+}
