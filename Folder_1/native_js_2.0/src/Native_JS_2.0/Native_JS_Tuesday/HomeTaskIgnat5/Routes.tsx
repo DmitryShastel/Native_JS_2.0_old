@@ -5,13 +5,14 @@ import {JuniorPlus} from "./Pages/JuniorPlus";
 import {Error404} from "./Pages/Error404";
 import {PreJunior} from "./Pages/PreJunior";
 import {HomePage} from "./Pages/HomePage";
+import {Header} from "./Header";
 
 
 export const PATH = {
     PRE_JUNIOR: '/pre-junior',
     JUNIOR: '/junior',
     JUNIOR_PLUS: '/junior-plus',
-    HOME_PAGE: '/localhost:3000',
+    HOME_PAGE: '/',
 }
 
 
