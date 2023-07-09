@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -6,12 +6,13 @@ import Typography from "@mui/material/Typography";
 import MenuIcon from '@material-ui/icons/Menu';
 import {Drawer, List, ListItem, ListItemText} from "@mui/material";
 import CloseIcon from '@material-ui/icons/Close';
-import {NavLink} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 import {PATH} from "./Routes";
 import s from './Pages/Pages.module.css'
 
 
 export const Header = () => {
+    const location = useLocation()
 
     const [open, setOpen] = useState(false)
     const [title, setTitle] = useState('Menu')
@@ -24,8 +25,26 @@ export const Header = () => {
     }
     const handleClick = (title: string) => {
         setTitle(title);
-        //handleDrawerClose();
+        handleDrawerClose();
     }
+
+
+    useEffect(() => {
+        switch (location.pathname) {
+            case PATH.PRE_JUNIOR:
+                setTitle('Pre-junior');
+                break;
+            case PATH.JUNIOR:
+                setTitle('Junior')
+                break;
+            case PATH.JUNIOR_PLUS:
+                setTitle('Junior PLUS')
+                break;
+            default:
+                setTitle('Menu');
+                break;
+        }
+    }, [location])
 
     const styles = {
         iconButton: {
@@ -64,11 +83,9 @@ export const Header = () => {
                 color: '#ADD8E6',
             },
         },
-        activeLink: {
-            color: '#ADD8E6',
-        },
-    }
 
+
+    }
 
 
     return (
@@ -86,35 +103,37 @@ export const Header = () => {
             <Drawer anchor='left' open={open} onClose={handleDrawerClose}>
 
                 <div>
-
                     <IconButton style={styles.closeButton} onClick={handleDrawerClose} onKeyDown={handleDrawerClose}>
                         <CloseIcon/>
                     </IconButton>
 
                     <div style={styles.list} role='presentation'
                          onKeyDown={handleDrawerClose}>
-                        <List >
+                        <List>
                             <ListItem style={styles.menuItem}>
                                 <ListItemText sx={styles.firstListItem} primary='Menu'/>
                             </ListItem>
 
 
-                            <ListItem >
-                                <NavLink className={s.listItem} to={PATH.PRE_JUNIOR}
+                            <ListItem>
+                                <NavLink className={navData => navData.isActive ? s.activeLink : s.listItem}
+                                         to={PATH.PRE_JUNIOR}
                                          onClick={() => handleClick('Pre-junior')}>
                                     <ListItemText primary='Pre-junior'/>
                                 </NavLink>
                             </ListItem>
 
-                            <ListItem >
-                                <NavLink className={s.listItem} to={PATH.JUNIOR}
+                            <ListItem>
+                                <NavLink className={navData => navData.isActive ? s.activeLink : s.listItem}
+                                         to={PATH.JUNIOR}
                                          onClick={() => handleClick('Junior')}>
                                     <ListItemText primary='Junior'/>
                                 </NavLink>
                             </ListItem>
 
-                            <ListItem >
-                                <NavLink className={s.listItem} to={PATH.JUNIOR_PLUS}
+                            <ListItem>
+                                <NavLink className={navData => navData.isActive ? s.activeLink : s.listItem}
+                                         to={PATH.JUNIOR_PLUS}
                                          onClick={() => handleClick('Junior PLUS')}>
                                     <ListItemText primary='Junior PLUS'/>
                                 </NavLink>

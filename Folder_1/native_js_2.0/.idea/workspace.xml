@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0afec1fa-fd71-4a39-b1ca-a70ddeddead8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat5/Pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat5/Pages/HomePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat5/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat5/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat5/Pages/Pages.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat5/Pages/Pages.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat5/Routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat5/Routes.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -208,7 +209,7 @@
       <workItem from="1687957675690" duration="2588000" />
       <workItem from="1688125183067" duration="7401000" />
       <workItem from="1688709156967" duration="24616000" />
-      <workItem from="1688828195731" duration="3661000" />
+      <workItem from="1688828195731" duration="9897000" />
     </task>
     <servers />
   </component>

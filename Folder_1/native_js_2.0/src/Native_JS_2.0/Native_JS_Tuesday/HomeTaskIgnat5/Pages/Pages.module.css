@@ -1,23 +1,18 @@
 .listItem {
     text-decoration: none;
     color: black;
-
 }
 
-nav:hover {
+.listItem:hover {
     color: #ADD8E6
 }
 
+.activeLink {
+    color: #ADD8E6;
+    text-decoration: none;
+}
 
-/*&*/
-/*:active {*/
-/*    color: #ADD8E6;*/
+/*.drawer {*/
+/*    width: 250px;*/
+/*    transition-duration:  3s ;*/
 /*}*/
-
-
-/*&:hover*/
-/* {*/
-/*    color: #ADD8E6;*/
-/*}*/
-
-

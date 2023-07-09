@@ -5,7 +5,6 @@ import {JuniorPlus} from "./Pages/JuniorPlus";
 import {Error404} from "./Pages/Error404";
 import {PreJunior} from "./Pages/PreJunior";
 import {HomePage} from "./Pages/HomePage";
-import {Header} from "./Header";
 
 
 export const PATH = {
@@ -14,6 +13,7 @@ export const PATH = {
     JUNIOR_PLUS: '/junior-plus',
     HOME_PAGE: '/',
 }
+
 
 
 export const NavbarRoutes = () => {
