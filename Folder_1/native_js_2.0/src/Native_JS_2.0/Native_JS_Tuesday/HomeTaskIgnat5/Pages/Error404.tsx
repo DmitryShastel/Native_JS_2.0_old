@@ -1,7 +1,8 @@
 import React from 'react';
 import {Grid} from "@material-ui/core";
 import s from "./Error.module.css"
-import { Button } from '@mui/material';
+import {Button} from '@mui/material';
+import {Link} from "react-router-dom";
 
 export const Error404 = () => {
 
@@ -17,8 +18,10 @@ export const Error404 = () => {
                 <p className={s.subtitle}>There isn't a GitHub Pages site here.</p>
                 <img src={imgSrc} alt='404 error' className={s.image}/>
             </Grid>
-            <Grid item >
-                <Button className={s.button} variant="contained" color="error">Back to home page</Button>
+            <Grid item>
+                <Link to="/">
+                    <Button className={s.button} variant="contained" color="error">Back to home page</Button>
+                </Link>
             </Grid>
         </Grid>
     );
