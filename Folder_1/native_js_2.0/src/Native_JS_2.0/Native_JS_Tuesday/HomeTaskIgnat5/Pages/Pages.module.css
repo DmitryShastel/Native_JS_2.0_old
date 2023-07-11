@@ -1,23 +1,17 @@
 .listItem {
     text-decoration: none;
     color: black;
-
 }
 
-nav:hover {
+.listItem:hover {
     color: #ADD8E6
 }
 
+.activeLink {
+    color: #ADD8E6;
+    text-decoration: none;
+}
 
-/*&*/
-/*:active {*/
-/*    color: #ADD8E6;*/
-/*}*/
-
-
-/*&:hover*/
-/* {*/
-/*    color: #ADD8E6;*/
-/*}*/
-
-
+.homeStyle {
+    background: greenyellow;
+}

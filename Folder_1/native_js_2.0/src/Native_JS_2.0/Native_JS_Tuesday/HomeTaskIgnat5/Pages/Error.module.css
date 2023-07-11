@@ -1,0 +1,22 @@
+.container {
+    height: 80vh;
+    /*position: relative;*/
+    display: grid !important;
+    place-items: center;
+}
+
+.title {
+    font-size: 5rem;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 2rem;
+    margin-top: -5rem;
+}
+
+.image {
+    max-width: 10%;
+    height: auto;
+    margin-left: 45%;
+}
