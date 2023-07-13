@@ -26,5 +26,3 @@ export const Error404 = () => {
         </Grid>
     );
 };
-
-
