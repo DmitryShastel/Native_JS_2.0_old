@@ -16,7 +16,7 @@ export function HW6() {
 
     return (
         <div>
-            <hr/>
+
             homeworks 6
             <div>
                 <SuperEditableSpan

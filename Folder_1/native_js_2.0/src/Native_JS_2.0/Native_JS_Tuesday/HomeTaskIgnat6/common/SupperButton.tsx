@@ -8,6 +8,7 @@ type SuperButtonPropsType = DefaultButtonPropsType & {
     red?: boolean
 }
 
+//импортируем из hw2
 export const SuperButton: React.FC<SuperButtonPropsType> = (
     {
         red, className,
