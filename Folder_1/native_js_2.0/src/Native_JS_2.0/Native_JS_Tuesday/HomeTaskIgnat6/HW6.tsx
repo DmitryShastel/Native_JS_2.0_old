@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {SuperEditableSpan} from './common/SuperEditableSpanType'
 import {SuperButton} from './common/SupperButton'
-import {saveState} from './localStorage/localStorage'
+import {restoreState, saveState} from './localStorage/localStorage'
 
 
 export function HW6() {
@@ -11,7 +11,12 @@ export function HW6() {
         saveState<string>('editable-span-value', value)
     }
     const restore = () => {
-        // setValue()
+        setValue(restoreState<string>('editable-span-value', ''))
+
+        // const restore = () => {
+        //     const savedValue = restoreState<string>('editable-span-value')
+        //     setValue(savedValue || '')
+        // }
     }
 
     return (
@@ -30,3 +35,4 @@ export function HW6() {
         </div>
     )
 }
+
