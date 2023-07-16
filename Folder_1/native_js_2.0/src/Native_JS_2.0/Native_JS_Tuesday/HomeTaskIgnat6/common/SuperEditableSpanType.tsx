@@ -29,25 +29,33 @@ export const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
     }
 ) => {
     const [editMode, setEditMode] = useState<boolean>(false)
+    const [showIcon, setShowIcon] = useState<boolean>(true)
     const {children, onDoubleClick, className, ...restSpanProps} = spanProps || {}
 
     const onEnterCallback = () => {
         setEditMode(false) // выключить editMode при нажатии Enter
+        setShowIcon(true)
         onEnter && onEnter()
     }
     const onBlurCallback = (e: React.FocusEvent<HTMLInputElement>) => {
         setEditMode(false) // выключить editMode при нажатии за пределами инпута
+        setShowIcon(true)
         onBlur && onBlur(e)
     }
     const onDoubleClickCallBack = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
         setEditMode(true) // включить editMode при двойном клике
         onDoubleClick && onDoubleClick(e)
+        setShowIcon(false)
     }
 
     const spanClassName = `${s.input ? s.input : ""} ${className}`
 
     return (
-        <>
+        <div className={s.inputContainer}>
+            {showIcon &&
+                <img className={s.inputIcon} src="https://cdn-icons-png.flaticon.com/128/4277/4277132.png" alt="Icon"/>
+            }
+
             {editMode
                 ? (
                     <SuperInputText
@@ -69,6 +77,6 @@ export const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                     </span>
                 )
             }
-        </>
+        </div>
     )
 }

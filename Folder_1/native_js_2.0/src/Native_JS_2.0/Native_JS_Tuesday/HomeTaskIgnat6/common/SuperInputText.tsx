@@ -49,6 +49,7 @@ export const SuperInputText: React.FC<SuperInputTextPropsType> = (
                 onChange={onChangeCallback}
                 onKeyPress={onKeyPressCallback}
                 className={finalInputClassName}
+                style={{color: 'black'}}
 
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
