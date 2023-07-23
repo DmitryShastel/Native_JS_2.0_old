@@ -2,6 +2,7 @@ import React, {DetailedHTMLProps, InputHTMLAttributes, HTMLAttributes, useState}
 import {SuperInputText} from './SuperInputText'
 import s from "./SuperInput.module.css";
 
+
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 // тип пропсов обычного спана
@@ -32,6 +33,8 @@ export const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
     const [showIcon, setShowIcon] = useState<boolean>(true)
     const {children, onDoubleClick, className, ...restSpanProps} = spanProps || {}
 
+
+
     const onEnterCallback = () => {
         setEditMode(false) // выключить editMode при нажатии Enter
         setShowIcon(true)
@@ -48,7 +51,9 @@ export const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
         setShowIcon(false)
     }
 
-    const spanClassName = `${s.input ? s.input : ""} ${className}`
+    const spanClassName = `${s.input ? s.input : ""} ${className}`;
+    // const spanClassName = `${s.input ? s.input : ""} ${className}`;
+
 
     return (
         <div className={s.inputContainer}>
@@ -63,13 +68,13 @@ export const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                         onBlur={onBlurCallback}
                         onEnter={onEnterCallback}
 
+
                         {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
                     />
                 ) : (
                     <span
                         onDoubleClick={onDoubleClickCallBack}
                         className={spanClassName}
-
                         {...restSpanProps}
                     >
                         {/*если нет захардкодженного текста для спана, то значение инпута*/}

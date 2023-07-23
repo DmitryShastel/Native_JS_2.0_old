@@ -51,6 +51,7 @@ export const SuperInputText: React.FC<SuperInputTextPropsType> = (
                 className={finalInputClassName}
                 style={{color: 'black'}}
 
+
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
             {error && <span className={finalSpanClassName}>{error}</span>}

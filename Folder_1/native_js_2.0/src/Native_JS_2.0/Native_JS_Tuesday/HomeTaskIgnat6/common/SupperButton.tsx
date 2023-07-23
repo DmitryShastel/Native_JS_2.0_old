@@ -16,15 +16,19 @@ export const SuperButton: React.FC<SuperButtonPropsType> = (
         ...restProps// все остальные пропсы попадут в объект restProps, там же будет children
     }
 ) => {
+
     const finalClassName = `${red ? s.red : s.default} ${className ? className : ""}`;
 
+
     return (
-        <Button variant="outlined" color="primary">
-            {/*className={finalClassName}*/}
-            {/*// отдаём кнопке остальные пропсы если они есть (children там внутри)*/}
-            <div>{restProps.children}</div>
+        <div>
+            <Button variant="outlined" color="primary" onClick={restProps.onClick}>
 
+                {/*className={finalClassName}*/}
+                {/*// отдаём кнопке остальные пропсы если они есть (children там внутри)*/}
+                <div>{restProps.children}</div>
 
-        </Button>
+            </Button>
+        </div>
     );
 }

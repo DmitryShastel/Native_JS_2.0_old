@@ -6,6 +6,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
 
+
 export function HW6() {
     const [value, setValue] = useState<string>('')
 
@@ -14,12 +15,8 @@ export function HW6() {
     }
     const restore = () => {
         setValue(restoreState<string>('editable-span-value', ''))
-
-        // const restore = () => {
-        //     const savedValue = restoreState<string>('editable-span-value')
-        //     setValue(savedValue || '')
-        // }
     }
+
 
     return (
 
@@ -37,7 +34,7 @@ export function HW6() {
 
             </Grid>
 
-            <Grid item container direction="row" justifyContent="left" >
+            <Grid item container direction="row" justifyContent="left">
 
                 <Grid item paddingRight='10px'>
                     <SuperButton onClick={save}>save</SuperButton>
@@ -51,4 +48,3 @@ export function HW6() {
 
     )
 }
-
