@@ -3,7 +3,7 @@ import {Header} from "./Header";
 import {NavbarRoutes} from "./Routes";
 import {BrowserRouter} from "react-router-dom";
 
-export const Hw5 = () => {
+export const HW5 = () => {
     return (
         <div>
             <BrowserRouter>

@@ -1,7 +1,10 @@
 import React, {useState} from 'react'
 import {SuperEditableSpan} from './common/SuperEditableSpanType'
 import {SuperButton} from './common/SupperButton'
-import {saveState} from './localStorage/localStorage'
+import {restoreState, saveState} from './localStorage/localStorage'
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+
 
 
 export function HW6() {
@@ -11,22 +14,37 @@ export function HW6() {
         saveState<string>('editable-span-value', value)
     }
     const restore = () => {
-        // setValue()
+        setValue(restoreState<string>('editable-span-value', ''))
     }
 
+
     return (
-        <div>
-            <hr/>
-            homeworks 6
-            <div>
+
+        <Grid container spacing={2} direction="column" margin='5%'>
+            <Grid item>
+                <Typography variant="h5">Homework №6</Typography>
+            </Grid>
+
+            <Grid item>
                 <SuperEditableSpan
                     value={value}
                     onChangeText={setValue}
                     spanProps={{children: value ? undefined : 'enter text...'}}
                 />
-            </div>
-            <SuperButton onClick={save}>save</SuperButton>
-            <SuperButton onClick={restore}>restore</SuperButton>
-        </div>
+
+            </Grid>
+
+            <Grid item container direction="row" justifyContent="left">
+
+                <Grid item paddingRight='10px'>
+                    <SuperButton onClick={save}>save</SuperButton>
+                </Grid>
+                <Grid item>
+                    <SuperButton onClick={restore}>restore</SuperButton>
+                </Grid>
+            </Grid>
+        </Grid>
+
+
     )
 }

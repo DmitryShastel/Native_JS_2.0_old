@@ -1,12 +1,33 @@
+.inputContainer {
+    display: inline-flex;
+    align-items: center;
+}
+
+.inputIcon {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
 .input {
-color: black
+    color: deepskyblue;
+    font-family: Jazz LET, fantasy;
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    width: 100%;
 }
 
-.errorInput {
-    border: 3px solid lime;
-    background: red;
+.focused {
+    border: 1px solid red;
 }
 
-.error {
-    color: red;
-}
+/*.errorInput {*/
+/*    border: 3px solid lime;*/
+/*    background: red;*/
+/*}*/
+
+/*.error {*/
+/*    color: red;*/
+/*}*/
