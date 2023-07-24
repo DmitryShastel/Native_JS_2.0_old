@@ -13,10 +13,12 @@ let handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSelectedOption(e.currentTarget.value)
 }
 
-
     return (
         <div className={s.parent}>
-           <SuperRadioT/>
+           <SuperRadioT 
+           setSelectedOption={selectedOption}
+           handleChange={handleChange}
+           />
         </div>
     )
 }
