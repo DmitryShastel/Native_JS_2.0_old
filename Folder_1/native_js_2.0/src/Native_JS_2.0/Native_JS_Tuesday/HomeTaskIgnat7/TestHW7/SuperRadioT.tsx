@@ -4,25 +4,39 @@ import React, {
   DetailedHTMLProps,
 } from "react";
 
-
 type SuperRadioTType = {
-    setSelectedOption: string
-    handleChange: (e: ChangeEvent<HTMLInputElement>) => void
-}
+  setSelectedOption: string;
+  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+};
 
 export const SuperRadioT = (props: SuperRadioTType) => {
   return (
     <div>
       <label>
-        <input type="radio" value="option1"  checked={}/>
+        <input
+          type="radio"
+          value="option1"
+          checked={props.setSelectedOption === "option1"}
+          onChange={props.handleChange}
+        />
         Option 1
       </label>
       <label>
-        <input type="radio" value="option2" />
+        <input
+          type="radio"
+          value="option2"
+          checked={props.setSelectedOption === "option2"}
+          onChange={props.handleChange}
+        />
         Option 2
       </label>
       <label>
-        <input type="radio" value="option3" />
+        <input
+          type="radio"
+          value="option3"
+          checked={props.setSelectedOption === "option3"}
+          onChange={props.handleChange}
+        />
         Option 3
       </label>
     </div>
