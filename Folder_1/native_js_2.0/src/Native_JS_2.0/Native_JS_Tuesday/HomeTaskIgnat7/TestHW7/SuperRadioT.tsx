@@ -5,8 +5,8 @@ import React, {
 } from "react";
 
 type SuperRadioTType = {
-  setSelectedOption: string;
-  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  setSelectedOption: any;
+  handleChange: (e: any) => void;
 };
 
 export const SuperRadioT = (props: SuperRadioTType) => {

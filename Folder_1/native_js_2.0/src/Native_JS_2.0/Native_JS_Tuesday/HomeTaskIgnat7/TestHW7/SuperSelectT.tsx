@@ -4,7 +4,10 @@ import React, {
   ChangeEvent,
 } from "react";
 
-type SuperSelectType = {};
+type SuperSelectType = {
+  value: string
+  onChange: (e: any) => void
+};
 
 const options = [
   { label: "1", value: "option1" },
@@ -16,15 +19,13 @@ let mappedOptions = options.map((option) => (
   <option value={option.value}>{option.label}</option>
 ));
 
-export const SuperSelect = () => {
+export const SuperSelect = (props: SuperSelectType) => {
   return (
     <div>
-      <label>
+      <label >
         Select some options
-        <select>{mappedOptions}</select>
+        <select onChange={props.onChange}>{mappedOptions}</select>
       </label>
-
-      <p>Selected </p>
     </div>
   );
 };
