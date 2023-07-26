@@ -5,11 +5,12 @@ import { SuperSelect } from "./SuperSelectT";
 
 export function HW7T() {
   const [selectedOption, setSelectedOption] = useState("");
-  const [value, setValue] = useState<string>("option1");
+  const [value, setValue] = useState("");
 
 
   let handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSelectedOption(e.currentTarget.value);
+    setValue(e.currentTarget.value);
   };
 
   return (
@@ -18,7 +19,7 @@ export function HW7T() {
         setSelectedOption={selectedOption}
         handleChange={handleChange}
       />
-      <SuperSelect value={value} onChange={handleChange} />
+      <SuperSelect value={value} handleChange={handleChange} />
     </div>
   );
 }
