@@ -4,15 +4,17 @@ import React, {
   DetailedHTMLProps,
 } from "react";
 
+
 type SuperRadioTType = {
   setSelectedOption: string;
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  options:any [] 
 };
 
 export const SuperRadioT = (props: SuperRadioTType) => {
-  const radioOptions = [ 1, 2, 3];
+  // const radioOptions = [ 1, 2, 3];
 
-  let mappedRadioOptions = radioOptions.map((option) => (
+  let mappedRadioOptions = props.options.map((option) => (
     <label key={option} >
       <input
         type="radio"
@@ -26,6 +28,21 @@ export const SuperRadioT = (props: SuperRadioTType) => {
 
   return <div>{mappedRadioOptions}</div>;
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 {
   /* <label>
