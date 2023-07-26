@@ -5,21 +5,40 @@ import React, {
 } from "react";
 
 type SuperRadioTType = {
-  setSelectedOption: any;
-  handleChange: (e: any) => void;
+  setSelectedOption: string;
+  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
 export const SuperRadioT = (props: SuperRadioTType) => {
-  return (
-    <div>
-      <label>
+  const radioOptions = [
+    { label: 1, value: "option1" },
+    { label: 2, value: "option2" },
+    { label: 3, value: "option3" },
+  ];
+
+  let mappedRadioOptions = radioOptions.map((option) => (
+    <label key={option.value}>
+      <input
+        type="radio"
+        value={option.value}
+        checked={props.setSelectedOption === option.value}
+        onChange={props.handleChange}
+      />
+      {option.label}
+    </label>
+  ));
+
+  return <div>{mappedRadioOptions}</div>;
+};
+
+{
+  /* <label>
         <input
           type="radio"
           value="option1"
           checked={props.setSelectedOption === "option1"}
           onChange={props.handleChange}
         />
-        Option 1
       </label>
       <label>
         <input
@@ -38,7 +57,5 @@ export const SuperRadioT = (props: SuperRadioTType) => {
           onChange={props.handleChange}
         />
         Option 3
-      </label>
-    </div>
-  );
-};
+      </label> */
+}
