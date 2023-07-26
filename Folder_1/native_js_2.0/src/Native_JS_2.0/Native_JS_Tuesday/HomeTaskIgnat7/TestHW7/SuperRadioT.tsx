@@ -10,21 +10,17 @@ type SuperRadioTType = {
 };
 
 export const SuperRadioT = (props: SuperRadioTType) => {
-  const radioOptions = [
-    { label: 1, value: "option1" },
-    { label: 2, value: "option2" },
-    { label: 3, value: "option3" },
-  ];
+  const radioOptions = [ 1, 2, 3];
 
   let mappedRadioOptions = radioOptions.map((option) => (
-    <label key={option.value}>
+    <label key={option} >
       <input
         type="radio"
-        value={option.value}
-        checked={props.setSelectedOption === option.value}
+        value={option}
+        checked={props.setSelectedOption === option.toString()}
         onChange={props.handleChange}
       />
-      {option.label}
+      {option}
     </label>
   ));
 
@@ -59,3 +55,20 @@ export const SuperRadioT = (props: SuperRadioTType) => {
         Option 3
       </label> */
 }
+
+
+// let mappedRadioOptions = radioOptions.map((option) => (
+//   <label key={option.index}>
+//     <input
+//       type="radio"
+//       value={option.value}
+//       checked={props.setSelectedOption === option.value}
+//       onChange={props.handleChange}
+//     />
+//     {option.label}
+//   </label>
+// ));
+
+// { label: 1, value: "option1" },
+    // { label: 2, value: "option2" },
+    // { label: 3, value: "option3" },
