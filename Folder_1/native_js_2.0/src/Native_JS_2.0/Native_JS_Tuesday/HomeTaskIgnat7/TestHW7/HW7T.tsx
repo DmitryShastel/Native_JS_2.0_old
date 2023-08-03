@@ -1,12 +1,13 @@
-import React, {useState, ChangeEvent} from "react";
+import React, {ChangeEvent, useState} from "react";
 import s from "./SuperHW7T.module.css";
 import {SuperRadioT} from "./SuperRadioT";
 import {SuperSelectT} from "./SuperSelectT";
 
-const options = [1, 2, 3];
+const options = ['x', 'y', 'z'];
 
 export function HW7T() {
-    const [selectedOption, setSelectedOption] = useState("");
+    const [selectedOption, setSelectedOption] = useState<any>("");
+
 
     let handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setSelectedOption(e.currentTarget.value);
@@ -21,9 +22,8 @@ export function HW7T() {
             />
             <SuperSelectT
                 options={options}
-                value={selectedOption}
+                // value={selectedOption}
                 handleChange={handleChange}
-
             />
         </div>
     );

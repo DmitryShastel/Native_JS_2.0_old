@@ -2,9 +2,8 @@ import React from "react";
 
 
 type SuperSelectType = {
-    value: string
-    handleChange: (e: any) => void
-    options: any []
+    handleChange: (e: any) => void;
+    options: any [];
 };
 
 
