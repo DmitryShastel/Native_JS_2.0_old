@@ -9,7 +9,7 @@ import { HW7T } from './Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat7/TestHW7/H
 export function App() {
     return (
         <div>
-            <HW7/>
+            <HW5/>
         </div>
 
     );

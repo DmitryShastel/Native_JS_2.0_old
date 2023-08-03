@@ -1,7 +1,5 @@
-import React, {SelectHTMLAttributes, DetailedHTMLProps, ChangeEvent} from 'react'
-import {FormControl, InputLabel,  MenuItem, Select, SelectChangeEvent, SelectProps} from "@mui/material";
-
-
+import React, {ChangeEvent, DetailedHTMLProps, SelectHTMLAttributes} from 'react'
+import {FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, SelectProps} from "@mui/material";
 
 
 type DefaultSelectPropsType = DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>
@@ -31,7 +29,7 @@ export const SuperSelect: React.FC<SuperSelectPropsType> = (
     return (
         <FormControl >
             <InputLabel>{restProps['aria-label']}</InputLabel>
-            <Select  onChange={onChangeCallback} {...restProps  as SelectProps<string>}>
+            <Select onChange={onChangeCallback} {...restProps  as SelectProps<string>}>
                 {mappedOptions}
             </Select>
         </FormControl>

@@ -1,4 +1,5 @@
-import React, {ChangeEvent, InputHTMLAttributes, DetailedHTMLProps} from 'react'
+import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes} from 'react'
+import {Radio} from "@mui/material";
 
 type DefaultRadioPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
@@ -21,10 +22,10 @@ export const SuperRadio: React.FC<SuperRadioPropsType> = (
     }
 
 
-    const mappedOptions: JSX.Element[] = options ? options.map((o:string, i: number) => (
+    const mappedOptions: JSX.Element[] = options ? options.map((o: string, i: number) => (
         <label key={name + '-' + i}>
-            <input
-                type={'radio'}
+            <Radio
+                color='info'
                 value={o}
                 checked={value === o}
                 onChange={onChangeCallback}
@@ -35,7 +36,8 @@ export const SuperRadio: React.FC<SuperRadioPropsType> = (
 
     return (
         <>
-            {mappedOptions}
+            <div>   {mappedOptions}</div>
+
         </>
     )
 }
