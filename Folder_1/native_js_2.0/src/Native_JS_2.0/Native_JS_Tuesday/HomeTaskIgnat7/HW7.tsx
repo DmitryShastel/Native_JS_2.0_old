@@ -6,11 +6,10 @@ import s from "./TestHW7/SuperHW7T.module.css";
 const arr = ['x', 'y', 'z']
 
 export function HW7() {
-    const [value, onChangeOption] = useState(arr)
+    const [value, onChangeOption] = useState<string>(arr[1])
 
     return (
         <div className={s.parent}>
-
             <div>
                 <SuperSelect
                     options={arr}
