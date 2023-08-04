@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import {homeWorkReducer} from "./homeWorkReducer";
 import {SuperButton} from "../HomeTaskIgnat6/common/SupperButton";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
 
 
 const initialPeople = [
@@ -16,10 +18,14 @@ export function HW8() {
     const [people, setPeople] = useState(initialPeople);
 
     const finalPeople = people.map(p => (
-        <div key={p._id}>
-            <span> {p.name}</span>
-            <span> {p.age}</span>
-        </div>
+        <Grid container spacing={2} key={p._id}>
+            <Grid item>
+                <Typography>{p.name}</Typography>
+            </Grid>
+            <Grid item>
+                <Typography>{p.age}</Typography>
+            </Grid>
+        </Grid>
     ))
 
     const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: "sort-up", payload: "up"}))
@@ -27,11 +33,26 @@ export function HW8() {
     const check = () => setPeople(homeWorkReducer(initialPeople, {type: "check", payload: "up"}))
 
     return (
-        <div>
-            {finalPeople}
-            <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-            <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
-            <div><SuperButton onClick={check}>check age</SuperButton></div>
-        </div>
+        <Grid container spacing={2} margin='5%'>
+            <Grid item xs={12}>
+                {finalPeople}
+            </Grid>
+
+            <Grid item>
+                <SuperButton onClick={sortUp}>sort up</SuperButton>
+            </Grid>
+            <Grid item>
+                <SuperButton onClick={sortDown}>sort down</SuperButton>
+            </Grid>
+            <Grid item>
+                <SuperButton onClick={check}>check age</SuperButton>
+            </Grid>
+
+        </Grid>
     );
 }
+
+// {finalPeople}
+// <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
+// <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
+// <div><SuperButton onClick={check}>check age</SuperButton></div>
