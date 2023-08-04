@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="032ec4d1-33a1-4a32-a818-97fc1bd4e3c9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat8/HW8.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat8/HW8.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat8/homeWorkReducer.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat8/homeWorkReducer.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,12 +39,26 @@
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs.jest.jest_package": "C:/incubator/Incubator_2.0/Native_JS_2.0/Folder_1/native_js_2.0/node_modules/react-scripts",
     "nodejs_package_manager_path": "yarn",
     "ts.external.directory.path": "C:\\incubator\\Incubator_2.0\\Native_JS_2.0\\Folder_1\\native_js_2.0\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Jest.sort name up">
+    <configuration name="sort name up" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat8/homeWorkReducer.test.tsx" />
+      <test-names>
+        <test-name value="sort name up" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -57,6 +71,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.sort name up" />
         <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
@@ -69,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1691053293617</updated>
-      <workItem from="1691053301972" duration="21314000" />
+      <workItem from="1691053301972" duration="22233000" />
     </task>
     <servers />
   </component>
