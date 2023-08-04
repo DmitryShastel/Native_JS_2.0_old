@@ -17,7 +17,8 @@ export function HW8() {
 
     const finalPeople = people.map(p => (
         <div key={p._id}>
-            some name, age
+            <span> {p.name}</span>
+            <span> {p.age}</span>
         </div>
     ))
 
