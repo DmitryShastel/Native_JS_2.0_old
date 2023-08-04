@@ -10,7 +10,7 @@ import {HW8} from "./Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat8/HW8";
 export function App() {
     return (
         <div>
-            <HW8/>
+            <HW5/>
         </div>
 
     );
