@@ -1,8 +1,12 @@
 import React from 'react';
 import {homeWorkReducer} from "./homeWorkReducer";
 
-
-let initialState: any[];
+type StateType = {
+    _id: number
+    name: string
+    age: number
+}
+let initialState: StateType[];
 
 beforeEach(() => {
     initialState = [

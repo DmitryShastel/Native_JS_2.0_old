@@ -31,7 +31,7 @@ export function HW8() {
             <div>sort down</div>
 
             check 18
-            
+
         </div>
     );
 }
