@@ -1,4 +1,6 @@
-export const homeWorkReducer = (state: any, action: any): any => {
+import {ActionType, StateType} from "./homeWorkReducer.test";
+
+export const homeWorkReducer = (state: StateType[], action: ActionType): StateType[] => {
     switch (action.type) {
         case "sort": {
 

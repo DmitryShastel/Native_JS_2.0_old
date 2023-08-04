@@ -1,7 +1,12 @@
 import React from 'react';
 import {homeWorkReducer} from "./homeWorkReducer";
 
-type StateType = {
+export type ActionType = {
+    type: string
+    payload: string | number
+}
+
+export type StateType = {
     _id: number
     name: string
     age: number
@@ -23,7 +28,7 @@ test("sort name up", () => {
     const newState = homeWorkReducer(initialState, {type: "sort", payload: "up"});
 
     console.log(newState);
-    expect(newState[0].name).toEqual('Александр');
+    expect(newState[0].name).toBe('Александр');
     expect(newState[1].name).toEqual('Виктор');
     expect(newState[2].name).toEqual('Дмитрий');
     expect(newState[3].name).toEqual('Ирина');
