@@ -8,7 +8,7 @@
 //
 //     /* Что нужно написать вместо XXX, чтобы значение в поле ввода зачищалось?
 //     В качестве ответа укажите строчку целиком.  */
-//     (document.getElementById)
+//     (const inputElement = document.XXX('latvia'))
 // </script>
 
 //2
@@ -21,6 +21,7 @@
 //     /*
 //     Что нужно написать внутри скобок вместо XXX, чтобы значение в поле ввода зачищалось?
 //     */
+//      ('#ball')
 // </script>
 
 //3
@@ -40,7 +41,7 @@
 //     Ответ дайте через пробел.
 //     Пример ответа: firstword secondword
 //     */
-//
+//   (lookButtonElement  click)
 // </script>
 
 //4
@@ -103,7 +104,7 @@
 // }
 //
 //     function yo(){}
-//
+//    (3 раза)
 // </script>
 
 
@@ -120,6 +121,7 @@
 // }
 //
 //     console.log(removeWhitespaces('you are JS developer'))
+//(return)
 // </script>
 // Что минимальное забыли написать внутри функции removeWhitespaces, чтобы в консоли увидеть 'you_are_JS_developer' вместо undefined?
 

@@ -1,53 +1,30 @@
-import React, {
-  SelectHTMLAttributes,
-  DetailedHTMLProps,
-  ChangeEvent,
-} from "react";
+import React from "react";
 
 
 type SuperSelectType = {
+<<<<<<< HEAD
   handleChange: (e: any) => void
   options:any [] 
   value?: any
+=======
+    handleChange: (e: any) => void;
+    options: any [];
+>>>>>>> 37dc46892675173cb4cfb7921e0219b56b56a30d
 };
 
 
-export const SuperSelect = (props: SuperSelectType) => {
+export const SuperSelectT = (props: SuperSelectType) => {
 
-  let mappedSelectOptions = props.options.map((option) => (
-    <option key={option} value={option} >{option}</option>
-  ));
+    let mappedSelectOptions = props.options.map((option) => (
+        <option key={option} value={option}>{option}</option>
+    ));
 
-  return (
-    <div>
-      <label >
-        Select some options
-        <select onChange={props.handleChange}>{mappedSelectOptions}</select>
-      </label>
-    </div>
-  );
+    return (
+        <div>
+            <label>
+                Select some options
+                <select onChange={props.handleChange}>{mappedSelectOptions}</select>
+            </label>
+        </div>
+    );
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// { label: "1", value: "option8" },
-// { label: "2", value: "option22" },
-// { label: "3", value: "option31" },
