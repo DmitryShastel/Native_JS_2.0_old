@@ -1,6 +1,6 @@
 // import {sum} from "../JS_TS_TDD";
 
-import { log } from "console";
+// import { log } from "console";
 
 // links to watch theory
 // https://www.youtube.com/watch?v=6napu-MGQDo&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8&index=47
@@ -809,4 +809,9 @@ import { log } from "console";
 // console.log(dominator())
 
 
-console.log('hello') 
+let person = {
+    'id': 1,
+    'name': 'Alex',
+    'age': 25,
+    'gender': 'male',
+}
