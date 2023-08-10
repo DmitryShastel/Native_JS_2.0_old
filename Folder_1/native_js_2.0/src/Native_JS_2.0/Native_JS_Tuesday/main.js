@@ -1,5 +1,7 @@
 // import {sum} from "../JS_TS_TDD";
 
+import { log } from "console";
+
 // links to watch theory
 // https://www.youtube.com/watch?v=6napu-MGQDo&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8&index=47
 // https://www.youtube.com/watch?v=I8LNJpG60vI&feature=youtu.be
@@ -805,3 +807,6 @@
 // dominator()
 //
 // console.log(dominator())
+
+
+console.log('hello') 

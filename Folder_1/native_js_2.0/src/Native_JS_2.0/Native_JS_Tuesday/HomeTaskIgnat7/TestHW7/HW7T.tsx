@@ -3,27 +3,25 @@ import s from "./SuperHW7T.module.css";
 import { SuperRadioT } from "./SuperRadioT";
 import { SuperSelect } from "./SuperSelectT";
 
- const options = [1, 2, 3];
+const options = [1, 2, 3];
 
 export function HW7T() {
   const [selectedOption, setSelectedOption] = useState("");
-  //const [value, setValue] = useState("");
-
-  let handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setSelectedOption(e.currentTarget.value);
-    // setValue(e.currentTarget.value);
-  };
+  
+const handleRadioChange  = (value: any) => {
+    setSelectedOption(value)
+}
 
   return (
     <div className={s.parent}>
       <SuperRadioT
+        value={selectedOption}
         options={options}
-        setSelectedOption={selectedOption}
-        handleChange={handleChange}
+        handleChange={handleRadioChange}
       />
       <SuperSelect
         value={selectedOption}
-        handleChange={handleChange}
+        handleChange={setSelectedOption}
         options={options}
       />
     </div>

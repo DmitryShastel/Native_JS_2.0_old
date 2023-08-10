@@ -6,9 +6,9 @@ import React, {
 
 
 type SuperSelectType = {
-  value: string
   handleChange: (e: any) => void
   options:any [] 
+  value?: any
 };
 
 

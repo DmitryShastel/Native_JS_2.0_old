@@ -13,13 +13,6 @@ export function HW7() {
             homeworks 7
 
             <div>
-                <SuperSelect
-                    options={arr}
-                    value={value}
-                    onChangeOption={onChangeOption}
-                />
-            </div>
-            <div>
                 <SuperRadio
                     name={'radio'}
                     options={arr}
@@ -27,6 +20,15 @@ export function HW7() {
                     onChangeOption={onChangeOption}
                 />
             </div>
+
+            <div>
+                <SuperSelect
+                    options={arr}
+                    value={value}
+                    onChangeOption={onChangeOption}
+                />
+            </div>
+          
         </div>
     )
 }
