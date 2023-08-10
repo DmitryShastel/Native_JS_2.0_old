@@ -815,3 +815,14 @@ let person = {
     'age': 25,
     'gender': 'male',
 }
+
+console.log(person)
+
+let countFun = (person) => {
+    let currentDate = new Date()
+    let currentYear = currentDate.getFullYear()
+    let yearBorn = currentYear - person['age']
+    return yearBorn
+}
+
+console.log(countFun(person))
