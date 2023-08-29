@@ -805,3 +805,13 @@
 // dominator()
 //
 // console.log(dominator())
+
+
+//Cloning an array
+let vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
+
+function arrayClone(vegetables) {
+    return [...vegetables]
+}
+
+console.log(arrayClone(vegetables))

@@ -117,7 +117,7 @@
 //10
 // <script>
 //     function removeWhitespaces(string) {
-//     string.split(' ').filter(s => s !== '').join('_')
+//     string.split(' ').filter(s => s !== '').join('_')a
 // }
 //
 //     console.log(removeWhitespaces('you are JS developer'))
