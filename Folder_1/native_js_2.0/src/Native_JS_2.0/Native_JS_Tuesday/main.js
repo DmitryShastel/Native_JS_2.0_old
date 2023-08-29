@@ -809,31 +809,18 @@
 // console.log(dominator())
 
 
-<<<<<<< HEAD
+
 //Cloning an array
+// let vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
+//
+// function arrayClone(vegetables) {
+//     return [...vegetables]
+// }
+//
+// console.log(arrayClone(vegetables))
+
+//Converting an array to a string
 let vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
 
-function arrayClone(vegetables) {
-    return [...vegetables]
-}
-
-console.log(arrayClone(vegetables))
-=======
-let person = {
-    'id': 1,
-    'name': 'Alex',
-    'age': 25,
-    'gender': 'male',
-}
-
-console.log(person)
-
-let countFun = (person) => {
-    let currentDate = new Date()
-    let currentYear = currentDate.getFullYear()
-    let yearBorn = currentYear - person['age']
-    return yearBorn
-}
-
-console.log(countFun(person))
->>>>>>> a3b8a0a0f2525de6b1978881135b1063eed0e288
+let newVegetables = vegetables.toString()
+console.log(newVegetables)
