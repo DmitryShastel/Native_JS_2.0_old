@@ -12,16 +12,35 @@ export function HW7() {
     return (
         <Grid container spacing={2} direction="column" margin='5%'>
 
+<<<<<<< HEAD
+            <div>
+                <SuperRadio
+                    name={'radio'}
+=======
             <Grid item>
                 <Typography variant="h5">Homework №7</Typography>
             </Grid>
 
             <Grid item container  direction="row">
                 <SuperSelect
+>>>>>>> 37dc46892675173cb4cfb7921e0219b56b56a30d
                     options={arr}
                     value={value}
                     onChangeOption={onChangeOption}
                 />
+<<<<<<< HEAD
+            </div>
+
+            <div>
+                <SuperSelect
+                    options={arr}
+                    value={value}
+                    onChangeOption={onChangeOption}
+                />
+            </div>
+          
+        </div>
+=======
 
                 <Grid item>
                     <SuperRadio
@@ -33,5 +52,6 @@ export function HW7() {
                 </Grid>
             </Grid>
         </Grid>
+>>>>>>> 37dc46892675173cb4cfb7921e0219b56b56a30d
     )
 }

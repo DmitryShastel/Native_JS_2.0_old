@@ -3,6 +3,32 @@ import s from "./SuperHW7T.module.css";
 import {SuperRadioT} from "./SuperRadioT";
 import {SuperSelectT} from "./SuperSelectT";
 
+<<<<<<< HEAD
+const options = [1, 2, 3];
+
+export function HW7T() {
+  const [selectedOption, setSelectedOption] = useState("");
+  
+const handleRadioChange  = (value: any) => {
+    setSelectedOption(value)
+}
+
+  return (
+    <div className={s.parent}>
+      <SuperRadioT
+        value={selectedOption}
+        options={options}
+        handleChange={handleRadioChange}
+      />
+      <SuperSelect
+        value={selectedOption}
+        handleChange={setSelectedOption}
+        options={options}
+      />
+    </div>
+  );
+}
+=======
 const options = ['x', 'y', 'z'];
 
 //type DefaultSelectPropsType = DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>
@@ -31,3 +57,4 @@ export function HW7T () {
         </div>
     );
 }
+>>>>>>> 37dc46892675173cb4cfb7921e0219b56b56a30d

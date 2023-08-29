@@ -1,5 +1,7 @@
 // import {sum} from "../JS_TS_TDD";
 
+// import { log } from "console";
+
 // links to watch theory
 // https://www.youtube.com/watch?v=6napu-MGQDo&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8&index=47
 // https://www.youtube.com/watch?v=I8LNJpG60vI&feature=youtu.be
@@ -807,6 +809,7 @@
 // console.log(dominator())
 
 
+<<<<<<< HEAD
 //Cloning an array
 let vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
 
@@ -815,3 +818,22 @@ function arrayClone(vegetables) {
 }
 
 console.log(arrayClone(vegetables))
+=======
+let person = {
+    'id': 1,
+    'name': 'Alex',
+    'age': 25,
+    'gender': 'male',
+}
+
+console.log(person)
+
+let countFun = (person) => {
+    let currentDate = new Date()
+    let currentYear = currentDate.getFullYear()
+    let yearBorn = currentYear - person['age']
+    return yearBorn
+}
+
+console.log(countFun(person))
+>>>>>>> a3b8a0a0f2525de6b1978881135b1063eed0e288
