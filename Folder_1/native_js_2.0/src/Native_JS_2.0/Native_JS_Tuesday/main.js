@@ -809,7 +809,6 @@
 // console.log(dominator())
 
 
-
 //Cloning an array
 // let vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
 //
@@ -820,7 +819,29 @@
 // console.log(arrayClone(vegetables))
 
 //Converting an array to a string
-let vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
+// let vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
+//
+// let newVegetables = vegetables.toString()
+// console.log(newVegetables)
 
-let newVegetables = vegetables.toString()
-console.log(newVegetables)
+//Colon between odd numbers
+const input = prompt('Введите число');
+let num = parseInt(input)
+
+let colonOdd = (num) => {
+
+    let numStr = num.toString()
+    let result = ''
+
+    for (let i = 0; i < numStr.length; i++) {
+        result += numStr[i]
+
+        if (parseInt(numStr[i]) % 2 !== 0 && parseInt(numStr[i + 1]) % 2 !== 0 && i !== numStr.length - 1){
+            result += ':'
+        }
+    }
+    return result
+}
+
+let result = colonOdd(num)
+console.log(result)
