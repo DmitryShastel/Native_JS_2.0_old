@@ -846,19 +846,33 @@
 // let result = colonOdd(num)
 // console.log(result)
 
-let changeRegister = (str) => {
-    let newStr = str.split([,])
 
-    let result = newStr.map((e) => {
-        if (e === e.toLowerCase()) {
-            return e.toUpperCase()
-        } else if (e === e.toUpperCase()) {
-            return e.toLowerCase()
-        }
+//Replaces the case of each character with the opposite one
+// let changeRegister = (str) => {
+//     let newStr = str.split([,])
+//
+//     let intermediateResult = newStr.map((e) => {
+//         if (e === e.toLowerCase()) {
+//             return e.toUpperCase()
+//         } else if (e === e.toUpperCase()) {
+//             return e.toLowerCase()
+//         }
+//     })
+//
+//     let result = intermediateResult.join('')
+//     return result
+// }
+//
+// console.log(changeRegister('qAzQaZ')) //QaZqAz
+
+let arr = ["php", "php", "css", "css", "script", "script", "html", "html", "java"];
+
+let removeDuplicates = (arr) => {
+
+    let result = arr.filter((e, index) => {
+      return arr.indexOf(e) === index
     })
-
-    let result2 = result.join('')
-    return result2
+    return result
 }
 
-console.log(changeRegister('qAzQaZ')) //QaZqAz
+console.log(removeDuplicates(["php", "php", "css", "css", "script", "script", "html", "html", "java"]))
