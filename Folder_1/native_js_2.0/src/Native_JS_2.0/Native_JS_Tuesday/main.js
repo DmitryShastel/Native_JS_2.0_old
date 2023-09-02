@@ -852,18 +852,13 @@ let changeRegister = (str) => {
     let result = newStr.map((e) => {
         if (e === e.toLowerCase()) {
             return e.toUpperCase()
+        } else if (e === e.toUpperCase()) {
+            return e.toLowerCase()
         }
     })
 
-
-    return result
+    let result2 = result.join('')
+    return result2
 }
 
-console.log(changeRegister('qaz'))
-
-// for (let i = 0; i < newStr.length; i++){
-//     if (i === i.toLowerCase){
-//         return i.toUpperCase()
-//     }
-//
-// }
+console.log(changeRegister('qAzQaZ')) //QaZqAz
