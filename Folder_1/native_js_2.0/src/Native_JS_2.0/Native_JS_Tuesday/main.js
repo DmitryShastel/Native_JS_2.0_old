@@ -848,7 +848,22 @@
 
 let changeRegister = (str) => {
     let newStr = str.split([,])
-    return newStr
+
+    let result = newStr.map((e) => {
+        if (e === e.toLowerCase()) {
+            return e.toUpperCase()
+        }
+    })
+
+
+    return result
 }
 
 console.log(changeRegister('qaz'))
+
+// for (let i = 0; i < newStr.length; i++){
+//     if (i === i.toLowerCase){
+//         return i.toUpperCase()
+//     }
+//
+// }
