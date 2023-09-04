@@ -879,16 +879,26 @@
 
 //Find leap years
 
-let chooseYears = (startYear , endYear) => {
-    let leapYears = []
+// let chooseYears = (startYear , endYear) => {
+//     let leapYears = []
+//
+//     for(let year = startYear; year <= endYear; year ++){
+//         if((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+//             leapYears.push(year)
+//         }
+//     }
+//     return leapYears
+// }
+//
+// console.log(chooseYears(2000, 2018))
 
-    for(let year = startYear; year <= endYear; year ++){
-        if((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
-            leapYears.push(year)
-        }
-    }
-    return leapYears
+//Display items in random order
+
+let array = [1, 2, 3, 4, 5]
+
+let shuffle = () => {
+    return Math.random() - 0.5
 }
 
-console.log(chooseYears(2000, 2018))
-
+array.sort(shuffle)
+console.log(array)
