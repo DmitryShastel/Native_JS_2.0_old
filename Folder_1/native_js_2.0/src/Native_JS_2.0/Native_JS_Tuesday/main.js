@@ -894,11 +894,22 @@
 
 //Display items in random order
 
-let array = [1, 2, 3, 4, 5]
+// let array = [1, 2, 3, 4, 5]
+//
+// let shuffle = () => {
+//     return Math.random() - 0.5
+// }
+//
+// array.sort(shuffle)
+// console.log(array)
 
-let shuffle = () => {
-    return Math.random() - 0.5
+//Get the first elements of the array
+
+let getFirst = (arr, n) => {
+    let result = arr.slice(0, n);
+    return result
 }
 
-array.sort(shuffle)
-console.log(array)
+let arr = [1, 2, 3, 4, 5]
+
+console.log(getFirst(arr, 3))
