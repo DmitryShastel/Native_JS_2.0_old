@@ -865,14 +865,30 @@
 //
 // console.log(changeRegister('qAzQaZ')) //QaZqAz
 
-let arr = ["php", "php", "css", "css", "script", "script", "html", "html", "java"];
+// let arr = ["php", "php", "css", "css", "script", "script", "html", "html", "java"];
+//
+// let removeDuplicates = (arr) => {
+//
+//     let result = arr.filter((e, index) => {
+//       return arr.indexOf(e) === index
+//     })
+//     return result
+// }
+//
+// console.log(removeDuplicates(["php", "php", "css", "css", "script", "script", "html", "html", "java"]))
 
-let removeDuplicates = (arr) => {
+//Find leap years
 
-    let result = arr.filter((e, index) => {
-      return arr.indexOf(e) === index
-    })
-    return result
+let chooseYears = (startYear , endYear) => {
+    let leapYears = []
+
+    for(let year = startYear; year <= endYear; year ++){
+        if((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+            leapYears.push(year)
+        }
+    }
+    return leapYears
 }
 
-console.log(removeDuplicates(["php", "php", "css", "css", "script", "script", "html", "html", "java"]))
+console.log(chooseYears(2000, 2018))
+
