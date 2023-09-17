@@ -914,11 +914,24 @@
 // console.log(getFirst(arr, 2))
 
 //Get the last elements of the array
-let array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// let array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+//
+// let getLast = (array, n) => {
+//     let result = array.slice(-n)
+//     return result
+// }
+//
+// console.log(getLast(array, 3))
 
-let getLast = (array, n) => {
-    let result = array.slice(-n)
-    return result
+//Sum of elements of two arrays
+let arr1 = [1, 2, 3, 4, 5];
+let arr2 = [4, 5, 6];
+
+let arr3 = [];
+
+for (let i = 0; i < arr1.length || i < arr2.length; i++) {
+    let sum = (arr1[i] || 0) + (arr2[i] || 0);
+    arr3.push(sum);
 }
 
-console.log(getLast(array, 3))
+console.log(arr3)
