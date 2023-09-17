@@ -904,12 +904,21 @@
 // console.log(array)
 
 //Get the first elements of the array
+// let getFirst = (arr, n) => {
+//     let result = arr.slice(0, n);
+//     return result
+// }
+//
+// let arr = [1, 2, 3, 4, 5]
+//
+// console.log(getFirst(arr, 2))
 
-let getFirst = (arr, n) => {
-    let result = arr.slice(0, n);
+//Get the last elements of the array
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+let getLast = (array, n) => {
+    let result = array.slice(-n)
     return result
 }
 
-let arr = [1, 2, 3, 4, 5]
-
-console.log(getFirst(arr, 3))
+console.log(getLast(array, 3))
