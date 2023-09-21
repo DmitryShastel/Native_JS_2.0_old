@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="032ec4d1-33a1-4a32-a818-97fc1bd4e3c9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Exams/exams.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Exams/exams.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +119,8 @@
       <workItem from="1691053301972" duration="29463000" />
       <workItem from="1692096166935" duration="1413000" />
       <workItem from="1692780779158" duration="601000" />
-      <workItem from="1693330535587" duration="20686000" />
+      <workItem from="1693330535587" duration="21330000" />
+      <workItem from="1695279288406" duration="4811000" />
     </task>
     <servers />
   </component>

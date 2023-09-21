@@ -924,14 +924,55 @@
 // console.log(getLast(array, 3))
 
 //Sum of elements of two arrays
-let arr1 = [1, 2, 3, 4, 5];
-let arr2 = [4, 5, 6];
+// let arr1 = [1, 2, 3, 4, 5];
+// let arr2 = [4, 5, 6];
+//
+// let arr3 = [];
+//
+// for (let i = 0; i < arr1.length || i < arr2.length; i++) {
+//     let sum = (arr1[i] || 0) + (arr2[i] || 0);
+//     arr3.push(sum);
+// }
+//
+// console.log(arr3)
 
-let arr3 = [];
+//The number of duplicate elements in the array
 
-for (let i = 0; i < arr1.length || i < arr2.length; i++) {
-    let sum = (arr1[i] || 0) + (arr2[i] || 0);
-    arr3.push(sum);
+
+let countIdentic = (nums) => {
+
+    let count = 0;
+
+    for (let i = 0; i < nums.length; i += 1) {
+
+        if (nums[i] === 1) {
+            count += 1
+        }
+    }
+    return count
 }
 
-console.log(arr3)
+console.log(countIdentic([15, 14, 13, 19, 13, 14, 14, 14, 7, 9, 9]))
+
+const nums = [15, 14, 13, 19, 13, 14, 14, 14, 7, 9, 9];
+
+let count = 0;
+
+for (let i = 0; i < nums.length; i += 1) {
+    if (nums[i] === 1) {
+        count += 1;
+    }
+}
+
+console.log(count)
+
+let varFun3 = (arr) => {
+
+    let result = {};
+    arr.forEach(item => {
+        result[item] = (result[item] || 0) + 1
+    })
+    return result
+}
+
+console.log(varFun3([15, 14, 13, 19, 13, 14, 14, 14, 7, 9, 9]))
