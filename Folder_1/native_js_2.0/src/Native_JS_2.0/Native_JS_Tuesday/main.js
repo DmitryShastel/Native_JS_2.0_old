@@ -937,42 +937,56 @@
 // console.log(arr3)
 
 //The number of duplicate elements in the array
-
-
-let countIdentic = (nums) => {
-
-    let count = 0;
-
-    for (let i = 0; i < nums.length; i += 1) {
-
-        if (nums[i] === 1) {
-            count += 1
-        }
-    }
-    return count
-}
-
-console.log(countIdentic([15, 14, 13, 19, 13, 14, 14, 14, 7, 9, 9]))
-
-const nums = [15, 14, 13, 19, 13, 14, 14, 14, 7, 9, 9];
-
-let count = 0;
-
-for (let i = 0; i < nums.length; i += 1) {
-    if (nums[i] === 1) {
-        count += 1;
-    }
-}
-
-console.log(count)
-
-let varFun3 = (arr) => {
-
-    let result = {};
-    arr.forEach(item => {
-        result[item] = (result[item] || 0) + 1
-    })
-    return result
-}
-
-console.log(varFun3([15, 14, 13, 19, 13, 14, 14, 14, 7, 9, 9]))
+// let varFun3 = (arr) => {
+//
+//     let result = {};
+//     arr.forEach(item => {
+//         result[item] = (result[item] || 0) + 1
+//     })
+//     return result
+// }
+//
+// console.log(varFun3([15, 14, 13, 19, 13, 14, 14, 14, 7, 9, 9]))
+//
+//
+// const countDuplicates = (arr) => {
+//     let duplicates = {};
+//     let count = 0;
+//
+//     for (let i = 0; i < arr.length; i++) {
+//         if (duplicates[arr[i]]) {
+//             duplicates[arr[i]] += 1;
+//         } else {
+//             duplicates[arr[i]] = 1;
+//         }
+//     }
+//
+//     for (let key in duplicates) {
+//         if (duplicates[key] > 1) {
+//             count += 1;
+//         }
+//     }
+//
+//     return count;
+// };
+//
+// console.log(countDuplicates([3, 3, 7, 7, 3, 3, 4, 5, 5, 8, 8, 8]));  // Вывод: 4
+// console.log(countDuplicates([15, 14, 13, 19, 13, 14, 14, 14, 7, 9, 9]));  // Вывод: 3
+//
+// const arr = [3, 3, 7, 7, 3, 3, 4];
+// let duplicates = {};
+//
+// for (let i = 0; i < arr.length; i++) {
+//     if (duplicates[arr[i]]) {
+//         duplicates[arr[i]] += 1;
+//     } else {
+//         duplicates[arr[i]] = 1;
+//     }
+// }
+//
+// for (let key in duplicates) {
+//     console.log('Ключ:', key);
+//     console.log('Значение:', duplicates[key]);
+// }
+//
+// console.log(duplicates)
