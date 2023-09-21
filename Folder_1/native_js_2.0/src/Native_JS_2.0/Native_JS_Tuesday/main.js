@@ -992,10 +992,36 @@
 // console.log(duplicates)
 
 //Expanding an array of arrays
+// let expand = (arr) => {
+//     return arr.flat(Infinity)
+// }
+//
+// console.log(expand([1, [2, [3, [4]]]]))
+// console.log(expand([1, [2], [3, [[4], [3, [[4], [3, [[4]]], [5, 6]]], [5, 6]]], [5, 6]]))
 
-let expand = (arr) => {
-    return arr.flat(Infinity)
+//Merge two arrays without duplicating elements
+
+// let union = (arr1, arr2) => {
+//     let result = [];
+//     let arr3 = arr1.concat(arr2)
+//
+//     for (let num of arr3) {
+//         if (!result.includes(num)) {
+//             result.push(num)
+//         }
+//     }
+//     return result
+// }
+//
+// console.log(union([5, 2, 1, -9, 3, 7],[5, 2, 1, -10, 8]))
+
+//Difference between two arrays
+let union = (arr1, arr2) => {
+
+    const uniqueArr1 = arr1.filter(el => !arr2.includes(el))
+    const uniqueArr2 = arr2.filter(el => !arr1.includes(el))
+
+    return uniqueArr1.concat(uniqueArr2)
 }
 
-console.log(expand([1, [2, [3, [4]]]]))
-console.log(expand([1, [2], [3, [[4]]], [5, 6]]))
+console.log(union([1, 2, 'a'], [1, 2, 3, 4, 'b']))
