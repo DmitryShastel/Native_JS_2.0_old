@@ -990,3 +990,12 @@
 // }
 //
 // console.log(duplicates)
+
+//Expanding an array of arrays
+
+let expand = (arr) => {
+    return arr.flat(Infinity)
+}
+
+console.log(expand([1, [2, [3, [4]]]]))
+console.log(expand([1, [2], [3, [[4]]], [5, 6]]))
