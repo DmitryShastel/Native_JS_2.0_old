@@ -1034,7 +1034,18 @@
 // console.log(compareNumbers([3, 8, 7, 6, 5, -4, 3, 2, 1]))
 
 //The most commonly used array element
-let arr = [7, 'z', 'z', 'z', 3, 7, 'z', 7, 'z', 3, 5, 9, 7 , 7 , 7 , 7 , 7]
+// let arr = [7, 'z', 'z', 'z', 3, 7, 'z', 7, 'z', 3, 5, 9, 7 , 7 , 7 , 7 , 7]
+//
+// let result = arr.sort((a, b) => arr.filter(e => e === a).length - arr.filter(e => e === b).length).pop()
+// console.log(result)
 
-let result = arr.sort((a, b) => arr.filter(e => e === a).length - arr.filter(e => e === b).length).pop()
-console.log(result)
+//Sum of squares of array values
+let sumOfSquares = (arr) => {
+    const sumOfElements = arr.reduce(function(sum, element) {
+        return sum + Math.pow(element, 2); // return sum + element ** 2;
+    }, 0);
+
+    return sumOfElements
+}
+
+console.log(sumOfSquares([1, 2, 3, 4, 5]))
