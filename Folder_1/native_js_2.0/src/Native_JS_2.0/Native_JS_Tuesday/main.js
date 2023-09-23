@@ -1027,9 +1027,14 @@
 // console.log(union([1, 2, 'a'], [1, 2, 3, 4, 'b']))
 
 //Sorting the array in descending order
+// let compareNumbers = (arr) => {
+//     return arr.sort()
+// }
+//
+// console.log(compareNumbers([3, 8, 7, 6, 5, -4, 3, 2, 1]))
 
-let compareNumbers = (arr) => {
-    return arr.sort()
-}
+//The most commonly used array element
+let arr = [7, 'z', 'z', 'z', 3, 7, 'z', 7, 'z', 3, 5, 9, 7 , 7 , 7 , 7 , 7]
 
-console.log(compareNumbers([3, 8, 7, 6, 5, -4, 3, 2, 1]))
+let result = arr.sort((a, b) => arr.filter(e => e === a).length - arr.filter(e => e === b).length).pop()
+console.log(result)
