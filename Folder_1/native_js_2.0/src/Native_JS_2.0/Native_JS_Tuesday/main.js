@@ -1025,3 +1025,11 @@
 // }
 //
 // console.log(union([1, 2, 'a'], [1, 2, 3, 4, 'b']))
+
+//Sorting the array in descending order
+
+let compareNumbers = (arr) => {
+    return arr.sort()
+}
+
+console.log(compareNumbers([3, 8, 7, 6, 5, -4, 3, 2, 1]))
