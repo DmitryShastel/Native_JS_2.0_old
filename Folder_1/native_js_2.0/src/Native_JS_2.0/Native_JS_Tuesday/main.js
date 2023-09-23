@@ -1016,12 +1016,12 @@
 // console.log(union([5, 2, 1, -9, 3, 7],[5, 2, 1, -10, 8]))
 
 //Difference between two arrays
-let union = (arr1, arr2) => {
-
-    const uniqueArr1 = arr1.filter(el => !arr2.includes(el))
-    const uniqueArr2 = arr2.filter(el => !arr1.includes(el))
-
-    return uniqueArr1.concat(uniqueArr2)
-}
-
-console.log(union([1, 2, 'a'], [1, 2, 3, 4, 'b']))
+// let union = (arr1, arr2) => {
+//
+//     const uniqueArr1 = arr1.filter(el => !arr2.includes(el))
+//     const uniqueArr2 = arr2.filter(el => !arr1.includes(el))
+//
+//     return uniqueArr1.concat(uniqueArr2)
+// }
+//
+// console.log(union([1, 2, 'a'], [1, 2, 3, 4, 'b']))
