@@ -1040,12 +1040,26 @@
 // console.log(result)
 
 //Sum of squares of array values
-let sumOfSquares = (arr) => {
-    const sumOfElements = arr.reduce(function(sum, element) {
-        return sum + Math.pow(element, 2); // return sum + element ** 2;
-    }, 0);
+// let sumOfSquares = (arr) => {
+//     const sumOfElements = arr.reduce(function(sum, element) {
+//         return sum + Math.pow(element, 2); // return sum + element ** 2;
+//     }, 0);
+//
+//     return sumOfElements
+// }
+//
+// console.log(sumOfSquares([1, 2, 3, 4, 5]))
 
-    return sumOfElements
+//Sum and product of array values
+let sumAndComposition = (arr) => {
+    let sum = arr.reduce((el, acc) => {
+        return el + acc
+    }, 0)
+
+    let composition = arr.reduce((el, acc) => {
+        return el * acc
+    }, 1)
+    return [sum ,composition]
 }
 
-console.log(sumOfSquares([1, 2, 3, 4, 5]))
+console.log(sumAndComposition([1, 2, 3, 4, 5, 6, 7, 8, 9]))
