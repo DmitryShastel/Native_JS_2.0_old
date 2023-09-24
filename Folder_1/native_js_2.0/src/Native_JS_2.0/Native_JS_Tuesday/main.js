@@ -1065,11 +1065,71 @@
 // console.log(sumAndComposition([1, 2, 3, 4, 5, 6, 7, 8, 9]))
 
 //Removing false values from an array
+// let filterFalse = (arr) => {
+//     let result = arr.filter(el => !!el)
+//     return result
+//
+//     // (el => el !== false && el !== '' && el !== undefined && el !== null && !Number.isNaN(el) && el !== 0)
+//     // return result
+// }
+//
+// console.log(filterFalse([NaN, 0, 77, false, -17, '', undefined, 99, null]))
 
-let filterFalse = (arr) => {
-    let result = arr.filter
-    (el => el !== false && el !== '' && el !== undefined && el !== null && !Number.isNaN(el) && el !== 0)
-    return result
-}
+//Sorting an array of objects
 
-console.log(filterFalse([NaN, 0, 77, false, -17, '', undefined, 99, null]))
+let litmir = [
+    {author: 'Хэленка', title: 'Улетела сказка'},
+    {author: 'Коул Кресли', title: 'Восстание Аркан'},
+    {author: 'Райчел Мид', title: 'Золотая лилия'}
+];
+
+litmir.sort((a, b) => {
+    let titleA = a.title.toUpperCase()
+    let titleB = b.title.toUpperCase()
+
+    if (titleA < titleB) {
+        return -1
+    }
+    if (titleA > titleB) {
+        return 1
+    }
+    return 0
+})
+
+let titles = litmir.map(book => book.title)
+let result = titles.join(' ')
+
+console.log(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
