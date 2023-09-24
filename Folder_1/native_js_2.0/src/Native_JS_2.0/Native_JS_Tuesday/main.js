@@ -1051,15 +1051,15 @@
 // console.log(sumOfSquares([1, 2, 3, 4, 5]))
 
 //Sum and product of array values
-let sumAndComposition = (arr) => {
-    let sum = arr.reduce((el, acc) => {
-        return el + acc
-    }, 0)
-
-    let composition = arr.reduce((el, acc) => {
-        return el * acc
-    }, 1)
-    return [sum ,composition]
-}
-
-console.log(sumAndComposition([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+// let sumAndComposition = (arr) => {
+//     let sum = arr.reduce((el, acc) => {
+//         return el + acc
+//     }, 0)
+//
+//     let composition = arr.reduce((el, acc) => {
+//         return el * acc
+//     }, 1)
+//     return [sum ,composition]
+// }
+//
+// console.log(sumAndComposition([1, 2, 3, 4, 5, 6, 7, 8, 9]))

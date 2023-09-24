@@ -5,8 +5,8 @@ import {FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, SelectProp
 type DefaultSelectPropsType = DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>
 
 type SuperSelectPropsType = DefaultSelectPropsType & {
-    options: string[]
-    onChangeOption: (option: string) => void
+    options: any
+    onChangeOption: any
 }
 
 
@@ -17,7 +17,7 @@ export const SuperSelect: React.FC<SuperSelectPropsType> = (
         ...restProps
     }
 ) => {
-    const mappedOptions: JSX.Element[] = options.map((option) => (
+    const mappedOptions: JSX.Element[] = options.map((option: any) => (
         <MenuItem key={option} value={option}>{option}</MenuItem>
     ))
 
