@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="032ec4d1-33a1-4a32-a818-97fc1bd4e3c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Exams/ExamsMonday.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Exams/exams.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Exams/exams.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat7/HW7.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat7/HW7.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat7/SuperSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat7/SuperSelect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat7/TestHW7/HW7T.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat7/TestHW7/HW7T.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat7/TestHW7/SuperRadioT.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat7/TestHW7/SuperRadioT.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat7/TestHW7/SuperSelectT.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat7/TestHW7/SuperSelectT.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +120,7 @@
       <workItem from="1692780779158" duration="601000" />
       <workItem from="1693330535587" duration="21330000" />
       <workItem from="1695279288406" duration="24234000" />
-      <workItem from="1695529859347" duration="12458000" />
+      <workItem from="1695529859347" duration="14358000" />
     </task>
     <servers />
   </component>

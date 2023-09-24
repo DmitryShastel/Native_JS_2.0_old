@@ -1063,3 +1063,13 @@
 // }
 //
 // console.log(sumAndComposition([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+
+//Removing false values from an array
+
+let filterFalse = (arr) => {
+    let result = arr.filter
+    (el => el !== false && el !== '' && el !== undefined && el !== null && !Number.isNaN(el) && el !== 0)
+    return result
+}
+
+console.log(filterFalse([NaN, 0, 77, false, -17, '', undefined, 99, null]))
