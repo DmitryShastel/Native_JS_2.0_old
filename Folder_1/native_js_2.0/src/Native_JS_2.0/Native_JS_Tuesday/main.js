@@ -1076,37 +1076,42 @@
 // console.log(filterFalse([NaN, 0, 77, false, -17, '', undefined, 99, null]))
 
 //Sorting an array of objects
+// let litmir = [
+//     {author: 'Хэленка', title: 'Улетела сказка'},
+//     {author: 'Коул Кресли', title: 'Восстание Аркан'},
+//     {author: 'Райчел Мид', title: 'Золотая лилия'}
+// ];
+//
+//
+// let titles = litmir.map(book => book.title)
+// let result = titles.join(' ')
+//
+// console.log(result)
 
-let litmir = [
-    {author: 'Хэленка', title: 'Улетела сказка'},
-    {author: 'Коул Кресли', title: 'Восстание Аркан'},
-    {author: 'Райчел Мид', title: 'Золотая лилия'}
-];
+//Find pairs of numbers whose sum is equal to a given value
+let num = 10;
+let arr = [1, 6, 5, 2, 7, 5, 1, 4, 3, 9, 8, 11, 10, 18];
 
-litmir.sort((a, b) => {
-    let titleA = a.title.toUpperCase()
-    let titleB = b.title.toUpperCase()
+let findCouple = (arr, number) => {
+    let pairs = new Set();
 
-    if (titleA < titleB) {
-        return -1
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] + arr[j] === number) {
+                let pair = arr[i] + ':' + arr[j];
+                pairs.add(pair);
+            }
+        }
     }
-    if (titleA > titleB) {
-        return 1
-    }
-    return 0
-})
 
-let titles = litmir.map(book => book.title)
-let result = titles.join(' ')
+    return pairs;
+};
 
-console.log(result)
+let result = findCouple(arr, num);
 
-
-
-
-
-
-
+result.forEach(pair => {
+    console.log('Ваша пара чисел: ' + pair);
+});
 
 
 
