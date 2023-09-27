@@ -1160,12 +1160,20 @@
 // console.log(randomElement([24, 45, 22, 35, 43]))
 
 //An array with a specified number of elements
+// let arrayFilled = (len, value) => {
+//     let result = Array(len).fill(value)
+//     return result
+// }
+// console.log(arrayFilled(4, 12))
 
-let arrayFilled = (len, value) => {
-    let result = Array(len).fill(value)
-    return result
+//Move an array element from one position to another
+let moveElement = (arr, from, to) => {
+    const element = arr.splice(from, 1)[0]
+    arr.splice(to, 0, element)
+    return arr
 }
-console.log(arrayFilled(4, 12))
+console.log(moveElement([ 'a', 'b', 'c', 'd', 'e'], 4, 1))
+
 
 
 
