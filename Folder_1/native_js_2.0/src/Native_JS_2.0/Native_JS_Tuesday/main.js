@@ -1153,15 +1153,19 @@
 // console.log(removeItem([3, 5, 7, 8, 5], 5))
 
 //Return a random element from the array
-let randomElement = (arr) => {
-    return arr[Math.floor(Math.random()*arr.length)]
+// let randomElement = (arr) => {
+//     return arr[Math.floor(Math.random()*arr.length)]
+// }
+//
+// console.log(randomElement([24, 45, 22, 35, 43]))
+
+//An array with a specified number of elements
+
+let arrayFilled = (len, value) => {
+    let result = Array(len).fill(value)
+    return result
 }
-
-console.log(randomElement([24, 45, 22, 35, 43]))
-
-
-
-
+console.log(arrayFilled(4, 12))
 
 
 
