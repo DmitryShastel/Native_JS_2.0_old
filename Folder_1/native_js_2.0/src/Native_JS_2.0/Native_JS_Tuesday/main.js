@@ -1145,14 +1145,19 @@
 // console.log(startingSubstring(['Репа', 'Редиска']))
 
 //Remove a specific element from the array
-let removeItem = (arr, num) => {
-    const numberToDelete = num
-    const result = arr.filter(el => el !== numberToDelete)
-    return result
+// let removeItem = (arr, num) => {
+//     const numberToDelete = num
+//     const result = arr.filter(el => el !== numberToDelete)
+//     return result
+// }
+// console.log(removeItem([3, 5, 7, 8, 5], 5))
+
+//Return a random element from the array
+let randomElement = (arr) => {
+    return arr[Math.floor(Math.random()*arr.length)]
 }
 
-console.log(removeItem([3, 5, 7, 8, 5], 5))
-
+console.log(randomElement([24, 45, 22, 35, 43]))
 
 
 
