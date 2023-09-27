@@ -1089,30 +1089,49 @@
 // console.log(result)
 
 //Find pairs of numbers whose sum is equal to a given value
-let num = 10;
-let arr = [1, 6, 5, 2, 7, 5, 1, 4, 3, 9, 8, 11, 10, 18];
+// let num = 10;
+// let arr = [1, 6, 5, 2, 7, 5, 1, 4, 3, 9, 8, 11, 10, 18];
+//
+// let findCouple = (arr, number) => {
+//     let pairs = new Set();
+//
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = i + 1; j < arr.length; j++) {
+//             if (arr[i] + arr[j] === number) {
+//                 let pair = arr[i] + ':' + arr[j];
+//                 pairs.add(pair);
+//             }
+//         }
+//     }
+//
+//     return pairs;
+// };
+//
+// let result = findCouple(arr, num);
+//
+// result.forEach(pair => {
+//     console.log('Ваша пара чисел: ' + pair);
+// });
 
-let findCouple = (arr, number) => {
-    let pairs = new Set();
+//Find all values of this property in an array of objects
+let litmir = [
+    {author: 'Хэленка', title: 'Улетела сказка'},
+    {author: 'Коул Кресли', title: 'Восстание Аркан'},
+    {author: 'Райчел Мид', title: 'Золотая лилия'}
+];
 
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = i + 1; j < arr.length; j++) {
-            if (arr[i] + arr[j] === number) {
-                let pair = arr[i] + ':' + arr[j];
-                pairs.add(pair);
-            }
-        }
+let propertyValue = (array, key) => {
+    let titles = array.map(e => e.title)
+    let authors = array.map(e => e.author)
+
+    if (key === 'title') {
+        return titles
+    } else if (key === 'author') {
+        return authors
     }
+}
 
-    return pairs;
-};
-
-let result = findCouple(arr, num);
-
-result.forEach(pair => {
-    console.log('Ваша пара чисел: ' + pair);
-});
-
+console.log(propertyValue(litmir, 'title'))
 
 
 
