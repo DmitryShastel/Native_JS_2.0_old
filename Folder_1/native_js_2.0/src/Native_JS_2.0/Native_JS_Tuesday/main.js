@@ -1114,26 +1114,35 @@
 // });
 
 //Find all values of this property in an array of objects
-let litmir = [
-    {author: 'Хэленка', title: 'Улетела сказка'},
-    {author: 'Коул Кресли', title: 'Восстание Аркан'},
-    {author: 'Райчел Мид', title: 'Золотая лилия'}
-];
+// let litmir = [
+//     {author: 'Хэленка', title: 'Улетела сказка'},
+//     {author: 'Коул Кресли', title: 'Восстание Аркан'},
+//     {author: 'Райчел Мид', title: 'Золотая лилия'}
+// ];
+//
+// let propertyValue = (array, key) => {
+//     let titles = array.map(e => e.title)
+//     let authors = array.map(e => e.author)
+//
+//     if (key === 'title') {
+//         return titles
+//     } else if (key === 'author') {
+//         return authors
+//     }
+// }
+//
+// console.log(propertyValue(litmir, 'title'))
 
-let propertyValue = (array, key) => {
-    let titles = array.map(e => e.title)
-    let authors = array.map(e => e.author)
-
-    if (key === 'title') {
-        return titles
-    } else if (key === 'author') {
-        return authors
-    }
-}
-
-console.log(propertyValue(litmir, 'title'))
-
-
+//A common starting substring in an array of strings
+// let startingSubstring = (arr) => {
+//     const charts = arr[0].split('');
+//
+//     return charts.reduce((result, chart) => {
+//         const isEvery = arr.every(itemArr => itemArr.startsWith(result + chart));
+//         return isEvery ? (result + chart) : result;
+//     }, '');
+// }
+// console.log(startingSubstring(['Репа', 'Редиска']))
 
 
 
