@@ -1186,20 +1186,33 @@
 // console.log(generateNumbers(-5, 4))
 
 //Array of lengths of string elements
+// let vegetables = (arr) => {
+//     //let arrLength = []
+//     // for (let i = 0; i < arr.length; i++) {
+//     //     arrLength[i] = arr[i].length
+//     // }
+//     // return arrLength
+//
+//     let result = arr.map(el => el.length)
+//     return result
+// }
+// console.log(vegetables(['Капуста', 'Репа', 'Редиска', 'Морковка']))
 
-let vegetables = (arr) => {
-    //let arrLength = []
-    // for (let i = 0; i < arr.length; i++) {
-    //     arrLength[i] = arr[i].length
-    // }
-    // return arrLength
+//Array of sums of numbers
+let currentSums = (numbers) => {
+    let result = numbers.reduce((el, acc, index) => {
+        if(index === 0) {
+            el.push(acc)
+        } else {
+            const sum = acc + el[index -1]
+            el.push(sum)
+        }
+        return el
+    }, [])
 
-    let result = arr.map(el => el.length)
     return result
 }
-
-console.log(vegetables(['Капуста', 'Репа', 'Редиска', 'Морковка']))
-
+console.log(currentSums([2, 3, 5, 7, 11, 13, 17]))
 
 
 
