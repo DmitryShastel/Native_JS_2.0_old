@@ -1185,6 +1185,20 @@
 // }
 // console.log(generateNumbers(-5, 4))
 
+//Array of lengths of string elements
+
+let vegetables = (arr) => {
+    //let arrLength = []
+    // for (let i = 0; i < arr.length; i++) {
+    //     arrLength[i] = arr[i].length
+    // }
+    // return arrLength
+
+    let result = arr.map(el => el.length)
+    return result
+}
+
+console.log(vegetables(['Капуста', 'Репа', 'Редиска', 'Морковка']))
 
 
 
