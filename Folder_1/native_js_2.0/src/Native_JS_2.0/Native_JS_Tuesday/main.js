@@ -1174,17 +1174,16 @@
 // console.log(moveElement([ 'a', 'b', 'c', 'd', 'e'], 4, 1))
 
 //Array of the specified length
-
-let generateNumbers = (start, len) => {
-    let arr = []
-
-    for (let i = 0; i < len; i++) {
-        const number = start + i;
-        arr.push(number)
-    }
-    return arr
-}
-console.log(generateNumbers(-5, 4))
+// let generateNumbers = (start, len) => {
+//     let arr = []
+//
+//     for (let i = 0; i < len; i++) {
+//         const number = start + i;
+//         arr.push(number)
+//     }
+//     return arr
+// }
+// console.log(generateNumbers(-5, 4))
 
 
 
