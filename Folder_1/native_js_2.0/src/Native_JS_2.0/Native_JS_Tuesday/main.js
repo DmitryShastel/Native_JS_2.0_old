@@ -1199,20 +1199,45 @@
 // console.log(vegetables(['Капуста', 'Репа', 'Редиска', 'Морковка']))
 
 //Array of sums of numbers
-let currentSums = (numbers) => {
-    let result = numbers.reduce((el, acc, index) => {
-        if(index === 0) {
-            el.push(acc)
-        } else {
-            const sum = acc + el[index -1]
-            el.push(sum)
-        }
-        return el
-    }, [])
+// let currentSums = (numbers) => {
+//     let result = numbers.reduce((el, acc, index) => {
+//         if(index === 0) {
+//             el.push(acc)
+//         } else {
+//             const sum = acc + el[index -1]
+//             el.push(sum)
+//         }
+//         return el
+//     }, [])
+//
+//     return result
+// }
+// console.log(currentSums([2, 3, 5, 7, 11, 13, 17]))
 
-    return result
+//Equal in sum pairs of numbers
+
+let sumSeven = (numbers) => {
+
+    const targetSum = 7
+    const pairs = []
+
+    for (let i = 0; i < numbers.length; i++) {
+        const num1 = numbers[i];
+
+        for (let j = i + 1; j < numbers.length; j++) {
+            const num2 = numbers[j];
+            const sum = num1 + num2;
+
+            if (sum === targetSum) {
+                const pair = `${num1}:${num2}`;
+                pairs.push(pair);
+            }
+        }
+    }
+
+    return pairs;
 }
-console.log(currentSums([2, 3, 5, 7, 11, 13, 17]))
+console.log(sumSeven([0, 1, 2, 3, 4, 5, 6, 7]))
 
 
 
