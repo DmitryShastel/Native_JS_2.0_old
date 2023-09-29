@@ -1165,14 +1165,26 @@
 //     return result
 // }
 // console.log(arrayFilled(4, 12))
-
 //Move an array element from one position to another
-let moveElement = (arr, from, to) => {
-    const element = arr.splice(from, 1)[0]
-    arr.splice(to, 0, element)
+// let moveElement = (arr, from, to) => {
+//     const element = arr.splice(from, 1)[0]
+//     arr.splice(to, 0, element)
+//     return arr
+// }
+// console.log(moveElement([ 'a', 'b', 'c', 'd', 'e'], 4, 1))
+
+//Array of the specified length
+
+let generateNumbers = (start, len) => {
+    let arr = []
+
+    for (let i = 0; i < len; i++) {
+        const number = start + i;
+        arr.push(number)
+    }
     return arr
 }
-console.log(moveElement([ 'a', 'b', 'c', 'd', 'e'], 4, 1))
+console.log(generateNumbers(-5, 4))
 
 
 
