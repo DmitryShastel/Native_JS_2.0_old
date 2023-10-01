@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './App.css';
+// import './App.css';
 import {TaskType, Todolist} from './Todolist_9';
 import {v1} from 'uuid';
 import {AddItemForm} from './AddItemForm';
@@ -18,7 +18,7 @@ type TasksStateType = {
 }
 
 
-export function App() {
+export function AppRoot_9() {
     let todolistId1 = v1();
     let todolistId2 = v1();
 
@@ -178,5 +178,3 @@ export function App() {
         </div>
     );
 }
-
-export default App;

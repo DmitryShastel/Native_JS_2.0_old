@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css'
-import {HW7} from "./Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat7/HW7";
+import {AppRootTuesday} from "./Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/App_Root_Tuesday";
 
 
 export function App() {
     return (
         <div>
-          <HW7/>
+            <AppRootTuesday/>
         </div>
 
     );

@@ -1,6 +1,6 @@
-import React, {ChangeEvent} from 'react';
+import React from 'react';
 import {AddItemForm} from './AddItemForm';
-import {Button, Checkbox, IconButton} from '@material-ui/core';
+import {Button, IconButton} from '@material-ui/core';
 import {Delete} from '@material-ui/icons';
 import {EditableSpan} from "./EditableSpan_9";
 import {FilterValuesType} from "./AppRoot_9";
@@ -72,10 +72,10 @@ export function Todolist(props: PropsType) {
                             color="primary"
                             onChange={onChangeHandler}
                         /> */}
-                        колбек приходит из SuperCheckbox компоненты
-                        значение из props.callBack(event.currentTarget.checked) === newIsDone в колбеке  
-                        передаем в параметрах onChangeHandler + добавляем id
-                        все передаем выше в onChangeHandler
+                        {/*колбек приходит из SuperCheckbox компоненты*/}
+                        {/*значение из props.callBack(event.currentTarget.checked) === newIsDone в колбеке  */}
+                        {/*передаем в параметрах onChangeHandler + добавляем id*/}
+                        {/*все передаем выше в onChangeHandler*/}
                         <SuperCheckbox callBack={(newIsDone)=> onChangeHandler(t.id, newIsDone)} isDone={t.isDone}/>
 
                         <EditableSpan value={t.title} onChange={onTitleChangeHandler} />

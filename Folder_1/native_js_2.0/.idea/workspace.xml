@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="032ec4d1-33a1-4a32-a818-97fc1bd4e3c9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/AddItemForm_Tuesday.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/App_Root_Tuesday.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/EditableSpan_Tuesday.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/SuperCheckBox_Tuesday.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/TodoList_Tuesday.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDolist_9/AppRoot_9.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDolist_9/AppRoot_9.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDolist_9/Todolist_9.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDolist_9/Todolist_9.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,20 +42,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;C:/incubator/Incubator_2.0/Native_JS_2.0/Folder_1/native_js_2.0/node_modules/react-scripts&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\incubator\\Incubator_2.0\\Native_JS_2.0\\Folder_1\\native_js_2.0\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/incubator/Incubator_2.0/Native_JS_2.0/Folder_1/native_js_2.0",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs.jest.jest_package": "C:/incubator/Incubator_2.0/Native_JS_2.0/Folder_1/native_js_2.0/node_modules/react-scripts",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "C:\\incubator\\Incubator_2.0\\Native_JS_2.0\\Folder_1\\native_js_2.0\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Jest.check age 18">
     <configuration name="check age 18" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
@@ -121,7 +130,8 @@
       <workItem from="1693330535587" duration="21330000" />
       <workItem from="1695279288406" duration="24234000" />
       <workItem from="1695529859347" duration="42350000" />
-      <workItem from="1696137860025" duration="8340000" />
+      <workItem from="1696137860025" duration="11076000" />
+      <workItem from="1696179011137" duration="2428000" />
     </task>
     <servers />
   </component>
