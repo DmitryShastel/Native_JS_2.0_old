@@ -43,12 +43,16 @@ export const AppRootTuesday = () => {
     })
 
 
+
+
     return (
         <div>
-            <TodoListTuesday
-                todolists={todolists}
-                tasks={tasks}
-            />
+            {
+                todolists.map((el) => (el.title))
+
+            }
+
+            <TodoListTuesday/>
         </div>
     );
 };
