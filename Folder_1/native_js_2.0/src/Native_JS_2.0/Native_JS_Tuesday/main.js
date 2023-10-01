@@ -1250,20 +1250,22 @@
 // console.log(firstSymbol("Каждый охотник желает знать, где сидит фазан."))
 
 //Array of strings of three characters
+// let threeCharacters = (str) => {
+//     let result = Array.from(str)
+//         .map((el, index, arr) => {
+//             const prevChar = arr[index - 1] || '';
+//             const nextChar = arr[index + 1] || '';
+//             return prevChar + el + nextChar
+//         })
+//     return result
+// }
+// console.log(threeCharacters('JavaScript'))
 
-let threeCharacters = (str) => {
-
-    let result = Array.from(str)
-        .map((el, index, arr) => {
-            const prevChar = arr[index - 1] || '';
-            const nextChar = arr[index + 1] || '';
-            return prevChar + el + nextChar
-        })
-    return result
+//Get an array of numbers in descending order
+let sortArray = (arr) => {
+    return arr.sort((a, b) => b - a)
 }
-
-console.log(threeCharacters('JavaScript'))
-
+console.log(sortArray([5, 7, 2, 9, 3, 1, 8]))
 
 
 
