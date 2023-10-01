@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="032ec4d1-33a1-4a32-a818-97fc1bd4e3c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/AddItemForm_Tuesday.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/App_Root_Tuesday.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/EditableSpan_Tuesday.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/SuperCheckBox_Tuesday.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/TodoList_Tuesday.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDolist_9/AppRoot_9.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDolist_9/AppRoot_9.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDolist_9/Todolist_9.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDolist_9/Todolist_9.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/App_Root_Tuesday.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/App_Root_Tuesday.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +123,7 @@
       <workItem from="1695279288406" duration="24234000" />
       <workItem from="1695529859347" duration="42350000" />
       <workItem from="1696137860025" duration="11076000" />
-      <workItem from="1696179011137" duration="2428000" />
+      <workItem from="1696179011137" duration="3618000" />
     </task>
     <servers />
   </component>
