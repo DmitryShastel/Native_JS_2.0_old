@@ -1239,18 +1239,30 @@
 // console.log(sumSeven([0, 1, 2, 3, 4, 5, 6, 7]))
 
 //Array of the first letters
-let firstSymbol = (str) => {
+// let firstSymbol = (str) => {
+//
+//     let result = str.split(' ')
+//         .filter((el) => (el !== '' ? true : false))
+//         .map(el => el.charAt(0))
+//
+//     return result
+// }
+// console.log(firstSymbol("Каждый охотник желает знать, где сидит фазан."))
 
-    let result = str.split(' ')
-        .filter((el) => (el !== '' ? true : false))
-        .map(el => el.charAt(0))
+//Array of strings of three characters
 
+let threeCharacters = (str) => {
+
+    let result = Array.from(str)
+        .map((el, index, arr) => {
+            const prevChar = arr[index - 1] || '';
+            const nextChar = arr[index + 1] || '';
+            return prevChar + el + nextChar
+        })
     return result
 }
-console.log(firstSymbol("Каждый охотник желает знать, где сидит фазан."))
 
-
-
+console.log(threeCharacters('JavaScript'))
 
 
 
