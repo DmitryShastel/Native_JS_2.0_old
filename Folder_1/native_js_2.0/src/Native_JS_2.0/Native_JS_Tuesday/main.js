@@ -1215,29 +1215,39 @@
 // console.log(currentSums([2, 3, 5, 7, 11, 13, 17]))
 
 //Equal in sum pairs of numbers
+// let sumSeven = (numbers) => {
+//
+//     const targetSum = 7
+//     const pairs = []
+//
+//     for (let i = 0; i < numbers.length; i++) {
+//         const num1 = numbers[i];
+//
+//         for (let j = i + 1; j < numbers.length; j++) {
+//             const num2 = numbers[j];
+//             const sum = num1 + num2;
+//
+//             if (sum === targetSum) {
+//                 const pair = `${num1}:${num2}`;
+//                 pairs.push(pair);
+//             }
+//         }
+//     }
+//
+//     return pairs;
+// }
+// console.log(sumSeven([0, 1, 2, 3, 4, 5, 6, 7]))
 
-let sumSeven = (numbers) => {
+//Array of the first letters
+let firstSymbol = (str) => {
 
-    const targetSum = 7
-    const pairs = []
+    let result = str.split(' ')
+        .filter((el) => (el !== '' ? true : false))
+        .map(el => el.charAt(0))
 
-    for (let i = 0; i < numbers.length; i++) {
-        const num1 = numbers[i];
-
-        for (let j = i + 1; j < numbers.length; j++) {
-            const num2 = numbers[j];
-            const sum = num1 + num2;
-
-            if (sum === targetSum) {
-                const pair = `${num1}:${num2}`;
-                pairs.push(pair);
-            }
-        }
-    }
-
-    return pairs;
+    return result
 }
-console.log(sumSeven([0, 1, 2, 3, 4, 5, 6, 7]))
+console.log(firstSymbol("Каждый охотник желает знать, где сидит фазан."))
 
 
 
