@@ -1262,13 +1262,20 @@
 // console.log(threeCharacters('JavaScript'))
 
 //Get an array of numbers in descending order
-let sortArray = (arr) => {
-    return arr.sort((a, b) => b - a)
+// let sortArray = (arr) => {
+//     return arr.sort((a, b) => b - a)
+// }
+// console.log(sortArray([5, 7, 2, 9, 3, 1, 8]))
+
+//Merging Arrays
+
+let mergeArray = (arr1, arr2, arr3) => {
+    let tempResult = arr1.concat(arr2, arr3)
+    let result = tempResult.sort((a, b) => b - a)
+    return result
 }
-console.log(sortArray([5, 7, 2, 9, 3, 1, 8]))
 
-
-
+console.log(mergeArray([5, 2], [2, 1], [4, 3]))
 
 
 
