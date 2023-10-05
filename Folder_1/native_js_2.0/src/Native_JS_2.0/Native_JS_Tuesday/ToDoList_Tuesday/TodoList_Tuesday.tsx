@@ -6,6 +6,7 @@ type ToDoListType = {
     tasks: TaskType[]
     addTask: (taskTitle: string) => void
     removeTask: (taskId: string) => void
+    changeTaskStatus: (taskId: string) => void
 }
 
 
@@ -26,6 +27,10 @@ export const TodoListTuesday = (props: ToDoListType) => {
         props.removeTask(taskId)
     }
 
+    const changeTaskStatusHandler = (event: ChangeEvent<HTMLInputElement>, taskId: string) => {
+        props.changeTaskStatus(taskId)
+    }
+
     return (
         <div>
             <h3>What to learn</h3>
@@ -40,7 +45,10 @@ export const TodoListTuesday = (props: ToDoListType) => {
                 props.tasks.map((task) => {
                     return (
                         <ul key={task.id} style={{listStyleType: 'none'}}>
-                            <li><input type='checkbox'/>
+                            <li><input
+                                checked={task.isDone}
+                                type='checkbox'
+                                onChange={(event) => changeTaskStatusHandler(event, task.id)}/>
                                 {task.title}
                                 <button onClick={() => {
                                     removeTaskHandler(task.id)

@@ -41,8 +41,8 @@ export const AppRootTuesday = () => {
     let [tasks, setTasks] = useState<TaskType[]>([
             {id: v1(), title: 'HTML', isDone: true},
             {id: v1(), title: 'CSS', isDone: true},
-            {id: v1(), title: 'JS', isDone: true},
-            {id: v1(), title: 'React', isDone: true},
+            {id: v1(), title: 'JS', isDone: false},
+            {id: v1(), title: 'React', isDone: false},
         ]
     )
 
@@ -57,12 +57,26 @@ export const AppRootTuesday = () => {
         setTasks([...removedTask])
     }
 
+    const changeTaskStatus = (taskId: string) => {
+        let updatedTasks = tasks.map(task => {
+            if (task.id === taskId) {
+                return {
+                    ...task,
+                    isDone: !task.isDone
+                };
+            }
+            return task;
+        });
+        setTasks(updatedTasks);
+    }
+
     return (
         <div>
             <TodoListTuesday
                 tasks={tasks}
                 addTask={addTask}
                 removeTask={removeTask}
+                changeTaskStatus={changeTaskStatus}
             />
         </div>
     );
