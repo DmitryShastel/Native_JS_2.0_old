@@ -50,15 +50,19 @@ export const AppRootTuesday = () => {
     const addTask = (taskTitle: string) => {
         let newTask = {id: v1(), title: taskTitle, isDone: false}
         setTasks([newTask, ...tasks])
-
     }
 
+    const removeTask = (taskId: string) => {
+        let removedTask = tasks.filter(task => task.id != taskId)
+        setTasks([...removedTask])
+    }
 
     return (
         <div>
             <TodoListTuesday
                 tasks={tasks}
                 addTask={addTask}
+                removeTask={removeTask}
             />
         </div>
     );

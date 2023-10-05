@@ -5,6 +5,7 @@ type ToDoListType = {
     // tdTitle: string
     tasks: TaskType[]
     addTask: (taskTitle: string) => void
+    removeTask: (taskId: string) => void
 }
 
 
@@ -19,6 +20,10 @@ export const TodoListTuesday = (props: ToDoListType) => {
 
     const onChangeTaskTitleHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setTitle(e.currentTarget.value)
+    }
+
+    const removeTaskHandler = (taskId: string) => {
+        props.removeTask(taskId)
     }
 
     return (
@@ -37,7 +42,10 @@ export const TodoListTuesday = (props: ToDoListType) => {
                         <ul key={task.id} style={{listStyleType: 'none'}}>
                             <li><input type='checkbox'/>
                                 {task.title}
-                                <button>X</button>
+                                <button onClick={() => {
+                                    removeTaskHandler(task.id)
+                                }}>X
+                                </button>
                             </li>
                         </ul>
                     )
