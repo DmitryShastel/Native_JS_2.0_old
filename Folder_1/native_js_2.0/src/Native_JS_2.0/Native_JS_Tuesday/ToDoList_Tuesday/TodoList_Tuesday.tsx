@@ -1,16 +1,25 @@
 import React from 'react';
-import {TasksType, ToDoListsType} from "./App_Root_Tuesday";
+import {TaskType} from "./App_Root_Tuesday";
 
 type ToDoListType = {
-    // todolists: ToDoListsType[]
-    // tasks: TasksType[]
+    tdTitle: string
+    tasks: TaskType[]
 }
 
 
 export const TodoListTuesday = (props: ToDoListType) => {
     return (
         <div>
-            hello
+            <h3>{props.tdTitle}</h3>
+            {
+                props.tasks.map((task) => {
+                    return (
+                        <ul>
+                            <li>{task.title}</li>
+                        </ul>
+                    )
+                })
+            }
         </div>
     );
 };

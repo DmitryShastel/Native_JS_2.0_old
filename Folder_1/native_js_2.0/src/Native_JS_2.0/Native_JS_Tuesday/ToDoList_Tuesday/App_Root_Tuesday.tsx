@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {TodoListTuesday} from "./TodoList_Tuesday";
 import {v1} from "uuid";
 
-type  TaskType = {
+export type  TaskType = {
     id: string
     title: string
     isDone: boolean
@@ -33,12 +33,10 @@ export const AppRootTuesday = () => {
         [todolistId1]: [
             {id: v1(), title: 'HTML', isDone: true},
             {id: v1(), title: 'CSS', isDone: true},
-            {id: v1(), title: 'JS', isDone: true},
         ],
         [todolistId2]: [
             {id: v1(), title: 'Books', isDone: true},
             {id: v1(), title: 'Food', isDone: true},
-            {id: v1(), title: 'Things', isDone: true},
         ]
     })
 
@@ -46,8 +44,13 @@ export const AppRootTuesday = () => {
     return (
         <div>
             {
-                todolists.map((el) => {
-                    return <TodoListTuesday/>
+                todolists.map((td) => {
+                    return (
+                        <TodoListTuesday
+                            tdTitle={td.title}
+                            tasks={tasks[td.id]}
+                        />
+                    )
                 })
             }
         </div>
