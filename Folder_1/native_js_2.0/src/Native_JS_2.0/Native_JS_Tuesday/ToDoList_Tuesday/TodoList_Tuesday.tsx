@@ -1,18 +1,35 @@
-import React from 'react';
+import React, {ChangeEvent, useState} from 'react';
 import {TaskType} from "./App_Root_Tuesday";
-import {AddItemFormTuesday} from "./AddItemForm_Tuesday";
 
 type ToDoListType = {
-    tdTitle: string
+    // tdTitle: string
     tasks: TaskType[]
+    addTask: (taskTitle: string) => void
 }
 
 
 export const TodoListTuesday = (props: ToDoListType) => {
+
+    const [title, setTitle] = useState('')
+
+    const addTaskTitleHandler = () => {
+        props.addTask(title)
+        setTitle('')
+    }
+
+    const onChangeTaskTitleHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        setTitle(e.currentTarget.value)
+    }
+
     return (
         <div>
-            <h3>{props.tdTitle}</h3>
-            <AddItemFormTuesday/>
+            <h3>What to learn</h3>
+            <input
+                type='text'
+                onChange={onChangeTaskTitleHandler}
+                value={title}/>
+            <button onClick={addTaskTitleHandler}>+
+            </button>
 
             {
                 props.tasks.map((task) => {
