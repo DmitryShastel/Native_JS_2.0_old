@@ -26,7 +26,7 @@ export const AppRootTuesday = () => {
 
     let [todolists, setTodolists] = useState<ToDoListsType[]>([
         {id: todolistId1, title: 'What to learn', filter: 'all'},
-        {id: todolistId2, title: 'What to buy', filter: 'all'},
+        // {id: todolistId2, title: 'What to buy', filter: 'all'},
     ])
 
     let [tasks, setTasks] = useState<TasksType>({
@@ -43,16 +43,13 @@ export const AppRootTuesday = () => {
     })
 
 
-
-
     return (
         <div>
             {
-                todolists.map((el) => (el.title))
-
+                todolists.map((el) => {
+                    return <TodoListTuesday/>
+                })
             }
-
-            <TodoListTuesday/>
         </div>
     );
 };
