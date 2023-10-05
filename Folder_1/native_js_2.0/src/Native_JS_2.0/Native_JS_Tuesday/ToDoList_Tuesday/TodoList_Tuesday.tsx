@@ -20,6 +20,9 @@ export const TodoListTuesday = (props: ToDoListType) => {
                     )
                 })
             }
+            <button>All</button>
+            <button>Active</button>
+            <button>Completed</button>
         </div>
     );
 };
