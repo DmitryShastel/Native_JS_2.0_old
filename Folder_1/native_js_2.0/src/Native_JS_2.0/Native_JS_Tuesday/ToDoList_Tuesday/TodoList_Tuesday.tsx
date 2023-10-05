@@ -11,11 +11,17 @@ export const TodoListTuesday = (props: ToDoListType) => {
     return (
         <div>
             <h3>{props.tdTitle}</h3>
+            <input type='text'/>
+            <button>+</button>
+
             {
                 props.tasks.map((task) => {
                     return (
-                        <ul>
-                            <li>{task.title}</li>
+                        <ul key={task.id} style={{ listStyleType: 'none' }}>
+                            <li ><input type='checkbox'/>
+                                {task.title}
+                                <button>+</button>
+                            </li>
                         </ul>
                     )
                 })
