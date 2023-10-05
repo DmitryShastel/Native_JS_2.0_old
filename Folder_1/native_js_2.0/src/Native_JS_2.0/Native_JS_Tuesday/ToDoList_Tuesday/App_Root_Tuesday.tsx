@@ -47,6 +47,7 @@ export const AppRootTuesday = () => {
                 todolists.map((td) => {
                     return (
                         <TodoListTuesday
+                            key={td.id}
                             tdTitle={td.title}
                             tasks={tasks[td.id]}
                         />

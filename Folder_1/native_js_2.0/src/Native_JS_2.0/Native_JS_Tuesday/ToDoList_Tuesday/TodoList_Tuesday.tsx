@@ -1,5 +1,6 @@
 import React from 'react';
 import {TaskType} from "./App_Root_Tuesday";
+import {AddItemFormTuesday} from "./AddItemForm_Tuesday";
 
 type ToDoListType = {
     tdTitle: string
@@ -11,16 +12,15 @@ export const TodoListTuesday = (props: ToDoListType) => {
     return (
         <div>
             <h3>{props.tdTitle}</h3>
-            <input type='text'/>
-            <button>+</button>
+            <AddItemFormTuesday/>
 
             {
                 props.tasks.map((task) => {
                     return (
-                        <ul key={task.id} style={{ listStyleType: 'none' }}>
-                            <li ><input type='checkbox'/>
+                        <ul key={task.id} style={{listStyleType: 'none'}}>
+                            <li><input type='checkbox'/>
                                 {task.title}
-                                <button>+</button>
+                                <button>X</button>
                             </li>
                         </ul>
                     )
