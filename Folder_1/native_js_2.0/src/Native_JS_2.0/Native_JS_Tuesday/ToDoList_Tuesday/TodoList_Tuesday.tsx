@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {ChangeEvent, useState, useRef} from 'react';
 import {TaskType} from "./App_Root_Tuesday";
 
 type ToDoListType = {
@@ -15,6 +15,7 @@ export const TodoListTuesday = (props: ToDoListType) => {
 
     const [title, setTitle] = useState('')
     const [editingTaskId, setEditingTaskId] = useState('')
+    const inputRef = useRef<HTMLInputElement>(null);
 
     const addTaskTitleHandler = () => {
         props.addTask(title)
@@ -33,8 +34,9 @@ export const TodoListTuesday = (props: ToDoListType) => {
 
     //change task title
     const changeTaskTitleHandler = (taskId: string, newTitle: string) => {
-        props.changeTaskTitle(taskId, newTitle)
-        // stopEditingTask()
+        if (newTitle.trim() !== '') {
+            props.changeTaskTitle(taskId, newTitle)
+        }
     }
 
     const startEditingTask = (taskId: string) => {
@@ -74,6 +76,15 @@ export const TodoListTuesday = (props: ToDoListType) => {
                                         onDoubleClick={() => startEditingTask(task.id)}
                                         onBlur={stopEditingTask}
                                         autoFocus
+                                        onKeyDown={(e) => {
+                                            if (e.key === 'Enter') {
+                                                if (inputRef.current) {
+                                                    inputRef.current.blur();
+                                                }
+                                                changeTaskTitleHandler(task.id, e.currentTarget.value);
+                                            }
+                                        }}
+                                        ref={inputRef}
                                     />
                                 ) : (
                                     <span
