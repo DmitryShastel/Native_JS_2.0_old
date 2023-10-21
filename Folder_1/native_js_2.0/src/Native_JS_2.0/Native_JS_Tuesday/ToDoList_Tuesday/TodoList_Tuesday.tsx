@@ -19,17 +19,18 @@ export const TodoListTuesday = (props: ToDoListType) => {
         props.addTask(title)
         setTitle('')
     }
-
     const onChangeTaskTitleHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setTitle(e.currentTarget.value)
     }
-
     const removeTaskHandler = (taskId: string) => {
         props.removeTask(taskId)
     }
-
     const changeTaskStatusHandler = (event: ChangeEvent<HTMLInputElement>, taskId: string) => {
         props.changeTaskStatus(taskId)
+    }
+
+    const changeTaskTitle = (newTitle: string) => {
+        props.changeTaskTitle(newTitle)
     }
 
     return (
