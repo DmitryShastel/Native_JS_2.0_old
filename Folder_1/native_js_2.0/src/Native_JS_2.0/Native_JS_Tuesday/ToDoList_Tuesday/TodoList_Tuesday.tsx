@@ -15,7 +15,7 @@ export const TodoListTuesday = (props: ToDoListType) => {
 
     const [title, setTitle] = useState('')
     const [editingTaskId, setEditingTaskId] = useState('')
-    const [filter, setFilter] = useState('all')
+    const [filter, setFilter] = useState('All')
     const inputRef = useRef<HTMLInputElement>(null);
 
     const addTaskTitleHandler = () => {
@@ -45,6 +45,23 @@ export const TodoListTuesday = (props: ToDoListType) => {
         setEditingTaskId('');
     }
 
+    //filter tasks
+    const filterAllTasks = () => {
+        setFilter('All')
+    }
+    const filterActiveTasks = () => {
+        setFilter('Active')
+    }
+    const filterCompletedTasks = () => {
+        setFilter('Completed')
+    }
+    let filteredTasks = props.tasks
+    if (filter === 'Active') {
+        filteredTasks = filteredTasks.filter(task => !task.isDone)
+    } else if (filter === 'Completed') {
+        filteredTasks = filteredTasks.filter(task => task.isDone)
+    }
+
     return (
         <div>
             <h3>What to learn</h3>
@@ -56,7 +73,7 @@ export const TodoListTuesday = (props: ToDoListType) => {
             </button>
 
             {
-                props.tasks.map((task) => {
+                filteredTasks.map((task) => {
                     return (
                         <ul key={task.id} style={{listStyleType: 'none'}}>
                             <li><input
@@ -91,10 +108,7 @@ export const TodoListTuesday = (props: ToDoListType) => {
                                 {task.title}
                             </span>
                                 )
-
                                 }
-
-
                                 <button onClick={() => {
                                     removeTaskHandler(task.id)
                                 }}>X
@@ -104,9 +118,9 @@ export const TodoListTuesday = (props: ToDoListType) => {
                     )
                 })
             }
-            <button>All</button>
-            <button>Active</button>
-            <button>Completed</button>
+            <button onClick={filterAllTasks}>All</button>
+            <button onClick={filterActiveTasks}>Active</button>
+            <button onClick={filterCompletedTasks}>Completed</button>
         </div>
     );
 };
