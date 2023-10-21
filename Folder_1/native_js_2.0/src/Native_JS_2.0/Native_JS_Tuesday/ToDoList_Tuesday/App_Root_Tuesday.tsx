@@ -51,12 +51,10 @@ export const AppRootTuesday = () => {
         let newTask = {id: v1(), title: taskTitle, isDone: false}
         setTasks([newTask, ...tasks])
     }
-
     const removeTask = (taskId: string) => {
         let removedTask = tasks.filter(task => task.id != taskId)
         setTasks([...removedTask])
     }
-
     const changeTaskStatus = (taskId: string) => {
         let updatedTasks = tasks.map(task => {
             if (task.id === taskId) {
@@ -70,6 +68,10 @@ export const AppRootTuesday = () => {
         setTasks(updatedTasks);
     }
 
+    const changeTaskTitle = (title: string) => {
+
+    }
+
     return (
         <div>
             <TodoListTuesday
@@ -77,6 +79,7 @@ export const AppRootTuesday = () => {
                 addTask={addTask}
                 removeTask={removeTask}
                 changeTaskStatus={changeTaskStatus}
+                changeTaskTitle={changeTaskTitle}
             />
         </div>
     );

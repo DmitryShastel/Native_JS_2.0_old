@@ -7,6 +7,7 @@ type ToDoListType = {
     addTask: (taskTitle: string) => void
     removeTask: (taskId: string) => void
     changeTaskStatus: (taskId: string) => void
+    changeTaskTitle: (title: string) => void
 }
 
 
