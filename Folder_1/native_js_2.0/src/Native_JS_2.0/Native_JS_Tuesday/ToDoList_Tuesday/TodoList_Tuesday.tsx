@@ -7,13 +7,14 @@ type ToDoListType = {
     addTask: (taskTitle: string) => void
     removeTask: (taskId: string) => void
     changeTaskStatus: (taskId: string) => void
-    changeTaskTitle: (title: string) => void
+    changeTaskTitle: (taskId: string, title: string) => void
 }
 
 
 export const TodoListTuesday = (props: ToDoListType) => {
 
     const [title, setTitle] = useState('')
+    const [editingTaskId, setEditingTaskId] = useState('')
 
     const addTaskTitleHandler = () => {
         props.addTask(title)
@@ -29,8 +30,19 @@ export const TodoListTuesday = (props: ToDoListType) => {
         props.changeTaskStatus(taskId)
     }
 
-    const changeTaskTitle = (newTitle: string) => {
-        props.changeTaskTitle(newTitle)
+
+    //change task title
+    const changeTaskTitleHandler = (taskId: string, newTitle: string) => {
+        props.changeTaskTitle(taskId, newTitle)
+        // stopEditingTask()
+    }
+
+    const startEditingTask = (taskId: string) => {
+        setEditingTaskId(taskId)
+    }
+
+    const stopEditingTask = () => {
+        setEditingTaskId('');
     }
 
     return (
@@ -50,8 +62,30 @@ export const TodoListTuesday = (props: ToDoListType) => {
                             <li><input
                                 checked={task.isDone}
                                 type='checkbox'
-                                onChange={(event) => changeTaskStatusHandler(event, task.id)}/>
+                                onChange={
+                                    (event) => changeTaskStatusHandler(event, task.id)
+                                }
+                            />
+                                {editingTaskId === task.id ? (
+                                    <input
+                                        type='text'
+                                        value={task.title}
+                                        onChange={(e) => changeTaskTitleHandler(task.id, e.target.value)}
+                                        onDoubleClick={() => startEditingTask(task.id)}
+                                        onBlur={stopEditingTask}
+                                        autoFocus
+                                    />
+                                ) : (
+                                    <span
+                                        onDoubleClick={() => startEditingTask(task.id)}
+                                    >
                                 {task.title}
+                            </span>
+                                )
+
+                                }
+
+
                                 <button onClick={() => {
                                     removeTaskHandler(task.id)
                                 }}>X
