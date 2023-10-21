@@ -15,6 +15,7 @@ export const TodoListTuesday = (props: ToDoListType) => {
 
     const [title, setTitle] = useState('')
     const [editingTaskId, setEditingTaskId] = useState('')
+    const [filter, setFilter] = useState('all')
     const inputRef = useRef<HTMLInputElement>(null);
 
     const addTaskTitleHandler = () => {
@@ -31,18 +32,15 @@ export const TodoListTuesday = (props: ToDoListType) => {
         props.changeTaskStatus(taskId)
     }
 
-
     //change task title
     const changeTaskTitleHandler = (taskId: string, newTitle: string) => {
         if (newTitle.trim() !== '') {
             props.changeTaskTitle(taskId, newTitle)
         }
     }
-
     const startEditingTask = (taskId: string) => {
         setEditingTaskId(taskId)
     }
-
     const stopEditingTask = () => {
         setEditingTaskId('');
     }

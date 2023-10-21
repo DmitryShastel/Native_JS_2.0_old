@@ -67,13 +67,13 @@ export const AppRootTuesday = () => {
         });
         setTasks(updatedTasks);
     }
-
     const changeTaskTitle = (taskId: string, newTitle: string) => {
         setTasks((changedTitle) => changedTitle.map((task) =>
                 task.id === taskId ? {...task, title: newTitle} : task
             )
         )
     }
+
 
     return (
         <div>
