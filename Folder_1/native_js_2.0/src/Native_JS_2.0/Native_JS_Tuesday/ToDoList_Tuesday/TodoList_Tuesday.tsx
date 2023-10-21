@@ -1,5 +1,6 @@
 import React, {ChangeEvent, useState, useRef} from 'react';
 import {TaskType} from "./App_Root_Tuesday";
+import './ToDoList_Tuesday.css';
 
 type ToDoListType = {
     // tdTitle: string
@@ -16,12 +17,20 @@ export const TodoListTuesday = (props: ToDoListType) => {
     const [title, setTitle] = useState('')
     const [editingTaskId, setEditingTaskId] = useState('')
     const [filter, setFilter] = useState('All')
+    const [error, setError] = useState('')
     const inputRef = useRef<HTMLInputElement>(null);
+    const hasError = title.trim() === '' && error !== ''
 
     const addTaskTitleHandler = () => {
+        if (title.trim() === '') {
+            setError('Please enter a task title')
+            return
+        }
         props.addTask(title)
         setTitle('')
+        setError('')
     }
+
     const onChangeTaskTitleHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setTitle(e.currentTarget.value)
     }
@@ -68,9 +77,20 @@ export const TodoListTuesday = (props: ToDoListType) => {
             <input
                 type='text'
                 onChange={onChangeTaskTitleHandler}
-                value={title}/>
-            <button onClick={addTaskTitleHandler}>+
-            </button>
+                value={title}
+                onBlur={() => {
+                    if (title.trim() === '') {
+                        setError('Please enter a task title')
+                    } else {
+                        setError('')
+                    }
+                }}
+                className={hasError ? 'input-error' : ''}
+            />
+
+
+            <button onClick={addTaskTitleHandler}>+</button>
+            {error && <p className="error-text">{error}</p>}
 
             {
                 filteredTasks.map((task) => {
