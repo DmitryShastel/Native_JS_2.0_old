@@ -8,9 +8,9 @@ export type  TaskType = {
     isDone: boolean
 }
 
-// export type TasksType = {
-//     [key: string]: TaskType[]
-// }
+export type TasksType = {
+    [key: string]: TaskType[]
+}
 
 export type ToDoListsType = {
     id: string
@@ -30,25 +30,17 @@ export const AppRootTuesday = () => {
         {id: todolistId2, title: 'What to buy', filter: 'Completed'},
     ])
 
-    // let [tasks, setTasks] = useState<TasksType>({
-    //     [todolistId1]: [
-    //         {id: v1(), title: 'HTML', isDone: true},
-    //         {id: v1(), title: 'CSS', isDone: true},
-    //     ],
-    //     [todolistId2]: [
-    //         {id: v1(), title: 'Books', isDone: true},
-    //         {id: v1(), title: 'Food', isDone: true},
-    //     ]
-    // })
-
-
-    let [tasks, setTasks] = useState<TaskType[]>([
+    let [tasks, setTasks] = useState<TasksType>({
+        [todolistId1]: [
             {id: v1(), title: 'HTML', isDone: true},
             {id: v1(), title: 'CSS', isDone: true},
-            {id: v1(), title: 'JS', isDone: false},
-            {id: v1(), title: 'React', isDone: false},
+        ],
+        [todolistId2]: [
+            {id: v1(), title: 'Books', isDone: true},
+            {id: v1(), title: 'Food', isDone: true},
         ]
-    )
+    })
+
 
 
     const addTask = (taskTitle: string) => {
@@ -77,8 +69,6 @@ export const AppRootTuesday = () => {
             )
         )
     }
-
-
     const changeFilter = (todolistId: string, value: FilterType) => {
         let todolist = todolists.find(tl => tl.id === todolistId)
         if(todolist) {
