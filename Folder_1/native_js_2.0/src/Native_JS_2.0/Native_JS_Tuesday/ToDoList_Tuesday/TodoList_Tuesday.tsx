@@ -4,6 +4,7 @@ import './ToDoList_Tuesday.css';
 
 type ToDoListType = {
     // tdTitle: string
+    title: string
     tasks: TaskType[]
     addTask: (taskTitle: string) => void
     removeTask: (taskId: string) => void
@@ -11,12 +12,14 @@ type ToDoListType = {
     changeTaskTitle: (taskId: string, title: string) => void
 }
 
+type FilterType = 'All' | 'Active' | 'Completed'
+
 
 export const TodoListTuesday = (props: ToDoListType) => {
 
     const [title, setTitle] = useState('')
     const [editingTaskId, setEditingTaskId] = useState('')
-    const [filter, setFilter] = useState('All')
+    const [filter, setFilter] = useState<FilterType>('All')
     const [error, setError] = useState('')
     const inputRef = useRef<HTMLInputElement>(null);
     const hasError = title.trim() === '' && error !== ''
@@ -30,7 +33,6 @@ export const TodoListTuesday = (props: ToDoListType) => {
         setTitle('')
         setError('')
     }
-
     const onChangeTaskTitleHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setTitle(e.currentTarget.value)
     }
@@ -73,7 +75,7 @@ export const TodoListTuesday = (props: ToDoListType) => {
 
     return (
         <div>
-            <h3>What to learn</h3>
+            <h3>{props.title}</h3>
             <input
                 type='text'
                 onChange={onChangeTaskTitleHandler}
