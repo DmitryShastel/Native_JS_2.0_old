@@ -80,14 +80,19 @@ export const AppRootTuesday = () => {
 
     return (
         <div>
-            <TodoListTuesday
-                title='What to learn'
-                tasks={tasks}
-                addTask={addTask}
-                removeTask={removeTask}
-                changeTaskStatus={changeTaskStatus}
-                changeTaskTitle={changeTaskTitle}
-            />
+            {
+                todolists.map((tl) => (
+                    <TodoListTuesday
+                        title='What to learn'
+                        tasks={tasks}
+                        addTask={addTask}
+                        removeTask={removeTask}
+                        changeTaskStatus={changeTaskStatus}
+                        changeTaskTitle={changeTaskTitle}
+                    />
+                ))
+            }
         </div>
     );
 };
+
