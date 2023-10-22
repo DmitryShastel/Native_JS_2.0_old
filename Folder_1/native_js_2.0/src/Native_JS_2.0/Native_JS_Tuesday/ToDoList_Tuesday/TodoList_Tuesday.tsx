@@ -1,25 +1,23 @@
 import React, {ChangeEvent, useState, useRef} from 'react';
-import {TaskType} from "./App_Root_Tuesday";
+import {FilterType, TaskType} from "./App_Root_Tuesday";
 import './ToDoList_Tuesday.css';
 
 type ToDoListType = {
-    // tdTitle: string
+    todolistId: string
     title: string
     tasks: TaskType[]
     addTask: (taskTitle: string) => void
     removeTask: (taskId: string) => void
     changeTaskStatus: (taskId: string) => void
     changeTaskTitle: (taskId: string, title: string) => void
+    changeFilter: (todolistId: string, value: FilterType) => void
 }
-
-type FilterType = 'All' | 'Active' | 'Completed'
 
 
 export const TodoListTuesday = (props: ToDoListType) => {
 
     const [title, setTitle] = useState('')
     const [editingTaskId, setEditingTaskId] = useState('')
-    const [filter, setFilter] = useState<FilterType>('All')
     const [error, setError] = useState('')
     const inputRef = useRef<HTMLInputElement>(null);
     const hasError = title.trim() === '' && error !== ''
@@ -58,20 +56,15 @@ export const TodoListTuesday = (props: ToDoListType) => {
 
     //filter tasks
     const filterAllTasks = () => {
-        setFilter('All')
+        props.changeFilter(props.todolistId, 'All')
     }
     const filterActiveTasks = () => {
-        setFilter('Active')
+        props.changeFilter(props.todolistId, 'Active')
     }
     const filterCompletedTasks = () => {
-        setFilter('Completed')
+        props.changeFilter(props.todolistId, 'Completed')
     }
-    let filteredTasks = props.tasks
-    if (filter === 'Active') {
-        filteredTasks = filteredTasks.filter(task => !task.isDone)
-    } else if (filter === 'Completed') {
-        filteredTasks = filteredTasks.filter(task => task.isDone)
-    }
+
 
     return (
         <div>
@@ -95,7 +88,7 @@ export const TodoListTuesday = (props: ToDoListType) => {
             {error && <p className="error-text">{error}</p>}
 
             {
-                filteredTasks.map((task) => {
+                props.tasks.map((task) => {
                     return (
                         <ul key={task.id} style={{listStyleType: 'none'}}>
                             <li><input

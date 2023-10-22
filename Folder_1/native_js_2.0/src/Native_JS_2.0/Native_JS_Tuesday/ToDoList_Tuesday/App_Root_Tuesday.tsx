@@ -17,16 +17,17 @@ export type ToDoListsType = {
     title: string
     filter: string
 }
-
+export type FilterType = 'All' | 'Active' | 'Completed'
 
 export const AppRootTuesday = () => {
+    // const [filter, setFilter] = useState<FilterType>('All')
 
     let todolistId1 = v1()
     let todolistId2 = v1()
 
     let [todolists, setTodolists] = useState<ToDoListsType[]>([
-        {id: todolistId1, title: 'What to learn', filter: 'all'},
-        {id: todolistId2, title: 'What to buy', filter: 'all'},
+        {id: todolistId1, title: 'What to learn', filter: 'All'},
+        {id: todolistId2, title: 'What to buy', filter: 'Completed'},
     ])
 
     // let [tasks, setTasks] = useState<TasksType>({
@@ -78,19 +79,39 @@ export const AppRootTuesday = () => {
     }
 
 
+    const changeFilter = (todolistId: string, value: FilterType) => {
+        let todolist = todolists.find(tl => tl.id === todolistId)
+        if(todolist) {
+            todolist.filter = value
+            setTodolists([...todolists])
+        }
+    }
+
+
     return (
         <div>
             {
-                todolists.map((tl) => (
-                    <TodoListTuesday
-                        title='What to learn'
-                        tasks={tasks}
+                todolists.map((tl => {
+
+                    let filteredTasks = tasks
+                    if (tl.filter === 'Active') {
+                        filteredTasks = tasks.filter(task => !task.isDone)
+                    } else if (tl.filter === 'Completed') {
+                        filteredTasks = tasks.filter(task => task.isDone)
+                    }
+
+                    return <TodoListTuesday
+                        todolistId={tl.id}
+                        key={tl.id}
+                        title={tl.title}
+                        tasks={filteredTasks}
                         addTask={addTask}
                         removeTask={removeTask}
                         changeTaskStatus={changeTaskStatus}
                         changeTaskTitle={changeTaskTitle}
+                        changeFilter={changeFilter}
                     />
-                ))
+                }))
             }
         </div>
     );
