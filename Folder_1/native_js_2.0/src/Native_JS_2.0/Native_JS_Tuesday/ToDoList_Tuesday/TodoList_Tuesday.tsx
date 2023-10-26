@@ -1,6 +1,7 @@
 import React, {ChangeEvent, useState, useRef} from 'react';
 import {FilterType, TaskType} from "./App_Root_Tuesday";
 import './ToDoList_Tuesday.css';
+import {AddItemFormTuesday} from "./AddItemForm_Tuesday";
 
 type ToDoListType = {
     todolistId: string
@@ -71,19 +72,21 @@ export const TodoListTuesday = (props: ToDoListType) => {
                 <button onClick={removeTodolistHandler}>X</button>
             </h3>
 
-            <input
-                // type='text'
-                // onChange={onChangeTaskTitleHandler}
-                // value={title}
-                // onBlur={() => {
-                //     if (title.trim() === '') {
-                //         setError('Please enter a task title')
-                //     } else {
-                //         setError('')
-                //     }
-                // }}
-                // className={hasError ? 'input-error' : ''}
-            />
+            <AddItemFormTuesday callBack={() => {}}/>
+
+            {/*<input*/}
+            {/*    type='text'*/}
+            {/*    onChange={onChangeTaskTitleHandler}*/}
+            {/*    value={title}*/}
+            {/*    onBlur={() => {*/}
+            {/*        if (title.trim() === '') {*/}
+            {/*            setError('Please enter a task title')*/}
+            {/*        } else {*/}
+            {/*            setError('')*/}
+            {/*        }*/}
+            {/*    }}*/}
+            {/*    className={hasError ? 'input-error' : ''}*/}
+            {/*/>*/}
 
 
             {/*<button onClick={addTaskTitleHandler}>+</button>*/}

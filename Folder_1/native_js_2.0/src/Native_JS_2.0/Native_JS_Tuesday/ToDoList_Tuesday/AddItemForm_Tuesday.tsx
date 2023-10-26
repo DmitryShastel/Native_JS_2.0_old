@@ -8,23 +8,24 @@ type AddItemType = {
 export const AddItemFormTuesday = (props: AddItemType) => {
 
     const [title, setTitle] = useState('')
-    const [error, setError] = useState('')
+    const [error, setError] = useState<string | null>(null)
 
-    // const addTaskTitleHandler = () => {
-    //     if (title.trim() === '') {
-    //         setError('Please enter a task title')
-    //         return
-    //     }
-    //     props.addTask(props.todolistId, title)
-    //     setTitle('')
-    //     setError('')
-    // }
+    const addTaskTitleHandler = () => {
+        let newTitle = title.trim()
+        if (newTitle !== '') {
+            props.callBack(newTitle)
+            setTitle('')
+        } else {
+            setError('Please enter a task title')
+        }
+    }
 
 
     return (
         <div>
-            {/*<button onClick={addTaskTitleHandler}>+</button>*/}
-            {/*{error && <p className="error-text">{error}</p>}*/}
+            <input type='text'/>
+            <button onClick={addTaskTitleHandler}>+</button>
+            {error && <p className="error-text">{error}</p>}
         </div>
     );
 };
