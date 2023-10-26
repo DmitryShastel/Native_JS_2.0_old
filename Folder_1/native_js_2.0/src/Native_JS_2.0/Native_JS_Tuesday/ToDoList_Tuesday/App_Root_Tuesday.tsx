@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {TodoListTuesday} from "./TodoList_Tuesday";
 import {v1} from "uuid";
+import {AddItemFormTuesday} from "./AddItemForm_Tuesday";
 
 export type  TaskType = {
     id: string
@@ -52,7 +53,7 @@ export const AppRootTuesday = () => {
         tasks[todolistId] = todolistTasks.filter(t => t.id != taskId)
         setTasks({...tasks})
     }
-    const changeTaskTitle = (taskId: string, newTitle: string) =>  {
+    const changeTaskTitle = (taskId: string, newTitle: string) => {
         // setTasks((changedTitle) => changedTitle.map((task) =>
         //         task.id === taskId ? {...task, title: newTitle} : task
         //     )
@@ -78,38 +79,45 @@ export const AppRootTuesday = () => {
         delete tasks[todolistId]
         setTasks({...tasks})
     }
+    const addTodolist = (todolistTitle: string) => {
+        let todolistId = v1()
+        let newTodolist = {id: todolistId, title: todolistTitle, filter: 'All'}
+        setTodolists([...todolists, newTodolist])
+        setTasks({...tasks, [todolistId]: []})
+    }
 
 
-        return (
-            <div>
-                {
-                    todolists.map((todolist => {
+    return (
+        <div>
+            <AddItemFormTuesday callBack={addTodolist}/>
+            {
+                todolists.map((todolist => {
 
-                        let allTodolistTasks = tasks[todolist.id]
-                        let tasksForTodolist = allTodolistTasks
+                    let allTodolistTasks = tasks[todolist.id]
+                    let tasksForTodolist = allTodolistTasks
 
-                        if (todolist.filter === 'Active') {
-                            tasksForTodolist = allTodolistTasks.filter(t => t.isDone === false)
-                        }
-                        if (todolist.filter === 'Completed') {
-                            tasksForTodolist = allTodolistTasks.filter(t => t.isDone === true)
-                        }
+                    if (todolist.filter === 'Active') {
+                        tasksForTodolist = allTodolistTasks.filter(t => t.isDone === false)
+                    }
+                    if (todolist.filter === 'Completed') {
+                        tasksForTodolist = allTodolistTasks.filter(t => t.isDone === true)
+                    }
 
-                        return <TodoListTuesday
-                            todolistId={todolist.id}
-                            key={todolist.id}
-                            title={todolist.title}
-                            tasks={tasksForTodolist}
-                            addTask={addTask}
-                            removeTask={removeTask}
-                            changeTaskStatus={changeTaskStatus}
-                            changeTaskTitle={changeTaskTitle}
-                            changeFilter={changeFilter}
-                            removeTodolist={removeTodolist}
-                        />
-                    }))
-                }
-            </div>
-        );
+                    return <TodoListTuesday
+                        todolistId={todolist.id}
+                        key={todolist.id}
+                        title={todolist.title}
+                        tasks={tasksForTodolist}
+                        addTask={addTask}
+                        removeTask={removeTask}
+                        changeTaskStatus={changeTaskStatus}
+                        changeTaskTitle={changeTaskTitle}
+                        changeFilter={changeFilter}
+                        removeTodolist={removeTodolist}
+                    />
+                }))
+            }
+        </div>
+    );
 
 }

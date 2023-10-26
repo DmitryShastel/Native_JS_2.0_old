@@ -59,13 +59,11 @@ export const TodoListTuesday = (props: ToDoListType) => {
 
     return (
         <div>
-
             <h3>{props.title}
                 <button onClick={removeTodolistHandler}>X</button>
             </h3>
 
             <AddItemFormTuesday callBack={addTaskHandler}/>
-
 
             {
                 props.tasks.map((task) => {
@@ -88,7 +86,7 @@ export const TodoListTuesday = (props: ToDoListType) => {
                             />
 
                                 {task.title}
-                                
+
                                 <button onClick={removeTaskHandler}>X</button>
                             </li>
                         </ul>
