@@ -1,19 +1,30 @@
 import React, {useState} from 'react';
 
 type AddItemType = {
-    addItem: (title: string) => void
+    callBack: (title: string) => void
 }
 
 
 export const AddItemFormTuesday = (props: AddItemType) => {
 
     const [title, setTitle] = useState('')
+    const [error, setError] = useState('')
+
+    // const addTaskTitleHandler = () => {
+    //     if (title.trim() === '') {
+    //         setError('Please enter a task title')
+    //         return
+    //     }
+    //     props.addTask(props.todolistId, title)
+    //     setTitle('')
+    //     setError('')
+    // }
 
 
     return (
         <div>
-            <input type='text'/>
-            <button>+</button>
+            {/*<button onClick={addTaskTitleHandler}>+</button>*/}
+            {/*{error && <p className="error-text">{error}</p>}*/}
         </div>
     );
 };

@@ -17,40 +17,40 @@ type ToDoListType = {
 
 export const TodoListTuesday = (props: ToDoListType) => {
 
-    const [title, setTitle] = useState('')
-    const [editingTaskId, setEditingTaskId] = useState('')
-    const [error, setError] = useState('')
-    const inputRef = useRef<HTMLInputElement>(null);
-    const hasError = title.trim() === '' && error !== ''
+    // const [title, setTitle] = useState('')
+    // const [editingTaskId, setEditingTaskId] = useState('')
+    // const [error, setError] = useState('')
+    // const inputRef = useRef<HTMLInputElement>(null);
+    // const hasError = title.trim() === '' && error !== ''
 
-    const addTaskTitleHandler = () => {
-        if (title.trim() === '') {
-            setError('Please enter a task title')
-            return
-        }
-        props.addTask(props.todolistId, title)
-        setTitle('')
-        setError('')
-    }
-    const onChangeTaskTitleHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setTitle(e.currentTarget.value)
-    }
+    // const addTaskTitleHandler = () => {
+    //     if (title.trim() === '') {
+    //         setError('Please enter a task title')
+    //         return
+    //     }
+    //     props.addTask(props.todolistId, title)
+    //     setTitle('')
+    //     setError('')
+    // }
+    // const onChangeTaskTitleHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    //     setTitle(e.currentTarget.value)
+    // }
     const removeTodolistHandler = () => {
         props.removeTodolist(props.todolistId)
     }
 
     //change task title
-    const changeTaskTitleHandler = (taskId: string, newTitle: string) => {
-        if (newTitle.trim() !== '') {
-            props.changeTaskTitle(taskId, newTitle)
-        }
-    }
-    const startEditingTask = (taskId: string) => {
-        setEditingTaskId(taskId)
-    }
-    const stopEditingTask = () => {
-        setEditingTaskId('');
-    }
+    // const changeTaskTitleHandler = (taskId: string, newTitle: string) => {
+    //     if (newTitle.trim() !== '') {
+    //         props.changeTaskTitle(taskId, newTitle)
+    //     }
+    // }
+    // const startEditingTask = (taskId: string) => {
+    //     setEditingTaskId(taskId)
+    // }
+    // const stopEditingTask = () => {
+    //     setEditingTaskId('');
+    // }
 
     //filter tasks
     const filterAllTasks = () => {
@@ -72,22 +72,22 @@ export const TodoListTuesday = (props: ToDoListType) => {
             </h3>
 
             <input
-                type='text'
-                onChange={onChangeTaskTitleHandler}
-                value={title}
-                onBlur={() => {
-                    if (title.trim() === '') {
-                        setError('Please enter a task title')
-                    } else {
-                        setError('')
-                    }
-                }}
-                className={hasError ? 'input-error' : ''}
+                // type='text'
+                // onChange={onChangeTaskTitleHandler}
+                // value={title}
+                // onBlur={() => {
+                //     if (title.trim() === '') {
+                //         setError('Please enter a task title')
+                //     } else {
+                //         setError('')
+                //     }
+                // }}
+                // className={hasError ? 'input-error' : ''}
             />
 
 
-            <button onClick={addTaskTitleHandler}>+</button>
-            {error && <p className="error-text">{error}</p>}
+            {/*<button onClick={addTaskTitleHandler}>+</button>*/}
+            {/*{error && <p className="error-text">{error}</p>}*/}
 
             {
                 props.tasks.map((task) => {
@@ -108,32 +108,18 @@ export const TodoListTuesday = (props: ToDoListType) => {
                                 type='checkbox'
                                 onChange={changeTaskStatusHandler}
                             />
-                                {editingTaskId === task.id ? (
-                                    <input
-                                        type='text'
-                                        value={task.title}
-                                        onChange={(e) => changeTaskTitleHandler(task.id, e.target.value)}
-                                        onDoubleClick={() => startEditingTask(task.id)}
-                                        onBlur={stopEditingTask}
-                                        autoFocus
-                                        onKeyDown={(e) => {
-                                            if (e.key === 'Enter') {
-                                                if (inputRef.current) {
-                                                    inputRef.current.blur();
-                                                }
-                                                changeTaskTitleHandler(task.id, e.currentTarget.value);
-                                            }
-                                        }}
-                                        ref={inputRef}
-                                    />
-                                ) : (
-                                    <span
-                                        onDoubleClick={() => startEditingTask(task.id)}
-                                    >
+
                                 {task.title}
-                            </span>
-                                )
-                                }
+
+                                {/*<li>*/}
+                                {/*    // type='text'*/}
+                                {/*    value={task.title}*/}
+                                {/*    // onChange={(e) => changeTaskTitleHandler(task.id, e.target.value)}*/}
+                                {/*    // onDoubleClick={() => startEditingTask(task.id)}*/}
+                                {/*    // onBlur={stopEditingTask}*/}
+                                {/*    autoFocus*/}
+                                {/*/>*/}
+
                                 <button onClick={removeTaskHandler}>X</button>
                             </li>
                         </ul>

@@ -26,7 +26,7 @@ export const AppRootTuesday = () => {
 
     let [todolists, setTodolists] = useState<ToDoListsType[]>([
         {id: todolistId1, title: 'What to learn', filter: 'All'},
-        {id: todolistId2, title: 'What to buy', filter: 'Completed'},
+        {id: todolistId2, title: 'What to buy', filter: 'All'},
     ])
 
     let [tasks, setTasks] = useState<TasksType>({
@@ -52,7 +52,7 @@ export const AppRootTuesday = () => {
         tasks[todolistId] = todolistTasks.filter(t => t.id != taskId)
         setTasks({...tasks})
     }
-    const changeTaskTitle = (taskId: string, newTitle: string) => {
+    const changeTaskTitle = (taskId: string, newTitle: string) =>  {
         // setTasks((changedTitle) => changedTitle.map((task) =>
         //         task.id === taskId ? {...task, title: newTitle} : task
         //     )
