@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState, useRef} from 'react';
+import React, {ChangeEvent} from 'react';
 import {FilterType, TaskType} from "./App_Root_Tuesday";
 import './ToDoList_Tuesday.css';
 import {AddItemFormTuesday} from "./AddItemForm_Tuesday";
@@ -18,27 +18,10 @@ type ToDoListType = {
 
 export const TodoListTuesday = (props: ToDoListType) => {
 
-    // const [title, setTitle] = useState('')
-    // const [editingTaskId, setEditingTaskId] = useState('')
-    // const [error, setError] = useState('')
-    // const inputRef = useRef<HTMLInputElement>(null);
-    // const hasError = title.trim() === '' && error !== ''
-
-    // const addTaskTitleHandler = () => {
-    //     if (title.trim() === '') {
-    //         setError('Please enter a task title')
-    //         return
-    //     }
-    //     props.addTask(props.todolistId, title)
-    //     setTitle('')
-    //     setError('')
-    // }
     // const onChangeTaskTitleHandler = (e: ChangeEvent<HTMLInputElement>) => {
     //     setTitle(e.currentTarget.value)
     // }
-    const removeTodolistHandler = () => {
-        props.removeTodolist(props.todolistId)
-    }
+
 
     //change task title
     // const changeTaskTitleHandler = (taskId: string, newTitle: string) => {
@@ -52,6 +35,15 @@ export const TodoListTuesday = (props: ToDoListType) => {
     // const stopEditingTask = () => {
     //     setEditingTaskId('');
     // }
+
+
+    const removeTodolistHandler = () => {
+        props.removeTodolist(props.todolistId)
+    }
+
+    const addTaskHandler = (newTitle: string) => {
+        props.addTask(props.todolistId, newTitle)
+    }
 
     //filter tasks
     const filterAllTasks = () => {
@@ -72,25 +64,8 @@ export const TodoListTuesday = (props: ToDoListType) => {
                 <button onClick={removeTodolistHandler}>X</button>
             </h3>
 
-            <AddItemFormTuesday callBack={() => {}}/>
+            <AddItemFormTuesday callBack={addTaskHandler}/>
 
-            {/*<input*/}
-            {/*    type='text'*/}
-            {/*    onChange={onChangeTaskTitleHandler}*/}
-            {/*    value={title}*/}
-            {/*    onBlur={() => {*/}
-            {/*        if (title.trim() === '') {*/}
-            {/*            setError('Please enter a task title')*/}
-            {/*        } else {*/}
-            {/*            setError('')*/}
-            {/*        }*/}
-            {/*    }}*/}
-            {/*    className={hasError ? 'input-error' : ''}*/}
-            {/*/>*/}
-
-
-            {/*<button onClick={addTaskTitleHandler}>+</button>*/}
-            {/*{error && <p className="error-text">{error}</p>}*/}
 
             {
                 props.tasks.map((task) => {
@@ -113,16 +88,7 @@ export const TodoListTuesday = (props: ToDoListType) => {
                             />
 
                                 {task.title}
-
-                                {/*<li>*/}
-                                {/*    // type='text'*/}
-                                {/*    value={task.title}*/}
-                                {/*    // onChange={(e) => changeTaskTitleHandler(task.id, e.target.value)}*/}
-                                {/*    // onDoubleClick={() => startEditingTask(task.id)}*/}
-                                {/*    // onBlur={stopEditingTask}*/}
-                                {/*    autoFocus*/}
-                                {/*/>*/}
-
+                                
                                 <button onClick={removeTaskHandler}>X</button>
                             </li>
                         </ul>
