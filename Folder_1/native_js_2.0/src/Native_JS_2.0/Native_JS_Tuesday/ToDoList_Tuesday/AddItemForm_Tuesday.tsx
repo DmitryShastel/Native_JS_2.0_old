@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
 import './ToDoList_Tuesday.css';
 
 type AddItemType = {
@@ -25,6 +25,13 @@ export const AddItemFormTuesday = (props: AddItemType) => {
         setTitle(e.currentTarget.value)
     }
 
+    const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
+        setError(null);
+        if (e.charCode === 13) {
+            addTaskTitle();
+        }
+    }
+
 
     return (
         <div>
@@ -32,6 +39,7 @@ export const AddItemFormTuesday = (props: AddItemType) => {
                 type='text'
                 value={title}
                 onChange={onChangeTaskTitleHandler}
+                onKeyPress={onKeyPressHandler}
                 className={error ? 'input-error' : ''}
             />
             <button onClick={addTaskTitle}>+</button>
