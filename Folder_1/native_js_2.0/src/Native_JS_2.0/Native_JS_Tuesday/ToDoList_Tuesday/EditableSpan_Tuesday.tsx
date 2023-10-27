@@ -1,6 +1,12 @@
 import React from 'react';
 
-export const EditableSpanTuesday = () => {
+type EditableSpanTuesdayType = {
+    oldTitle: string
+    callBack: () => void
+}
+
+
+export const EditableSpanTuesday = (props: EditableSpanTuesdayType) => {
     return (
         <div>
 
