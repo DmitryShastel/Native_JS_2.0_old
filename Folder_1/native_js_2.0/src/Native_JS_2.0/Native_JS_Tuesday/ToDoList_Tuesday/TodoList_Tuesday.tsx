@@ -2,6 +2,7 @@ import React, {ChangeEvent} from 'react';
 import {FilterType, TaskType} from "./App_Root_Tuesday";
 import './ToDoList_Tuesday.css';
 import {AddItemFormTuesday} from "./AddItemForm_Tuesday";
+import {EditableSpanTuesday} from "./EditableSpan_Tuesday";
 
 type ToDoListType = {
     todolistId: string
@@ -85,7 +86,8 @@ export const TodoListTuesday = (props: ToDoListType) => {
                                 onChange={changeTaskStatusHandler}
                             />
 
-                                {task.title}
+                                {/*{task.title}*/}
+                                <EditableSpanTuesday oldTitle={task.title} callBack={() => {}}  />
 
                                 <button onClick={removeTaskHandler}>X</button>
                             </li>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 type EditableSpanTuesdayType = {
     oldTitle: string
@@ -7,9 +7,18 @@ type EditableSpanTuesdayType = {
 
 
 export const EditableSpanTuesday = (props: EditableSpanTuesdayType) => {
-    return (
-        <div>
 
-        </div>
+    const [updateTitle, updateSetTitle] = useState(props.oldTitle)
+    const [edit, setEdit] = useState(false)
+
+
+    const activateEditMode = () => {
+        setEdit(!edit)
+    }
+
+    return (
+        edit
+            ? <input value={updateTitle} onBlur={activateEditMode} autoFocus/>
+            : <span onDoubleClick={activateEditMode}>{props.oldTitle}</span>
     );
 };
