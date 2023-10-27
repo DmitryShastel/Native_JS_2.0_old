@@ -53,7 +53,11 @@ export const AppRootTuesday = () => {
         tasks[todolistId] = todolistTasks.filter(t => t.id != taskId)
         setTasks({...tasks})
     }
-    const changeTaskTitle = (taskId: string, newTitle: string) => {
+    const changeTaskTitle = (todolistId: string, taskId: string, updateTitle: string) => {
+        setTasks({
+            ...tasks,
+            [todolistId]: tasks[todolistId].map(el => el.id === taskId ? {...el, title: updateTitle} : el)
+        })
         // setTasks((changedTitle) => changedTitle.map((task) =>
         //         task.id === taskId ? {...task, title: newTitle} : task
         //     )

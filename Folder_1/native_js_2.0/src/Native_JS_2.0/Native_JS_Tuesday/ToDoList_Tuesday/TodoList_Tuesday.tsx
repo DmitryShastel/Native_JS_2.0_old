@@ -11,7 +11,7 @@ type ToDoListType = {
     addTask: (todolistId: string, newTaskTitle: string) => void
     removeTask: (todolistId: string, taskId: string) => void
     changeTaskStatus: (todolistId: string, taskId: string, isDone: boolean) => void
-    changeTaskTitle: (taskId: string, title: string) => void
+    changeTaskTitle: (todolistId: string, taskId: string, title: string) => void
     changeFilter: (todolistId: string, value: FilterType) => void
     removeTodolist: (todolistId: string) => void
 }
@@ -19,29 +19,9 @@ type ToDoListType = {
 
 export const TodoListTuesday = (props: ToDoListType) => {
 
-    // const onChangeTaskTitleHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    //     setTitle(e.currentTarget.value)
-    // }
-
-
-    //change task title
-    // const changeTaskTitleHandler = (taskId: string, newTitle: string) => {
-    //     if (newTitle.trim() !== '') {
-    //         props.changeTaskTitle(taskId, newTitle)
-    //     }
-    // }
-    // const startEditingTask = (taskId: string) => {
-    //     setEditingTaskId(taskId)
-    // }
-    // const stopEditingTask = () => {
-    //     setEditingTaskId('');
-    // }
-
-
     const removeTodolistHandler = () => {
         props.removeTodolist(props.todolistId)
     }
-
     const addTaskHandler = (newTitle: string) => {
         props.addTask(props.todolistId, newTitle)
     }
@@ -78,6 +58,10 @@ export const TodoListTuesday = (props: ToDoListType) => {
                         props.removeTask(props.todolistId, task.id)
                     }
 
+                    const changeTaskTitleHandler = (updateSetTitle: string) => {
+                        props.changeTaskTitle(props.todolistId, task.id,  updateSetTitle)
+                    }
+
                     return (
                         <ul key={task.id} style={{listStyleType: 'none'}}>
                             <li><input
@@ -86,9 +70,7 @@ export const TodoListTuesday = (props: ToDoListType) => {
                                 onChange={changeTaskStatusHandler}
                             />
 
-                                {/*{task.title}*/}
-                                <EditableSpanTuesday oldTitle={task.title} callBack={() => {}}  />
-
+                                <EditableSpanTuesday oldTitle={task.title} callBack={changeTaskTitleHandler}/>
                                 <button onClick={removeTaskHandler}>X</button>
                             </li>
                         </ul>

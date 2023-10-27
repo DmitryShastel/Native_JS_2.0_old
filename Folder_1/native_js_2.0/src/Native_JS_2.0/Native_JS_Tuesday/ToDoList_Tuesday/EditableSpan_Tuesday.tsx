@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, {ChangeEvent, useState} from 'react';
 
 type EditableSpanTuesdayType = {
     oldTitle: string
-    callBack: () => void
+    callBack: (updateTitle: string) => void
 }
 
 
@@ -14,11 +14,22 @@ export const EditableSpanTuesday = (props: EditableSpanTuesdayType) => {
 
     const activateEditMode = () => {
         setEdit(!edit)
+        if(edit) {
+            addTaskTitleHandler()
+        }
+    }
+
+    const addTaskTitleHandler = () => {
+        props.callBack(updateTitle)
+    }
+
+    const onChangeTaskTitleHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        updateSetTitle(e.currentTarget.value)
     }
 
     return (
         edit
-            ? <input value={updateTitle} onBlur={activateEditMode} autoFocus/>
+            ? <input onChange={onChangeTaskTitleHandler} value={updateTitle} onBlur={activateEditMode} autoFocus/>
             : <span onDoubleClick={activateEditMode}>{props.oldTitle}</span>
     );
 };
