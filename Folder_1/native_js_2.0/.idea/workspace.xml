@@ -50,7 +50,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Jest.user reducer should increment only age">
+  <component name="RunManager" selected="Jest.user-reducer.test.ts">
     <configuration name="check age 18" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -77,19 +77,6 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="sort name up" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat8/homeWorkReducer.test.tsx" />
-      <test-names>
-        <test-name value="sort name up" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="user reducer should increment only age" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -101,6 +88,16 @@
       <test-names>
         <test-name value="user reducer should increment only age" />
       </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="user-reducer.test.ts" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/state/user-reducer.test.ts" />
       <method v="2" />
     </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -115,11 +112,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.user-reducer.test.ts" />
         <item itemvalue="Jest.user reducer should increment only age" />
         <item itemvalue="npm.start" />
         <item itemvalue="Jest.check age 18" />
         <item itemvalue="Jest.sort name down" />
-        <item itemvalue="Jest.sort name up" />
       </list>
     </recent_temporary>
   </component>
@@ -140,7 +137,7 @@
       <workItem from="1696137860025" duration="11076000" />
       <workItem from="1696179011137" duration="26673000" />
       <workItem from="1696657031000" duration="759000" />
-      <workItem from="1697863554992" duration="74504000" />
+      <workItem from="1697863554992" duration="75282000" />
     </task>
     <servers />
   </component>

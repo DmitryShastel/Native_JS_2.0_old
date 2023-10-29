@@ -13,8 +13,9 @@ type ActionType = {
 export const userReducer = (state: UserType, action: UserReducerType): UserType => {
     switch (action.type) {
         case 'INCREMENT-AGE' :
-            return {...state, age: state.age + 1}
-
+            return {...state, age: state.age + 1};
+        case 'INCREMENT-CHILDREN-COUNT':
+            return {...state, childrenCount: state.childrenCount + 1}
 
         default:
             return state
@@ -22,11 +23,18 @@ export const userReducer = (state: UserType, action: UserReducerType): UserType 
 }
 
 
-type UserReducerType = IncrementUserAgeACType
+type UserReducerType = IncrementUserAgeACType | IncrementUserChildrenCountACType
 type IncrementUserAgeACType = ReturnType<typeof incrementUserAgeAC>
+type IncrementUserChildrenCountACType = ReturnType<typeof incrementUserChildrenCountAC>
 
 export const incrementUserAgeAC = () => {
     return {
         type: 'INCREMENT-AGE',
+    } as const
+}
+
+export const incrementUserChildrenCountAC = () => {
+    return {
+        type: 'INCREMENT-CHILDREN-COUNT'
     } as const
 }
