@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="032ec4d1-33a1-4a32-a818-97fc1bd4e3c9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/state/todolists-reducer.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/state/todolists-reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/state/user-reducer.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/state/user-reducer.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/state/user-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/state/user-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,17 +51,30 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Jest.user reducer should increment only name">
-    <configuration name="check age 18" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.correct todolist should be added">
+    <configuration name="correct todolist should be added" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/HomeTaskIgnat8/homeWorkReducer.test.tsx" />
+      <test-file value="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/state/todolists-reducer.test.ts" />
       <test-names>
-        <test-name value="check age 18" />
+        <test-name value="correct todolist should be added" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="correct todolist should be removed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/state/todolists-reducer.test.ts" />
+      <test-names>
+        <test-name value="correct todolist should be removed" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -100,23 +114,13 @@
       <test-file value="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Tuesday/ToDoList_Tuesday/state/user-reducer.test.ts" />
       <method v="2" />
     </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.correct todolist should be added" />
+        <item itemvalue="Jest.correct todolist should be removed" />
         <item itemvalue="Jest.user reducer should increment only name" />
         <item itemvalue="Jest.user-reducer.test.ts" />
         <item itemvalue="Jest.user reducer should increment only age" />
-        <item itemvalue="npm.start" />
-        <item itemvalue="Jest.check age 18" />
       </list>
     </recent_temporary>
   </component>
@@ -137,7 +141,7 @@
       <workItem from="1696137860025" duration="11076000" />
       <workItem from="1696179011137" duration="26673000" />
       <workItem from="1696657031000" duration="759000" />
-      <workItem from="1697863554992" duration="76355000" />
+      <workItem from="1697863554992" duration="80968000" />
     </task>
     <servers />
   </component>

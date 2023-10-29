@@ -4,11 +4,6 @@ type UserType = {
     name: string
 }
 
-type ActionType = {
-    type: string
-    [key: string]: any
-}
-
 
 export const userReducer = (state: UserType, action: UserReducerType): UserType => {
     switch (action.type) {
