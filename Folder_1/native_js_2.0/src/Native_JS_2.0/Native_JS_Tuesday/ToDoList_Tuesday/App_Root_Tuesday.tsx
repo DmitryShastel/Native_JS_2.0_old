@@ -89,6 +89,9 @@ export const AppRootTuesday = () => {
         setTodolists([...todolists, newTodolist])
         setTasks({...tasks, [todolistId]: []})
     }
+    const changeTodolistTitle = (todolistId: string, updateTitle: string) => {
+        setTodolists(todolists.map(el => el.id === todolistId ? {...el,title: updateTitle} : el))
+    }
 
 
     return (
@@ -118,6 +121,7 @@ export const AppRootTuesday = () => {
                         changeTaskTitle={changeTaskTitle}
                         changeFilter={changeFilter}
                         removeTodolist={removeTodolist}
+                        changeTodolistTitle={changeTodolistTitle}
                     />
                 }))
             }

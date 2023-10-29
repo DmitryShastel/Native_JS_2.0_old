@@ -14,6 +14,7 @@ type ToDoListType = {
     changeTaskTitle: (todolistId: string, taskId: string, title: string) => void
     changeFilter: (todolistId: string, value: FilterType) => void
     removeTodolist: (todolistId: string) => void
+    changeTodolistTitle: (todolistId: string, updateTitle: string) => void
 }
 
 
@@ -24,6 +25,9 @@ export const TodoListTuesday = (props: ToDoListType) => {
     }
     const addTaskHandler = (newTitle: string) => {
         props.addTask(props.todolistId, newTitle)
+    }
+    const changeTodolistTitleHandler = (updateTitle: string) => {
+        props.changeTodolistTitle(props.todolistId, updateTitle)
     }
 
     //filter tasks
@@ -40,7 +44,8 @@ export const TodoListTuesday = (props: ToDoListType) => {
 
     return (
         <div>
-            <h3>{props.title}
+            <h3>
+                <EditableSpanTuesday oldTitle={props.title} callBack={changeTodolistTitleHandler}/>
                 <button onClick={removeTodolistHandler}>X</button>
             </h3>
 
@@ -59,7 +64,7 @@ export const TodoListTuesday = (props: ToDoListType) => {
                     }
 
                     const changeTaskTitleHandler = (updateSetTitle: string) => {
-                        props.changeTaskTitle(props.todolistId, task.id,  updateSetTitle)
+                        props.changeTaskTitle(props.todolistId, task.id, updateSetTitle)
                     }
 
                     return (
@@ -69,7 +74,6 @@ export const TodoListTuesday = (props: ToDoListType) => {
                                 type='checkbox'
                                 onChange={changeTaskStatusHandler}
                             />
-
                                 <EditableSpanTuesday oldTitle={task.title} callBack={changeTaskTitleHandler}/>
                                 <button onClick={removeTaskHandler}>X</button>
                             </li>
