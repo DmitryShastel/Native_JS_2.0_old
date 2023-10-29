@@ -1,6 +1,6 @@
 import {v1} from 'uuid';
 import {ToDoListsType} from "../App_Root_Tuesday";
-import {addTodolistAC, removeTodolistAC, todolistsReducer} from "./todolists-reducer";
+import {addTodolistAC, changeTodolistTitleAC, removeTodolistAC, todolistsReducer} from "./todolists-reducer";
 
 test('correct todolist should be removed', () => {
     let todolistId1 = v1();
@@ -58,3 +58,28 @@ test('correct todolist should be added', () => {
     expect(endState.some((todolist) => todolist.id === todolistId2)).toBe(true);
     expect(endState.some((todolist) => todolist.id === todolistId3)).toBe(true);
 })
+
+test('correct todolist should change its name', () => {
+    let todolistId1 = v1();
+    let todolistId2 = v1();
+
+    let newTodolistTitle = "New Todolist";
+
+    const startState: Array<ToDoListsType> = [
+        {id: todolistId1, title: "What to learn", filter: "all"},
+        {id: todolistId2, title: "What to buy", filter: "all"}
+    ]
+
+    // const action = {
+    //     type: 'CHANGE-TODOLIST-TITLE',
+    //     id: todolistId2,
+    //     title: newTodolistTitle
+    // };
+
+    const endState = todolistsReducer(startState, changeTodolistTitleAC(todolistId2, newTodolistTitle));
+
+    //expected results regarding new added id(s) can be checked in case if new id(s) is hardcode,
+    // not thought library v1()
+    expect(endState[0].title).toBe("What to learn");
+    expect(endState[1].title).toBe(newTodolistTitle);
+});

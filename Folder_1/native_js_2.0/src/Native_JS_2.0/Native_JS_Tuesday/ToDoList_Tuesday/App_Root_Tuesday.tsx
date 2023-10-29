@@ -14,7 +14,7 @@ export type TasksType = {
 }
 
 export type ToDoListsType = {
-    id: string
+    id: any
     title: string
     filter: string
 }
