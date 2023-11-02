@@ -1,4 +1,4 @@
-import React, {ChangeEvent} from 'react';
+import React from 'react';
 import {FilterType, TaskType} from "./App_Root_Tuesday";
 import './ToDoList_Tuesday.css';
 import {AddItemFormTuesday} from "./AddItemForm_Tuesday";

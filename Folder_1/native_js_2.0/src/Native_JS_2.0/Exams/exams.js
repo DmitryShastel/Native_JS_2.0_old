@@ -1,421 +1,5 @@
 //Monday
 
-//Sprint#1-3week
-
-//1
-// const user = {}
-// const cat = user
-// const student = {}
-//
-//
-// if(XXX === user) {
-//     console.log ("Yo!!!")
-// }
-/*Какую переменную надо указать вместо XXX, кроме user,
-что бы в консоль вывелась строка "Yo!!!?*/
-// cat
-
-//2
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-//
-// function Button() {
-//     return <button
-//         // onClick={xxx}
-//     >Click</button>
-// }
-//
-//
-// ReactDOM.render(
-//     <Button/>, document.getElementById('root')
-// );
-// Что надо написать вместо ххх,
-// что бы на странице появился пустой alert при клике по кнопке?
-//() => alert('')
-
-
-//3
-// import React, {useState} from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-//
-// type UserType = {
-//     id: number
-//     name: string
-//     age: number
-// }
-//
-// function User(props: UserType) {
-//     return (
-//         <li>User {props.name}: {props.age} y.o.</li>
-//     )
-// }
-//
-// function UsersList() {
-//     const data: Array<UserType> = [
-//         {id: 1, name: "Bob", age: 25},
-//         {id: 2, name: "Alex", age: 28},
-//         {id: 3, name: "Ann", age: 23},
-//         {id: 4, name: "John", age: 30},
-//     ]
-//     const [users, setUsers] = useState<Array<UserType>>(data)
-//     // Пользователи старше 25 лет:
-//     // const olderThen25Users = users.xxx(u => u.age > 25)
-//     return (
-//         <main>
-//             <h4>User list:</h4>
-//             <ul>
-//                 {/*{ olderThen25Users.map(u => <User key={u.id} {...u}/>)}*/}
-//             </ul>
-//         </main>
-//     )
-// }
-//
-// ReactDOM.render(
-//     <UsersList/>, document.getElementById('root')
-// );
-// Что надо написать вместо xxx, чтобы код работал?
-// filter
-
-//4
-// import React, {useState} from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-//
-// type UserType = {
-//     id: number
-//     name: string
-//     age: number
-// }
-//
-// type UserPropsType = UserType & {
-//     deleteUser: (id: any) => void
-// }
-//
-// function User(props: UserPropsType) {
-//     return (
-//         <li>
-//             <button onClick={()=>props.deleteUser(props.id)}>x</button>
-//             User {props.name}: {props.age} y.o.
-//         </li>
-//     )
-// }
-//
-// function UsersList() {
-//     const data: Array<UserType> = [
-//         {id: 1, name: "Bob", age: 25},
-//         {id: 2, name: "Alex", age: 28},
-//         {id: 3, name: "Ann", age: 23},
-//         {id: 4, name: "John", age: 30},
-//     ]
-//     const [users, setUsers] = useState<Array<UserType>>(data)
-//     const deleteUser = (userID: number) => {
-//         setUsers(users.filter(u => u.id !== userID))
-//     }
-//     return (
-//         <main>
-//             <h4>Users list:</h4>
-//             <ul>
-//                 {users.map(u => <User
-//                     key={u.id}
-//                     {...u}
-//                     deleteUser={deleteUser}
-//                 />)}
-//             </ul>
-//         </main>
-//     )
-// }
-//
-// ReactDOM.render(
-//     <UsersList/>, document.getElementById('root')
-// );
-// В типе UserPropsType у функции deleteUser в параметрах указан тип "any".
-// Какой тип было бы указать правильнее?
-// number
-
-
-//5
-// import React, {useState} from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-//
-// type UserType = {
-//     id: number
-//     name: string
-//     age: number
-// }
-//
-// function User(props: UserType) {
-//     return (
-//         <li>Student {props.name}: {props.age} y.o.</li>
-//     )
-// }
-//
-// function UsersList() {
-//     const data: Array<UserType> = [
-//         {id: 1, name: "Bob", age: 34},
-//         {id: 2, name: "Alex", age: 29},
-//         {id: 3, name: "Ann", age: 25},
-//         {id: 4, name: "John", age: 36},
-//     ]
-//     const [users, setUsers] = useState<Array<UserType>>(data)
-//     return (
-//         <main>
-//             <h4>User list:</h4>
-//             <ul>
-//                 {/*{*/}
-//                 {/*    users.map(u => <User xxx={u.id}*/}
-//                 {/*                         id={u.id}*/}
-//                 {/*                         name={u.name}*/}
-//                 {/*                         age={u.age}*/}
-//                 {/*        />*/}
-//                 {/*    )*/}
-//                 {/*}*/}
-//             </ul>
-//         </main>
-//     )
-// }
-//
-// ReactDOM.render(
-//     <UsersList/>, document.getElementById('root')
-// );
-// Что надо написать вместо xxx, чтобы код работал оптимально?
-//key
-
-//6
-// import React, {useState} from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-//
-// type UserType = {
-//     id: number
-//     name: string
-//     age: number
-// }
-//
-// function User(props: UserType) {
-//     return (
-//         <li>Student {props.name}: {props.age} y.o.</li>
-//     )
-// }
-//
-// function UsersList() {
-//     const data: Array<UserType> = [
-//         {id: 1, name: "Bob", age: 34},
-//         {id: 2, name: "Alex", age: 29},
-//         {id: 3, name: "Ann", age: 25},
-//         {id: 4, name: "John", age: 36},
-//     ]
-//     const [users, setUsers] = useState<Array<UserType>>(data)
-//     return (
-//         <main>
-//             <h4>User list:</h4>
-//             <ul>
-//                 {/*{ users.map(u => <User key={u.id} {...xxx} />) }*/}
-//             </ul>
-//         </main>
-//     )
-// }
-//
-// ReactDOM.render(
-//     <UsersList/>, document.getElementById('root')
-// );
-// Что надо написать вместо xxx, чтобы код работал?
-// u
-
-//7
-// import React, {useState, MouseEvent} from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-//
-// function Button() {
-//     const [tagName, setTagName] = useState<string>()
-//     const onClickHandler = (e: MouseEvent<HTMLButtonElement>) => {
-//         // setTagName(e.xxx.tagName)
-//     }
-//     return (
-//         <>
-//             <p>{tagName}</p>
-//             <button onClick={onClickHandler} >
-//                 <span>Click</span>
-//             </button>
-//         </>
-//     )
-// }
-//
-// ReactDOM.render(
-//     <Button/>, document.getElementById('root')
-// );
-// Что надо написать вместо ххх, что бы на странице появился текст BUTTON?
-//currentTarget
-
-//8
-// import React, {MouseEvent} from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-//
-// function Button() {
-//     const onClickHandler = (e: MouseEvent<HTMLButtonElement>) => {
-//         // console.log((typeof e) === ххх)
-//     }
-//     return <button onClick={onClickHandler} >Click</button>
-// }
-//
-//
-// ReactDOM.render(
-//     <Button/>, document.getElementById('root')
-// );
-// Какой тип данных представляет аргумент функции-обработчика?
-// Что надо написать вместо ххх, что бы в консоль вывело true?
-//MouseEvent<HTMLButtonElement>  'object'
-
-//9
-// import React, {useState} from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-//
-// type UserType = {
-//     id: number
-//     name: string
-//     age: number
-// }
-//
-// function User(props: UserType) {
-//     return (
-//         <li>User {props.name}: {props.age} y.o.</li>
-//     )
-// }
-//
-// function UsersList() {
-//     const data: Array<UserType> = [
-//         {id: 1, name: "Bob", age: 25},
-//         {id: 2, name: "Alex", age: 28},
-//         {id: 3, name: "Ann", age: 23},
-//         {id: 4, name: "John", age: 30},
-//     ]
-//     const [users, setUsers] = useState<Array<UserType>>(data)
-//     // Необходимо отрендерить список пользователей старше 25 лет:
-//     // const getOlderThen25Users = (u: xxx) => u.age > 25
-//     // const olderThen25Users = users.filter(getOlderThen25Users)
-//     return (
-//         <main>
-//             <h4>User list:</h4>
-//             <ul>
-//                 {/*{ olderThen25Users.map(u => <User key={u.id} {...u}/>)}*/}
-//             </ul>
-//         </main>
-//     )
-// }
-//
-// ReactDOM.render(
-//     <UsersList/>, document.getElementById('root')
-// );
-// Что надо написать вместо xxx, чтобы код работал?
-//UserType
-
-//10
-// import React, {useState} from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-//
-// type UserType = {
-//     id: number
-//     name: string
-//     age: number
-// }
-//
-// function User(props: UserType) {
-//     return (
-//         <li>User {props.name}: {props.age} y.o.</li>
-//     )
-// }
-//
-// function UsersList() {
-//     const data: Array<UserType> = [
-//         {id: 1, name: "Bob", age: 25},
-//         {id: 2, name: "Alex", age: 28},
-//         {id: 3, name: "Ann", age: 23},
-//         {id: 4, name: "John", age: 30},
-//     ]
-//     const [users, setUsers] = useState<Array<UserType>>(data)
-//     // Необходимо отрендерить список ользователей старше 25 лет:
-//     const getOlderThen25Users = (u: UserType) => u.age > 25
-//     const olderThen25Users = users.filter(getOlderThen25Users)
-//     return (
-//         <main>
-//             <h4>User list:</h4>
-//             <ul>
-//                 { olderThen25Users.map(u => <User key={u.id} {...u}/>)}
-//             </ul>
-//         </main>
-//     )
-// }
-//
-// ReactDOM.render(
-//     <UsersList/>, document.getElementById('root')
-// );
-// Что вернёт выражение: Array.isArray(olderThen25Users)
-//true
-
-//11
-// import React, {useState} from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-//
-// type UserType = {
-//     id: number
-//     name: string
-//     age: number
-// }
-//
-// type UserPropsType = UserType & {
-//     deleteUser: (id: number) => void
-// }
-//
-// function User(props: UserPropsType) {
-//     const deleteUser = () => props.deleteUser(props.id)
-//     return (
-//         <li>
-//             <button onClick={deleteUser}>x</button>
-//             User {props.name}: {props.age} y.o.
-//         </li>
-//     )
-// }
-//
-// function UsersList() {
-//     const data: Array<UserType> = [
-//         {id: 1, name: "Bob", age: 25},
-//         {id: 2, name: "Alex", age: 28},
-//         {id: 3, name: "Ann", age: 23},
-//         {id: 4, name: "John", age: 30},
-//     ]
-//     const [users, setUsers] = useState<Array<UserType>>(data)
-//     const deleteUser = (userID: number) => {
-//         const filteredUsers = users.filter(u => u.id !== userID)
-//         // setUsers(xxx)
-//     }
-//     return (
-//         <main>
-//             <h4>User list:</h4>
-//             <ul>
-//                 {users.map(u => <User
-//                     key={u.id}
-//                     {...u}
-//                     deleteUser={deleteUser}
-//                 />)}
-//             </ul>
-//         </main>
-//     )
-// }
-//
-// ReactDOM.render(
-//     <UsersList/>, document.getElementById('root')
-// );
-// Что надо написать вместо xxx, чтобы код работал?
-//filteredUsers
-
-
 //Sprint#1-TOTAL
 
 //1
@@ -443,7 +27,8 @@
 //     </div>
 // }
 // Что нужно написать вместо xxx и yyy, чтобы компонент UserMoney отобразил информацию о двух кошельках (bitcoin и $)?
-//     Ответ дайте через пробел, например: props.x wallets
+// Ответ дайте через пробел, например: props.x wallets
+//wallets[0] wallets[1] ???  { title: wallets[0].title } { title: wallets[1].title }
 
 //2
 // type UserPropsType = {
@@ -505,6 +90,7 @@
 // Что надо написать вместо XXX, чтобы код работал?
 // ❗ Если мы отмапим массив, то должны увидеть данные пользователей
 // ❗ Ответ дать минимально возможным объёмом кода
+//state
 
 //4
 // import React, {useState, MouseEvent, ChangeEvent} from 'react';
@@ -569,6 +155,7 @@
 // );
 // Что надо написать вместо ххх,
 // чтобы при клике список заметок очищался?
+//() => setNotes([])
 
 //6
 // import React, {useState} from 'react';
@@ -590,6 +177,7 @@
 //     <UsersList/>, document.getElementById('root')
 // );
 // Чему равно results.length?
+// 2
 
 //7
 // import React, {useState} from 'react';
@@ -627,6 +215,7 @@
 // );
 // Какой тип данных представляет аргумент функции-обработчика?
 // Что надо написать вместо ххх, что бы в консоль вывело true?
+//'object'
 
 //9
 // import ReactDOM from 'react-dom'
@@ -662,6 +251,7 @@
 //     document.getElementById('root')
 // )
 // Что нужно написать вместо XXX YYY ZZZ? Ответ дайте через пробел
+// name fatherName sonName
 
 //10
 // import React, {useState} from 'react';
@@ -724,6 +314,7 @@
 // }
 // Что нужно написать вместо xxx и yyy?
 // Ответ дайте через пробел, например: blabla onClick(props)
+//props.age props.name
 
 //12
 // import React, {useState} from 'react';
@@ -779,6 +370,7 @@
 //     <UsersList/>, document.getElementById('root')
 // );
 // Что надо написать вместо xxx, чтобы код работал?
+//props.id
 
 
 
