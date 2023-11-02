@@ -3,6 +3,7 @@ import {FilterType, TaskType} from "./App_Root_Tuesday";
 import './ToDoList_Tuesday.css';
 import {AddItemFormTuesday} from "./AddItemForm_Tuesday";
 import {EditableSpanTuesday} from "./EditableSpan_Tuesday";
+import {SuperCheckbox} from "./SuperCheckbox";
 
 type ToDoListType = {
     todolistId: string
@@ -54,10 +55,6 @@ export const TodoListTuesday = (props: ToDoListType) => {
             {
                 props.tasks.map((task) => {
 
-                    const changeTaskStatusHandler = (e: ChangeEvent<HTMLInputElement>) => {
-                        let newIsDoneValue = e.currentTarget.checked;
-                        props.changeTaskStatus(props.todolistId, task.id, newIsDoneValue)
-                    }
 
                     const removeTaskHandler = () => {
                         props.removeTask(props.todolistId, task.id)
@@ -67,13 +64,14 @@ export const TodoListTuesday = (props: ToDoListType) => {
                         props.changeTaskTitle(props.todolistId, task.id, updateSetTitle)
                     }
 
+                    const changeTaskStatusHandler = () => {
+                        props.changeTaskStatus(props.todolistId, task.id, task.isDone)
+                    }
+
                     return (
                         <ul key={task.id} style={{listStyleType: 'none'}}>
-                            <li><input
-                                checked={task.isDone}
-                                type='checkbox'
-                                onChange={changeTaskStatusHandler}
-                            />
+                            <li>
+                                <SuperCheckbox isDone={task.isDone} callback={changeTaskStatusHandler}/>
                                 <EditableSpanTuesday oldTitle={task.title} callBack={changeTaskTitleHandler}/>
                                 <button onClick={removeTaskHandler}>X</button>
                             </li>
