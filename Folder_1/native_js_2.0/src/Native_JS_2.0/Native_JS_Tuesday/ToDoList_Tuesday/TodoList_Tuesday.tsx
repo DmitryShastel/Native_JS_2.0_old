@@ -64,17 +64,17 @@ export const TodoListTuesday = (props: ToDoListType) => {
                         props.changeTaskTitle(props.todolistId, task.id, updateSetTitle)
                     }
 
-                    const changeTaskStatusHandler = () => {
-                        props.changeTaskStatus(props.todolistId, task.id, task.isDone)
+                    const changeTaskStatusHandler = (checked: boolean) => {
+                        props.changeTaskStatus(props.todolistId, task.id, checked)
                     }
 
                     return (
                         <ul key={task.id} style={{listStyleType: 'none'}}>
-                            <li>
+
                                 <SuperCheckbox isDone={task.isDone} callback={changeTaskStatusHandler}/>
                                 <EditableSpanTuesday oldTitle={task.title} callBack={changeTaskTitleHandler}/>
                                 <button onClick={removeTaskHandler}>X</button>
-                            </li>
+
                         </ul>
                     )
                 })

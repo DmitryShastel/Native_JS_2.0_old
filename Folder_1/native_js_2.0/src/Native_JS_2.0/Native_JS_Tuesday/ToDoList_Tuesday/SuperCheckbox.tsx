@@ -5,8 +5,6 @@ type SuperCheckboxType = {
     callback: (checked: boolean) => void
 }
 
-
-
 export const SuperCheckbox = (props: SuperCheckboxType) => {
 
     const changeTaskStatus = (e: ChangeEvent<HTMLInputElement>) => {
