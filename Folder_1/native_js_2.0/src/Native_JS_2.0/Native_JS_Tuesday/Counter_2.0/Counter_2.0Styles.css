@@ -1,0 +1,12 @@
+.error-color {
+    color: red;
+}
+
+.disabled-inc {
+    opacity: 0.5;
+}
+
+
+.disabled-reset {
+    opacity: 1;
+}

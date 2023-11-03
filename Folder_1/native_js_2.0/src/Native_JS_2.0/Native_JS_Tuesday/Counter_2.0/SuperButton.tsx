@@ -3,6 +3,7 @@ import React from 'react';
 type SuperButtonType = {
     title: string
     callback: () => void
+    className?: string
 }
 
 
@@ -10,7 +11,7 @@ type SuperButtonType = {
 export const SuperButton = (props: SuperButtonType) => {
     return (
         <div>
-            <button onClick={props.callback}>{props.title}</button>
+            <button className={props.className} onClick={props.callback}>{props.title}</button>
         </div>
     );
 };
