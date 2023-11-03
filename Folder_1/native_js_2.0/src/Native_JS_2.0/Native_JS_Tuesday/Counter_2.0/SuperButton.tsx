@@ -7,11 +7,13 @@ type SuperButtonType = {
 }
 
 
-
 export const SuperButton = (props: SuperButtonType) => {
     return (
         <div>
-            <button className={props.className} onClick={props.callback}>{props.title}</button>
+            <button
+                className={`button ${props.className}`}
+                onClick={props.callback}
+            >{props.title}</button>
         </div>
     );
 };
