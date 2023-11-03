@@ -28,7 +28,17 @@ export const Counter_2_0 = (props: CounterType) => {
 
             <div className={'counter-settings'}>
                 <Settings/>
+                <div className={'setting-button'}>
+                    <SuperButton
+                        title='set'
+                        callback={() => {
+                        }}
+                        // className={props.counter === 5 ? 'disabled-inc' : ''}
+                    />
+                </div>
+
             </div>
+
 
             <div className={'counter-counter'}>
                 <div className={'counter-display'}>
