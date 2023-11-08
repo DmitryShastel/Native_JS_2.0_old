@@ -1,14 +1,17 @@
-import React, {useState} from 'react';
-import {Settings} from "./Settings";
+import React, {ChangeEvent, useState} from 'react';
 import {SuperButton} from "./SuperButton";
 import './Counter_2.0Styles.css'
+import {Input} from "./Settings";
+
 
 export const AppRootCounter2_0 = () => {
 
     let [counter, setCounter] = useState<number>(0)
+    const [maxValue, setMaxValue] = useState<number>(0)
+    const [startValue, setStartValue] = useState<number>(0)
 
 
-    let inc = () => {
+    let incCounter = () => {
         if (counter === 5) {
             return {
                 counter
@@ -16,18 +19,31 @@ export const AppRootCounter2_0 = () => {
         }
         setCounter(++counter)
     }
-
-    let reset = () => {
+    let resetCounter = () => {
         setCounter(0)
     }
 
+    const onChangeMaxValue = (e: ChangeEvent<HTMLInputElement>) => {
+        let maxValue = Number(e.currentTarget.value)
+        setMaxValue(maxValue)
+    }
+
+    const onChangeStartValue = (e: ChangeEvent<HTMLInputElement>) => {
+        let startValue = Number(e.currentTarget.value)
+        setStartValue(startValue)
+    }
 
     return (
         <div className={'counter-root'}>
 
 
             <div className={'counter-settings'}>
-                <Settings/>
+
+                <div className="settings-container">
+                    <Input title='max value:' value={maxValue} callback={onChangeMaxValue}/>
+                    <Input title='start value:' value={startValue} callback={onChangeStartValue}/>
+                </div>
+
                 <div className={'setting-button'}>
                     <SuperButton
                         title='set'
@@ -35,7 +51,6 @@ export const AppRootCounter2_0 = () => {
                         }}
                     />
                 </div>
-
             </div>
 
 
@@ -46,13 +61,13 @@ export const AppRootCounter2_0 = () => {
                 <div className={'counter-buttons'}>
                     <SuperButton
                         title='inc'
-                        callback={inc}
+                        callback={incCounter}
                         className={counter === 5 ? 'disabled-inc' : ''}
 
                     />
                     <SuperButton
                         title='reset'
-                        callback={reset}
+                        callback={resetCounter}
                         className={counter === 0 ? 'disabled-reset' : ''}/>
                 </div>
 
