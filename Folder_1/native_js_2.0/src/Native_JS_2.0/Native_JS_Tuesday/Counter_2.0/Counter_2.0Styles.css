@@ -106,15 +106,23 @@
 
 
 
-.error {
-    background-color: hotpink;
+.errorInput {
+    background-color: pink;
+    border: 3px solid red;
 }
 
-.disabled-inc {
-    opacity: 0.5;
+.errorMessage {
+    color: #f44336;
 }
 
+.disabled {
+    color: grey;
+}
 
 .disabled-reset {
     opacity: 0.5;
+}
+
+.countColor {
+    color: #f44336;
 }

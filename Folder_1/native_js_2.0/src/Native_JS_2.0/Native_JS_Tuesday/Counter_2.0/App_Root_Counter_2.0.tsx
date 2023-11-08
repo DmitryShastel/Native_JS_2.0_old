@@ -2,6 +2,7 @@ import React, {ChangeEvent, useState} from 'react';
 import {SuperButton} from "./SuperButton";
 import './Counter_2.0Styles.css'
 import {SuperInput} from "./SuperInput";
+import {Display} from "./Display";
 
 
 export const AppRootCounter2_0 = () => {
@@ -22,11 +23,10 @@ export const AppRootCounter2_0 = () => {
         setCounter(startValue)
         setError(null)
     }
-
     const onChangeMaxValue = (e: ChangeEvent<HTMLInputElement>) => {
         let maxValue = Number(e.currentTarget.value)
         setMaxValue(maxValue)
-        if(maxValue <= startValue){
+        if (maxValue <= startValue) {
             setError('Incorrect value')
         } else {
             setError('Enter SET')
@@ -35,16 +35,17 @@ export const AppRootCounter2_0 = () => {
     const onChangeStartValue = (e: ChangeEvent<HTMLInputElement>) => {
         let startValue = Number(e.currentTarget.value)
         setStartValue(startValue)
-        if(startValue < 0 || startValue >= maxValue){
+        if (startValue < 0 || startValue >= maxValue) {
             setError('Incorrect value')
         } else {
             setError('Enter SET')
         }
     }
-
-
-    const errorMaxValue = maxValue <= startValue ? 'error' : '';
-    const errorStartValue = startValue < 0 ||  startValue >= maxValue ? 'error' : '';
+    const errorMaxValue = maxValue <= startValue ? 'errorInput' : '';
+    const errorStartValue = startValue < 0 || startValue >= maxValue ? 'errorInput' : '';
+    const disabledInc = counter === maxValue
+    const disabledReset = counter === startValue
+    const disabledSet = disabledInc
 
 
     return (
@@ -53,14 +54,23 @@ export const AppRootCounter2_0 = () => {
             <div className={'counter-settings'}>
 
                 <div className="settings-container">
-                    <SuperInput title='max value:' value={maxValue} callback={onChangeMaxValue} error={errorMaxValue}/>
-                    <SuperInput title='start value:' value={startValue} callback={onChangeStartValue} error={errorStartValue}/>
+                    <SuperInput
+                        title='max value:'
+                        value={maxValue}
+                        onChange={onChangeMaxValue}
+                        error={errorMaxValue}/>
+                    <SuperInput
+                        title='start value:'
+                        value={startValue}
+                        onChange={onChangeStartValue}
+                        error={errorStartValue}/>
                 </div>
 
                 <div className={'setting-button'}>
                     <SuperButton
                         title='set'
                         callback={setSettings}
+                        disabled={disabledSet}
                     />
                 </div>
             </div>
@@ -68,19 +78,24 @@ export const AppRootCounter2_0 = () => {
 
             <div className={'counter-counter'}>
                 <div className={'counter-display'}>
-                    <span className={counter === 5 ? 'error-color' : ''}>{counter} </span>
+                    <Display
+                        counter={counter}
+                        error={error}
+                        startValue={startValue}
+                        maxValue={maxValue}
+                    />
                 </div>
                 <div className={'counter-buttons'}>
                     <SuperButton
                         title='inc'
                         callback={incCounter}
-                        className={counter === 5 ? 'disabled-inc' : ''}
-
+                        disabled={disabledInc}
                     />
                     <SuperButton
                         title='reset'
                         callback={resetCounter}
-                        className={counter === 0 ? 'disabled-reset' : ''}/>
+                        disabled={disabledReset}
+                    />
                 </div>
 
             </div>

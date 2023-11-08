@@ -4,7 +4,7 @@ import React, {ChangeEvent} from 'react';
 type  SettingsType = {
     title: string
     value: number
-    callback: (e: ChangeEvent<HTMLInputElement>) => void
+    onChange: (e: ChangeEvent<HTMLInputElement>) => void
     error: string
 }
 
@@ -21,7 +21,7 @@ export const SuperInput = (props: SettingsType) => {
                     type={'number'}
                     className={`setting-input input-center ${props.error}`}
                     value={props.value}
-                    onChange={props.callback}
+                    onChange={props.onChange}
                 />
             </div>
         </div>
