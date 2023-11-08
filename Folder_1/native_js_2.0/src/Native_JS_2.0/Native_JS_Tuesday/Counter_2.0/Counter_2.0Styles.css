@@ -106,8 +106,8 @@
 
 
 
-.error-color {
-    color: red;
+.error {
+    background-color: hotpink;
 }
 
 .disabled-inc {

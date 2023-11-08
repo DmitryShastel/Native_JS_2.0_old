@@ -5,6 +5,7 @@ type  SettingsType = {
     title: string
     value: number
     callback: (e: ChangeEvent<HTMLInputElement>) => void
+    error: string
 }
 
 
@@ -18,7 +19,7 @@ export const SuperInput = (props: SettingsType) => {
 
                 <input
                     type={'number'}
-                    className="setting-input input-center"
+                    className={`setting-input input-center ${props.error}`}
                     value={props.value}
                     onChange={props.callback}
                 />

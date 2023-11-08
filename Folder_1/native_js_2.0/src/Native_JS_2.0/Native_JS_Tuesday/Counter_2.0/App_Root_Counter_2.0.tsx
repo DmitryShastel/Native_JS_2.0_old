@@ -15,13 +15,12 @@ export const AppRootCounter2_0 = () => {
     let incCounter = () => {
         return counter < maxValue ? setCounter(++counter) : '';
     }
-
     let resetCounter = () => {
         return counter > startValue ? setCounter(counter = startValue) : '';
     }
-
     let setSettings = () => {
         setCounter(startValue)
+        setError(null)
     }
 
     const onChangeMaxValue = (e: ChangeEvent<HTMLInputElement>) => {
@@ -44,14 +43,18 @@ export const AppRootCounter2_0 = () => {
     }
 
 
+    const errorMaxValue = maxValue <= startValue ? 'error' : '';
+    const errorStartValue = startValue < 0 ||  startValue >= maxValue ? 'error' : '';
+
+
     return (
         <div className={'counter-root'}>
 
             <div className={'counter-settings'}>
 
                 <div className="settings-container">
-                    <SuperInput title='max value:' value={maxValue} callback={onChangeMaxValue}/>
-                    <SuperInput title='start value:' value={startValue} callback={onChangeStartValue}/>
+                    <SuperInput title='max value:' value={maxValue} callback={onChangeMaxValue} error={errorMaxValue}/>
+                    <SuperInput title='start value:' value={startValue} callback={onChangeStartValue} error={errorStartValue}/>
                 </div>
 
                 <div className={'setting-button'}>
