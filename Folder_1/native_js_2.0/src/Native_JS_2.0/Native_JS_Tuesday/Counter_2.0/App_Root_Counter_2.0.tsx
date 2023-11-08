@@ -1,24 +1,27 @@
 import React, {ChangeEvent, useState} from 'react';
 import {SuperButton} from "./SuperButton";
 import './Counter_2.0Styles.css'
-import {Input} from "./Settings";
+import {SuperInput} from "./SuperInput";
 
 
 export const AppRootCounter2_0 = () => {
 
     let [counter, setCounter] = useState<number>(0)
-    const [maxValue, setMaxValue] = useState<number>(0)
-    const [startValue, setStartValue] = useState<number>(0)
+    let [maxValue, setMaxValue] = useState<number>(0)
+    let [startValue, setStartValue] = useState<number>(0)
 
 
     let incCounter = () => {
-        if (counter === 5) {
-            return {
-                counter
-            }
-        }
-        setCounter(++counter)
+        // if (counter === 5) {
+        //     return {
+        //         counter
+        //     }
+        // }
+        // setCounter(++counter)
+
+        return counter < maxValue ? setCounter(++counter) : ''
     }
+
     let resetCounter = () => {
         setCounter(0)
     }
@@ -27,21 +30,22 @@ export const AppRootCounter2_0 = () => {
         let maxValue = Number(e.currentTarget.value)
         setMaxValue(maxValue)
     }
-
     const onChangeStartValue = (e: ChangeEvent<HTMLInputElement>) => {
         let startValue = Number(e.currentTarget.value)
         setStartValue(startValue)
     }
 
+
+
+
     return (
         <div className={'counter-root'}>
-
 
             <div className={'counter-settings'}>
 
                 <div className="settings-container">
-                    <Input title='max value:' value={maxValue} callback={onChangeMaxValue}/>
-                    <Input title='start value:' value={startValue} callback={onChangeStartValue}/>
+                    <SuperInput title='max value:' value={maxValue} callback={onChangeMaxValue}/>
+                    <SuperInput title='start value:' value={startValue} callback={onChangeStartValue}/>
                 </div>
 
                 <div className={'setting-button'}>

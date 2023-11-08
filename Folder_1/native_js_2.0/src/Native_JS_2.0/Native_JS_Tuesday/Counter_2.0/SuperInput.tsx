@@ -9,7 +9,7 @@ type  SettingsType = {
 
 
 
-export const Input = (props: SettingsType) => {
+export const SuperInput = (props: SettingsType) => {
 
     return (
         <div >
