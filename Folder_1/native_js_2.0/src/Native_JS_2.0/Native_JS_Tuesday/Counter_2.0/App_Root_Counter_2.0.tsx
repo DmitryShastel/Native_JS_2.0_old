@@ -9,6 +9,7 @@ export const AppRootCounter2_0 = () => {
     let [counter, setCounter] = useState<number>(0)
     let [maxValue, setMaxValue] = useState<number>(0)
     let [startValue, setStartValue] = useState<number>(0)
+    let [error, setError] = useState<null | string>(null)
 
 
     let incCounter = () => {
@@ -26,10 +27,20 @@ export const AppRootCounter2_0 = () => {
     const onChangeMaxValue = (e: ChangeEvent<HTMLInputElement>) => {
         let maxValue = Number(e.currentTarget.value)
         setMaxValue(maxValue)
+        if(maxValue <= startValue){
+            setError('Incorrect value')
+        } else {
+            setError('Enter SET')
+        }
     }
     const onChangeStartValue = (e: ChangeEvent<HTMLInputElement>) => {
         let startValue = Number(e.currentTarget.value)
         setStartValue(startValue)
+        if(startValue < 0 || startValue >= maxValue){
+            setError('Incorrect value')
+        } else {
+            setError('Enter SET')
+        }
     }
 
 
