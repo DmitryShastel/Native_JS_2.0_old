@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {ChangeEvent, useEffect, useState} from 'react';
 import {SuperButton} from "./SuperButton";
 import './Counter_2.0Styles.css'
 import {SuperInput} from "./SuperInput";
@@ -7,12 +7,13 @@ import {Display} from "./Display";
 
 export const AppRootCounter2_0 = () => {
 
-    let [counter, setCounter] = useState<number>(0)
+    //states: counter, inputs, validation
+    let [counter, setCounter] = useState(0)
     let [maxValue, setMaxValue] = useState<number>(0)
     let [startValue, setStartValue] = useState<number>(0)
     let [error, setError] = useState<null | string>(null)
 
-
+    //logical functions
     let incCounter = () => {
         return counter < maxValue ? setCounter(++counter) : '';
     }
@@ -46,6 +47,18 @@ export const AppRootCounter2_0 = () => {
     const disabledInc = counter === maxValue
     const disabledReset = counter === startValue
     const disabledSet = disabledInc
+
+
+    //functions for localStorage
+    //maxValue
+
+    useEffect(() => {
+        let inputValue = localStorage.getItem('inputMaxData')
+        if(inputValue){
+            let newInputValue = JSON.parse(inputValue)
+            setMaxValue(newInputValue)
+        }
+    })
 
 
     return (
