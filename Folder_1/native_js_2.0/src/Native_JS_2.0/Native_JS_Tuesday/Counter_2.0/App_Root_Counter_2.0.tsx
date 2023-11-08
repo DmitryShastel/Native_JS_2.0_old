@@ -12,18 +12,15 @@ export const AppRootCounter2_0 = () => {
 
 
     let incCounter = () => {
-        // if (counter === 5) {
-        //     return {
-        //         counter
-        //     }
-        // }
-        // setCounter(++counter)
-
-        return counter < maxValue ? setCounter(++counter) : ''
+        return counter < maxValue ? setCounter(++counter) : '';
     }
 
     let resetCounter = () => {
-        setCounter(0)
+        return counter > startValue ? setCounter(counter = startValue) : '';
+    }
+
+    let setSettings = () => {
+        setCounter(startValue)
     }
 
     const onChangeMaxValue = (e: ChangeEvent<HTMLInputElement>) => {
@@ -34,8 +31,6 @@ export const AppRootCounter2_0 = () => {
         let startValue = Number(e.currentTarget.value)
         setStartValue(startValue)
     }
-
-
 
 
     return (
@@ -51,8 +46,7 @@ export const AppRootCounter2_0 = () => {
                 <div className={'setting-button'}>
                     <SuperButton
                         title='set'
-                        callback={() => {
-                        }}
+                        callback={setSettings}
                     />
                 </div>
             </div>
