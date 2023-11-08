@@ -73,12 +73,23 @@ export const AppRootCounter2_0 = () => {
         }
     }, [])
 
-
     useEffect(() => {
         localStorage.setItem('inputStartData', JSON.stringify(startValue))
     }, [startValue])
 
 
+    //count
+    useEffect(() => {
+        let inputCountValue = localStorage.getItem('inputCountData')
+        if (inputCountValue) {
+            let newInputCountValue = JSON.parse(inputCountValue)
+            setCounter(newInputCountValue)
+        }
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem('inputCountData', JSON.stringify(counter))
+    }, [counter])
 
     return (
         <div className={'counter-root'}>
