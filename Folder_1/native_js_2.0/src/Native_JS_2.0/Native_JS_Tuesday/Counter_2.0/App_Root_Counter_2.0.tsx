@@ -51,14 +51,33 @@ export const AppRootCounter2_0 = () => {
 
     //functions for localStorage
     //maxValue
+    useEffect(() => {
+        let inputMaxValue = localStorage.getItem('inputMaxData')
+        if (inputMaxValue) {
+            let newInputMaxValue = JSON.parse(inputMaxValue)
+            setMaxValue(newInputMaxValue)
+        }
+    }, [])
 
     useEffect(() => {
-        let inputValue = localStorage.getItem('inputMaxData')
-        if(inputValue){
-            let newInputValue = JSON.parse(inputValue)
-            setMaxValue(newInputValue)
+        localStorage.setItem('inputMaxData', JSON.stringify(maxValue))
+    }, [maxValue])
+
+
+    //startValue
+    useEffect(() => {
+        let inputStartValue = localStorage.getItem('inputStartData')
+        if (inputStartValue) {
+            let newInputStartValue = JSON.parse(inputStartValue)
+            setStartValue(newInputStartValue)
         }
-    })
+    }, [])
+
+
+    useEffect(() => {
+        localStorage.setItem('inputStartData', JSON.stringify(startValue))
+    }, [startValue])
+
 
 
     return (
