@@ -12,6 +12,7 @@ export const AppRootCounter2_0 = () => {
     let [maxValue, setMaxValue] = useState<number>(0)
     let [startValue, setStartValue] = useState<number>(0)
     let [error, setError] = useState<null | string>(null)
+    let [isDataLoaded, setIsDataLoaded] = useState(false)
 
     //logical functions
     let incCounter = () => {
@@ -46,8 +47,7 @@ export const AppRootCounter2_0 = () => {
     const errorStartValue = startValue < 0 || startValue >= maxValue ? 'errorInput' : '';
     const disabledInc = counter === maxValue
     const disabledReset = counter === startValue
-    const disabledSet = disabledInc
-
+    const disabledSet = disabledInc || maxValue === startValue
 
     //functions for localStorage
     //maxValue
@@ -58,11 +58,9 @@ export const AppRootCounter2_0 = () => {
             setMaxValue(newInputMaxValue)
         }
     }, [])
-
     useEffect(() => {
         localStorage.setItem('inputMaxData', JSON.stringify(maxValue))
     }, [maxValue])
-
 
     //startValue
     useEffect(() => {
@@ -71,12 +69,11 @@ export const AppRootCounter2_0 = () => {
             let newInputStartValue = JSON.parse(inputStartValue)
             setStartValue(newInputStartValue)
         }
+         setIsDataLoaded(true)
     }, [])
-
     useEffect(() => {
         localStorage.setItem('inputStartData', JSON.stringify(startValue))
     }, [startValue])
-
 
     //count
     useEffect(() => {
@@ -86,7 +83,6 @@ export const AppRootCounter2_0 = () => {
             setCounter(newInputCountValue)
         }
     }, [])
-
     useEffect(() => {
         localStorage.setItem('inputCountData', JSON.stringify(counter))
     }, [counter])
@@ -94,54 +90,60 @@ export const AppRootCounter2_0 = () => {
     return (
         <div className={'counter-root'}>
 
-            <div className={'counter-settings'}>
+            {
+                isDataLoaded && (
+                    <>
+                        <div className={'counter-settings'}>
 
-                <div className="settings-container">
-                    <SuperInput
-                        title='max value:'
-                        value={maxValue}
-                        onChange={onChangeMaxValue}
-                        error={errorMaxValue}/>
-                    <SuperInput
-                        title='start value:'
-                        value={startValue}
-                        onChange={onChangeStartValue}
-                        error={errorStartValue}/>
-                </div>
+                            <div className="settings-container">
+                                <SuperInput
+                                    title='max value:'
+                                    value={maxValue}
+                                    onChange={onChangeMaxValue}
+                                    error={errorMaxValue}/>
+                                <SuperInput
+                                    title='start value:'
+                                    value={startValue}
+                                    onChange={onChangeStartValue}
+                                    error={errorStartValue}/>
+                            </div>
 
-                <div className={'setting-button'}>
-                    <SuperButton
-                        title='set'
-                        callback={setSettings}
-                        disabled={disabledSet}
-                    />
-                </div>
-            </div>
+                            <div className={'setting-button'}>
+                                <SuperButton
+                                    title='set'
+                                    callback={setSettings}
+                                    disabled={disabledSet}
+                                />
+                            </div>
+                        </div>
 
+                        <div className={'counter-counter'}>
+                            <div className={'counter-display'}>
+                                <Display
+                                    counter={counter}
+                                    error={error}
+                                    startValue={startValue}
+                                    maxValue={maxValue}
+                                />
+                            </div>
+                            <div className={'counter-buttons'}>
+                                <SuperButton
+                                    title='inc'
+                                    callback={incCounter}
+                                    disabled={disabledInc}
+                                />
+                                <SuperButton
+                                    title='reset'
+                                    callback={resetCounter}
+                                    disabled={disabledReset}
+                                />
+                            </div>
 
-            <div className={'counter-counter'}>
-                <div className={'counter-display'}>
-                    <Display
-                        counter={counter}
-                        error={error}
-                        startValue={startValue}
-                        maxValue={maxValue}
-                    />
-                </div>
-                <div className={'counter-buttons'}>
-                    <SuperButton
-                        title='inc'
-                        callback={incCounter}
-                        disabled={disabledInc}
-                    />
-                    <SuperButton
-                        title='reset'
-                        callback={resetCounter}
-                        disabled={disabledReset}
-                    />
-                </div>
+                        </div>
+                    </>
+                )
+            }
 
-            </div>
 
         </div>
     );

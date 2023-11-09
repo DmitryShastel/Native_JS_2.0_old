@@ -42,7 +42,7 @@
 //     <Colorize/>, document.getElementById('root')
 // );
 // Что надо вставить вместо XXX, чтобы круг менял цвет по клику?
-// getColor () wrong
+// getColor (colors)
 
 //2
 // const customer = {
@@ -144,7 +144,7 @@
 // Те пользователи, у которых в стэке пять и более технологий, должны в списке
 // быть отмечены, как готовые к работе.
 // Что надо вставить вместо XXX, чтобы код работал нормально?
-//
+//personalData.technologies
 
 //4
 // import React, { ChangeEvent, useState } from 'react';
@@ -194,6 +194,8 @@
 // первоначально кнопка должна быть в состоянии disable, а после успешного выполнения условия
 // (комментарий должен быть больше 5 символов) должна раздизаблиться.
 // ❗ Ответ необходимо дать на основании данных (переменных), которые уже есть в коде
+//!isCommentReady
+
 
 //5
 // const student = {
@@ -231,6 +233,7 @@
 //     <PasswordChecker/>, document.getElementById('root')
 // );
 // Что надо вставить вместо XXX, чтобы код работал нормально?
+//password.length
 
 //7
 // const student = {
@@ -251,7 +254,7 @@
 //     ? newUser.name
 //     : student.name
 /*Какое значение получит переменная "myFriendName"?*/
-//"Michail" wrong
+//"Mia"
 
 //8
 // import React, {useState, MouseEvent} from 'react';
@@ -273,6 +276,7 @@
 //     <ColorButton/>, document.getElementById('root')
 // );
 // Что надо написать вместо XXX, чтобы при клике кнопка становилась красной?
+//isColored
 
 //9
 // import React, {useState} from 'react';
@@ -301,6 +305,7 @@
 //     <UsersList/>, document.getElementById('root')
 // );
 // Что надо вставить вместо XXX, чтобы код корректно работал  со списком пользователей?
+//users.length
 
 //10
 // const user = {
@@ -314,7 +319,7 @@
 // updatedUser.friends.push("Vladislav")
 // console.log(user.friends[3])
 /*Какое значение будет выведено в консоль?*/
-//undefined wrong
+//"Vladislav"
 
 
 

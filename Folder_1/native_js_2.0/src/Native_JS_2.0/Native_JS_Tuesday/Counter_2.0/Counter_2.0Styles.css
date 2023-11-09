@@ -9,11 +9,11 @@
 .counter-settings {
     flex: 1;
     display: flex;
-    height: 70vh;
+    height: 50vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 30px 0 30px;
+    margin: 0 50px 0 50px;
 }
 
 .counter-settings {
@@ -26,7 +26,7 @@
     flex-direction: column;
     border: 3px solid #00FFFF;
     border-radius: 10px;
-    padding: 16% 13%;
+    padding: 6% 12%;
 }
 
 .setting-row {
@@ -53,8 +53,8 @@
 .setting-button {
     border: 3px solid #00FFFF;
     border-radius: 10px;
-    margin-top: 30px ;
-    padding: 4.5% 32%;
+    margin-top: 25px ;
+    padding: 4% 32%;
 }
 
 .input-center {
@@ -66,20 +66,20 @@
 .counter-counter {
     flex: 1;
     display: flex;
-    height: 70vh;
+    height: 50vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border: 3px solid #00FFFF;
     border-radius: 10px;
-    margin: 0 20px 0 30px;
+    margin: 0 50px 0 50px;
 }
 
 .counter-display {
     border: 3px solid #00FFFF;
     border-radius: 10px;
-    padding: 20% 44%;
-    font-size: 70px;
+    padding: 75px 280px;
+    font-size: 50px;
     color: #00FFFF;
     font-weight: bold;
 }
@@ -87,7 +87,7 @@
 .counter-buttons {
     display: flex;
     margin-top: 4%;
-    padding: 5% 16%;
+    padding: 5% 14%;
     border: 3px solid #00FFFF;
     border-radius: 15px;
 }
@@ -113,6 +113,7 @@
 
 .errorMessage {
     color: #f44336;
+    font-size: 20px;
 }
 
 .disabled {
