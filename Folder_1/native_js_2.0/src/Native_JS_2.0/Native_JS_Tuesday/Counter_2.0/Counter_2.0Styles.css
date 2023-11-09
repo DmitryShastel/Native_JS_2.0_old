@@ -81,15 +81,18 @@
     border: 3px solid #00FFFF;
     border-radius: 10px;
     padding: 70px 30px;
-    font-size: 50px;
+    font-size: 35px;
     color: #00FFFF;
     font-weight: bold;
 }
 
 .counter-display-window {
+    display: flex;
     align-items: center;
-    border: 3px solid #00FFFF;
-    padding: 0px 220px;
+    justify-content: center;
+    padding:20px  200px 0px 180px;
+    color: #00FFFF;
+    white-space: nowrap;
 }
 
 .counter-buttons {
@@ -112,8 +115,6 @@
     cursor: pointer;
 }
 
-
-
 .errorInput {
     background-color: pink;
     border: 3px solid red;
@@ -121,7 +122,11 @@
 
 .errorMessage {
     color: #f44336;
-    font-size: 20px;
+    white-space: nowrap;
+}
+
+.resultColor {
+    color: #f44336;
 }
 
 .disabled {

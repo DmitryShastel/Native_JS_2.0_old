@@ -16,7 +16,6 @@ export const SuperInput = (props: SettingsType) => {
         <div >
             <div className="setting-row">
                 <h3 className="setting-label">{props.title}</h3>
-
                 <input
                     type={'number'}
                     className={`setting-input input-center ${props.error}`}

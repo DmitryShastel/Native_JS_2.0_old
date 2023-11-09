@@ -22,8 +22,14 @@ export const AppRootCounter2_0 = () => {
         return counter > startValue ? setCounter(counter = startValue) : '';
     }
     let setSettings = () => {
-        setCounter(startValue)
-        setError(null)
+        if (startValue === maxValue) {
+            setError('Incorrect value');
+        } else if (maxValue === counter) {
+            setError(null)
+        } else {
+            setCounter(startValue)
+            setError(null)
+        }
     }
     const onChangeMaxValue = (e: ChangeEvent<HTMLInputElement>) => {
         let maxValue = Number(e.currentTarget.value)
@@ -69,7 +75,7 @@ export const AppRootCounter2_0 = () => {
             let newInputStartValue = JSON.parse(inputStartValue)
             setStartValue(newInputStartValue)
         }
-         setIsDataLoaded(true)
+        setIsDataLoaded(true)
     }, [])
     useEffect(() => {
         localStorage.setItem('inputStartData', JSON.stringify(startValue))
@@ -87,14 +93,13 @@ export const AppRootCounter2_0 = () => {
         localStorage.setItem('inputCountData', JSON.stringify(counter))
     }, [counter])
 
+
     return (
         <div className={'counter-root'}>
-
             {
                 isDataLoaded && (
                     <>
                         <div className={'counter-settings'}>
-
                             <div className="settings-container">
                                 <SuperInput
                                     title='max value:'
@@ -107,7 +112,6 @@ export const AppRootCounter2_0 = () => {
                                     onChange={onChangeStartValue}
                                     error={errorStartValue}/>
                             </div>
-
                             <div className={'setting-button'}>
                                 <SuperButton
                                     title='set'
@@ -116,15 +120,16 @@ export const AppRootCounter2_0 = () => {
                                 />
                             </div>
                         </div>
-
                         <div className={'counter-counter'}>
                             <div className={'counter-display'}>
-                                <Display
-                                    counter={counter}
-                                    error={error}
-                                    startValue={startValue}
-                                    maxValue={maxValue}
-                                />
+                                <div className={'counter-display-window'}>
+                                    <Display
+                                        counter={counter}
+                                        error={error}
+                                        startValue={startValue}
+                                        maxValue={maxValue}
+                                    />
+                                </div>
                             </div>
                             <div className={'counter-buttons'}>
                                 <SuperButton
@@ -138,13 +143,10 @@ export const AppRootCounter2_0 = () => {
                                     disabled={disabledReset}
                                 />
                             </div>
-
                         </div>
                     </>
                 )
             }
-
-
         </div>
     );
 };

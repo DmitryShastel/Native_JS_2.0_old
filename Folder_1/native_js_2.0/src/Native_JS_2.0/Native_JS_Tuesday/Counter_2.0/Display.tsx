@@ -11,18 +11,16 @@ type DisplayPropsType = {
 
 export const Display = (props: DisplayPropsType) => {
 
-    let result = props.error === 'Incorrect value' ? 'errorMessage' : ''
-    let countColor = props.counter === props.maxValue ? 'countColor' : ''
+     let result = props.error === 'Incorrect value' ? 'errorMessage' : '';
+     let resultColor = props.counter === props.maxValue ? 'resultColor' : ''
 
     return (
-        <div className={'counter-display-window'}>
-
+        <div>
             {
                 props.error
                     ? <span className={result}>{props.error}</span>
-                    : <span className={countColor}>{props.counter} </span>
+                    : <span className={resultColor}>{props.counter} </span>
             }
-
         </div>
     );
 };
