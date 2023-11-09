@@ -15,7 +15,7 @@ export const Display = (props: DisplayPropsType) => {
     let countColor = props.counter === props.maxValue ? 'countColor' : ''
 
     return (
-        <div>
+        <div className={'counter-display-window'}>
 
             {
                 props.error
