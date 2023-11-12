@@ -48,13 +48,34 @@
 // counter2()
 // counter2()
 
+// let fun = (x, n) => {
+//     if (n === 1) {
+//         return x
+//     } else {
+//         return x * fun(x, n - 1)
+//     }
+// }
+//
+// console.log(fun(2, 4))
 
-let fun = (x, n) => {
-    if (n === 1) {
+//faq(5) -> 1 * 2 * 3 * 4 * 5
+
+let faq = (x) => {
+    if(x === 1) {
         return x
-    } else {
-        return x * fun(x, n - 1)
     }
+    return x * faq(x -1)
 }
+console.log(faq(5))
 
-console.log(fun(2, 4))
+
+
+
+
+
+
+
+
+
+
+
