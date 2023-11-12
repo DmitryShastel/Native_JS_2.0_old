@@ -29,20 +29,32 @@
 //     console.log(b)
 // }
 
-const counterCreator = () => {
-    let count = 0;
+// let count = 0;
+//
+// const counterCreator = () => {
+//
+//     return () => {
+//         console.log(++count);
+//     }
+// }
+//
+// const counter = counterCreator();
+// const counter2 = counterCreator();
+// counter()
+// counter()
+// counter()
+//
+// counter2()
+// counter2()
+// counter2()
 
-    return () => {
-        console.log(++count);
+
+let fun = (x, n) => {
+    if (n === 1) {
+        return x
+    } else {
+        return x * fun(x, n - 1)
     }
 }
 
-const counter = counterCreator();
-const counter2 = counterCreator();
-counter()
-counter()
-counter()
-
-counter2()
-counter2()
-counter2()
+console.log(fun(2, 4))
