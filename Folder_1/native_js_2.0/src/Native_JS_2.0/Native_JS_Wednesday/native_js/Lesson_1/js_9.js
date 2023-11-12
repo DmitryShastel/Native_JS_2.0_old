@@ -15,6 +15,11 @@ function foo() {
     const a = 30;
     const b = 40;
     console.log(a, b)
+    foo2();
 }
 
 foo()
+
+function foo2() {
+    console.log(b)
+}

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="032ec4d1-33a1-4a32-a818-97fc1bd4e3c9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Wednesday/native_js/Lesson_1/js_9.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Wednesday/native_js/Lesson_1/js_9.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +140,7 @@
       <workItem from="1696657031000" duration="759000" />
       <workItem from="1697863554992" duration="125720000" />
       <workItem from="1699416046883" duration="45226000" />
-      <workItem from="1699799107825" duration="4163000" />
+      <workItem from="1699799107825" duration="4504000" />
     </task>
     <servers />
   </component>
