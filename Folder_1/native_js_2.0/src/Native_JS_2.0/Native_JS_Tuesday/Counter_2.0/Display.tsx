@@ -1,13 +1,11 @@
 import React from 'react';
 
-
 type DisplayPropsType = {
     counter: number
     error: string | null
     startValue: number
     maxValue: number
 }
-
 
 export const Display = (props: DisplayPropsType) => {
 
