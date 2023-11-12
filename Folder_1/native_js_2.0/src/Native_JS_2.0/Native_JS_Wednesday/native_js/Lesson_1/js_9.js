@@ -8,23 +8,36 @@
 //
 // startEngine()
 
-const a = 10;
-const b = 20;
-const c = 50;
+// const a = 10;
+// const b = 20;
+// const c = 50;
+//
+// function foo() {
+//     const a = 30;
+//     const b = 40;
+//     console.log(a, b)
+//     foo2();
+//     const bar = () => {
+//         console.log(c)
+//     }
+//     bar();
+// }
+//
+// foo()
+//
+// function foo2() {
+//     console.log(b)
+// }
 
-function foo() {
-    const a = 30;
-    const b = 40;
-    console.log(a, b)
-    foo2();
-    const bar = () => {
-        console.log(c)
+const counterCreator = () => {
+    let count = 0;
+
+    return () => {
+        console.log(++count);
     }
-    bar();
 }
 
-foo()
-
-function foo2() {
-    console.log(b)
-}
+const counter = counterCreator();
+counter()
+counter()
+counter()
