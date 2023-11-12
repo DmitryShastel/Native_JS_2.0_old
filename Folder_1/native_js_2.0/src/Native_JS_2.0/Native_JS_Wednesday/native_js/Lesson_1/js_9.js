@@ -38,6 +38,11 @@ const counterCreator = () => {
 }
 
 const counter = counterCreator();
+const counter2 = counterCreator();
 counter()
 counter()
 counter()
+
+counter2()
+counter2()
+counter2()
