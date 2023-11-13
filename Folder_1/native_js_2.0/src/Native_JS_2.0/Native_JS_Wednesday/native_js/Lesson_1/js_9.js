@@ -59,16 +59,44 @@
 // console.log(fun(2, 4))
 
 //faq(5) -> 1 * 2 * 3 * 4 * 5
+// let faq = (x) => {
+//     if(x === 1) {
+//         return x
+//     }
+//     return x * faq(x -1)
+// }
+// console.log(faq(5))
 
-let faq = (x) => {
-    if(x === 1) {
-        return x
+//fib(5) -> 0 + 1 + 1 + 2 + 3 + 5
+
+// let fib = (x) => {
+//   if (x <= 0){
+//       return 0
+//   } else if (x === 1) {
+//       return 1
+//   }
+//   return fib(x-1) + fib(x-2)
+//
+// }
+// console.log(fib(15))
+
+let a = 0; //1, 2, 3
+
+const createCounter = () => {
+    const counter = {
+        increment() {++a },
+        getCounter() {return a}
     }
-    return x * faq(x -1)
+    return counter
 }
-console.log(faq(5))
 
+const counter1 = createCounter()
+const counter2 = createCounter()
 
+counter1.increment()
+counter1.increment()
+counter2.increment()
+console.log(counter2.getCounter())
 
 
 
