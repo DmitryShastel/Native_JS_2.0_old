@@ -80,28 +80,33 @@
 // }
 // console.log(fib(15))
 
-let a = 0; //1, 2, 3
+// const createCounter = () => {
+//
+//     let a = 0;
+//
+//     const counter = {
+//         increment() {++a },
+//         getCounter() {return a}
+//     }
+//     return counter
+// }
+//
+// const counter1 = createCounter()
+// const counter2 = createCounter()
+//
+// counter1.increment()
+// counter1.increment()
+// counter2.increment()
+// console.log(counter2.getCounter())
 
-const createCounter = () => {
-    const counter = {
-        increment() {++a },
-        getCounter() {return a}
+
+let fun = (m) => {
+    return (n) => {
+        console.log(n + m)
     }
-    return counter
 }
 
-const counter1 = createCounter()
-const counter2 = createCounter()
-
-counter1.increment()
-counter1.increment()
-counter2.increment()
-console.log(counter2.getCounter())
-
-
-
-
-
+let result = fun(3)(2)
 
 
 
