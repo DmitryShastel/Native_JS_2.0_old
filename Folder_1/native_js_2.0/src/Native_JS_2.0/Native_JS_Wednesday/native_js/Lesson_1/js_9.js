@@ -100,15 +100,26 @@
 // console.log(counter2.getCounter())
 
 
-let fun = (m) => {
-    return (n) => {
-        console.log(n + m)
+// let fun = (m) => {
+//     return (n) => {
+//         console.log(n + m)
+//     }
+// }
+//
+// let result = fun(3)(2)
+
+function makeCounter() {
+    let count = 0;
+
+    return function() {
+        return count++
     }
 }
 
-let result = fun(3)(2)
-
-
+let counter = makeCounter();
+console.log(counter())
+console.log(counter())
+console.log(counter())
 
 
 
