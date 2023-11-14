@@ -108,18 +108,25 @@
 //
 // let result = fun(3)(2)
 
-function makeCounter() {
-    let count = 0;
+// function makeCounter() {
+//     let count = 0;
+//
+//     return function() {
+//         return count++
+//     }
+// }
+// let counter = makeCounter();
+// console.log(counter())
+// console.log(counter())
+// console.log(counter())
 
-    return function() {
-        return count++
+let sum = (a) => {
+    return (b) => {
+        return a + b
     }
 }
 
-let counter = makeCounter();
-console.log(counter())
-console.log(counter())
-console.log(counter())
+console.log(sum(5)(-1))
 
 
 
