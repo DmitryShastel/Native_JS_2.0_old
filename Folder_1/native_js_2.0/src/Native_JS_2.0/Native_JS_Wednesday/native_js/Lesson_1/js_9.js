@@ -128,23 +128,20 @@
 //
 // console.log(sum(5)(-1))
 
-function logPerson(person) {
-    console.log(`Person: ${person.name}, ${person.age}, ${person.job}`)
-}
+
 
 const person1 = {name: 'Misha', age: 25, job: 'any'}
 const person2 = {name: 'Misha2', age: 22, job: 'any2'}
 
-logPerson(person1)
-
-const person = {
-    name: 'Misha2',
-    age: 22,
-    job: 'any2',
-    logPerson: function() {
-        console.log(`Person: ${this.name}, ${this.age}, ${this.job}`)
-    }
+function bind (person, fun) {
+     return function () {
+        fun.call(person)
+     }
 }
 
-person.logPerson()
+function logPerson() {
+    console.log(`Person: ${this.name}, ${this.age}, ${this.job}`)
+}
 
+const boundLogPerson = bind(person1, logPerson)
+boundLogPerson()
