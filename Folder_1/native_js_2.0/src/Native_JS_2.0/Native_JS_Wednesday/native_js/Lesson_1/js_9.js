@@ -155,15 +155,15 @@
 // volume(2)(3,3)
 
 const module = ( () => {
-    return {
-        myOwnMethod: () => {
-            console.log('hello')
-        },
-        mySecondMethod: () => {
-            console.log('hello2')
-        }
-    }
-}) ()
+   let privateMethod = () => {
+       console.log('hello')
+   }
+   return {
+       publicMethod: () => {
+           privateMethod()
+           console.log('hello2')
+       }
+   }
+}) ();
 
-module.myOwnMethod()
-module.mySecondMethod()
+module.publicMethod()
