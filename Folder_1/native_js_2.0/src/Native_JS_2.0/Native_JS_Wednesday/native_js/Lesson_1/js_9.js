@@ -99,7 +99,6 @@
 // counter2.increment()
 // console.log(counter2.getCounter())
 
-
 // let fun = (m) => {
 //     return (n) => {
 //         console.log(n + m)
@@ -167,7 +166,6 @@
 // }) ();
 // module.publicMethod()
 
-
 // let fun = (x, n) => {
 //     if (n === 1) {
 //         return x
@@ -188,12 +186,12 @@
 //
 // console.log(sumTo(100))
 
-let factorial = (n) => {
-    if(n === 1) {
+let fib = (n) => {
+    if (n <= 1) {
         return n
     } else {
-        return n * factorial(n -1)
+        return fib(n - 1) + fib(n - 2)
     }
 }
 
-console.log(factorial(5))
+console.log(fib(7))
