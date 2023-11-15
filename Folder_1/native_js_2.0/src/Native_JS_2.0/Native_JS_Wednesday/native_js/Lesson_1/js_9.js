@@ -186,12 +186,18 @@
 //
 // console.log(sumTo(100))
 
-let fib = (n) => {
-    if (n <= 1) {
-        return n
-    } else {
-        return fib(n - 1) + fib(n - 2)
+// let fib = (n) => {
+//     if (n <= 1) {
+//         return n
+//     } else {
+//         return fib(n - 1) + fib(n - 2)
+//     }
+// }
+// console.log(fib(7))
+
+let sum = (a) => {
+    return (b) => {
+        return a + b
     }
 }
-
-console.log(fib(7))
+console.log(sum(3)(6))
