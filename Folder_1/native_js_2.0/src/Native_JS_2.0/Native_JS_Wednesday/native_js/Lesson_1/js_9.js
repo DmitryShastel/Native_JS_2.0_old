@@ -195,9 +195,24 @@
 // }
 // console.log(fib(7))
 
-let sum = (a) => {
-    return (b) => {
-        return a + b
+// let sum = (a) => {
+//     return (b) => {
+//         return a + b
+//     }
+// }
+// console.log(sum(3)(6))
+
+let makeCounter = () => {
+    let count = 0
+    return () => {
+        console.log(++count)
     }
 }
-console.log(sum(3)(6))
+
+let counter = makeCounter()
+counter()
+counter()
+
+let counter2 = makeCounter()
+counter2()
+counter()
