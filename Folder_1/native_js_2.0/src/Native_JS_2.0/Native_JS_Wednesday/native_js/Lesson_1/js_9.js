@@ -154,16 +154,36 @@
 // result(3,3)
 // volume(2)(3,3)
 
-const module = ( () => {
-   let privateMethod = () => {
-       console.log('hello')
-   }
-   return {
-       publicMethod: () => {
-           privateMethod()
-           console.log('hello2')
-       }
-   }
-}) ();
+// const module = ( () => {
+//    let privateMethod = () => {
+//        console.log('hello')
+//    }
+//    return {
+//        publicMethod: () => {
+//            privateMethod()
+//            console.log('hello2')
+//        }
+//    }
+// }) ();
+// module.publicMethod()
 
-module.publicMethod()
+
+// let fun = (x, n) => {
+//     if (n === 1) {
+//         return x
+//     } else {
+//         return x * fun(x, n - 1)
+//     }
+// }
+//
+// console.log(fun(2, 4))
+
+let sumTo = (n) => {
+    if(n === 1) {
+        return n
+    } else {
+        return n + sumTo(n -1)
+    }
+}
+
+console.log(sumTo(100))
