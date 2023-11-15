@@ -178,12 +178,22 @@
 //
 // console.log(fun(2, 4))
 
-let sumTo = (n) => {
+// let sumTo = (n) => {
+//     if(n === 1) {
+//         return n
+//     } else {
+//         return n + sumTo(n -1)
+//     }
+// }
+//
+// console.log(sumTo(100))
+
+let factorial = (n) => {
     if(n === 1) {
         return n
     } else {
-        return n + sumTo(n -1)
+        return n * factorial(n -1)
     }
 }
 
-console.log(sumTo(100))
+console.log(factorial(5))
