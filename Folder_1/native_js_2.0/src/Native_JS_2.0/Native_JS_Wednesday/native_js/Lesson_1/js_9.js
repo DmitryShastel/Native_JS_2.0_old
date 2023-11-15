@@ -202,17 +202,26 @@
 // }
 // console.log(sum(3)(6))
 
-let makeCounter = () => {
-    let count = 0
-    return () => {
-        console.log(++count)
+let makeCounter = (n) => {
+    let count = n
+    return {
+        increase: () => {
+            return console.log(count + 1)
+        },
+        decrease: () => {
+            return console.log(count - 1)
+        },
+        reset: () => {
+            return console.log(count = 0)
+        },
+        set: () => {
+            return console.log(count = n)
+        },
     }
 }
 
-let counter = makeCounter()
-counter()
-counter()
-
-let counter2 = makeCounter()
-counter2()
-counter()
+let counter = makeCounter(2)
+counter.increase()
+counter.decrease()
+counter.reset()
+counter.set()
