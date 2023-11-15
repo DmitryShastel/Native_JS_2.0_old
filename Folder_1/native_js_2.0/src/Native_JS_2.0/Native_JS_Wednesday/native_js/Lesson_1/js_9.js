@@ -144,12 +144,26 @@
 // const boundLogPerson = bind(person1, logPerson)
 // boundLogPerson()
 
-function volume(a) {
-    return (b, c) => {
-        return console.log(a * b * c)
-    }
-}
+// function volume(a) {
+//     return (b, c) => {
+//         return console.log(a * b * c)
+//     }
+// }
+//
+// let result = volume(2)
+// result(3,3)
+// volume(2)(3,3)
 
-let result = volume(2)
-result(3,3)
-volume(2)(3,3)
+const module = ( () => {
+    return {
+        myOwnMethod: () => {
+            console.log('hello')
+        },
+        mySecondMethod: () => {
+            console.log('hello2')
+        }
+    }
+}) ()
+
+module.myOwnMethod()
+module.mySecondMethod()
