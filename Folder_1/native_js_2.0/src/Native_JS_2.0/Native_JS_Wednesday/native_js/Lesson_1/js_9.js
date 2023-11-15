@@ -128,20 +128,28 @@
 //
 // console.log(sum(5)(-1))
 
+// const person1 = {name: 'Misha', age: 25, job: 'any'}
+// const person2 = {name: 'Misha2', age: 22, job: 'any2'}
+//
+// function bind (person, fun) {
+//      return function () {
+//         fun.call(person)
+//      }
+// }
+//
+// function logPerson() {
+//     console.log(`Person: ${this.name}, ${this.age}, ${this.job}`)
+// }
+//
+// const boundLogPerson = bind(person1, logPerson)
+// boundLogPerson()
 
-
-const person1 = {name: 'Misha', age: 25, job: 'any'}
-const person2 = {name: 'Misha2', age: 22, job: 'any2'}
-
-function bind (person, fun) {
-     return function () {
-        fun.call(person)
-     }
+function volume(a) {
+    return (b, c) => {
+        return console.log(a * b * c)
+    }
 }
 
-function logPerson() {
-    console.log(`Person: ${this.name}, ${this.age}, ${this.job}`)
-}
-
-const boundLogPerson = bind(person1, logPerson)
-boundLogPerson()
+let result = volume(2)
+result(3,3)
+volume(2)(3,3)
