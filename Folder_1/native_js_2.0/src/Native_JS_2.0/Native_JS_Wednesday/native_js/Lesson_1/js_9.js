@@ -202,26 +202,50 @@
 // }
 // console.log(sum(3)(6))
 
-let makeCounter = (n) => {
-    let count = n
-    return {
-        increase: () => {
-            return console.log(count + 1)
-        },
-        decrease: () => {
-            return console.log(count - 1)
-        },
-        reset: () => {
-            return console.log(count = 0)
-        },
-        set: () => {
-            return console.log(count = n)
-        },
+// let makeCounter = (n) => {
+//     let count = n
+//     return {
+//         increase: () => {
+//             return console.log(count + 1)
+//         },
+//         decrease: () => {
+//             return console.log(count - 1)
+//         },
+//         reset: () => {
+//             return console.log(count = 0)
+//         },
+//         set: () => {
+//             return console.log(count = n)
+//         },
+//     }
+// }
+//
+// let counter = makeCounter(2)
+// counter.increase()
+// counter.decrease()
+// counter.reset()
+// counter.set()
+
+let superSum = (num) => {
+    if (num === 0) return 0;
+    if (num === 1) return (n) => n
+
+    let _arguments = [];
+
+    function helper(...args) {
+        _arguments = [..._arguments, ...args];
+        if(_arguments.length >= num) {
+            return _arguments.reduce((acc, number) => acc + number)
+        } else {
+            return helper
+        }
     }
+    return helper
 }
 
-let counter = makeCounter(2)
-counter.increase()
-counter.decrease()
-counter.reset()
-counter.set()
+console.log(superSum(3)(2)(5)(3))
+console.log(superSum(3)(2)(5,3))
+console.log(superSum(3)(2,5,3))
+console.log(superSum(3)(2)(5)(3))
+console.log(superSum(3)(2,5)(3))
+console.log(superSum(3)(2,5)(3,9))
