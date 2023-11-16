@@ -235,6 +235,7 @@ let superSum = (num) => {
     function helper(...args) {
         _arguments = [..._arguments, ...args];
         if(_arguments.length >= num) {
+            _arguments.length = num
             return _arguments.reduce((acc, number) => acc + number)
         } else {
             return helper
