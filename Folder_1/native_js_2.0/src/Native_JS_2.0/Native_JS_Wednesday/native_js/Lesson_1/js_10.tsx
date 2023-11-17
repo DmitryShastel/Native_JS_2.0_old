@@ -3,11 +3,28 @@ import React from 'react';
 
 export const Js10 = () => {
 
-    const identity = <T, >(value: T): T => {
+    type funType = {
+        id: string
+        title: string
+        isDone: boolean
+    }
+
+    const identity = <funType, >(value: funType[]): funType[] => {
         return (value)
     }
 
-    console.log(identity<number[]>([1]))
+    // console.log(identity<funType>([{id: '123', title: "test", isDone: true}]), typeof identity([1, 2]))
+
+    type DataType = {
+        data: number[]
+    }
+
+    let numbers = [1, 2, 3]
+
+    let reverseArray = <DataType, >(numbers: DataType[]): DataType[] => {
+        return numbers
+    }
+    console.log(reverseArray(numbers), typeof reverseArray(numbers))
 
     return (
         <div>
