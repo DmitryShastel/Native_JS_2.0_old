@@ -15,16 +15,24 @@ export const Js10 = () => {
 
     // console.log(identity<funType>([{id: '123', title: "test", isDone: true}]), typeof identity([1, 2]))
 
-    type DataType = number[]
+    // type DataType = number[]
+    //
+    // let numbers: DataType = [1, 2, 3]
+    //
+    // let reverseArray = <DataType, >(value: DataType[]): DataType[] => {
+    //     return value.reverse()
+    // }
+    // console.log(reverseArray(numbers))
 
-    let numbers = [1, 2, 3]
 
-    let reverseArray = <DataType,> (value: DataType[]): DataType[] => {
-        return  value.reverse()
+    type DataType = Array<any> | string
+
+    let getLength = <T extends DataType >(data: T): number => {
+        return data ? data.length : 0
     }
 
-    console.log(reverseArray(numbers))
-
+    console.log(getLength([1, 2, 3, {}]))
+    console.log(getLength('abc'))
 
     return (
         <div>
