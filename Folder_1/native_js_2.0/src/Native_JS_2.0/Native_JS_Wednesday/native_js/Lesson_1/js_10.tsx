@@ -25,14 +25,32 @@ export const Js10 = () => {
     // console.log(reverseArray(numbers))
 
 
-    type DataType = Array<any> | string
+    // type DataType = Array<any> | string
+    //
+    // let getLength = <T extends DataType >(data: T): number => {
+    //     return data ? data.length : 0
+    // }
+    //
+    // console.log(getLength([1, 2, 3, {}]))
+    // console.log(getLength('abc'))
 
-    let getLength = <T extends DataType >(data: T): number => {
-        return data ? data.length : 0
+
+    type DataTypeArr1 = Array<any>
+    type DataTypeArr2 = Array<any>
+    type DataType = DataTypeArr1 | DataTypeArr2
+
+    let mergeArrays = <T extends DataType> (data1: DataType, data2:  DataType): DataType => {
+
+            let result: DataType = data1.concat(data2)
+            return result
+
+
+
     }
 
-    console.log(getLength([1, 2, 3, {}]))
-    console.log(getLength('abc'))
+    console.log(mergeArrays([1],['1', '2']))
+
+
 
     return (
         <div>
