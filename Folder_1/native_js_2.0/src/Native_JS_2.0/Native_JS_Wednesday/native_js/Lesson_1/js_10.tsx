@@ -60,7 +60,7 @@ export const Js10 = () => {
     type DataType = number[]
     let numbers = [1, 5, 6, 8, 10, 3]
 
-    let getMaxValue = (data: number[]) => {
+    let getMaxValue = <T extends DataType> (data: T): number => {
         // return Math.max(...data)
 
         //let result: any = data.reduce((el, acc) => el < acc ? acc : el)
