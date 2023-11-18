@@ -35,22 +35,27 @@ export const Js10 = () => {
     // console.log(getLength('abc'))
 
 
-    type DataTypeArr1 = Array<any>
-    type DataTypeArr2 = Array<any>
-    type DataType = DataTypeArr1 | DataTypeArr2
+    // type DataTypeArr1 = Array<number>
+    // type DataTypeArr2 = Array<string>
+    // type DataType = DataTypeArr1 | DataTypeArr2
+    //
+    // let mergeArrays = <T extends DataType>(data1: T, data2: T): DataType => {
+    //     let result: DataType = data1.concat(data2)
+    //     return result
+    // }
+    //
+    // console.log(mergeArrays([1], ['1', '2']))
 
-    let mergeArrays = <T extends DataType> (data1: DataType, data2:  DataType): DataType => {
+    type DataTypeArr1 = Array<number>;
+    type DataTypeArr2 = Array<string>;
+    type DataType = DataTypeArr1 | DataTypeArr2;
 
-            let result: DataType = data1.concat(data2)
-            return result
+    let mergeArrays = <T extends DataType>(data1: T, data2: T): DataType => {
+        let result: DataType = [...data1, ...data2] as DataType;
+        return result;
+    };
 
-
-
-    }
-
-    console.log(mergeArrays([1],['1', '2']))
-
-
+    console.log(mergeArrays([1], ['1', '2'])); // [1, "1", "2"]
 
     return (
         <div>
