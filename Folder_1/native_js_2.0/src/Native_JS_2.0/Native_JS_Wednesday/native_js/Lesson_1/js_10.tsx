@@ -3,15 +3,15 @@ import React from 'react';
 
 export const Js10 = () => {
 
-    type funType = {
-        id: string
-        title: string
-        isDone: boolean
-    }
-
-    const identity = <funType, >(value: funType[]): funType[] => {
-        return (value)
-    }
+    // type funType = {
+    //     id: string
+    //     title: string
+    //     isDone: boolean
+    // }
+    //
+    // const identity = <funType, >(value: funType[]): funType[] => {
+    //     return (value)
+    // }
 
     // console.log(identity<funType>([{id: '123', title: "test", isDone: true}]), typeof identity([1, 2]))
 
@@ -57,11 +57,22 @@ export const Js10 = () => {
     // console.log(mergeArrays([1], ['1', '2'])); // [1, "1", "2"]
 
 
-    let numbers = [1, 5 , 6, 8, 10, 3]
+    type DataType = number[]
+    let numbers = [1, 5, 6, 8, 10, 3]
 
-    let getMaxValue = (data: number[]): number => {
-        return Math.max(...data)
+    let getMaxValue = (data: number[]) => {
+        // return Math.max(...data)
 
+        //let result: any = data.reduce((el, acc) => el < acc ? acc : el)
+
+        let result = data[0];
+        for(let i = 1; i < data.length; i ++){
+            let current = data[i]
+            if(result < current){
+                result = current
+            }
+        }
+        return result
     }
 
     console.log(getMaxValue(numbers))
