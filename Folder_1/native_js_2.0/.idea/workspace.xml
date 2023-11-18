@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="032ec4d1-33a1-4a32-a818-97fc1bd4e3c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Wednesday/native_js/Lesson_1/Containers/CurrencyEContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Wednesday/native_js/Lesson_1/Redux/actions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Wednesday/native_js/Lesson_1/Redux/state.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Wednesday/native_js/Lesson_1/Containers/CurrencyEContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Wednesday/native_js/Lesson_1/Containers/CurrencyEContainer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +17,8 @@
         <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -142,7 +144,7 @@
       <workItem from="1699416046883" duration="45226000" />
       <workItem from="1699799107825" duration="34745000" />
       <workItem from="1700060532414" duration="7872000" />
-      <workItem from="1700226895150" duration="15331000" />
+      <workItem from="1700226895150" duration="15495000" />
     </task>
     <servers />
   </component>
