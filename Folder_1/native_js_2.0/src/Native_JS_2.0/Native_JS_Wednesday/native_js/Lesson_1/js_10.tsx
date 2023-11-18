@@ -46,16 +46,26 @@ export const Js10 = () => {
     //
     // console.log(mergeArrays([1], ['1', '2']))
 
-    type DataTypeArr1 = Array<number>;
-    type DataTypeArr2 = Array<string>;
-    type DataType = DataTypeArr1 | DataTypeArr2;
+    // type DataTypeArr1 = Array<number>;
+    // type DataTypeArr2 = Array<string>;
+    // type DataType = DataTypeArr1 | DataTypeArr2;
+    //
+    // let mergeArrays = <T extends DataType>(data1: T, data2: T): DataType => {
+    //     let result: DataType = [...data1, ...data2] as DataType;
+    //     return result;
+    // };
+    // console.log(mergeArrays([1], ['1', '2'])); // [1, "1", "2"]
 
-    let mergeArrays = <T extends DataType>(data1: T, data2: T): DataType => {
-        let result: DataType = [...data1, ...data2] as DataType;
-        return result;
-    };
 
-    console.log(mergeArrays([1], ['1', '2'])); // [1, "1", "2"]
+    let numbers = [1, 5 , 6, 8, 10, 3]
+
+    let getMaxValue = (data: number[]): number => {
+        return Math.max(...data)
+
+    }
+
+    console.log(getMaxValue(numbers))
+
 
     return (
         <div>
