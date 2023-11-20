@@ -23,7 +23,6 @@ const initialState: StoreType = {
 };
 
 export const storeReducer = (state: StoreType = initialState, action: any): StoreType => {
-    debugger
     switch (action.type) {
         case "INC_FIRST":
             return {
