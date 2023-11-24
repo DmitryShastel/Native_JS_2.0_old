@@ -1,5 +1,4 @@
 import {ACTIONS_TYPE, CurrencyReducersTypes} from './actions';
-import {IGlobalState} from "./state";
 
 
 export type CurrencyType = {
@@ -40,34 +39,61 @@ const initialState: CurrencyState = {
 };
 
 export const currencyReducer = (state: CurrencyState = initialState, action: CurrencyReducersTypes): CurrencyState => {
+
+    // @ts-ignore
     switch (action.type) {
         case ACTIONS_TYPE.CHANGE_CURRENCY_FIELD_TYPE:
             return {
                 ...state,
+                // @ts-ignore
                 ...action.payload,
-            };
-        case ACTIONS_TYPE.CHANGE_CHANGE_ACTION:
-        case ACTIONS_TYPE.CHANGE_CURRENT_CURRENCY:
-            return {
-                ...state,
-                ...action.payload,
-                // пишем тут умный коментарий
-                amountOfBYN: '',
-                amountOfCurrency: '',
-            };
-        // case ACTIONS_TYPE.CHANGE_CURRENT_CURRENCY:
-        //     return {
-        //         ...state,
-        //         ...action.payload,
-        //         // пишем тут умный коментарий
-        //         amountOfBYN: '',
-        //         amountOfCurrency: '',
-        //     };
+            }
         default:
             return state;
     }
 };
 
 
-//export const selectCurrencies = (store: IGlobalState) => store.currency.currencies;
-export const selectAll = (store: IGlobalState) => store.currency;
+// //export const selectCurrencies = (store: IGlobalState) => store.currency.currencies;
+//export const selectAll = (store: IGlobalState) => store.currency;
+
+// export const currencyReducer = (state: CurrencyState = initialState, action: CurrencyReducersTypes): CurrencyState => {
+//     // @ts-ignore
+//     switch (action.type) {
+//         case ACTIONS_TYPE.CHANGE_CURRENCY_FIELD_TYPE:
+//             return {
+//                 ...state,
+//                 // @ts-ignore
+//                 ...action.payload,
+//             }
+//         default:
+//             return state;
+//     }
+// };
+
+//switch (action.type) {
+//         case ACTIONS_TYPE.CHANGE_CURRENCY_FIELD_TYPE:
+//             return {
+//                 ...state,
+//                 ...action.payload,
+//             };
+//         case ACTIONS_TYPE.CHANGE_CHANGE_ACTION:
+//         case ACTIONS_TYPE.CHANGE_CURRENT_CURRENCY:
+//             return {
+//                 ...state,
+//                 ...action.payload,
+//                 // пишем тут умный коментарий
+//                 amountOfBYN: '',
+//                 amountOfCurrency: '',
+//             };
+//         // case ACTIONS_TYPE.CHANGE_CURRENT_CURRENCY:
+//         //     return {
+//         //         ...state,
+//         //         ...action.payload,
+//         //         // пишем тут умный коментарий
+//         //         amountOfBYN: '',
+//         //         amountOfCurrency: '',
+//         //     };
+//         default:
+//             return state;
+//     }

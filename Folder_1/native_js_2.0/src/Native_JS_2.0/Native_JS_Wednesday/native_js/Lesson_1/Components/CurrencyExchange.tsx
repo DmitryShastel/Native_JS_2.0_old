@@ -13,16 +13,16 @@ type CurrencyExchangePropsType = {
 };
 
 export const CurrencyExchange: React.FC<CurrencyExchangePropsType> = ({
-                                                                   currenciesName,
-                                                                   currentCurrency,
-                                                                   currencyRate,
-                                                                   isBuying,
-                                                                   amountOfBYN,
-                                                                   amountOfCurrency,
-                                                                   changeCurrencyField,
-                                                                   changeAction,
-                                                                   changeCurrentCurrency,
-                                                               }) => {
+                                                                          currenciesName,
+                                                                          currentCurrency,
+                                                                          currencyRate,
+                                                                          isBuying,
+                                                                          amountOfBYN,
+                                                                          amountOfCurrency,
+                                                                          changeCurrencyField,
+                                                                          changeAction,
+                                                                          changeCurrentCurrency,
+                                                                      }) => {
     const viewCurrency = isBuying ? (
         <React.Fragment>
             <label>

@@ -4,22 +4,32 @@ export type RootState = {
         secondCounter: number;
     };
     storeReducer: StoreType;
+    testData: TestDataType
 };
+
+export type TestDataType = {
+    id: number
+    title: string
+}
 
 export type   InitialStateType = {
     firstCounter: number;
     secondCounter: number;
+    testData?: TestDataType
 }
 
-export type StoreType  = {
-    counters: InitialStateType
+export type StoreType = {
+    counters: InitialStateType,
+    testData: TestDataType
 }
 
 const initialState: StoreType = {
     counters: {
         firstCounter: 0,
-        secondCounter: 0
-    }
+        secondCounter: 0,
+    },
+    testData: {id: 110,
+        title: 'test'},
 };
 
 export const storeReducer = (state: StoreType = initialState, action: any): StoreType => {
@@ -44,3 +54,9 @@ export const storeReducer = (state: StoreType = initialState, action: any): Stor
             return state;
     }
 };
+
+export const IncrementFirstAC = () => {
+    return {
+        type: "INC_FIRST"
+    }
+}
