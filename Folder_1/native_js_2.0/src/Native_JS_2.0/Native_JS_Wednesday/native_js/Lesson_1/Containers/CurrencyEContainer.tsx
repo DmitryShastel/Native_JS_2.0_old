@@ -1,5 +1,5 @@
 import React from 'react';
-import {Dispatch} from 'redux';
+import {compose, Dispatch} from 'redux';
 /*import {
     ChangeActionAC,
     ChangeCurrencyFieldAC,
@@ -10,6 +10,7 @@ import {connect, ConnectedProps} from 'react-redux';
 import {CurrencyExchange} from "../Components/CurrencyExchange";
 import {CurrencyState, CurrencyType} from "../Redux/currencyReducer";
 import {ChangeActionAC, ChangeCurrencyFieldAC, ChangeCurrentCurrencyAC, CurrencyReducersTypes} from "../Redux/actions";
+import {IGlobalState} from "../Redux/state";
 
 interface ICurrencyProps extends CurrencyState {
     setCurrencyAmount: (amountOfBYN: string, amountOfCurrency: string) => void
@@ -18,7 +19,7 @@ interface ICurrencyProps extends CurrencyState {
 }
 
 
-export const CurrencyEContainer: React.FunctionComponent<ICurrencyProps> =  ({
+const CurrencyEContainer: React.FunctionComponent<ICurrencyProps> =  ({
         currencies,
         currentCurrency,
         isBuying,
@@ -83,17 +84,17 @@ export const CurrencyEContainer: React.FunctionComponent<ICurrencyProps> =  ({
 };
 
 
-const mapStateToProps = ({currency}: { currency: CurrencyState}) => {
+const mapStateToProps = (state: IGlobalState) => {
     return {
-        currencies: currency.currencies,
-        currentCurrency: currency.currentCurrency,
-        isBuying: currency.isBuying,
-        amountOfBYN: currency.amountOfBYN,
-        amountOfCurrency: currency.amountOfCurrency,
+        currencies: state.currency.currencies,
+        currentCurrency: state.currency.currentCurrency,
+        isBuying: state.currency.isBuying,
+        amountOfBYN: state.currency.amountOfBYN,
+        amountOfCurrency: state.currency.amountOfCurrency,
     };
 };
 
-
+//@ts-ignore
 const mapDispatchToProps = (dispatch: Dispatch<CurrencyReducersTypes>)  => {
     return {
         setCurrencyAmount(amountOfBYN: string, amountOfCurrency: string) {
@@ -109,11 +110,14 @@ const mapDispatchToProps = (dispatch: Dispatch<CurrencyReducersTypes>)  => {
 };
 
 
-const connector = connect(mapStateToProps, mapDispatchToProps);
+//@ts-ignore
+export const CurrencyExchangeContainer = compose(connect(mapStateToProps,mapDispatchToProps))(CurrencyEContainer)
 
-type TProps = ConnectedProps<typeof connector>;
-
-export default connector(CurrencyEContainer);
+// const connector = connect(mapStateToProps, mapDispatchToProps);
+//
+// type TProps = ConnectedProps<typeof connector>;
+//
+// export default connector(CurrencyEContainer);
 
 
 // interface ICurrencyProps extends CurrencyState {
