@@ -18,7 +18,7 @@ interface ICurrencyProps extends CurrencyState {
 }
 
 
-export const CurrencyEContainer: React.FC<ICurrencyProps> =  ({
+export const CurrencyEContainer: React.FunctionComponent<ICurrencyProps> =  ({
         currencies,
         currentCurrency,
         isBuying,
