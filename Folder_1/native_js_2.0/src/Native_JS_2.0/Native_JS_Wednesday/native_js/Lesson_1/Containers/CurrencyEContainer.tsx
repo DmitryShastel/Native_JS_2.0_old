@@ -83,7 +83,7 @@ const CurrencyEContainer: React.FunctionComponent<ICurrencyProps> =  ({
     );
 };
 
-
+//@ts-ignore
 const mapStateToProps = (state: IGlobalState) => {
     return {
         currencies: state.currency.currencies,
