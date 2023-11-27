@@ -14,7 +14,7 @@ export type ChangeCurrencyFieldType = {
 };
 
 
-export type ChangeAction = {
+export type ChangeActionType = {
     type: ACTIONS_TYPE.CHANGE_CHANGE_ACTION
     payload: {
         isBuying: boolean
