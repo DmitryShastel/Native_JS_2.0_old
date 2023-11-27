@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Wednesday/native_js/Lesson_1/Containers/CurrencyEContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Wednesday/native_js/Lesson_1/Containers/CurrencyEContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Wednesday/native_js/Lesson_1/Redux/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Wednesday/native_js/Lesson_1/Redux/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Wednesday/native_js/Lesson_1/Redux/currencyReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Native_JS_2.0/Native_JS_Wednesday/native_js/Lesson_1/Redux/currencyReducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +146,7 @@
       <workItem from="1700060532414" duration="7872000" />
       <workItem from="1700226895150" duration="28241000" />
       <workItem from="1700463677497" duration="37756000" />
-      <workItem from="1701067716480" duration="9403000" />
+      <workItem from="1701067716480" duration="10591000" />
     </task>
     <servers />
   </component>
