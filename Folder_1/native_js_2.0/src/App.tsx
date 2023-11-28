@@ -6,7 +6,7 @@ import {AppJs10} from "./Native_JS_2.0/Native_JS_Wednesday/native_js/Lesson_1/Ap
 export function App() {
     return (
         <div>
-            <AppJs10/>
+
         </div>
 
     );
