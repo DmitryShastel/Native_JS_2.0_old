@@ -9,20 +9,35 @@ const server = {
     }
 }
 
+const axios = {
+    get () {
+        return {
+            request: {},
+            status: 200,
+            headers: {},
+            data: [],
+        }
+    }
+}
+
+
 // const promise = server.getData();
 // console.log(promise);
 
-server.getData()
-    .then((data) => {
-        console.log('then1', data);
-        return 10
-    })
-    .then((data) => {
-        console.log('then2', data);
-    })
-    .catch((error) => {
-        console.log('cath1', error)
-    })
-    .then((data) => {
-        console.log('then3', data);
-    })
+// server.getData()
+//     .then((data) => {
+//         console.log('then1', data);
+//         return 10
+//     })
+//     .then((data) => {
+//         console.log('then2', data);
+//     })
+//     .catch((error) => {
+//         console.log('cath1', error)
+//     })
+//     .then((data) => {
+//         console.log('then3', data);
+//     })
+// .finally(() => {
+//     console.log('finally')
+// })
