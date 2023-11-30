@@ -11,8 +11,8 @@ const server = {
 
 const axios = {
     get(url) {
-        return new Promise ((resolve, reject) => {
-            setTimeout(()=> {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
                 const response = {
                     request: {},
                     status: 200,
@@ -24,6 +24,29 @@ const axios = {
         }, 2000)
     }
 }
+const findUserInDB = (id) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const users = [
+                {id: 1, name: 'Bob'},
+                {id: 2, name: 'Anna'},
+            ];
+            const filteredUser = users.filter((el) => el.id === id);
+            if (filteredUser.length > 0) {
+                resolve(filteredUser[0]);
+            } else {
+                reject(new Error('User not found'))
+            }
+            return filteredUser
+        }, 1000)
+    })
+}
+
+const promise2 = findUserInDB(2)
+promise2.then((userData) => {
+    console.log(userData)
+})
+
 
 const promise1 = axios.get('test_url')
 promise1.then((data) => {
