@@ -10,15 +10,25 @@ const server = {
 }
 
 const axios = {
-    get () {
-        return {
-            request: {},
-            status: 200,
-            headers: {},
-            data: [],
-        }
+    get(url) {
+        return new Promise ((resolve, reject) => {
+            setTimeout(()=> {
+                const response = {
+                    request: {},
+                    status: 200,
+                    headers: {},
+                    data: [],
+                };
+                resolve(response)
+            })
+        }, 2000)
     }
 }
+
+const promise1 = axios.get('test_url')
+promise1.then((data) => {
+    console.log(data)
+})
 
 
 // const promise = server.getData();
