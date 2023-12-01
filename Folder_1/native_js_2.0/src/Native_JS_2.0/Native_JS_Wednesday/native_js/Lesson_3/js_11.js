@@ -14,11 +14,16 @@ const axios = {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 const response = {
-                    request: {},
+                    vacancies: [
+                        {id: 1, title: 'js'},
+                        {id: 2, title: 'css'},
+            ],
                     status: 200,
                     headers: {},
                     data: [],
                 };
+
+                // const response = [{title: 'hello'},{},{}]
                 resolve(response)
             })
         })
@@ -27,7 +32,8 @@ const axios = {
 
 const promise1 = axios.get('test_url')
     .then((data) => {
-        return data
+        return  data
+        // return  console.log(data)
     })
 
 const findUserInDB = (id) => {
@@ -48,20 +54,22 @@ const findUserInDB = (id) => {
     })
 }
 
-const promise2 = findUserInDB(2)
+const promise2 = findUserInDB(1)
     .then((userData) => {
         return userData
     })
     .catch(() => {
-
     })
 
 
 const otherPromise = Promise.all([promise1, promise2])
 
 otherPromise
-    .then((result) => {
-        console.log(result)
+    .then((results) => {
+        const dataFromServer = results[0];
+        const userFromDB = results[1];
+        //console.log(userFromDB.name)
+        console.log(dataFromServer.vacancies[0].title + '; ' + userFromDB.name)
     })
     .catch(() => {
         console.log('initialization failed. Try later')
