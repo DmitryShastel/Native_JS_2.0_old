@@ -24,6 +24,11 @@ const axios = {
         }, 2000)
     }
 }
+
+const promise1 = axios.get('test_url').then((data) => {
+    console.log(data)
+})
+
 const findUserInDB = (id) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -42,16 +47,12 @@ const findUserInDB = (id) => {
     })
 }
 
-const promise2 = findUserInDB(2)
-promise2.then((userData) => {
+const promise2 = findUserInDB(20)
+    .then((userData) => {
     console.log(userData)
-})
-
-
-const promise1 = axios.get('test_url')
-promise1.then((data) => {
-    console.log(data)
-})
+}).catch((error) => {
+        console.log(error)
+    })
 
 
 // const promise = server.getData();
