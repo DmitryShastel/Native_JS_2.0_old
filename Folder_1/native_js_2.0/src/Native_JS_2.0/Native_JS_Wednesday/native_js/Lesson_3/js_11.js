@@ -21,13 +21,14 @@ const axios = {
                 };
                 resolve(response)
             })
-        }, 2000)
+        })
     }
 }
 
-const promise1 = axios.get('test_url').then((data) => {
-    console.log(data)
-})
+const promise1 = axios.get('test_url')
+    .then((data) => {
+        return data
+    })
 
 const findUserInDB = (id) => {
     return new Promise((resolve, reject) => {
@@ -43,15 +44,27 @@ const findUserInDB = (id) => {
                 reject(new Error('User not found'))
             }
             return filteredUser
-        }, 1000)
+        })
     })
 }
 
-const promise2 = findUserInDB(20)
+const promise2 = findUserInDB(2)
     .then((userData) => {
-    console.log(userData)
-}).catch((error) => {
-        console.log(error)
+        return userData
+    })
+    .catch(() => {
+
+    })
+
+
+const otherPromise = Promise.all([promise1, promise2])
+
+otherPromise
+    .then((result) => {
+        console.log(result)
+    })
+    .catch(() => {
+        console.log('initialization failed. Try later')
     })
 
 
