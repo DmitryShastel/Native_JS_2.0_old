@@ -79,14 +79,16 @@ const otherPromise2 = Promise.allSettled([promise1, promise2])
 otherPromise2
     .then((results) => {
         console.log(results)
-        return;
-        const dataFromServer = results[0];
-        const userFromDB = results[1];
+
+        const dataFromServer =
+            results[0].status === "fulfilled"
+                ? results[0].value
+                : results[0].vacancies;
+        const userFromDB = results[1].status === "fulfilled"
+            ? results[1].value
+            : {name: results[1].reason};
         console.log(dataFromServer.vacancies[0].title + '; ' + userFromDB.name)
     })
-
-
-
 
 
 // const promise = server.getData();
