@@ -17,7 +17,7 @@ const axios = {
                     vacancies: [
                         {id: 1, title: 'js'},
                         {id: 2, title: 'css'},
-            ],
+                    ],
                     status: 200,
                     headers: {},
                     data: [],
@@ -29,13 +29,6 @@ const axios = {
         })
     }
 }
-
-const promise1 = axios.get('test_url')
-    .then((data) => {
-        return  data
-        // return  console.log(data)
-    })
-
 const findUserInDB = (id) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -54,6 +47,12 @@ const findUserInDB = (id) => {
     })
 }
 
+const promise1 = axios.get('test_url')
+    .then((data) => {
+        return data
+        // return  console.log(data)
+    })
+
 const promise2 = findUserInDB(1)
     .then((userData) => {
         return userData
@@ -62,18 +61,32 @@ const promise2 = findUserInDB(1)
     })
 
 
-const otherPromise = Promise.all([promise1, promise2])
+//const otherPromise = Promise.all([promise1, promise2])
 
-otherPromise
+// otherPromise
+//     .then((results) => {
+//         const dataFromServer = results[0];
+//         const userFromDB = results[1];
+//         // console.log(results)
+//         console.log(dataFromServer.vacancies[0].title + '; ' + userFromDB.name)
+//     })
+//     .catch(() => {
+//         console.log('initialization failed. Try later')
+//     })
+
+const otherPromise2 = Promise.allSettled([promise1, promise2])
+
+otherPromise2
     .then((results) => {
+        console.log(results)
+        return;
         const dataFromServer = results[0];
         const userFromDB = results[1];
-        //console.log(userFromDB.name)
         console.log(dataFromServer.vacancies[0].title + '; ' + userFromDB.name)
     })
-    .catch(() => {
-        console.log('initialization failed. Try later')
-    })
+
+
+
 
 
 // const promise = server.getData();
